@@ -1,0 +1,4 @@
+xst -intstyle ise -ifn "C:/dev/ULiC/Verilog/Z1/blokIteracyjny.xst" -ofn "C:/dev/ULiC/Verilog/Z1/blokIteracyjny.syr" 
+vhdtdtfi -lang verilog -prj Z1 -o C:/dev/ULiC/Verilog/Z1/blokIteracyjny.vhi -lib work C:/dev/ULiC/Verilog/Z1//blokIteracyjny.v -module blokIteracyjny -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror 
+vhdtdtfi -lib work C:/dev/ULiC/Verilog/Z1/blokIteracyjny.v -lang verilog -prj Z1 -o blokIteracyjny.spl -module blokIteracyjny -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family xbr blokIteracyjny.spl C:/dev/ULiC/Verilog/Z1/blokIteracyjny.sym 

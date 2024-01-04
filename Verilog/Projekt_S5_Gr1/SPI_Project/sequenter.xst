@@ -1,0 +1,5 @@
+set -tmpdir "C:/dev/ULiC/Verilog/Projekt_S5_Gr1/SPI_Project/xst/projnav.tmp"
+set -xsthdpdir "C:/dev/ULiC/Verilog/Projekt_S5_Gr1/SPI_Project/xst"
+elaborate
+-ifn sequenter.prj
+-ifmt mixed

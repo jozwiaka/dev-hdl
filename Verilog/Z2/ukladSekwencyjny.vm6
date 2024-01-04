@@ -1,0 +1,360 @@
+NDS Database:  version P.20131013
+
+NDS_INFO | xbr | 2C256144 | XC2C256-6-TQ144
+
+DEVICE | 2C256 | 2C256144 | 
+
+NETWORK | ukladSekwencyjny | 0 | 0 | 1073758214 | 0
+
+INPUT_INSTANCE | 0 | 0 | NULL | clk_II | ukladSekwencyjny_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | clk | 494 | PI | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | clk_II/UIM | 501 | ? | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | NULL | clk_II | 0 | 5 | II_IMUX
+
+MACROCELL_INSTANCE | PrldHigh+Tff | out<0>_MC | ukladSekwencyjny_COPY_0_COPY_0 | 4608 | 3 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | start_stop_II/UIM | 499 | ? | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | NULL | start_stop_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+SIGNAL | NODE | FOOBAR12__ctinst/4 | 500 | ? | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | NULL | FOOBAR12__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | clk_II/UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | r_II/FSR- | 503 | ? | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | NULL | r_II | 9 | 5 | II_FSRINV
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | out<0>_MC.Q | 505 | ? | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | out<0>_MC.Q | out<0>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | out<0>_MC.UIM | 510 | ? | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | out<0>_MC.Q | out<0>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | out<0>_MC.SI | out<0>_MC | 0 | 1 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | start_stop_II/UIM | 499 | ? | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | NULL | start_stop_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | out<0>_MC.D1 | 496 | ? | 0 | 0 | out<0>_MC | NULL | NULL | out<0>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 1 | IV_FALSE | start_stop_II/UIM
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | out<0>_MC.D2 | 497 | ? | 0 | 0 | out<0>_MC | NULL | NULL | out<0>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | out<0>_MC.REG | out<0>_MC | 0 | 3 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | out<0>_MC.D | 495 | ? | 0 | 0 | out<0>_MC | NULL | NULL | out<0>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | FOOBAR12__ctinst/4 | 500 | ? | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | NULL | FOOBAR12__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | clk_II/UIM
+INPUT_NODE_TYPE | 2 | 8 | SRFF_S
+NODE | r_II/FSR- | 503 | ? | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | NULL | r_II | 9 | 5 | II_FSRINV
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | out<0>_MC.Q | 504 | ? | 0 | 0 | out<0>_MC | NULL | NULL | out<0>_MC.REG | 0 | 8 | SRFF_Q
+
+INPUT_INSTANCE | 0 | 0 | NULL | start_stop_II | ukladSekwencyjny_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | start_stop | 498 | PI | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | start_stop_II/UIM | 499 | ? | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | NULL | start_stop_II | 0 | 5 | II_IMUX
+
+INPUT_INSTANCE | 0 | 0 | NULL | r_II | ukladSekwencyjny_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | r | 502 | PI | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 9 | 5 | II_FSRINV
+NODE | r_II/FSR- | 503 | ? | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | NULL | r_II | 9 | 5 | II_FSRINV
+
+OUTPUT_INSTANCE | 0 | out<0> | ukladSekwencyjny_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | out<0>_MC.Q | 505 | ? | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | out<0>_MC.Q | out<0>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | out<0> | 506 | PO | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | NULL | out<0> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | PrldLow+Tff | out<1>_MC | ukladSekwencyjny_COPY_0_COPY_0 | 5120 | 7 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | start_stop_II/UIM | 499 | ? | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | NULL | start_stop_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | out<0>_MC.UIM | 510 | ? | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | out<0>_MC.Q | out<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | out<1>_MC.UIM | 512 | ? | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | out<1>_MC.Q | out<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | out<2>_MC.UIM | 517 | ? | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | out<2>_MC.Q | out<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | out<3>_MC.UIM | 523 | ? | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | out<3>_MC.Q | out<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+SIGNAL | NODE | FOOBAR12__ctinst/4 | 500 | ? | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | NULL | FOOBAR12__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | clk_II/UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | r_II/FSR- | 503 | ? | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | NULL | r_II | 9 | 5 | II_FSRINV
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | out<1>_MC.Q | 524 | ? | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | out<1>_MC.Q | out<1>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | out<1>_MC.UIM | 512 | ? | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | out<1>_MC.Q | out<1>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | out<1>_MC.SI | out<1>_MC | 0 | 5 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | start_stop_II/UIM | 499 | ? | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | NULL | start_stop_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | out<0>_MC.UIM | 510 | ? | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | out<0>_MC.Q | out<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | out<1>_MC.UIM | 512 | ? | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | out<1>_MC.Q | out<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | out<2>_MC.UIM | 517 | ? | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | out<2>_MC.Q | out<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | out<3>_MC.UIM | 523 | ? | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | out<3>_MC.Q | out<3>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | out<1>_MC.D1 | 508 | ? | 0 | 0 | out<1>_MC | NULL | NULL | out<1>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 2 | IV_FALSE | start_stop_II/UIM | IV_FALSE | out<0>_MC.UIM
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | out<1>_MC.D2 | 509 | ? | 0 | 0 | out<1>_MC | NULL | NULL | out<1>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 5 | IV_FALSE | start_stop_II/UIM | IV_FALSE | out<0>_MC.UIM | IV_FALSE | out<1>_MC.UIM | IV_FALSE | out<2>_MC.UIM | IV_FALSE | out<3>_MC.UIM
+
+SRFF_INSTANCE | out<1>_MC.REG | out<1>_MC | 0 | 3 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | out<1>_MC.D | 507 | ? | 0 | 0 | out<1>_MC | NULL | NULL | out<1>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | FOOBAR12__ctinst/4 | 500 | ? | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | NULL | FOOBAR12__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | clk_II/UIM
+INPUT_NODE_TYPE | 3 | 8 | SRFF_R
+NODE | r_II/FSR- | 503 | ? | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | NULL | r_II | 9 | 5 | II_FSRINV
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | out<1>_MC.Q | 511 | ? | 0 | 0 | out<1>_MC | NULL | NULL | out<1>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow+Tff | out<2>_MC | ukladSekwencyjny_COPY_0_COPY_0 | 5120 | 7 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | start_stop_II/UIM | 499 | ? | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | NULL | start_stop_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | out<0>_MC.UIM | 510 | ? | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | out<0>_MC.Q | out<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | out<1>_MC.UIM | 512 | ? | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | out<1>_MC.Q | out<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | out<2>_MC.UIM | 517 | ? | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | out<2>_MC.Q | out<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | out<3>_MC.UIM | 523 | ? | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | out<3>_MC.Q | out<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+SIGNAL | NODE | FOOBAR10__ctinst/4 | 521 | ? | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | NULL | FOOBAR10__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | clk_II/UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | r_II/FSR- | 503 | ? | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | NULL | r_II | 9 | 5 | II_FSRINV
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | out<2>_MC.Q | 526 | ? | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | out<2>_MC.Q | out<2>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | out<2>_MC.UIM | 517 | ? | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | out<2>_MC.Q | out<2>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | out<2>_MC.SI | out<2>_MC | 0 | 5 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | start_stop_II/UIM | 499 | ? | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | NULL | start_stop_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | out<0>_MC.UIM | 510 | ? | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | out<0>_MC.Q | out<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | out<1>_MC.UIM | 512 | ? | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | out<1>_MC.Q | out<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | out<2>_MC.UIM | 517 | ? | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | out<2>_MC.Q | out<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | out<3>_MC.UIM | 523 | ? | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | out<3>_MC.Q | out<3>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | out<2>_MC.D1 | 515 | ? | 0 | 0 | out<2>_MC | NULL | NULL | out<2>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | out<2>_MC.D2 | 514 | ? | 0 | 0 | out<2>_MC | NULL | NULL | out<2>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 4 | IV_FALSE | start_stop_II/UIM | IV_FALSE | out<0>_MC.UIM | IV_FALSE | out<1>_MC.UIM | IV_TRUE | out<2>_MC.UIM
+SPPTERM | 4 | IV_FALSE | start_stop_II/UIM | IV_FALSE | out<0>_MC.UIM | IV_FALSE | out<1>_MC.UIM | IV_TRUE | out<3>_MC.UIM
+
+SRFF_INSTANCE | out<2>_MC.REG | out<2>_MC | 0 | 3 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | out<2>_MC.D | 513 | ? | 0 | 0 | out<2>_MC | NULL | NULL | out<2>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | FOOBAR10__ctinst/4 | 521 | ? | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | NULL | FOOBAR10__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | clk_II/UIM
+INPUT_NODE_TYPE | 3 | 8 | SRFF_R
+NODE | r_II/FSR- | 503 | ? | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | NULL | r_II | 9 | 5 | II_FSRINV
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | out<2>_MC.Q | 516 | ? | 0 | 0 | out<2>_MC | NULL | NULL | out<2>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldHigh+Tff | out<3>_MC | ukladSekwencyjny_COPY_0_COPY_0 | 4608 | 6 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | start_stop_II/UIM | 499 | ? | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | NULL | start_stop_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | out<0>_MC.UIM | 510 | ? | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | out<0>_MC.Q | out<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | out<1>_MC.UIM | 512 | ? | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | out<1>_MC.Q | out<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | out<2>_MC.UIM | 517 | ? | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | out<2>_MC.Q | out<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+SIGNAL | NODE | FOOBAR10__ctinst/4 | 521 | ? | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | NULL | FOOBAR10__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | clk_II/UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | r_II/FSR- | 503 | ? | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | NULL | r_II | 9 | 5 | II_FSRINV
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | out<3>_MC.Q | 528 | ? | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | out<3>_MC.Q | out<3>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | out<3>_MC.UIM | 523 | ? | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | out<3>_MC.Q | out<3>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | out<3>_MC.SI | out<3>_MC | 0 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | start_stop_II/UIM | 499 | ? | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | NULL | start_stop_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | out<0>_MC.UIM | 510 | ? | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | out<0>_MC.Q | out<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | out<1>_MC.UIM | 512 | ? | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | out<1>_MC.Q | out<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | out<2>_MC.UIM | 517 | ? | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | out<2>_MC.Q | out<2>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | out<3>_MC.D1 | 519 | ? | 0 | 0 | out<3>_MC | NULL | NULL | out<3>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 4 | IV_FALSE | start_stop_II/UIM | IV_FALSE | out<0>_MC.UIM | IV_FALSE | out<1>_MC.UIM | IV_FALSE | out<2>_MC.UIM
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | out<3>_MC.D2 | 520 | ? | 0 | 0 | out<3>_MC | NULL | NULL | out<3>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | out<3>_MC.REG | out<3>_MC | 0 | 3 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | out<3>_MC.D | 518 | ? | 0 | 0 | out<3>_MC | NULL | NULL | out<3>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | FOOBAR10__ctinst/4 | 521 | ? | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | NULL | FOOBAR10__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | clk_II/UIM
+INPUT_NODE_TYPE | 2 | 8 | SRFF_S
+NODE | r_II/FSR- | 503 | ? | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | NULL | r_II | 9 | 5 | II_FSRINV
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | out<3>_MC.Q | 522 | ? | 0 | 0 | out<3>_MC | NULL | NULL | out<3>_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | out<1> | ukladSekwencyjny_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | out<1>_MC.Q | 524 | ? | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | out<1>_MC.Q | out<1>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | out<1> | 525 | PO | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | NULL | out<1> | 0 | 6 | OI_OUT
+
+OUTPUT_INSTANCE | 0 | out<2> | ukladSekwencyjny_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | out<2>_MC.Q | 526 | ? | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | out<2>_MC.Q | out<2>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | out<2> | 527 | PO | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | NULL | out<2> | 0 | 6 | OI_OUT
+
+OUTPUT_INSTANCE | 0 | out<3> | ukladSekwencyjny_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | out<3>_MC.Q | 528 | ? | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | out<3>_MC.Q | out<3>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | out<3> | 529 | PO | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | NULL | out<3> | 0 | 6 | OI_OUT
+
+FB_INSTANCE | FOOBAR1_ | ukladSekwencyjny_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 3 | NULL | 0 | r_II | 1 | NULL | 0 | 143 | 51200
+
+FB_INSTANCE | FOOBAR2_ | ukladSekwencyjny_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR3_ | ukladSekwencyjny_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR4_ | ukladSekwencyjny_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR5_ | ukladSekwencyjny_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR6_ | ukladSekwencyjny_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 12 | NULL | 0 | clk_II | 1 | NULL | 0 | 39 | 50176
+
+FB_INSTANCE | FOOBAR7_ | ukladSekwencyjny_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR8_ | ukladSekwencyjny_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR9_ | ukladSekwencyjny_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR10_ | ukladSekwencyjny_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 6 | out<3>_MC | 1 | NULL | 0 | out<3> | 1 | 104 | 49152
+FBPIN | 14 | out<2>_MC | 1 | NULL | 0 | out<2> | 1 | 102 | 49152
+
+FB_INSTANCE | FOOBAR11_ | ukladSekwencyjny_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 11 | NULL | 0 | start_stop_II | 1 | NULL | 0 | 124 | 50176
+
+FB_INSTANCE | FOOBAR12_ | ukladSekwencyjny_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 2 | out<1>_MC | 1 | NULL | 0 | out<1> | 1 | 100 | 49152
+FBPIN | 12 | out<0>_MC | 1 | NULL | 0 | out<0> | 1 | 97 | 49152
+
+FB_INSTANCE | FOOBAR13_ | ukladSekwencyjny_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR14_ | ukladSekwencyjny_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR15_ | ukladSekwencyjny_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR16_ | ukladSekwencyjny_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | INPUTPINS_FOOBAR17_ | ukladSekwencyjny_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR1_ | FOOBAR1__ctinst | ukladSekwencyjny_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR2_ | FOOBAR2__ctinst | ukladSekwencyjny_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR3_ | FOOBAR3__ctinst | ukladSekwencyjny_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR4_ | FOOBAR4__ctinst | ukladSekwencyjny_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR5_ | FOOBAR5__ctinst | ukladSekwencyjny_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR6_ | FOOBAR6__ctinst | ukladSekwencyjny_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR7_ | FOOBAR7__ctinst | ukladSekwencyjny_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR8_ | FOOBAR8__ctinst | ukladSekwencyjny_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR9_ | FOOBAR9__ctinst | ukladSekwencyjny_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR10_ | FOOBAR10__ctinst | ukladSekwencyjny_COPY_0_COPY_0 | 0 | 1 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | clk_II/UIM | 501 | ? | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | NULL | clk_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 4 | 12 | CT_SI4
+SIGNAL | NODE | FOOBAR10__ctinst/4 | 521 | ? | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | NULL | FOOBAR10__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | clk_II/UIM
+
+CT_INSTANCE | FOOBAR11_ | FOOBAR11__ctinst | ukladSekwencyjny_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR12_ | FOOBAR12__ctinst | ukladSekwencyjny_COPY_0_COPY_0 | 0 | 1 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | clk_II/UIM | 501 | ? | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | NULL | clk_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 4 | 12 | CT_SI4
+SIGNAL | NODE | FOOBAR12__ctinst/4 | 500 | ? | 0 | 0 | ukladSekwencyjny_COPY_0_COPY_0 | NULL | NULL | FOOBAR12__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | clk_II/UIM
+
+CT_INSTANCE | FOOBAR13_ | FOOBAR13__ctinst | ukladSekwencyjny_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR14_ | FOOBAR14__ctinst | ukladSekwencyjny_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR15_ | FOOBAR15__ctinst | ukladSekwencyjny_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR16_ | FOOBAR16__ctinst | ukladSekwencyjny_COPY_0_COPY_0 | 0 | 0 | 0
+
+PLA | FOOBAR10_ | 4
+PLA_TERM | 0 | 
+SPPTERM | 4 | IV_FALSE | start_stop_II/UIM | IV_FALSE | out<0>_MC.UIM | IV_FALSE | out<1>_MC.UIM | IV_TRUE | out<2>_MC.UIM
+PLA_TERM | 1 | 
+SPPTERM | 4 | IV_FALSE | start_stop_II/UIM | IV_FALSE | out<0>_MC.UIM | IV_FALSE | out<1>_MC.UIM | IV_TRUE | out<3>_MC.UIM
+PLA_TERM | 4 | 
+SPPTERM | 1 | IV_TRUE | clk_II/UIM
+PLA_TERM | 25 | 
+SPPTERM | 4 | IV_FALSE | start_stop_II/UIM | IV_FALSE | out<0>_MC.UIM | IV_FALSE | out<1>_MC.UIM | IV_FALSE | out<2>_MC.UIM
+
+PLA | FOOBAR12_ | 4
+PLA_TERM | 0 | 
+SPPTERM | 5 | IV_FALSE | start_stop_II/UIM | IV_FALSE | out<0>_MC.UIM | IV_FALSE | out<1>_MC.UIM | IV_FALSE | out<2>_MC.UIM | IV_FALSE | out<3>_MC.UIM
+PLA_TERM | 4 | 
+SPPTERM | 1 | IV_TRUE | clk_II/UIM
+PLA_TERM | 13 | 
+SPPTERM | 2 | IV_FALSE | start_stop_II/UIM | IV_FALSE | out<0>_MC.UIM
+PLA_TERM | 43 | 
+SPPTERM | 1 | IV_FALSE | start_stop_II/UIM
+
+BUSINFO | OUT<3:0> | 4 | 0 | 1 | out<0> | 3 | out<1> | 2 | out<2> | 1 | out<3> | 0
+
+IOSTD | LVCMOS18
+clk | LVCMOS18
+start_stop | LVCMOS18
+r | LVCMOS18
+out<0> | LVCMOS18
+out<1> | LVCMOS18
+out<2> | LVCMOS18
+out<3> | LVCMOS18
+
+
+FB_ORDER_OF_INPUTS | FOOBAR10_ | 0 | start_stop | 124 | 4 | out<1>_MC.UIM | NULL | 5 | clk | 39 | 8 | out<0>_MC.UIM | NULL | 14 | out<2>_MC.UIM | NULL
+FB_ORDER_OF_INPUTS | FOOBAR10_ | 21 | out<3>_MC.UIM | NULL
+
+FB_IMUX_INDEX | FOOBAR10_ | 120 | -1 | -1 | -1 | 361 | 61 | -1 | -1 | 371 | -1 | -1 | -1 | -1 | -1 | 341 | -1 | -1 | -1 | -1 | -1 | -1 | 333 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1
+
+
+FB_ORDER_OF_INPUTS | FOOBAR12_ | 0 | start_stop | 124 | 4 | out<1>_MC.UIM | NULL | 5 | clk | 39 | 8 | out<0>_MC.UIM | NULL | 14 | out<2>_MC.UIM | NULL
+FB_ORDER_OF_INPUTS | FOOBAR12_ | 21 | out<3>_MC.UIM | NULL
+
+FB_IMUX_INDEX | FOOBAR12_ | 120 | -1 | -1 | -1 | 361 | 61 | -1 | -1 | 371 | -1 | -1 | -1 | -1 | -1 | 341 | -1 | -1 | -1 | -1 | -1 | -1 | 333 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1
+
+
+
+GLOBAL_FSR | r | 0 | 0

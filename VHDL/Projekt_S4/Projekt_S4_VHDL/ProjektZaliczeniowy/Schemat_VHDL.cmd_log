@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/Schemat_VHDL.xst" -ofn "C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/Schemat_VHDL.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc SchematGlowny.ucf -p xc2c256-TQ144-6 Schemat_VHDL.ngc Schemat_VHDL.ngd  
+cpldfit -intstyle ise -p xc2c256-6-TQ144 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 Schemat_VHDL.ngd 
+tsim -intstyle ise Schemat_VHDL Schemat_VHDL.nga 
+taengine -intstyle ise -f Schemat_VHDL -w --format html1 -l Schemat_VHDL_html/tim/timing_report.htm 
+hprep6 -s IEEE1149 -i Schemat_VHDL 

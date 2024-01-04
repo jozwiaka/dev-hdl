@@ -1,0 +1,298 @@
+NDS Database:  version P.20131013
+
+NDS_INFO | xbr | 2C256144 | XC2C256-6-TQ144
+
+DEVICE | 2C256 | 2C256144 | 
+
+NETWORK | schematUkladIteracyjny | 0 | 0 | 1073758214 | 0
+
+MACROCELL_INSTANCE | NULL | P1wy_8_MC | schematUkladIteracyjny_COPY_0_COPY_0 | 0 | 8 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | ai_8_II/UIM | 953 | ? | 0 | 0 | schematUkladIteracyjny_COPY_0_COPY_0 | NULL | NULL | ai_8_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | ai_5_II/UIM | 947 | ? | 0 | 0 | schematUkladIteracyjny_COPY_0_COPY_0 | NULL | NULL | ai_5_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | ai_7_II/UIM | 951 | ? | 0 | 0 | schematUkladIteracyjny_COPY_0_COPY_0 | NULL | NULL | ai_7_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | ai_6_II/UIM | 949 | ? | 0 | 0 | schematUkladIteracyjny_COPY_0_COPY_0 | NULL | NULL | ai_6_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | ai_3_II/UIM | 941 | ? | 0 | 0 | schematUkladIteracyjny_COPY_0_COPY_0 | NULL | NULL | ai_3_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | ai_4_II/UIM | 945 | ? | 0 | 0 | schematUkladIteracyjny_COPY_0_COPY_0 | NULL | NULL | ai_4_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | ai_2_II/UIM | 943 | ? | 0 | 0 | schematUkladIteracyjny_COPY_0_COPY_0 | NULL | NULL | ai_2_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | ai_1_II/UIM | 955 | ? | 0 | 0 | schematUkladIteracyjny_COPY_0_COPY_0 | NULL | NULL | ai_1_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | P1wy_8_MC.Q | 957 | ? | 0 | 0 | schematUkladIteracyjny_COPY_0_COPY_0 | NULL | P1wy_8_MC.Q | P1wy_8_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | P1wy_8_MC.SI | P1wy_8_MC | 0 | 8 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | ai_8_II/UIM | 953 | ? | 0 | 0 | schematUkladIteracyjny_COPY_0_COPY_0 | NULL | NULL | ai_8_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | ai_5_II/UIM | 947 | ? | 0 | 0 | schematUkladIteracyjny_COPY_0_COPY_0 | NULL | NULL | ai_5_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | ai_7_II/UIM | 951 | ? | 0 | 0 | schematUkladIteracyjny_COPY_0_COPY_0 | NULL | NULL | ai_7_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | ai_6_II/UIM | 949 | ? | 0 | 0 | schematUkladIteracyjny_COPY_0_COPY_0 | NULL | NULL | ai_6_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | ai_3_II/UIM | 941 | ? | 0 | 0 | schematUkladIteracyjny_COPY_0_COPY_0 | NULL | NULL | ai_3_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | ai_4_II/UIM | 945 | ? | 0 | 0 | schematUkladIteracyjny_COPY_0_COPY_0 | NULL | NULL | ai_4_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | ai_2_II/UIM | 943 | ? | 0 | 0 | schematUkladIteracyjny_COPY_0_COPY_0 | NULL | NULL | ai_2_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | ai_1_II/UIM | 955 | ? | 0 | 0 | schematUkladIteracyjny_COPY_0_COPY_0 | NULL | NULL | ai_1_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | P1wy_8_MC.D1 | 939 | ? | 0 | 0 | P1wy_8_MC | NULL | NULL | P1wy_8_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | P1wy_8_MC.D2 | 938 | ? | 0 | 0 | P1wy_8_MC | NULL | NULL | P1wy_8_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 1 | IV_TRUE | ai_8_II/UIM
+SPPTERM | 2 | IV_TRUE | ai_5_II/UIM | IV_FALSE | ai_7_II/UIM
+SPPTERM | 2 | IV_TRUE | ai_6_II/UIM | IV_FALSE | ai_7_II/UIM
+SPPTERM | 3 | IV_TRUE | ai_3_II/UIM | IV_FALSE | ai_4_II/UIM | IV_FALSE | ai_5_II/UIM
+SPPTERM | 3 | IV_FALSE | ai_3_II/UIM | IV_TRUE | ai_2_II/UIM | IV_FALSE | ai_4_II/UIM
+SPPTERM | 3 | IV_FALSE | ai_3_II/UIM | IV_FALSE | ai_2_II/UIM | IV_TRUE | ai_1_II/UIM
+SPPTERM | 3 | IV_TRUE | ai_4_II/UIM | IV_FALSE | ai_5_II/UIM | IV_FALSE | ai_6_II/UIM
+
+SRFF_INSTANCE | P1wy_8_MC.REG | P1wy_8_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | P1wy_8_MC.D | 937 | ? | 0 | 0 | P1wy_8_MC | NULL | NULL | P1wy_8_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | P1wy_8_MC.Q | 956 | ? | 0 | 0 | P1wy_8_MC | NULL | NULL | P1wy_8_MC.REG | 0 | 8 | SRFF_Q
+
+INPUT_INSTANCE | 0 | 0 | NULL | ai_3_II | schematUkladIteracyjny_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | ai_3 | 940 | PI | 0 | 0 | schematUkladIteracyjny_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | ai_3_II/UIM | 941 | ? | 0 | 0 | schematUkladIteracyjny_COPY_0_COPY_0 | NULL | NULL | ai_3_II | 0 | 5 | II_IMUX
+
+INPUT_INSTANCE | 0 | 0 | NULL | ai_2_II | schematUkladIteracyjny_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | ai_2 | 942 | PI | 0 | 0 | schematUkladIteracyjny_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | ai_2_II/UIM | 943 | ? | 0 | 0 | schematUkladIteracyjny_COPY_0_COPY_0 | NULL | NULL | ai_2_II | 0 | 5 | II_IMUX
+
+INPUT_INSTANCE | 0 | 0 | NULL | ai_4_II | schematUkladIteracyjny_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | ai_4 | 944 | PI | 0 | 0 | schematUkladIteracyjny_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | ai_4_II/UIM | 945 | ? | 0 | 0 | schematUkladIteracyjny_COPY_0_COPY_0 | NULL | NULL | ai_4_II | 0 | 5 | II_IMUX
+
+INPUT_INSTANCE | 0 | 0 | NULL | ai_5_II | schematUkladIteracyjny_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | ai_5 | 946 | PI | 0 | 0 | schematUkladIteracyjny_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | ai_5_II/UIM | 947 | ? | 0 | 0 | schematUkladIteracyjny_COPY_0_COPY_0 | NULL | NULL | ai_5_II | 0 | 5 | II_IMUX
+
+INPUT_INSTANCE | 0 | 0 | NULL | ai_6_II | schematUkladIteracyjny_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | ai_6 | 948 | PI | 0 | 0 | schematUkladIteracyjny_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | ai_6_II/UIM | 949 | ? | 0 | 0 | schematUkladIteracyjny_COPY_0_COPY_0 | NULL | NULL | ai_6_II | 0 | 5 | II_IMUX
+
+INPUT_INSTANCE | 0 | 0 | NULL | ai_7_II | schematUkladIteracyjny_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | ai_7 | 950 | PI | 0 | 0 | schematUkladIteracyjny_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | ai_7_II/UIM | 951 | ? | 0 | 0 | schematUkladIteracyjny_COPY_0_COPY_0 | NULL | NULL | ai_7_II | 0 | 5 | II_IMUX
+
+INPUT_INSTANCE | 0 | 0 | NULL | ai_8_II | schematUkladIteracyjny_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | ai_8 | 952 | PI | 0 | 0 | schematUkladIteracyjny_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | ai_8_II/UIM | 953 | ? | 0 | 0 | schematUkladIteracyjny_COPY_0_COPY_0 | NULL | NULL | ai_8_II | 0 | 5 | II_IMUX
+
+INPUT_INSTANCE | 0 | 0 | NULL | ai_1_II | schematUkladIteracyjny_COPY_0_COPY_0 | 16 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | ai_1 | 954 | PI | 0 | 0 | schematUkladIteracyjny_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | ai_1_II/UIM | 955 | ? | 0 | 0 | schematUkladIteracyjny_COPY_0_COPY_0 | NULL | NULL | ai_1_II | 0 | 5 | II_IMUX
+
+OUTPUT_INSTANCE | 0 | P1wy_8 | schematUkladIteracyjny_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | P1wy_8_MC.Q | 957 | ? | 0 | 0 | schematUkladIteracyjny_COPY_0_COPY_0 | NULL | P1wy_8_MC.Q | P1wy_8_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | P1wy_8 | 958 | PO | 0 | 0 | schematUkladIteracyjny_COPY_0_COPY_0 | NULL | NULL | P1wy_8 | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | NULL | P2wy_8_MC | schematUkladIteracyjny_COPY_0_COPY_0 | 0 | 8 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | ai_6_II/UIM | 949 | ? | 0 | 0 | schematUkladIteracyjny_COPY_0_COPY_0 | NULL | NULL | ai_6_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | ai_8_II/UIM | 953 | ? | 0 | 0 | schematUkladIteracyjny_COPY_0_COPY_0 | NULL | NULL | ai_8_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | ai_7_II/UIM | 951 | ? | 0 | 0 | schematUkladIteracyjny_COPY_0_COPY_0 | NULL | NULL | ai_7_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | ai_3_II/UIM | 941 | ? | 0 | 0 | schematUkladIteracyjny_COPY_0_COPY_0 | NULL | NULL | ai_3_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | ai_4_II/UIM | 945 | ? | 0 | 0 | schematUkladIteracyjny_COPY_0_COPY_0 | NULL | NULL | ai_4_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | ai_5_II/UIM | 947 | ? | 0 | 0 | schematUkladIteracyjny_COPY_0_COPY_0 | NULL | NULL | ai_5_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | ai_2_II/UIM | 943 | ? | 0 | 0 | schematUkladIteracyjny_COPY_0_COPY_0 | NULL | NULL | ai_2_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | ai_1_II/UIM | 955 | ? | 0 | 0 | schematUkladIteracyjny_COPY_0_COPY_0 | NULL | NULL | ai_1_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | P2wy_8_MC.Q | 963 | ? | 0 | 0 | schematUkladIteracyjny_COPY_0_COPY_0 | NULL | P2wy_8_MC.Q | P2wy_8_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | P2wy_8_MC.SI | P2wy_8_MC | 0 | 8 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | ai_6_II/UIM | 949 | ? | 0 | 0 | schematUkladIteracyjny_COPY_0_COPY_0 | NULL | NULL | ai_6_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | ai_8_II/UIM | 953 | ? | 0 | 0 | schematUkladIteracyjny_COPY_0_COPY_0 | NULL | NULL | ai_8_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | ai_7_II/UIM | 951 | ? | 0 | 0 | schematUkladIteracyjny_COPY_0_COPY_0 | NULL | NULL | ai_7_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | ai_3_II/UIM | 941 | ? | 0 | 0 | schematUkladIteracyjny_COPY_0_COPY_0 | NULL | NULL | ai_3_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | ai_4_II/UIM | 945 | ? | 0 | 0 | schematUkladIteracyjny_COPY_0_COPY_0 | NULL | NULL | ai_4_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | ai_5_II/UIM | 947 | ? | 0 | 0 | schematUkladIteracyjny_COPY_0_COPY_0 | NULL | NULL | ai_5_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | ai_2_II/UIM | 943 | ? | 0 | 0 | schematUkladIteracyjny_COPY_0_COPY_0 | NULL | NULL | ai_2_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | ai_1_II/UIM | 955 | ? | 0 | 0 | schematUkladIteracyjny_COPY_0_COPY_0 | NULL | NULL | ai_1_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | P2wy_8_MC.D1 | 961 | ? | 0 | 0 | P2wy_8_MC | NULL | NULL | P2wy_8_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | P2wy_8_MC.D2 | 960 | ? | 0 | 0 | P2wy_8_MC | NULL | NULL | P2wy_8_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | ai_6_II/UIM | IV_FALSE | ai_8_II/UIM
+SPPTERM | 2 | IV_TRUE | ai_7_II/UIM | IV_FALSE | ai_8_II/UIM
+SPPTERM | 3 | IV_TRUE | ai_3_II/UIM | IV_FALSE | ai_4_II/UIM | IV_FALSE | ai_5_II/UIM
+SPPTERM | 3 | IV_FALSE | ai_3_II/UIM | IV_TRUE | ai_2_II/UIM | IV_FALSE | ai_4_II/UIM
+SPPTERM | 3 | IV_FALSE | ai_3_II/UIM | IV_FALSE | ai_2_II/UIM | IV_TRUE | ai_1_II/UIM
+SPPTERM | 3 | IV_TRUE | ai_4_II/UIM | IV_FALSE | ai_5_II/UIM | IV_FALSE | ai_6_II/UIM
+SPPTERM | 3 | IV_TRUE | ai_5_II/UIM | IV_FALSE | ai_6_II/UIM | IV_FALSE | ai_7_II/UIM
+
+SRFF_INSTANCE | P2wy_8_MC.REG | P2wy_8_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | P2wy_8_MC.D | 959 | ? | 0 | 0 | P2wy_8_MC | NULL | NULL | P2wy_8_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | P2wy_8_MC.Q | 962 | ? | 0 | 0 | P2wy_8_MC | NULL | NULL | P2wy_8_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | P2wy_8 | schematUkladIteracyjny_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | P2wy_8_MC.Q | 963 | ? | 0 | 0 | schematUkladIteracyjny_COPY_0_COPY_0 | NULL | P2wy_8_MC.Q | P2wy_8_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | P2wy_8 | 964 | PO | 0 | 0 | schematUkladIteracyjny_COPY_0_COPY_0 | NULL | NULL | P2wy_8 | 0 | 6 | OI_OUT
+
+FB_INSTANCE | FOOBAR1_ | schematUkladIteracyjny_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR2_ | schematUkladIteracyjny_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 1 | NULL | 0 | ai_8_II | 1 | NULL | 0 | 2 | 53248
+FBPIN | 3 | NULL | 0 | ai_4_II | 1 | NULL | 0 | 3 | 53248
+FBPIN | 4 | NULL | 0 | ai_7_II | 1 | NULL | 0 | 4 | 49152
+FBPIN | 5 | NULL | 0 | ai_3_II | 1 | NULL | 0 | 5 | 53248
+FBPIN | 12 | NULL | 0 | ai_6_II | 1 | NULL | 0 | 6 | 53248
+FBPIN | 13 | NULL | 0 | ai_2_II | 1 | NULL | 0 | 7 | 49152
+FBPIN | 14 | NULL | 0 | ai_5_II | 1 | NULL | 0 | 9 | 49152
+FBPIN | 15 | NULL | 0 | ai_1_II | 1 | NULL | 0 | 10 | 49152
+
+FB_INSTANCE | FOOBAR3_ | schematUkladIteracyjny_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR4_ | schematUkladIteracyjny_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR5_ | schematUkladIteracyjny_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR6_ | schematUkladIteracyjny_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR7_ | schematUkladIteracyjny_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR8_ | schematUkladIteracyjny_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR9_ | schematUkladIteracyjny_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR10_ | schematUkladIteracyjny_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 6 | P1wy_8_MC | 1 | NULL | 0 | P1wy_8 | 1 | 104 | 49152
+FBPIN | 14 | P2wy_8_MC | 1 | NULL | 0 | P2wy_8 | 1 | 102 | 49152
+
+FB_INSTANCE | FOOBAR11_ | schematUkladIteracyjny_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR12_ | schematUkladIteracyjny_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR13_ | schematUkladIteracyjny_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR14_ | schematUkladIteracyjny_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR15_ | schematUkladIteracyjny_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | FOOBAR16_ | schematUkladIteracyjny_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | INPUTPINS_FOOBAR17_ | schematUkladIteracyjny_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR1_ | FOOBAR1__ctinst | schematUkladIteracyjny_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR2_ | FOOBAR2__ctinst | schematUkladIteracyjny_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR3_ | FOOBAR3__ctinst | schematUkladIteracyjny_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR4_ | FOOBAR4__ctinst | schematUkladIteracyjny_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR5_ | FOOBAR5__ctinst | schematUkladIteracyjny_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR6_ | FOOBAR6__ctinst | schematUkladIteracyjny_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR7_ | FOOBAR7__ctinst | schematUkladIteracyjny_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR8_ | FOOBAR8__ctinst | schematUkladIteracyjny_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR9_ | FOOBAR9__ctinst | schematUkladIteracyjny_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR10_ | FOOBAR10__ctinst | schematUkladIteracyjny_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR11_ | FOOBAR11__ctinst | schematUkladIteracyjny_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR12_ | FOOBAR12__ctinst | schematUkladIteracyjny_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR13_ | FOOBAR13__ctinst | schematUkladIteracyjny_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR14_ | FOOBAR14__ctinst | schematUkladIteracyjny_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR15_ | FOOBAR15__ctinst | schematUkladIteracyjny_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR16_ | FOOBAR16__ctinst | schematUkladIteracyjny_COPY_0_COPY_0 | 0 | 0 | 0
+
+PLA | FOOBAR10_ | 10
+PLA_TERM | 0 | 
+SPPTERM | 3 | IV_FALSE | ai_3_II/UIM | IV_TRUE | ai_2_II/UIM | IV_FALSE | ai_4_II/UIM
+PLA_TERM | 1 | 
+SPPTERM | 3 | IV_TRUE | ai_3_II/UIM | IV_FALSE | ai_4_II/UIM | IV_FALSE | ai_5_II/UIM
+PLA_TERM | 2 | 
+SPPTERM | 3 | IV_TRUE | ai_4_II/UIM | IV_FALSE | ai_5_II/UIM | IV_FALSE | ai_6_II/UIM
+PLA_TERM | 3 | 
+SPPTERM | 2 | IV_TRUE | ai_5_II/UIM | IV_FALSE | ai_7_II/UIM
+PLA_TERM | 4 | 
+SPPTERM | 2 | IV_TRUE | ai_6_II/UIM | IV_FALSE | ai_7_II/UIM
+PLA_TERM | 5 | 
+SPPTERM | 1 | IV_TRUE | ai_8_II/UIM
+PLA_TERM | 6 | 
+SPPTERM | 3 | IV_FALSE | ai_3_II/UIM | IV_FALSE | ai_2_II/UIM | IV_TRUE | ai_1_II/UIM
+PLA_TERM | 7 | 
+SPPTERM | 3 | IV_TRUE | ai_5_II/UIM | IV_FALSE | ai_6_II/UIM | IV_FALSE | ai_7_II/UIM
+PLA_TERM | 8 | 
+SPPTERM | 2 | IV_TRUE | ai_6_II/UIM | IV_FALSE | ai_8_II/UIM
+PLA_TERM | 9 | 
+SPPTERM | 2 | IV_TRUE | ai_7_II/UIM | IV_FALSE | ai_8_II/UIM
+
+
+IOSTD | LVCMOS18
+ai_3 | LVCMOS18
+ai_2 | LVCMOS18
+ai_4 | LVCMOS18
+ai_5 | LVCMOS18
+ai_6 | LVCMOS18
+ai_7 | LVCMOS18
+ai_8 | LVCMOS18
+ai_1 | LVCMOS18
+P1wy_8 | LVCMOS18
+P2wy_8 | LVCMOS18
+
+
+FB_ORDER_OF_INPUTS | FOOBAR10_ | 1 | ai_4 | 3 | 2 | ai_1 | 10 | 4 | ai_2 | 7 | 6 | ai_8 | 2 | 7 | ai_6 | 6
+FB_ORDER_OF_INPUTS | FOOBAR10_ | 8 | ai_3 | 5 | 9 | ai_7 | 4 | 10 | ai_5 | 9
+
+FB_IMUX_INDEX | FOOBAR10_ | -1 | 13 | 20 | -1 | 18 | -1 | 11 | 17 | 15 | 14 | 19 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1
+
+

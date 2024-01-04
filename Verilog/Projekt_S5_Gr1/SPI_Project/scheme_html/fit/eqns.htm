@@ -1,0 +1,585 @@
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="paths.js"></script><script src="eqns.js"></script><script>
+      var design = "scheme";
+      var device = "XC2C256";
+      signals = new Array("CS","MOSI","N_PZ_166","N_PZ_187","N_PZ_191","RM0_SPECSIG","RM1_SPECSIG","RM2_BUFR_SPECSIG","RM2_SPECSIG","RM3_BUFR_SPECSIG","RM3_SPECSIG","RM4_BUFR_SPECSIG","RM4_SPECSIG","RM5_BUFR_SPECSIG","RM5_SPECSIG","RM6_BUFR_SPECSIG","RM6_SPECSIG","RM7_BUFR_SPECSIG","RM7_SPECSIG","XLXN_1","clkSeq","divider_100kHz_to_1Hz_instcounter0_SPECSIG","divider_100kHz_to_1Hz_instcounter10_SPECSIG","divider_100kHz_to_1Hz_instcounter11_SPECSIG","divider_100kHz_to_1Hz_instcounter12_SPECSIG","divider_100kHz_to_1Hz_instcounter13_SPECSIG","divider_100kHz_to_1Hz_instcounter14_SPECSIG","divider_100kHz_to_1Hz_instcounter15_SPECSIG","divider_100kHz_to_1Hz_instcounter1_SPECSIG","divider_100kHz_to_1Hz_instcounter2_SPECSIG","divider_100kHz_to_1Hz_instcounter3_SPECSIG","divider_100kHz_to_1Hz_instcounter4_SPECSIG","divider_100kHz_to_1Hz_instcounter5_SPECSIG","divider_100kHz_to_1Hz_instcounter6_SPECSIG","divider_100kHz_to_1Hz_instcounter7_SPECSIG","divider_100kHz_to_1Hz_instcounter8_SPECSIG","divider_100kHz_to_1Hz_instcounter9_SPECSIG","main_instMtrien_clkSeq_SPECSIG","main_instcounter0_SPECSIG","main_instcounter1_SPECSIG","main_instcounter2_SPECSIG","main_instcounter3_SPECSIG","main_instcounter4_SPECSIG","main_instendOfClkSeq_SPECSIG");
+      sigNegs = new Array("OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","ON","OFF","OFF","ON","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","ON","OFF","OFF","OFF","ON","OFF","OFF","OFF","OFF","OFF");
+      sigTypes = new Array("","DFF","","","","LATCH","LATCH","LATCH","","LATCH","","LATCH","","LATCH","","LATCH","","LATCH","","TFF","DEFF","DFF","DFF","TFF","TFF","TFF","TFF","DFF","DFF","DFF","DFF","TFF","DFF","DFF","DFF","DFF","DFF","DFF","TFF","TFF","TFF","TFF","TFF","DFF");
+
+      
+           iostyle["b0"]=new Array("KPR");
+        
+           iostyle["clkSeq"]=new Array("KPR");
+        
+           iostyle["in_data0_SPECSIG"]=new Array("KPR");
+        
+           iostyle["in_data4_SPECSIG"]=new Array("KPR");
+        
+           iostyle["in_data1_SPECSIG"]=new Array("KPR");
+        
+           iostyle["in_data5_SPECSIG"]=new Array("KPR");
+        
+           iostyle["in_data2_SPECSIG"]=new Array("KPR");
+        
+           iostyle["in_data6_SPECSIG"]=new Array("KPR");
+        
+           iostyle["in_data3_SPECSIG"]=new Array("KPR");
+        
+           iostyle["in_data7_SPECSIG"]=new Array("KPR");
+        
+           iostyle["clk"]=new Array("KPR");
+        
+        specSig["in_data0_SPECSIG"]=new Array("in_data<0>");
+      
+        specSig["in_data1_SPECSIG"]=new Array("in_data<1>");
+      
+        specSig["in_data2_SPECSIG"]=new Array("in_data<2>");
+      
+        specSig["in_data3_SPECSIG"]=new Array("in_data<3>");
+      
+        specSig["in_data4_SPECSIG"]=new Array("in_data<4>");
+      
+        specSig["in_data5_SPECSIG"]=new Array("in_data<5>");
+      
+        specSig["in_data6_SPECSIG"]=new Array("in_data<6>");
+      
+        specSig["in_data7_SPECSIG"]=new Array("in_data<7>");
+      
+        specSig["b_SPECSIG"]=new Array("(b)");
+      
+        specSig["divider_100kHz_to_1Hz_instcounter1_SPECSIG"]=new Array("divider_100kHz_to_1Hz_inst/counter<1>");
+      
+        specSig["divider_100kHz_to_1Hz_instcounter0_SPECSIG"]=new Array("divider_100kHz_to_1Hz_inst/counter<0>");
+      
+        specSig["RM0_SPECSIG"]=new Array("RM<0>");
+      
+        specSig["RM4_SPECSIG"]=new Array("RM<4>");
+      
+        specSig["RM1_SPECSIG"]=new Array("RM<1>");
+      
+        specSig["RM5_SPECSIG"]=new Array("RM<5>");
+      
+        specSig["RM2_SPECSIG"]=new Array("RM<2>");
+      
+        specSig["RM6_SPECSIG"]=new Array("RM<6>");
+      
+        specSig["RM3_SPECSIG"]=new Array("RM<3>");
+      
+        specSig["RM7_SPECSIG"]=new Array("RM<7>");
+      
+        specSig["RM3_BUFR_SPECSIG"]=new Array("RM<3>_BUFR");
+      
+        specSig["divider_100kHz_to_1Hz_instcounter2_SPECSIG"]=new Array("divider_100kHz_to_1Hz_inst/counter<2>");
+      
+        specSig["RM2_BUFR_SPECSIG"]=new Array("RM<2>_BUFR");
+      
+        specSig["main_instcounter1_SPECSIG"]=new Array("main_inst/counter<1>");
+      
+        specSig["main_instcounter2_SPECSIG"]=new Array("main_inst/counter<2>");
+      
+        specSig["main_instcounter3_SPECSIG"]=new Array("main_inst/counter<3>");
+      
+        specSig["main_instendOfClkSeq_SPECSIG"]=new Array("main_inst/endOfClkSeq");
+      
+        specSig["main_instcounter0_SPECSIG"]=new Array("main_inst/counter<0>");
+      
+        specSig["main_instcounter4_SPECSIG"]=new Array("main_inst/counter<4>");
+      
+        specSig["main_instMtrien_clkSeq_SPECSIG"]=new Array("main_inst/Mtrien_clkSeq");
+      
+        specSig["RM4_BUFR_SPECSIG"]=new Array("RM<4>_BUFR");
+      
+        specSig["divider_100kHz_to_1Hz_instcounter12_SPECSIG"]=new Array("divider_100kHz_to_1Hz_inst/counter<12>");
+      
+        specSig["divider_100kHz_to_1Hz_instcounter3_SPECSIG"]=new Array("divider_100kHz_to_1Hz_inst/counter<3>");
+      
+        specSig["divider_100kHz_to_1Hz_instcounter4_SPECSIG"]=new Array("divider_100kHz_to_1Hz_inst/counter<4>");
+      
+        specSig["divider_100kHz_to_1Hz_instcounter7_SPECSIG"]=new Array("divider_100kHz_to_1Hz_inst/counter<7>");
+      
+        specSig["divider_100kHz_to_1Hz_instcounter13_SPECSIG"]=new Array("divider_100kHz_to_1Hz_inst/counter<13>");
+      
+        specSig["divider_100kHz_to_1Hz_instcounter15_SPECSIG"]=new Array("divider_100kHz_to_1Hz_inst/counter<15>");
+      
+        specSig["divider_100kHz_to_1Hz_instcounter14_SPECSIG"]=new Array("divider_100kHz_to_1Hz_inst/counter<14>");
+      
+        specSig["divider_100kHz_to_1Hz_instcounter9_SPECSIG"]=new Array("divider_100kHz_to_1Hz_inst/counter<9>");
+      
+        specSig["divider_100kHz_to_1Hz_instcounter8_SPECSIG"]=new Array("divider_100kHz_to_1Hz_inst/counter<8>");
+      
+        specSig["divider_100kHz_to_1Hz_instcounter5_SPECSIG"]=new Array("divider_100kHz_to_1Hz_inst/counter<5>");
+      
+        specSig["divider_100kHz_to_1Hz_instcounter10_SPECSIG"]=new Array("divider_100kHz_to_1Hz_inst/counter<10>");
+      
+        specSig["divider_100kHz_to_1Hz_instcounter11_SPECSIG"]=new Array("divider_100kHz_to_1Hz_inst/counter<11>");
+      
+        specSig["divider_100kHz_to_1Hz_instcounter6_SPECSIG"]=new Array("divider_100kHz_to_1Hz_inst/counter<6>");
+      
+        specSig["RM6_BUFR_SPECSIG"]=new Array("RM<6>_BUFR");
+      
+        specSig["RM5_BUFR_SPECSIG"]=new Array("RM<5>_BUFR");
+      
+        specSig["RM7_BUFR_SPECSIG"]=new Array("RM<7>_BUFR");
+      
+            pterms["FB1_0"]=new Array("/main_instcounter0_SPECSIG");
+          
+            pterms["FB1_1"]=new Array("CS","main_instMtrien_clkSeq_SPECSIG");
+          
+            pterms["FB1_2"]=new Array("/CS","/main_instcounter0_SPECSIG","/main_instcounter1_SPECSIG","/main_instcounter2_SPECSIG","/main_instcounter3_SPECSIG","main_instcounter4_SPECSIG");
+          
+            pterms["FB1_3"]=new Array("/CS","main_instcounter0_SPECSIG","main_instcounter1_SPECSIG","main_instcounter2_SPECSIG","main_instcounter3_SPECSIG");
+          
+            pterms["FB1_4"]=new Array("XLXN_1");
+          
+            pterms["FB1_5"]=new Array("/b0","/N_PZ_187","/in_data3_SPECSIG");
+          
+            pterms["FB1_6"]=new Array("/b0","/N_PZ_187","in_data2_SPECSIG");
+          
+            pterms["FB1_7"]=new Array("/main_instMtrien_clkSeq_SPECSIG");
+          
+            pterms["FB1_8"]=new Array("/main_instcounter0_SPECSIG","/main_instcounter1_SPECSIG","/main_instcounter2_SPECSIG","/main_instcounter3_SPECSIG","main_instcounter4_SPECSIG");
+          
+            pterms["FB1_9"]=new Array("CS");
+          
+            pterms["FB1_10"]=new Array("/main_instendOfClkSeq_SPECSIG","/CS");
+          
+            pterms["FB1_11"]=new Array("/b0","/N_PZ_187","in_data3_SPECSIG");
+          
+            pterms["FB1_12"]=new Array("main_instendOfClkSeq_SPECSIG","CS");
+          
+            pterms["FB1_13"]=new Array("main_instendOfClkSeq_SPECSIG");
+          
+            pterms["FB1_14"]=new Array("N_PZ_166","/divider_100kHz_to_1Hz_instcounter0_SPECSIG","divider_100kHz_to_1Hz_instcounter1_SPECSIG");
+          
+            pterms["FB1_15"]=new Array("N_PZ_166","divider_100kHz_to_1Hz_instcounter0_SPECSIG","/divider_100kHz_to_1Hz_instcounter1_SPECSIG");
+          
+            pterms["FB1_16"]=new Array("N_PZ_166","divider_100kHz_to_1Hz_instcounter2_SPECSIG");
+          
+            pterms["FB1_17"]=new Array("N_PZ_166","divider_100kHz_to_1Hz_instcounter0_SPECSIG","divider_100kHz_to_1Hz_instcounter1_SPECSIG");
+          
+            pterms["FB1_19"]=new Array("/CS");
+          
+            pterms["FB1_20"]=new Array("/b0","/N_PZ_187","/in_data2_SPECSIG");
+          
+            pterms["FB1_22"]=new Array("main_instendOfClkSeq_SPECSIG");
+          
+            pterms["FB1_28"]=new Array("/CS","main_instcounter0_SPECSIG");
+          
+            pterms["FB1_31"]=new Array("/CS","main_instcounter0_SPECSIG","main_instcounter1_SPECSIG");
+          
+            pterms["FB1_34"]=new Array("/CS","main_instcounter0_SPECSIG","main_instcounter1_SPECSIG","main_instcounter2_SPECSIG");
+          
+            pterms["FB1_43"]=new Array("b0","/N_PZ_187");
+          
+            pterms["FB1_46"]=new Array("N_PZ_166","/divider_100kHz_to_1Hz_instcounter0_SPECSIG");
+          
+            pterms["FB1_49"]=new Array("N_PZ_166");
+          
+            pterms["FB2_0"]=new Array("N_PZ_166","/divider_100kHz_to_1Hz_instcounter6_SPECSIG","N_PZ_191");
+          
+            pterms["FB2_1"]=new Array("N_PZ_166","divider_100kHz_to_1Hz_instcounter6_SPECSIG","/N_PZ_191");
+          
+            pterms["FB2_2"]=new Array("N_PZ_166","divider_100kHz_to_1Hz_instcounter6_SPECSIG","N_PZ_191","divider_100kHz_to_1Hz_instcounter7_SPECSIG");
+          
+            pterms["FB2_3"]=new Array("N_PZ_166","divider_100kHz_to_1Hz_instcounter6_SPECSIG","N_PZ_191","divider_100kHz_to_1Hz_instcounter7_SPECSIG","divider_100kHz_to_1Hz_instcounter8_SPECSIG");
+          
+            pterms["FB2_4"]=new Array("main_instendOfClkSeq_SPECSIG");
+          
+            pterms["FB2_5"]=new Array("/b0","/N_PZ_187","/in_data4_SPECSIG");
+          
+            pterms["FB2_6"]=new Array("/b0","/N_PZ_187","in_data4_SPECSIG");
+          
+            pterms["FB2_7"]=new Array("/N_PZ_166");
+          
+            pterms["FB2_8"]=new Array("divider_100kHz_to_1Hz_instcounter10_SPECSIG","divider_100kHz_to_1Hz_instcounter11_SPECSIG","divider_100kHz_to_1Hz_instcounter6_SPECSIG","N_PZ_191","divider_100kHz_to_1Hz_instcounter7_SPECSIG","divider_100kHz_to_1Hz_instcounter12_SPECSIG","divider_100kHz_to_1Hz_instcounter8_SPECSIG","divider_100kHz_to_1Hz_instcounter9_SPECSIG","divider_100kHz_to_1Hz_instcounter13_SPECSIG");
+          
+            pterms["FB2_9"]=new Array("N_PZ_166","divider_100kHz_to_1Hz_instcounter15_SPECSIG");
+          
+            pterms["FB2_10"]=new Array("/b0","/N_PZ_187","in_data4_SPECSIG");
+          
+            pterms["FB2_11"]=new Array("N_PZ_166","divider_100kHz_to_1Hz_instcounter14_SPECSIG","divider_100kHz_to_1Hz_instcounter10_SPECSIG","divider_100kHz_to_1Hz_instcounter11_SPECSIG","divider_100kHz_to_1Hz_instcounter6_SPECSIG","N_PZ_191","divider_100kHz_to_1Hz_instcounter7_SPECSIG","divider_100kHz_to_1Hz_instcounter12_SPECSIG","divider_100kHz_to_1Hz_instcounter8_SPECSIG","divider_100kHz_to_1Hz_instcounter9_SPECSIG","divider_100kHz_to_1Hz_instcounter13_SPECSIG");
+          
+            pterms["FB2_12"]=new Array("divider_100kHz_to_1Hz_instcounter14_SPECSIG","divider_100kHz_to_1Hz_instcounter15_SPECSIG","divider_100kHz_to_1Hz_instcounter13_SPECSIG");
+          
+            pterms["FB2_13"]=new Array("/divider_100kHz_to_1Hz_instcounter14_SPECSIG","divider_100kHz_to_1Hz_instcounter10_SPECSIG","divider_100kHz_to_1Hz_instcounter11_SPECSIG","divider_100kHz_to_1Hz_instcounter6_SPECSIG","N_PZ_191","divider_100kHz_to_1Hz_instcounter7_SPECSIG","divider_100kHz_to_1Hz_instcounter12_SPECSIG","divider_100kHz_to_1Hz_instcounter8_SPECSIG","divider_100kHz_to_1Hz_instcounter9_SPECSIG");
+          
+            pterms["FB2_14"]=new Array("divider_100kHz_to_1Hz_instcounter10_SPECSIG","/divider_100kHz_to_1Hz_instcounter15_SPECSIG","divider_100kHz_to_1Hz_instcounter11_SPECSIG","divider_100kHz_to_1Hz_instcounter6_SPECSIG","N_PZ_191","divider_100kHz_to_1Hz_instcounter7_SPECSIG","divider_100kHz_to_1Hz_instcounter12_SPECSIG","divider_100kHz_to_1Hz_instcounter8_SPECSIG","divider_100kHz_to_1Hz_instcounter9_SPECSIG");
+          
+            pterms["FB2_15"]=new Array("/divider_100kHz_to_1Hz_instcounter6_SPECSIG","/divider_100kHz_to_1Hz_instcounter7_SPECSIG");
+          
+            pterms["FB2_16"]=new Array("divider_100kHz_to_1Hz_instcounter0_SPECSIG","divider_100kHz_to_1Hz_instcounter4_SPECSIG","divider_100kHz_to_1Hz_instcounter1_SPECSIG","divider_100kHz_to_1Hz_instcounter2_SPECSIG","divider_100kHz_to_1Hz_instcounter3_SPECSIG","divider_100kHz_to_1Hz_instcounter5_SPECSIG");
+          
+            pterms["FB2_17"]=new Array("divider_100kHz_to_1Hz_instcounter14_SPECSIG","divider_100kHz_to_1Hz_instcounter10_SPECSIG","divider_100kHz_to_1Hz_instcounter15_SPECSIG");
+          
+            pterms["FB2_18"]=new Array("divider_100kHz_to_1Hz_instcounter14_SPECSIG","divider_100kHz_to_1Hz_instcounter15_SPECSIG","divider_100kHz_to_1Hz_instcounter11_SPECSIG");
+          
+            pterms["FB2_19"]=new Array("N_PZ_166","divider_100kHz_to_1Hz_instcounter3_SPECSIG");
+          
+            pterms["FB2_20"]=new Array("divider_100kHz_to_1Hz_instcounter14_SPECSIG","divider_100kHz_to_1Hz_instcounter15_SPECSIG","divider_100kHz_to_1Hz_instcounter12_SPECSIG");
+          
+            pterms["FB2_21"]=new Array("divider_100kHz_to_1Hz_instcounter14_SPECSIG","divider_100kHz_to_1Hz_instcounter15_SPECSIG","divider_100kHz_to_1Hz_instcounter8_SPECSIG","divider_100kHz_to_1Hz_instcounter9_SPECSIG");
+          
+            pterms["FB2_22"]=new Array("divider_100kHz_to_1Hz_instcounter6_SPECSIG","N_PZ_191","divider_100kHz_to_1Hz_instcounter7_SPECSIG");
+          
+            pterms["FB2_23"]=new Array("/N_PZ_191","/divider_100kHz_to_1Hz_instcounter7_SPECSIG");
+          
+            pterms["FB2_24"]=new Array("/divider_100kHz_to_1Hz_instcounter14_SPECSIG","divider_100kHz_to_1Hz_instcounter10_SPECSIG","divider_100kHz_to_1Hz_instcounter11_SPECSIG","divider_100kHz_to_1Hz_instcounter6_SPECSIG","N_PZ_191","divider_100kHz_to_1Hz_instcounter7_SPECSIG","divider_100kHz_to_1Hz_instcounter8_SPECSIG","divider_100kHz_to_1Hz_instcounter9_SPECSIG");
+          
+            pterms["FB2_25"]=new Array("divider_100kHz_to_1Hz_instcounter10_SPECSIG","/divider_100kHz_to_1Hz_instcounter15_SPECSIG","divider_100kHz_to_1Hz_instcounter11_SPECSIG","divider_100kHz_to_1Hz_instcounter6_SPECSIG","N_PZ_191","divider_100kHz_to_1Hz_instcounter7_SPECSIG","divider_100kHz_to_1Hz_instcounter8_SPECSIG","divider_100kHz_to_1Hz_instcounter9_SPECSIG");
+          
+            pterms["FB2_26"]=new Array("/divider_100kHz_to_1Hz_instcounter14_SPECSIG","divider_100kHz_to_1Hz_instcounter10_SPECSIG","divider_100kHz_to_1Hz_instcounter6_SPECSIG","N_PZ_191","divider_100kHz_to_1Hz_instcounter7_SPECSIG","divider_100kHz_to_1Hz_instcounter8_SPECSIG","divider_100kHz_to_1Hz_instcounter9_SPECSIG");
+          
+            pterms["FB2_27"]=new Array("divider_100kHz_to_1Hz_instcounter10_SPECSIG","/divider_100kHz_to_1Hz_instcounter15_SPECSIG","divider_100kHz_to_1Hz_instcounter6_SPECSIG","N_PZ_191","divider_100kHz_to_1Hz_instcounter7_SPECSIG","divider_100kHz_to_1Hz_instcounter8_SPECSIG","divider_100kHz_to_1Hz_instcounter9_SPECSIG");
+          
+            pterms["FB2_28"]=new Array("/divider_100kHz_to_1Hz_instcounter14_SPECSIG");
+          
+            pterms["FB2_29"]=new Array("/divider_100kHz_to_1Hz_instcounter10_SPECSIG","/divider_100kHz_to_1Hz_instcounter11_SPECSIG","/divider_100kHz_to_1Hz_instcounter4_SPECSIG","/divider_100kHz_to_1Hz_instcounter5_SPECSIG","/divider_100kHz_to_1Hz_instcounter7_SPECSIG","/divider_100kHz_to_1Hz_instcounter12_SPECSIG","/divider_100kHz_to_1Hz_instcounter13_SPECSIG");
+          
+            pterms["FB2_30"]=new Array("/divider_100kHz_to_1Hz_instcounter10_SPECSIG","/divider_100kHz_to_1Hz_instcounter11_SPECSIG","/divider_100kHz_to_1Hz_instcounter6_SPECSIG","/divider_100kHz_to_1Hz_instcounter7_SPECSIG","/divider_100kHz_to_1Hz_instcounter12_SPECSIG","/divider_100kHz_to_1Hz_instcounter13_SPECSIG");
+          
+            pterms["FB2_31"]=new Array("/divider_100kHz_to_1Hz_instcounter10_SPECSIG","/divider_100kHz_to_1Hz_instcounter11_SPECSIG","/divider_100kHz_to_1Hz_instcounter12_SPECSIG","/divider_100kHz_to_1Hz_instcounter8_SPECSIG","/divider_100kHz_to_1Hz_instcounter13_SPECSIG");
+          
+            pterms["FB2_32"]=new Array("/divider_100kHz_to_1Hz_instcounter10_SPECSIG","/divider_100kHz_to_1Hz_instcounter11_SPECSIG","/divider_100kHz_to_1Hz_instcounter12_SPECSIG","/divider_100kHz_to_1Hz_instcounter9_SPECSIG","/divider_100kHz_to_1Hz_instcounter13_SPECSIG");
+          
+            pterms["FB2_33"]=new Array("/divider_100kHz_to_1Hz_instcounter15_SPECSIG");
+          
+            pterms["FB2_34"]=new Array("/divider_100kHz_to_1Hz_instcounter14_SPECSIG","divider_100kHz_to_1Hz_instcounter6_SPECSIG","N_PZ_191","divider_100kHz_to_1Hz_instcounter7_SPECSIG","divider_100kHz_to_1Hz_instcounter8_SPECSIG","divider_100kHz_to_1Hz_instcounter9_SPECSIG");
+          
+            pterms["FB2_35"]=new Array("/divider_100kHz_to_1Hz_instcounter15_SPECSIG","divider_100kHz_to_1Hz_instcounter6_SPECSIG","N_PZ_191","divider_100kHz_to_1Hz_instcounter7_SPECSIG","divider_100kHz_to_1Hz_instcounter8_SPECSIG","divider_100kHz_to_1Hz_instcounter9_SPECSIG");
+          
+            pterms["FB2_36"]=new Array("N_PZ_166","/N_PZ_191","divider_100kHz_to_1Hz_instcounter5_SPECSIG");
+          
+            pterms["FB2_37"]=new Array("N_PZ_166","divider_100kHz_to_1Hz_instcounter9_SPECSIG");
+          
+            pterms["FB2_38"]=new Array("N_PZ_166","/N_PZ_191","divider_100kHz_to_1Hz_instcounter0_SPECSIG","divider_100kHz_to_1Hz_instcounter4_SPECSIG","divider_100kHz_to_1Hz_instcounter1_SPECSIG","divider_100kHz_to_1Hz_instcounter2_SPECSIG","divider_100kHz_to_1Hz_instcounter3_SPECSIG");
+          
+            pterms["FB2_39"]=new Array("N_PZ_166","divider_100kHz_to_1Hz_instcounter0_SPECSIG","divider_100kHz_to_1Hz_instcounter1_SPECSIG","divider_100kHz_to_1Hz_instcounter2_SPECSIG","divider_100kHz_to_1Hz_instcounter3_SPECSIG");
+          
+            pterms["FB2_40"]=new Array("N_PZ_166","divider_100kHz_to_1Hz_instcounter8_SPECSIG");
+          
+            pterms["FB2_41"]=new Array("/N_PZ_166","divider_100kHz_to_1Hz_instcounter4_SPECSIG");
+          
+            pterms["FB2_42"]=new Array("N_PZ_166","divider_100kHz_to_1Hz_instcounter0_SPECSIG","divider_100kHz_to_1Hz_instcounter1_SPECSIG","divider_100kHz_to_1Hz_instcounter2_SPECSIG");
+          
+            pterms["FB2_46"]=new Array("/divider_100kHz_to_1Hz_instcounter10_SPECSIG");
+          
+            pterms["FB3_0"]=new Array("RM0_SPECSIG");
+          
+            pterms["FB3_4"]=new Array("main_instendOfClkSeq_SPECSIG");
+          
+            pterms["FB3_5"]=new Array("/b0","/N_PZ_187","/in_data6_SPECSIG");
+          
+            pterms["FB3_6"]=new Array("/b0","/N_PZ_187","in_data5_SPECSIG");
+          
+            pterms["FB3_16"]=new Array("/main_instMtrien_clkSeq_SPECSIG","/clkSeq");
+          
+            pterms["FB3_44"]=new Array("/b0","/N_PZ_187","in_data6_SPECSIG");
+          
+            pterms["FB3_46"]=new Array("/b0","/N_PZ_187","in_data6_SPECSIG");
+          
+            pterms["FB3_50"]=new Array("/b0","/N_PZ_187","/in_data5_SPECSIG");
+          
+            pterms["FB3_52"]=new Array("/b0","/N_PZ_187","in_data5_SPECSIG");
+          
+            pterms["FB4_4"]=new Array("main_instendOfClkSeq_SPECSIG");
+          
+            pterms["FB4_5"]=new Array("/b0","/N_PZ_187","/in_data7_SPECSIG");
+          
+            pterms["FB4_6"]=new Array("/b0","/N_PZ_187","in_data7_SPECSIG");
+          
+            pterms["FB4_55"]=new Array("/b0","/N_PZ_187","in_data7_SPECSIG");
+          
+            pterms["FB9_4"]=new Array("main_instendOfClkSeq_SPECSIG");
+          
+            pterms["FB9_5"]=new Array("/b0","/N_PZ_187","/in_data1_SPECSIG");
+          
+            pterms["FB9_6"]=new Array("/b0","/N_PZ_187","in_data0_SPECSIG");
+          
+            pterms["FB9_8"]=new Array("/b0","/N_PZ_187","/in_data0_SPECSIG");
+          
+            pterms["FB9_10"]=new Array("/b0","/N_PZ_187","in_data0_SPECSIG");
+          
+            pterms["FB9_13"]=new Array("RM4_BUFR_SPECSIG");
+          
+            pterms["FB9_17"]=new Array("/b0","/N_PZ_187","in_data1_SPECSIG");
+          
+            pterms["FB9_19"]=new Array("/b0","/N_PZ_187","in_data1_SPECSIG");
+          
+            pterms["FB9_25"]=new Array("RM5_BUFR_SPECSIG");
+          
+            pterms["FB9_43"]=new Array("RM2_BUFR_SPECSIG");
+          
+            pterms["FB9_46"]=new Array("RM6_BUFR_SPECSIG");
+          
+            pterms["FB9_49"]=new Array("RM3_BUFR_SPECSIG");
+          
+            pterms["FB9_52"]=new Array("RM7_BUFR_SPECSIG");
+          
+          d1["N_PZ_187"]=new Array("FB1_10");
+          
+          d2["RM3_BUFR_SPECSIG"]=new Array("FB1_11");
+          
+              clk["RM3_BUFR_SPECSIG"]=new Array("FB1_13");
+              
+              set["RM3_BUFR_SPECSIG"]=new Array("FB1_11");
+              
+              rst["RM3_BUFR_SPECSIG"]=new Array("FB1_5");
+              prld["RM3_BUFR_SPECSIG"]="GND";
+          d1["divider_100kHz_to_1Hz_instcounter2_SPECSIG"]=new Array("FB1_16");
+          
+          d2["divider_100kHz_to_1Hz_instcounter2_SPECSIG"]=new Array("FB1_17");
+          
+              gblclk["divider_100kHz_to_1Hz_instcounter2_SPECSIG"]=new Array("clk");
+            prld["divider_100kHz_to_1Hz_instcounter2_SPECSIG"]="GND";
+          d2["clkSeq"]=new Array("FB1_0");
+          
+              clk["clkSeq"]=new Array("FB1_4");
+              
+              trst["clkSeq"]=new Array("FB1_7");
+              
+          ce["clkSeq"]=new Array("FB1_19");
+          prld["clkSeq"]="GND";
+          d2["RM2_BUFR_SPECSIG"]=new Array("FB1_6");
+          
+              clk["RM2_BUFR_SPECSIG"]=new Array("FB1_13");
+              
+              set["RM2_BUFR_SPECSIG"]=new Array("FB1_6");
+              
+              rst["RM2_BUFR_SPECSIG"]=new Array("FB1_20");
+              prld["RM2_BUFR_SPECSIG"]="GND";
+          d2["divider_100kHz_to_1Hz_instcounter1_SPECSIG"]=new Array("FB1_15","FB1_14");
+          
+              gblclk["divider_100kHz_to_1Hz_instcounter1_SPECSIG"]=new Array("clk");
+            prld["divider_100kHz_to_1Hz_instcounter1_SPECSIG"]="GND";
+          d1["main_instcounter1_SPECSIG"]=new Array("FB1_28");
+          
+              clk["main_instcounter1_SPECSIG"]=new Array("FB1_4");
+              prld["main_instcounter1_SPECSIG"]="GND";
+          d1["main_instcounter2_SPECSIG"]=new Array("FB1_31");
+          
+              clk["main_instcounter2_SPECSIG"]=new Array("FB1_4");
+              prld["main_instcounter2_SPECSIG"]="GND";
+          d1["main_instcounter3_SPECSIG"]=new Array("FB1_34");
+          
+              clk["main_instcounter3_SPECSIG"]=new Array("FB1_4");
+              prld["main_instcounter3_SPECSIG"]="GND";
+          d2["main_instendOfClkSeq_SPECSIG"]=new Array("FB1_12","FB1_2");
+          
+              clk["main_instendOfClkSeq_SPECSIG"]=new Array("FB1_4");
+              prld["main_instendOfClkSeq_SPECSIG"]="GND";
+          d2["main_instcounter0_SPECSIG"]=new Array("FB1_9","FB1_8");
+          
+              clk["main_instcounter0_SPECSIG"]=new Array("FB1_4");
+              prld["main_instcounter0_SPECSIG"]="GND";
+          d1["CS"]=new Array("FB1_43");
+          
+          d1["divider_100kHz_to_1Hz_instcounter0_SPECSIG"]=new Array("FB1_46");
+          
+              gblclk["divider_100kHz_to_1Hz_instcounter0_SPECSIG"]=new Array("clk");
+            prld["divider_100kHz_to_1Hz_instcounter0_SPECSIG"]="GND";
+          d1["XLXN_1"]=new Array("FB1_49");
+          
+              gblclk["XLXN_1"]=new Array("clk");
+            prld["XLXN_1"]="GND";
+          d2["main_instcounter4_SPECSIG"]=new Array("FB1_3","FB1_2");
+          
+              clk["main_instcounter4_SPECSIG"]=new Array("FB1_4");
+              prld["main_instcounter4_SPECSIG"]="GND";
+          d2["main_instMtrien_clkSeq_SPECSIG"]=new Array("FB1_1","FB1_2");
+          
+              clk["main_instMtrien_clkSeq_SPECSIG"]=new Array("FB1_4");
+              prld["main_instMtrien_clkSeq_SPECSIG"]="GND";
+          d1["RM4_BUFR_SPECSIG"]=new Array("FB2_6");
+          
+              clk["RM4_BUFR_SPECSIG"]=new Array("FB2_4");
+              
+              set["RM4_BUFR_SPECSIG"]=new Array("FB2_6");
+              
+              rst["RM4_BUFR_SPECSIG"]=new Array("FB2_5");
+              prld["RM4_BUFR_SPECSIG"]="GND";
+          d2["divider_100kHz_to_1Hz_instcounter12_SPECSIG"]=new Array("FB2_20","FB2_24","FB2_25");
+          
+              gblclk["divider_100kHz_to_1Hz_instcounter12_SPECSIG"]=new Array("clk");
+            prld["divider_100kHz_to_1Hz_instcounter12_SPECSIG"]="GND";
+          d1["N_PZ_191"]=new Array("FB2_16");
+          
+          d1["divider_100kHz_to_1Hz_instcounter3_SPECSIG"]=new Array("FB2_19");
+          
+          d2["divider_100kHz_to_1Hz_instcounter3_SPECSIG"]=new Array("FB2_42");
+          
+              gblclk["divider_100kHz_to_1Hz_instcounter3_SPECSIG"]=new Array("clk");
+            prld["divider_100kHz_to_1Hz_instcounter3_SPECSIG"]="GND";
+          d2["divider_100kHz_to_1Hz_instcounter4_SPECSIG"]=new Array("FB2_41","FB2_39");
+          
+              gblclk["divider_100kHz_to_1Hz_instcounter4_SPECSIG"]=new Array("clk");
+            prld["divider_100kHz_to_1Hz_instcounter4_SPECSIG"]="GND";
+          d2["divider_100kHz_to_1Hz_instcounter7_SPECSIG"]=new Array("FB2_15","FB2_23","FB2_17","FB2_18","FB2_20","FB2_12","FB2_22","FB2_21");
+          
+              gblclk["divider_100kHz_to_1Hz_instcounter7_SPECSIG"]=new Array("clk");
+            prld["divider_100kHz_to_1Hz_instcounter7_SPECSIG"]="GND";
+          d2["divider_100kHz_to_1Hz_instcounter13_SPECSIG"]=new Array("FB2_12","FB2_13","FB2_14");
+          
+              gblclk["divider_100kHz_to_1Hz_instcounter13_SPECSIG"]=new Array("clk");
+            prld["divider_100kHz_to_1Hz_instcounter13_SPECSIG"]="GND";
+          d2["divider_100kHz_to_1Hz_instcounter15_SPECSIG"]=new Array("FB2_9","FB2_11");
+          
+              gblclk["divider_100kHz_to_1Hz_instcounter15_SPECSIG"]=new Array("clk");
+            prld["divider_100kHz_to_1Hz_instcounter15_SPECSIG"]="GND";
+          d2["divider_100kHz_to_1Hz_instcounter14_SPECSIG"]=new Array("FB2_7","FB2_8");
+          
+              gblclk["divider_100kHz_to_1Hz_instcounter14_SPECSIG"]=new Array("clk");
+            prld["divider_100kHz_to_1Hz_instcounter14_SPECSIG"]="GND";
+          d1["divider_100kHz_to_1Hz_instcounter9_SPECSIG"]=new Array("FB2_37");
+          
+          d2["divider_100kHz_to_1Hz_instcounter9_SPECSIG"]=new Array("FB2_3");
+          
+              gblclk["divider_100kHz_to_1Hz_instcounter9_SPECSIG"]=new Array("clk");
+            prld["divider_100kHz_to_1Hz_instcounter9_SPECSIG"]="GND";
+          d1["divider_100kHz_to_1Hz_instcounter8_SPECSIG"]=new Array("FB2_40");
+          
+          d2["divider_100kHz_to_1Hz_instcounter8_SPECSIG"]=new Array("FB2_2");
+          
+              gblclk["divider_100kHz_to_1Hz_instcounter8_SPECSIG"]=new Array("clk");
+            prld["divider_100kHz_to_1Hz_instcounter8_SPECSIG"]="GND";
+          d2["divider_100kHz_to_1Hz_instcounter5_SPECSIG"]=new Array("FB2_36","FB2_38");
+          
+              gblclk["divider_100kHz_to_1Hz_instcounter5_SPECSIG"]=new Array("clk");
+            prld["divider_100kHz_to_1Hz_instcounter5_SPECSIG"]="GND";
+          d1["divider_100kHz_to_1Hz_instcounter10_SPECSIG"]=new Array("FB2_46");
+          
+          d2["divider_100kHz_to_1Hz_instcounter10_SPECSIG"]=new Array("FB2_17","FB2_34","FB2_35");
+          
+              gblclk["divider_100kHz_to_1Hz_instcounter10_SPECSIG"]=new Array("clk");
+            prld["divider_100kHz_to_1Hz_instcounter10_SPECSIG"]="GND";
+          d2["N_PZ_166"]=new Array("FB2_28","FB2_33","FB2_31","FB2_32","FB2_30","FB2_29");
+          
+          d2["divider_100kHz_to_1Hz_instcounter11_SPECSIG"]=new Array("FB2_18","FB2_26","FB2_27");
+          
+              gblclk["divider_100kHz_to_1Hz_instcounter11_SPECSIG"]=new Array("clk");
+            prld["divider_100kHz_to_1Hz_instcounter11_SPECSIG"]="GND";
+          d2["divider_100kHz_to_1Hz_instcounter6_SPECSIG"]=new Array("FB2_1","FB2_0");
+          
+              gblclk["divider_100kHz_to_1Hz_instcounter6_SPECSIG"]=new Array("clk");
+            prld["divider_100kHz_to_1Hz_instcounter6_SPECSIG"]="GND";
+          d2["MOSI"]=new Array("FB3_0");
+          clkNegs["MOSI"]=1;
+              clk["MOSI"]=new Array("FB3_16");
+              prld["MOSI"]="GND";
+          d1["RM6_BUFR_SPECSIG"]=new Array("FB3_44");
+          
+              clk["RM6_BUFR_SPECSIG"]=new Array("FB3_4");
+              
+              set["RM6_BUFR_SPECSIG"]=new Array("FB3_44");
+              
+              rst["RM6_BUFR_SPECSIG"]=new Array("FB3_5");
+              prld["RM6_BUFR_SPECSIG"]="GND";
+          d1["RM5_BUFR_SPECSIG"]=new Array("FB3_6");
+          
+              clk["RM5_BUFR_SPECSIG"]=new Array("FB3_4");
+              
+              set["RM5_BUFR_SPECSIG"]=new Array("FB3_6");
+              
+              rst["RM5_BUFR_SPECSIG"]=new Array("FB3_50");
+              prld["RM5_BUFR_SPECSIG"]="GND";
+          d1["RM7_BUFR_SPECSIG"]=new Array("FB4_6");
+          
+              clk["RM7_BUFR_SPECSIG"]=new Array("FB4_4");
+              
+              set["RM7_BUFR_SPECSIG"]=new Array("FB4_6");
+              
+              rst["RM7_BUFR_SPECSIG"]=new Array("FB4_5");
+              prld["RM7_BUFR_SPECSIG"]="GND";
+          d1["RM0_SPECSIG"]=new Array("FB9_6");
+          
+              clk["RM0_SPECSIG"]=new Array("FB9_4");
+              
+              set["RM0_SPECSIG"]=new Array("FB9_6");
+              
+              rst["RM0_SPECSIG"]=new Array("FB9_8");
+              prld["RM0_SPECSIG"]="GND";
+          d1["RM4_SPECSIG"]=new Array("FB9_13");
+          
+          d1["RM1_SPECSIG"]=new Array("FB9_17");
+          
+              clk["RM1_SPECSIG"]=new Array("FB9_4");
+              
+              set["RM1_SPECSIG"]=new Array("FB9_17");
+              
+              rst["RM1_SPECSIG"]=new Array("FB9_5");
+              prld["RM1_SPECSIG"]="GND";
+          d1["RM5_SPECSIG"]=new Array("FB9_25");
+          
+          d1["RM2_SPECSIG"]=new Array("FB9_43");
+          
+          d1["RM6_SPECSIG"]=new Array("FB9_46");
+          
+          d1["RM3_SPECSIG"]=new Array("FB9_49");
+          
+          d1["RM7_SPECSIG"]=new Array("FB9_52");
+          
+
+      uimSignals = new Array();
+
+      uimSigNegs = new Array();
+
+      uimPterms = new Array();
+      
+
+      
+        function getEqnList() {
+          var str = "<html><head><link type='text/css' href='style.css' rel='stylesheet'></head><body class='pgBgnd'>";
+          str += "<center><h3>Equations</h3></center>";
+          str += "<table width='90%' align='center' border='1' cellpadding='0' cellspacing='0'>";
+          for (s=0; s<uimSignals.length; s++) {
+            str += "<tr><td>";
+            str += retUimEqn(uimSignals[s]);
+            str += "</td></tr>";
+          }
+          for (s=0; s<signals.length; s++) {
+            str += "<tr><td>";
+            str += retEqn(signals[s]);
+            str += "</td></tr>";
+          }
+
+          var legend = retLegend();
+		      if (legend != "") {
+		        str += "<tr><td>" + legend + "</td></tr>";
+		      }
+
+          str += "</table>";
+          str += "<form><span class='pgRef'>";
+
+          if (!parent.leftnav.IsNS()) {
+            str += "<table width='90%' align='center'>";
+            str += "<tr><td align='left'><input type='button' value='back to top' ";
+            str += "onclick='javascript:parent.leftnav.showEqnAll()' ";
+            str += "onmouseover=\"window.status='goto top of page'; return true;\" ";
+            str += "onmouseout=\"window.status=''\">";
+            str += "</td>";
+            str += "<td align='right'>";
+            str += "<input type='button' value='print page' ";
+            str += "onclick='javascript:window.print()' ";
+            str += "onmouseover=\"window.status='print page'; return true;\" ";
+            str += "onmouseout=\"window.status=''\">";
+            str += "</td>";
+            str += "</tr></table>";
+          }
+          else {
+            str += "<table width='90%' align='center'>";
+            str += "<tr><td align='left'><a href='javascript:parent.leftnav.showEqnAll()'>back to top</a>";
+            str += "</td>";
+            str += "<td align='right'>";
+            str += "<a href='javascript:window.print()'>";
+            str += "print page</a>";
+            str += "</td>";
+            str += "</tr></table>";
+          }
+
+          str += "</span></form>";
+          str += "</body></html>";
+          return str;
+        }
+      
+    </script>
+</head></html>

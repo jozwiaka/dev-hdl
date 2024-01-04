@@ -1,0 +1,14 @@
+// Verilog instantiation template created from schematic C:\dev\ULiC\Verilog\Projekt_S5_Gr1\SPI_Project\schematic.sch - Wed Jan 26 14:52:12 2022
+//
+// Notes: 
+// To use this template to instantiate this component,cut-and-paste and then edit
+//
+// Instantiate the UUT
+   schematic UUT (
+		.clk(    ), 
+		.b0(    ), 
+		.MISO(    ), 
+		.in_data(    ), 
+		.MOSI(    ), 
+		.RM(    )
+   );

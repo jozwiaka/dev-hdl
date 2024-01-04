@@ -1,0 +1,1104 @@
+MDF Database:  version 1.0
+MDF_INFO | Schemat_VHDL | XC2C256-6-TQ144
+MACROCELL | 13 | 3 | d_Stopwatch1_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 1 | sw0
+INPUTP | 1 | 62
+EQ | 1 | 
+   d_Stopwatch1 = sw0;	// (1 pt, 1 inp)
+
+MACROCELL | 13 | 5 | d_Stopwatch2_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 1 | sw0
+INPUTP | 1 | 62
+EQ | 1 | 
+   d_Stopwatch2 = !sw0;	// (1 pt, 1 inp)
+
+MACROCELL | 10 | 15 | wy_aktywna_anoda<0>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 2 | wy_sterowanie_kropka  | wy_we<1>
+INPUTMC | 2 | 15 | 5 | 0 | 3
+EQ | 1 | 
+   !wy_aktywna_anoda<0> = !wy_sterowanie_kropka & wy_we<1>;	// (1 pt, 2 inp)
+
+MACROCELL | 15 | 5 | wy_sterowanie_kropka_MC
+ATTRIBUTES | 2286158598 | 0
+OUTPUTMC | 13 | 0 | 3 | 10 | 15 | 10 | 14 | 10 | 13 | 10 | 12 | 3 | 4 | 3 | 3 | 1 | 10 | 1 | 15 | 1 | 7 | 1 | 9 | 1 | 8 | 15 | 11
+INPUTS | 0
+LCT | 1 | 2 | Internal_Name
+EQ | 2 | 
+   !wy_sterowanie_kropka.T := Gnd;	// (0 pt, 0 inp)
+    wy_sterowanie_kropka.CLK = wy_clk;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 0 | 6 | wy_clk_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 7 | 0 | 7 | 0 | 8 | 0 | 9 | 0 | 10 | 0 | 4 | 0 | 14 | 0 | 6
+INPUTS | 8 | Inst_dzielnik_100kHz_na_400Hz/licznik<0>  | Inst_dzielnik_100kHz_na_400Hz/licznik<1>  | Inst_dzielnik_100kHz_na_400Hz/licznik<2>  | Inst_dzielnik_100kHz_na_400Hz/licznik<3>  | Inst_dzielnik_100kHz_na_400Hz/licznik<4>  | Inst_dzielnik_100kHz_na_400Hz/licznik<5>  | Inst_dzielnik_100kHz_na_400Hz/licznik<6>  | wy_clk
+INPUTMC | 8 | 0 | 14 | 0 | 4 | 0 | 15 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 7 | 0 | 6
+EQ | 9 | 
+   wy_clk.T := Inst_dzielnik_100kHz_na_400Hz/licznik<0> & 
+	Inst_dzielnik_100kHz_na_400Hz/licznik<1> & Inst_dzielnik_100kHz_na_400Hz/licznik<2> & 
+	Inst_dzielnik_100kHz_na_400Hz/licznik<3> & Inst_dzielnik_100kHz_na_400Hz/licznik<4> & 
+	Inst_dzielnik_100kHz_na_400Hz/licznik<5> & Inst_dzielnik_100kHz_na_400Hz/licznik<6>
+	# wy_clk & !Inst_dzielnik_100kHz_na_400Hz/licznik<0> & 
+	Inst_dzielnik_100kHz_na_400Hz/licznik<1> & !Inst_dzielnik_100kHz_na_400Hz/licznik<2> & 
+	Inst_dzielnik_100kHz_na_400Hz/licznik<3> & Inst_dzielnik_100kHz_na_400Hz/licznik<4> & 
+	Inst_dzielnik_100kHz_na_400Hz/licznik<5> & Inst_dzielnik_100kHz_na_400Hz/licznik<6>;	// (2 pt, 8 inp)
+   wy_clk.CLK  =  clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk
+
+MACROCELL | 0 | 14 | Inst_dzielnik_100kHz_na_400Hz/licznik<0>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 8 | 0 | 15 | 0 | 7 | 0 | 8 | 0 | 9 | 0 | 10 | 0 | 4 | 0 | 14 | 0 | 6
+INPUTS | 8 | wy_clk  | Inst_dzielnik_100kHz_na_400Hz/licznik<0>  | Inst_dzielnik_100kHz_na_400Hz/licznik<1>  | Inst_dzielnik_100kHz_na_400Hz/licznik<2>  | Inst_dzielnik_100kHz_na_400Hz/licznik<3>  | Inst_dzielnik_100kHz_na_400Hz/licznik<4>  | Inst_dzielnik_100kHz_na_400Hz/licznik<5>  | Inst_dzielnik_100kHz_na_400Hz/licznik<6>
+INPUTMC | 8 | 0 | 6 | 0 | 14 | 0 | 4 | 0 | 15 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 7
+EQ | 5 | 
+   !Inst_dzielnik_100kHz_na_400Hz/licznik<0>.T := wy_clk & !Inst_dzielnik_100kHz_na_400Hz/licznik<0> & 
+	Inst_dzielnik_100kHz_na_400Hz/licznik<1> & !Inst_dzielnik_100kHz_na_400Hz/licznik<2> & 
+	Inst_dzielnik_100kHz_na_400Hz/licznik<3> & Inst_dzielnik_100kHz_na_400Hz/licznik<4> & 
+	Inst_dzielnik_100kHz_na_400Hz/licznik<5> & Inst_dzielnik_100kHz_na_400Hz/licznik<6>;	// (1 pt, 8 inp)
+   Inst_dzielnik_100kHz_na_400Hz/licznik<0>.CLK  =  clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk
+
+MACROCELL | 0 | 4 | Inst_dzielnik_100kHz_na_400Hz/licznik<1>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 8 | 0 | 15 | 0 | 7 | 0 | 8 | 0 | 9 | 0 | 10 | 0 | 4 | 0 | 14 | 0 | 6
+INPUTS | 8 | Inst_dzielnik_100kHz_na_400Hz/licznik<0>  | wy_clk  | Inst_dzielnik_100kHz_na_400Hz/licznik<1>  | Inst_dzielnik_100kHz_na_400Hz/licznik<2>  | Inst_dzielnik_100kHz_na_400Hz/licznik<3>  | Inst_dzielnik_100kHz_na_400Hz/licznik<4>  | Inst_dzielnik_100kHz_na_400Hz/licznik<5>  | Inst_dzielnik_100kHz_na_400Hz/licznik<6>
+INPUTMC | 8 | 0 | 14 | 0 | 6 | 0 | 4 | 0 | 15 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 7
+EQ | 6 | 
+   Inst_dzielnik_100kHz_na_400Hz/licznik<1>.T := Inst_dzielnik_100kHz_na_400Hz/licznik<0>
+	# wy_clk & Inst_dzielnik_100kHz_na_400Hz/licznik<1> & 
+	!Inst_dzielnik_100kHz_na_400Hz/licznik<2> & Inst_dzielnik_100kHz_na_400Hz/licznik<3> & 
+	Inst_dzielnik_100kHz_na_400Hz/licznik<4> & Inst_dzielnik_100kHz_na_400Hz/licznik<5> & 
+	Inst_dzielnik_100kHz_na_400Hz/licznik<6>;	// (2 pt, 8 inp)
+   Inst_dzielnik_100kHz_na_400Hz/licznik<1>.CLK  =  clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk
+
+MACROCELL | 0 | 15 | Inst_dzielnik_100kHz_na_400Hz/licznik<2>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 7 | 0 | 7 | 0 | 8 | 0 | 9 | 0 | 10 | 0 | 4 | 0 | 14 | 0 | 6
+INPUTS | 2 | Inst_dzielnik_100kHz_na_400Hz/licznik<0>  | Inst_dzielnik_100kHz_na_400Hz/licznik<1>
+INPUTMC | 2 | 0 | 14 | 0 | 4
+EQ | 3 | 
+   Inst_dzielnik_100kHz_na_400Hz/licznik<2>.T := Inst_dzielnik_100kHz_na_400Hz/licznik<0> & 
+	Inst_dzielnik_100kHz_na_400Hz/licznik<1>;	// (1 pt, 2 inp)
+   Inst_dzielnik_100kHz_na_400Hz/licznik<2>.CLK  =  clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk
+
+MACROCELL | 0 | 10 | Inst_dzielnik_100kHz_na_400Hz/licznik<3>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 7 | 0 | 7 | 0 | 8 | 0 | 9 | 0 | 10 | 0 | 4 | 0 | 14 | 0 | 6
+INPUTS | 8 | Inst_dzielnik_100kHz_na_400Hz/licznik<0>  | Inst_dzielnik_100kHz_na_400Hz/licznik<1>  | Inst_dzielnik_100kHz_na_400Hz/licznik<2>  | wy_clk  | Inst_dzielnik_100kHz_na_400Hz/licznik<3>  | Inst_dzielnik_100kHz_na_400Hz/licznik<4>  | Inst_dzielnik_100kHz_na_400Hz/licznik<5>  | Inst_dzielnik_100kHz_na_400Hz/licznik<6>
+INPUTMC | 8 | 0 | 14 | 0 | 4 | 0 | 15 | 0 | 6 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 7
+EQ | 7 | 
+   Inst_dzielnik_100kHz_na_400Hz/licznik<3>.T := Inst_dzielnik_100kHz_na_400Hz/licznik<0> & 
+	Inst_dzielnik_100kHz_na_400Hz/licznik<1> & Inst_dzielnik_100kHz_na_400Hz/licznik<2>
+	# wy_clk & !Inst_dzielnik_100kHz_na_400Hz/licznik<0> & 
+	Inst_dzielnik_100kHz_na_400Hz/licznik<1> & !Inst_dzielnik_100kHz_na_400Hz/licznik<2> & 
+	Inst_dzielnik_100kHz_na_400Hz/licznik<3> & Inst_dzielnik_100kHz_na_400Hz/licznik<4> & 
+	Inst_dzielnik_100kHz_na_400Hz/licznik<5> & Inst_dzielnik_100kHz_na_400Hz/licznik<6>;	// (2 pt, 8 inp)
+   Inst_dzielnik_100kHz_na_400Hz/licznik<3>.CLK  =  clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk
+
+MACROCELL | 0 | 9 | Inst_dzielnik_100kHz_na_400Hz/licznik<4>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 7 | 0 | 7 | 0 | 8 | 0 | 9 | 0 | 10 | 0 | 4 | 0 | 14 | 0 | 6
+INPUTS | 8 | Inst_dzielnik_100kHz_na_400Hz/licznik<0>  | Inst_dzielnik_100kHz_na_400Hz/licznik<1>  | Inst_dzielnik_100kHz_na_400Hz/licznik<2>  | Inst_dzielnik_100kHz_na_400Hz/licznik<3>  | wy_clk  | Inst_dzielnik_100kHz_na_400Hz/licznik<4>  | Inst_dzielnik_100kHz_na_400Hz/licznik<5>  | Inst_dzielnik_100kHz_na_400Hz/licznik<6>
+INPUTMC | 8 | 0 | 14 | 0 | 4 | 0 | 15 | 0 | 10 | 0 | 6 | 0 | 9 | 0 | 8 | 0 | 7
+EQ | 8 | 
+   Inst_dzielnik_100kHz_na_400Hz/licznik<4>.T := Inst_dzielnik_100kHz_na_400Hz/licznik<0> & 
+	Inst_dzielnik_100kHz_na_400Hz/licznik<1> & Inst_dzielnik_100kHz_na_400Hz/licznik<2> & 
+	Inst_dzielnik_100kHz_na_400Hz/licznik<3>
+	# wy_clk & !Inst_dzielnik_100kHz_na_400Hz/licznik<0> & 
+	Inst_dzielnik_100kHz_na_400Hz/licznik<1> & !Inst_dzielnik_100kHz_na_400Hz/licznik<2> & 
+	Inst_dzielnik_100kHz_na_400Hz/licznik<3> & Inst_dzielnik_100kHz_na_400Hz/licznik<4> & 
+	Inst_dzielnik_100kHz_na_400Hz/licznik<5> & Inst_dzielnik_100kHz_na_400Hz/licznik<6>;	// (2 pt, 8 inp)
+   Inst_dzielnik_100kHz_na_400Hz/licznik<4>.CLK  =  clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk
+
+MACROCELL | 0 | 8 | Inst_dzielnik_100kHz_na_400Hz/licznik<5>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 7 | 0 | 7 | 0 | 8 | 0 | 9 | 0 | 10 | 0 | 4 | 0 | 14 | 0 | 6
+INPUTS | 8 | Inst_dzielnik_100kHz_na_400Hz/licznik<0>  | Inst_dzielnik_100kHz_na_400Hz/licznik<1>  | Inst_dzielnik_100kHz_na_400Hz/licznik<2>  | Inst_dzielnik_100kHz_na_400Hz/licznik<3>  | Inst_dzielnik_100kHz_na_400Hz/licznik<4>  | wy_clk  | Inst_dzielnik_100kHz_na_400Hz/licznik<5>  | Inst_dzielnik_100kHz_na_400Hz/licznik<6>
+INPUTMC | 8 | 0 | 14 | 0 | 4 | 0 | 15 | 0 | 10 | 0 | 9 | 0 | 6 | 0 | 8 | 0 | 7
+EQ | 8 | 
+   Inst_dzielnik_100kHz_na_400Hz/licznik<5>.T := Inst_dzielnik_100kHz_na_400Hz/licznik<0> & 
+	Inst_dzielnik_100kHz_na_400Hz/licznik<1> & Inst_dzielnik_100kHz_na_400Hz/licznik<2> & 
+	Inst_dzielnik_100kHz_na_400Hz/licznik<3> & Inst_dzielnik_100kHz_na_400Hz/licznik<4>
+	# wy_clk & !Inst_dzielnik_100kHz_na_400Hz/licznik<0> & 
+	Inst_dzielnik_100kHz_na_400Hz/licznik<1> & !Inst_dzielnik_100kHz_na_400Hz/licznik<2> & 
+	Inst_dzielnik_100kHz_na_400Hz/licznik<3> & Inst_dzielnik_100kHz_na_400Hz/licznik<4> & 
+	Inst_dzielnik_100kHz_na_400Hz/licznik<5> & Inst_dzielnik_100kHz_na_400Hz/licznik<6>;	// (2 pt, 8 inp)
+   Inst_dzielnik_100kHz_na_400Hz/licznik<5>.CLK  =  clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk
+
+MACROCELL | 0 | 7 | Inst_dzielnik_100kHz_na_400Hz/licznik<6>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 7 | 0 | 7 | 0 | 8 | 0 | 9 | 0 | 10 | 0 | 4 | 0 | 14 | 0 | 6
+INPUTS | 8 | Inst_dzielnik_100kHz_na_400Hz/licznik<0>  | Inst_dzielnik_100kHz_na_400Hz/licznik<1>  | Inst_dzielnik_100kHz_na_400Hz/licznik<2>  | Inst_dzielnik_100kHz_na_400Hz/licznik<3>  | Inst_dzielnik_100kHz_na_400Hz/licznik<4>  | Inst_dzielnik_100kHz_na_400Hz/licznik<5>  | wy_clk  | Inst_dzielnik_100kHz_na_400Hz/licznik<6>
+INPUTMC | 8 | 0 | 14 | 0 | 4 | 0 | 15 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 6 | 0 | 7
+EQ | 9 | 
+   Inst_dzielnik_100kHz_na_400Hz/licznik<6>.T := Inst_dzielnik_100kHz_na_400Hz/licznik<0> & 
+	Inst_dzielnik_100kHz_na_400Hz/licznik<1> & Inst_dzielnik_100kHz_na_400Hz/licznik<2> & 
+	Inst_dzielnik_100kHz_na_400Hz/licznik<3> & Inst_dzielnik_100kHz_na_400Hz/licznik<4> & 
+	Inst_dzielnik_100kHz_na_400Hz/licznik<5>
+	# wy_clk & !Inst_dzielnik_100kHz_na_400Hz/licznik<0> & 
+	Inst_dzielnik_100kHz_na_400Hz/licznik<1> & !Inst_dzielnik_100kHz_na_400Hz/licznik<2> & 
+	Inst_dzielnik_100kHz_na_400Hz/licznik<3> & Inst_dzielnik_100kHz_na_400Hz/licznik<4> & 
+	Inst_dzielnik_100kHz_na_400Hz/licznik<5> & Inst_dzielnik_100kHz_na_400Hz/licznik<6>;	// (2 pt, 8 inp)
+   Inst_dzielnik_100kHz_na_400Hz/licznik<6>.CLK  =  clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk
+
+MACROCELL | 0 | 3 | wy_we<1>_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 12 | 10 | 15 | 10 | 14 | 10 | 13 | 10 | 12 | 3 | 4 | 3 | 3 | 1 | 10 | 1 | 15 | 1 | 7 | 1 | 9 | 1 | 8 | 15 | 11
+INPUTS | 1 | wy_sterowanie_kropka
+INPUTMC | 1 | 15 | 5
+LCT | 1 | 2 | Internal_Name
+EQ | 2 | 
+   wy_we<1>.T := !wy_sterowanie_kropka;	// (1 pt, 1 inp)
+    wy_we<1>.CLK = wy_clk;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 10 | 14 | wy_aktywna_anoda<1>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 2 | wy_sterowanie_kropka  | wy_we<1>
+INPUTMC | 2 | 15 | 5 | 0 | 3
+EQ | 1 | 
+   !wy_aktywna_anoda<1> = wy_sterowanie_kropka & wy_we<1>;	// (1 pt, 2 inp)
+
+MACROCELL | 10 | 13 | wy_aktywna_anoda<2>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 2 | wy_sterowanie_kropka  | wy_we<1>
+INPUTMC | 2 | 15 | 5 | 0 | 3
+EQ | 1 | 
+   !wy_aktywna_anoda<2> = !wy_sterowanie_kropka & !wy_we<1>;	// (1 pt, 2 inp)
+
+MACROCELL | 10 | 12 | wy_aktywna_anoda<3>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 2 | wy_sterowanie_kropka  | wy_we<1>
+INPUTMC | 2 | 15 | 5 | 0 | 3
+EQ | 1 | 
+   !wy_aktywna_anoda<3> = wy_sterowanie_kropka & !wy_we<1>;	// (1 pt, 2 inp)
+
+MACROCELL | 15 | 12 | wy_transkoder_7s<0>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 2 | Inst_transkoder_7s/wy<0>12  | N_PZ_466
+INPUTMC | 2 | 1 | 15 | 4 | 10
+EQ | 1 | 
+   !wy_transkoder_7s<0> = !Inst_transkoder_7s/wy<0>12 & !N_PZ_466;	// (1 pt, 2 inp)
+
+MACROCELL | 1 | 15 | Inst_transkoder_7s/wy<0>12_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 4 | 15 | 12 | 15 | 10 | 15 | 11 | 15 | 14
+INPUTS | 22 | wy_we_transkoder7s<1>  | wy_we_transkoder7s<3>  | N_PZ_362  | sw0  | wy_sterowanie_kropka  | wy_we<1>  | wy_s_dz_we3_2<0>  | wy_s_dz_we3_2<2>  | wy_ds_we1_2<2>  | wy_ds_we1_2<0>  | wy_min_we4_2<0>  | wy_min_we4_2<2>  | wy_s_j_we2_2<2>  | wy_s_j_we2_2<0>  | wy_s_dz_we3<0>  | wy_s_dz_we3<2>  | wy_ds_we1<2>  | wy_ds_we1<0>  | wy_min_we4<0>  | wy_min_we4<2>  | wy_s_j_we2<2>  | wy_s_j_we2<0>
+INPUTMC | 21 | 3 | 4 | 3 | 3 | 1 | 10 | 15 | 5 | 0 | 3 | 2 | 7 | 2 | 8 | 2 | 0 | 2 | 14 | 2 | 9 | 2 | 5 | 3 | 2 | 2 | 11 | 3 | 12 | 3 | 14 | 0 | 2 | 1 | 6 | 1 | 14 | 3 | 9 | 3 | 5 | 3 | 15
+INPUTP | 1 | 62
+EQ | 26 | 
+   Inst_transkoder_7s/wy<0>12 = wy_we_transkoder7s<1> & wy_we_transkoder7s<3> & 
+	N_PZ_362
+	# sw0 & wy_sterowanie_kropka & wy_we<1> & 
+	wy_we_transkoder7s<1> & wy_s_dz_we3_2<0> & !wy_s_dz_we3_2<2> & 
+	wy_we_transkoder7s<3>
+	# sw0 & wy_sterowanie_kropka & !wy_we<1> & 
+	wy_we_transkoder7s<1> & !wy_ds_we1_2<2> & wy_ds_we1_2<0> & 
+	wy_we_transkoder7s<3>
+	# sw0 & !wy_sterowanie_kropka & wy_we<1> & 
+	wy_we_transkoder7s<1> & wy_min_we4_2<0> & !wy_min_we4_2<2> & 
+	wy_we_transkoder7s<3>
+	# sw0 & !wy_sterowanie_kropka & !wy_we<1> & 
+	wy_we_transkoder7s<1> & !wy_s_j_we2_2<2> & wy_s_j_we2_2<0> & 
+	wy_we_transkoder7s<3>
+	# !sw0 & wy_sterowanie_kropka & wy_we<1> & 
+	wy_s_dz_we3<0> & !wy_s_dz_we3<2> & wy_we_transkoder7s<1> & 
+	wy_we_transkoder7s<3>
+	# !sw0 & wy_sterowanie_kropka & !wy_we<1> & 
+	!wy_ds_we1<2> & wy_ds_we1<0> & wy_we_transkoder7s<1> & 
+	wy_we_transkoder7s<3>
+	# !sw0 & !wy_sterowanie_kropka & wy_we<1> & 
+	wy_min_we4<0> & !wy_min_we4<2> & wy_we_transkoder7s<1> & 
+	wy_we_transkoder7s<3>
+	# !sw0 & !wy_sterowanie_kropka & !wy_we<1> & 
+	!wy_s_j_we2<2> & wy_s_j_we2<0> & wy_we_transkoder7s<1> & 
+	wy_we_transkoder7s<3>;	// (9 pt, 22 inp)
+
+MACROCELL | 3 | 12 | wy_s_dz_we3<0>_MC
+ATTRIBUTES | 2319450880 | 0
+OUTPUTMC | 17 | 3 | 7 | 1 | 1 | 3 | 9 | 1 | 13 | 3 | 14 | 3 | 10 | 3 | 8 | 1 | 14 | 1 | 5 | 1 | 6 | 3 | 15 | 3 | 12 | 1 | 10 | 1 | 15 | 1 | 9 | 1 | 8 | 15 | 11
+INPUTS | 10 | wy_s_j_we2<1>  | wy_s_j_we2<2>  | N_PZ_414  | wy_s_j_we2<3>  | wy_s_dz_we3<0>  | wy_min_we4<0>  | wy_s_dz_we3<1>  | wy_s_dz_we3<2>  | wy_s_dz_we3<3>  | N_PZ_395
+INPUTMC | 10 | 3 | 13 | 3 | 5 | 3 | 11 | 3 | 10 | 3 | 12 | 1 | 14 | 3 | 8 | 3 | 14 | 3 | 7 | 4 | 12
+LCT | 2 | 4 | Internal_Name | 2 | Internal_Name
+EQ | 8 | 
+   !wy_s_dz_we3<0>.T := wy_s_j_we2<1>
+	# wy_s_j_we2<2>
+	# !N_PZ_414
+	# !wy_s_j_we2<3>
+	# wy_s_dz_we3<0> & wy_min_we4<0> & !wy_s_dz_we3<1> & 
+	wy_s_dz_we3<2> & !wy_s_dz_we3<3> & N_PZ_395;	// (5 pt, 10 inp)
+    wy_s_dz_we3<0>.CLK = wy_clk_mp;	// CTC	(1 pt, 1 inp)
+    wy_s_dz_we3<0>.AR = !sw1 & !b0;	// CTR	(1 pt, 2 inp)
+
+MACROCELL | 3 | 13 | wy_s_j_we2<1>_MC
+ATTRIBUTES | 2319450880 | 0
+OUTPUTMC | 15 | 3 | 7 | 1 | 1 | 3 | 9 | 1 | 13 | 3 | 14 | 3 | 10 | 3 | 8 | 1 | 14 | 1 | 5 | 1 | 6 | 3 | 15 | 3 | 5 | 3 | 13 | 3 | 12 | 3 | 4
+INPUTS | 4 | N_PZ_414  | wy_s_j_we2<1>  | wy_s_j_we2<2>  | wy_s_j_we2<3>
+INPUTMC | 4 | 3 | 11 | 3 | 13 | 3 | 5 | 3 | 10
+LCT | 2 | 4 | Internal_Name | 2 | Internal_Name
+EQ | 4 | 
+   !wy_s_j_we2<1>.T := !N_PZ_414
+	# !wy_s_j_we2<1> & !wy_s_j_we2<2> & wy_s_j_we2<3>;	// (2 pt, 4 inp)
+    wy_s_j_we2<1>.CLK = wy_clk_mp;	// CTC	(1 pt, 1 inp)
+    wy_s_j_we2<1>.AR = !sw1 & !b0;	// CTR	(1 pt, 2 inp)
+
+MACROCELL | 3 | 5 | wy_s_j_we2<2>_MC
+ATTRIBUTES | 2319450880 | 0
+OUTPUTMC | 18 | 3 | 7 | 1 | 1 | 3 | 9 | 1 | 13 | 3 | 14 | 3 | 10 | 3 | 8 | 1 | 14 | 1 | 5 | 1 | 6 | 3 | 15 | 3 | 13 | 3 | 12 | 1 | 10 | 1 | 15 | 1 | 7 | 1 | 9 | 1 | 8
+INPUTS | 2 | wy_s_j_we2<1>  | N_PZ_414
+INPUTMC | 2 | 3 | 13 | 3 | 11
+LCT | 2 | 4 | Internal_Name | 2 | Internal_Name
+EQ | 3 | 
+   wy_s_j_we2<2>.T := wy_s_j_we2<1> & N_PZ_414;	// (1 pt, 2 inp)
+    wy_s_j_we2<2>.CLK = wy_clk_mp;	// CTC	(1 pt, 1 inp)
+    wy_s_j_we2<2>.AR = !sw1 & !b0;	// CTR	(1 pt, 2 inp)
+
+MACROCELL | 3 | 11 | N_PZ_414_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 11 | 3 | 7 | 1 | 1 | 3 | 9 | 1 | 13 | 3 | 14 | 3 | 10 | 3 | 8 | 1 | 14 | 3 | 5 | 3 | 13 | 3 | 12
+INPUTS | 5 | wy_s_j_we2<0>  | wy_ds_we1<1>  | wy_ds_we1<2>  | N_PZ_310  | wy_ds_we1<3>
+INPUTMC | 5 | 3 | 15 | 3 | 6 | 0 | 2 | 3 | 1 | 1 | 5
+EQ | 2 | 
+   N_PZ_414 = wy_s_j_we2<0> & !wy_ds_we1<1> & !wy_ds_we1<2> & 
+	N_PZ_310 & wy_ds_we1<3>;	// (1 pt, 5 inp)
+
+MACROCELL | 3 | 15 | wy_s_j_we2<0>_MC
+ATTRIBUTES | 2319450880 | 0
+OUTPUTMC | 9 | 1 | 5 | 1 | 6 | 3 | 15 | 3 | 11 | 1 | 10 | 1 | 15 | 1 | 9 | 1 | 8 | 15 | 11
+INPUTS | 14 | wy_ds_we1<1>  | wy_ds_we1<2>  | N_PZ_310  | wy_ds_we1<3>  | wy_s_dz_we3<0>  | wy_s_j_we2<1>  | wy_s_j_we2<2>  | wy_s_j_we2<0>  | wy_min_we4<0>  | wy_s_dz_we3<1>  | wy_s_j_we2<3>  | wy_s_dz_we3<2>  | wy_s_dz_we3<3>  | N_PZ_395
+INPUTMC | 14 | 3 | 6 | 0 | 2 | 3 | 1 | 1 | 5 | 3 | 12 | 3 | 13 | 3 | 5 | 3 | 15 | 1 | 14 | 3 | 8 | 3 | 10 | 3 | 14 | 3 | 7 | 4 | 12
+LCT | 2 | 4 | Internal_Name | 2 | Internal_Name
+EQ | 9 | 
+   !wy_s_j_we2<0>.T := wy_ds_we1<1>
+	# wy_ds_we1<2>
+	# !N_PZ_310
+	# !wy_ds_we1<3>
+	# wy_s_dz_we3<0> & !wy_s_j_we2<1> & !wy_s_j_we2<2> & 
+	wy_s_j_we2<0> & wy_min_we4<0> & !wy_s_dz_we3<1> & wy_s_j_we2<3> & 
+	wy_s_dz_we3<2> & !wy_s_dz_we3<3> & N_PZ_395;	// (5 pt, 14 inp)
+    wy_s_j_we2<0>.CLK = wy_clk_mp;	// CTC	(1 pt, 1 inp)
+    wy_s_j_we2<0>.AR = !sw1 & !b0;	// CTR	(1 pt, 2 inp)
+
+MACROCELL | 3 | 6 | wy_ds_we1<1>_MC
+ATTRIBUTES | 2319450880 | 0
+OUTPUTMC | 7 | 1 | 5 | 1 | 6 | 0 | 2 | 3 | 6 | 3 | 15 | 3 | 11 | 3 | 4
+INPUTS | 4 | N_PZ_310  | wy_ds_we1<1>  | wy_ds_we1<2>  | wy_ds_we1<3>
+INPUTMC | 4 | 3 | 1 | 3 | 6 | 0 | 2 | 1 | 5
+LCT | 2 | 4 | Internal_Name | 2 | Internal_Name
+EQ | 4 | 
+   !wy_ds_we1<1>.T := !N_PZ_310
+	# !wy_ds_we1<1> & !wy_ds_we1<2> & wy_ds_we1<3>;	// (2 pt, 4 inp)
+    wy_ds_we1<1>.CLK = wy_clk_mp;	// CTC	(1 pt, 1 inp)
+    wy_ds_we1<1>.AR = !sw1 & !b0;	// CTR	(1 pt, 2 inp)
+
+MACROCELL | 0 | 2 | wy_ds_we1<2>_MC
+ATTRIBUTES | 2185233184 | 0
+OUTPUTMC | 10 | 1 | 5 | 1 | 6 | 3 | 6 | 3 | 15 | 3 | 11 | 1 | 10 | 1 | 15 | 1 | 7 | 1 | 9 | 1 | 8
+INPUTS | 3 | wy_ds_we1<1>  | N_PZ_310  | wy_clk_mp
+INPUTMC | 3 | 3 | 6 | 3 | 1 | 0 | 5
+LCT | 1 | 4 | Internal_Name
+EQ | 3 | 
+   wy_ds_we1<2>.T := wy_ds_we1<1> & N_PZ_310;	// (1 pt, 2 inp)
+    wy_ds_we1<2>.CLK = wy_clk_mp;	// PTC	(1 pt, 1 inp)
+    wy_ds_we1<2>.AR = !sw1 & !b0;	// CTR	(1 pt, 2 inp)
+
+MACROCELL | 3 | 1 | N_PZ_310_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 5 | 1 | 5 | 0 | 2 | 3 | 6 | 3 | 15 | 3 | 11
+INPUTS | 5 | sw0  | sw1  | wy_ds_we1<0>  | Inst_moj_projekt_1/StartStop  | b0
+INPUTMC | 2 | 1 | 6 | 3 | 0
+INPUTP | 3 | 62 | 190 | 218
+EQ | 4 | 
+   N_PZ_310 = !sw0 & sw1 & wy_ds_we1<0> & 
+	Inst_moj_projekt_1/StartStop
+	# !sw0 & wy_ds_we1<0> & !b0 & 
+	Inst_moj_projekt_1/StartStop;	// (2 pt, 5 inp)
+
+MACROCELL | 1 | 6 | wy_ds_we1<0>_MC
+ATTRIBUTES | 2319450880 | 0
+OUTPUTMC | 7 | 1 | 6 | 3 | 1 | 1 | 10 | 1 | 15 | 1 | 9 | 1 | 8 | 15 | 11
+INPUTS | 18 | sw0  | Inst_moj_projekt_1/StartStop  | sw1  | b0  | wy_s_dz_we3<0>  | wy_s_j_we2<1>  | wy_s_j_we2<2>  | wy_s_j_we2<0>  | wy_ds_we1<1>  | wy_ds_we1<2>  | wy_ds_we1<0>  | wy_min_we4<0>  | wy_s_dz_we3<1>  | wy_s_j_we2<3>  | wy_s_dz_we3<2>  | wy_s_dz_we3<3>  | N_PZ_395  | wy_ds_we1<3>
+INPUTMC | 15 | 3 | 0 | 3 | 12 | 3 | 13 | 3 | 5 | 3 | 15 | 3 | 6 | 0 | 2 | 1 | 6 | 1 | 14 | 3 | 8 | 3 | 10 | 3 | 14 | 3 | 7 | 4 | 12 | 1 | 5
+INPUTP | 3 | 62 | 190 | 218
+LCT | 2 | 4 | Internal_Name | 2 | Internal_Name
+EQ | 9 | 
+   !wy_ds_we1<0>.T := sw0
+	# !Inst_moj_projekt_1/StartStop
+	# !sw1 & b0
+	# wy_s_dz_we3<0> & !wy_s_j_we2<1> & !wy_s_j_we2<2> & 
+	wy_s_j_we2<0> & !wy_ds_we1<1> & !wy_ds_we1<2> & wy_ds_we1<0> & 
+	wy_min_we4<0> & !wy_s_dz_we3<1> & wy_s_j_we2<3> & wy_s_dz_we3<2> & 
+	!wy_s_dz_we3<3> & N_PZ_395 & wy_ds_we1<3>;	// (4 pt, 18 inp)
+    wy_ds_we1<0>.CLK = wy_clk_mp;	// CTC	(1 pt, 1 inp)
+    wy_ds_we1<0>.AR = !sw1 & !b0;	// CTR	(1 pt, 2 inp)
+
+MACROCELL | 3 | 0 | Inst_moj_projekt_1/StartStop_MC
+ATTRIBUTES | 2148008736 | 0
+OUTPUTMC | 3 | 3 | 0 | 1 | 6 | 3 | 1
+INPUTS | 5 | sw0  | Inst_moj_projekt_1/StartStop  | b0  | b1  | sw1
+INPUTMC | 1 | 3 | 0
+INPUTP | 4 | 62 | 218 | 142 | 190
+EQ | 4 | 
+   !Inst_moj_projekt_1/StartStop.D = sw0 & !Inst_moj_projekt_1/StartStop
+	# b0 & !Inst_moj_projekt_1/StartStop
+	# !sw0 & b0 & !b1;	// (3 pt, 4 inp)
+    Inst_moj_projekt_1/StartStop.LH = sw1;	// PTC	(1 pt, 1 inp)
+
+MACROCELL | 1 | 14 | wy_min_we4<0>_MC
+ATTRIBUTES | 2319450880 | 0
+OUTPUTMC | 15 | 1 | 1 | 3 | 9 | 1 | 13 | 3 | 14 | 3 | 10 | 1 | 14 | 1 | 5 | 1 | 6 | 3 | 15 | 3 | 12 | 1 | 10 | 1 | 15 | 1 | 9 | 1 | 8 | 15 | 11
+INPUTS | 10 | wy_s_dz_we3<0>  | wy_s_j_we2<1>  | wy_s_j_we2<2>  | N_PZ_414  | wy_min_we4<0>  | wy_s_dz_we3<1>  | wy_s_j_we2<3>  | wy_s_dz_we3<2>  | wy_s_dz_we3<3>  | N_PZ_395
+INPUTMC | 10 | 3 | 12 | 3 | 13 | 3 | 5 | 3 | 11 | 1 | 14 | 3 | 8 | 3 | 10 | 3 | 14 | 3 | 7 | 4 | 12
+LCT | 2 | 4 | Internal_Name | 2 | Internal_Name
+EQ | 8 | 
+   wy_min_we4<0>.T := wy_s_dz_we3<0> & !wy_s_j_we2<1> & !wy_s_j_we2<2> & 
+	N_PZ_414 & !wy_min_we4<0> & !wy_s_dz_we3<1> & wy_s_j_we2<3> & 
+	wy_s_dz_we3<2> & !wy_s_dz_we3<3>
+	# wy_s_dz_we3<0> & !wy_s_j_we2<1> & !wy_s_j_we2<2> & 
+	N_PZ_414 & !wy_s_dz_we3<1> & wy_s_j_we2<3> & wy_s_dz_we3<2> & 
+	!wy_s_dz_we3<3> & !N_PZ_395;	// (2 pt, 10 inp)
+    wy_min_we4<0>.CLK = wy_clk_mp;	// CTC	(1 pt, 1 inp)
+    wy_min_we4<0>.AR = !sw1 & !b0;	// CTR	(1 pt, 2 inp)
+
+MACROCELL | 3 | 8 | wy_s_dz_we3<1>_MC
+ATTRIBUTES | 2319450880 | 0
+OUTPUTMC | 13 | 3 | 7 | 1 | 1 | 3 | 9 | 1 | 13 | 3 | 14 | 3 | 10 | 3 | 8 | 1 | 14 | 1 | 5 | 1 | 6 | 3 | 15 | 3 | 12 | 3 | 4
+INPUTS | 8 | wy_s_dz_we3<0>  | wy_s_j_we2<1>  | wy_s_j_we2<2>  | N_PZ_414  | wy_s_dz_we3<1>  | wy_s_j_we2<3>  | wy_s_dz_we3<2>  | wy_s_dz_we3<3>
+INPUTMC | 8 | 3 | 12 | 3 | 13 | 3 | 5 | 3 | 11 | 3 | 8 | 3 | 10 | 3 | 14 | 3 | 7
+LCT | 2 | 4 | Internal_Name | 2 | Internal_Name
+EQ | 8 | 
+   wy_s_dz_we3<1>.T := wy_s_dz_we3<0> & !wy_s_j_we2<1> & !wy_s_j_we2<2> & 
+	N_PZ_414 & wy_s_dz_we3<1> & wy_s_j_we2<3>
+	# wy_s_dz_we3<0> & !wy_s_j_we2<1> & !wy_s_j_we2<2> & 
+	N_PZ_414 & wy_s_j_we2<3> & !wy_s_dz_we3<2>
+	# wy_s_dz_we3<0> & !wy_s_j_we2<1> & !wy_s_j_we2<2> & 
+	N_PZ_414 & wy_s_j_we2<3> & wy_s_dz_we3<3>;	// (3 pt, 8 inp)
+    wy_s_dz_we3<1>.CLK = wy_clk_mp;	// CTC	(1 pt, 1 inp)
+    wy_s_dz_we3<1>.AR = !sw1 & !b0;	// CTR	(1 pt, 2 inp)
+
+MACROCELL | 3 | 10 | wy_s_j_we2<3>_MC
+ATTRIBUTES | 2323645184 | 0
+OUTPUTMC | 14 | 3 | 7 | 1 | 1 | 3 | 9 | 1 | 13 | 3 | 14 | 3 | 10 | 3 | 8 | 1 | 14 | 1 | 5 | 1 | 6 | 3 | 15 | 3 | 13 | 3 | 12 | 3 | 3
+INPUTS | 10 | N_PZ_414  | wy_s_j_we2<3>  | wy_s_j_we2<1>  | wy_s_j_we2<2>  | wy_s_dz_we3<0>  | wy_min_we4<0>  | wy_s_dz_we3<1>  | wy_s_dz_we3<2>  | wy_s_dz_we3<3>  | N_PZ_395
+INPUTMC | 10 | 3 | 11 | 3 | 10 | 3 | 13 | 3 | 5 | 3 | 12 | 1 | 14 | 3 | 8 | 3 | 14 | 3 | 7 | 4 | 12
+LCT | 2 | 4 | Internal_Name | 2 | Internal_Name
+EQ | 10 | 
+   wy_s_j_we2<3> := !N_PZ_414 & wy_s_j_we2<3>
+	# wy_s_j_we2<1> & !wy_s_j_we2<2> & wy_s_j_we2<3>
+	# !wy_s_j_we2<1> & wy_s_j_we2<2> & wy_s_j_we2<3>
+	# wy_s_j_we2<1> & wy_s_j_we2<2> & N_PZ_414 & 
+	!wy_s_j_we2<3>
+	# wy_s_dz_we3<0> & !wy_s_j_we2<2> & wy_min_we4<0> & 
+	!wy_s_dz_we3<1> & wy_s_j_we2<3> & wy_s_dz_we3<2> & !wy_s_dz_we3<3> & 
+	N_PZ_395;	// (5 pt, 10 inp)
+    wy_s_j_we2<3>.CLK = wy_clk_mp;	// CTC	(1 pt, 1 inp)
+    wy_s_j_we2<3>.AR = !sw1 & !b0;	// CTR	(1 pt, 2 inp)
+
+MACROCELL | 3 | 14 | wy_s_dz_we3<2>_MC
+ATTRIBUTES | 2319450880 | 0
+OUTPUTMC | 17 | 3 | 7 | 1 | 1 | 3 | 9 | 1 | 13 | 3 | 14 | 3 | 10 | 3 | 8 | 1 | 14 | 1 | 5 | 1 | 6 | 3 | 15 | 3 | 12 | 1 | 10 | 1 | 15 | 1 | 7 | 1 | 9 | 1 | 8
+INPUTS | 10 | wy_s_dz_we3<0>  | wy_s_j_we2<1>  | wy_s_j_we2<2>  | N_PZ_414  | wy_s_dz_we3<1>  | wy_s_j_we2<3>  | wy_min_we4<0>  | wy_s_dz_we3<2>  | wy_s_dz_we3<3>  | N_PZ_395
+INPUTMC | 10 | 3 | 12 | 3 | 13 | 3 | 5 | 3 | 11 | 3 | 8 | 3 | 10 | 1 | 14 | 3 | 14 | 3 | 7 | 4 | 12
+LCT | 2 | 4 | Internal_Name | 2 | Internal_Name
+EQ | 10 | 
+   wy_s_dz_we3<2>.T := wy_s_dz_we3<0> & !wy_s_j_we2<1> & !wy_s_j_we2<2> & 
+	N_PZ_414 & wy_s_dz_we3<1> & wy_s_j_we2<3>
+	# wy_s_dz_we3<0> & !wy_s_j_we2<1> & !wy_s_j_we2<2> & 
+	N_PZ_414 & !wy_min_we4<0> & wy_s_j_we2<3> & wy_s_dz_we3<2> & 
+	!wy_s_dz_we3<3>
+	# wy_s_dz_we3<0> & !wy_s_j_we2<1> & !wy_s_j_we2<2> & 
+	N_PZ_414 & wy_s_j_we2<3> & wy_s_dz_we3<2> & !wy_s_dz_we3<3> & 
+	!N_PZ_395;	// (3 pt, 10 inp)
+    wy_s_dz_we3<2>.CLK = wy_clk_mp;	// CTC	(1 pt, 1 inp)
+    wy_s_dz_we3<2>.AR = !sw1 & !b0;	// CTR	(1 pt, 2 inp)
+
+MACROCELL | 3 | 7 | wy_s_dz_we3<3>_MC
+ATTRIBUTES | 2319450880 | 0
+OUTPUTMC | 12 | 1 | 1 | 3 | 9 | 1 | 13 | 3 | 14 | 3 | 10 | 3 | 8 | 1 | 14 | 1 | 5 | 1 | 6 | 3 | 15 | 3 | 12 | 3 | 3
+INPUTS | 7 | wy_s_dz_we3<0>  | wy_s_j_we2<1>  | wy_s_j_we2<2>  | N_PZ_414  | wy_s_dz_we3<1>  | wy_s_j_we2<3>  | wy_s_dz_we3<2>
+INPUTMC | 7 | 3 | 12 | 3 | 13 | 3 | 5 | 3 | 11 | 3 | 8 | 3 | 10 | 3 | 14
+LCT | 2 | 4 | Internal_Name | 2 | Internal_Name
+EQ | 4 | 
+   wy_s_dz_we3<3>.T := wy_s_dz_we3<0> & !wy_s_j_we2<1> & !wy_s_j_we2<2> & 
+	N_PZ_414 & wy_s_dz_we3<1> & wy_s_j_we2<3> & wy_s_dz_we3<2>;	// (1 pt, 7 inp)
+    wy_s_dz_we3<3>.CLK = wy_clk_mp;	// CTC	(1 pt, 1 inp)
+    wy_s_dz_we3<3>.AR = !sw1 & !b0;	// CTR	(1 pt, 2 inp)
+
+MACROCELL | 0 | 5 | wy_clk_mp_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 4 | 0 | 11 | 0 | 12 | 0 | 5 | 0 | 2
+INPUTS | 6 | Inst_dzielnik_400Hz_na_10Hz/licznik<0>  | Inst_dzielnik_400Hz_na_10Hz/licznik<1>  | Inst_dzielnik_400Hz_na_10Hz/licznik<2>  | Inst_dzielnik_400Hz_na_10Hz/licznik<3>  | Inst_dzielnik_400Hz_na_10Hz/licznik<4>  | wy_clk_mp
+INPUTMC | 6 | 0 | 12 | 0 | 1 | 0 | 0 | 0 | 11 | 0 | 13 | 0 | 5
+LCT | 1 | 2 | Internal_Name
+EQ | 8 | 
+   wy_clk_mp.T := Inst_dzielnik_400Hz_na_10Hz/licznik<0> & 
+	Inst_dzielnik_400Hz_na_10Hz/licznik<1> & Inst_dzielnik_400Hz_na_10Hz/licznik<2> & 
+	Inst_dzielnik_400Hz_na_10Hz/licznik<3> & Inst_dzielnik_400Hz_na_10Hz/licznik<4>
+	# wy_clk_mp & 
+	!Inst_dzielnik_400Hz_na_10Hz/licznik<0> & !Inst_dzielnik_400Hz_na_10Hz/licznik<1> & 
+	!Inst_dzielnik_400Hz_na_10Hz/licznik<2> & Inst_dzielnik_400Hz_na_10Hz/licznik<3> & 
+	!Inst_dzielnik_400Hz_na_10Hz/licznik<4>;	// (2 pt, 6 inp)
+    wy_clk_mp.CLK = wy_clk;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 0 | 12 | Inst_dzielnik_400Hz_na_10Hz/licznik<0>_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 6 | 0 | 1 | 0 | 0 | 0 | 13 | 0 | 11 | 0 | 12 | 0 | 5
+INPUTS | 6 | wy_clk_mp  | Inst_dzielnik_400Hz_na_10Hz/licznik<0>  | Inst_dzielnik_400Hz_na_10Hz/licznik<1>  | Inst_dzielnik_400Hz_na_10Hz/licznik<2>  | Inst_dzielnik_400Hz_na_10Hz/licznik<3>  | Inst_dzielnik_400Hz_na_10Hz/licznik<4>
+INPUTMC | 6 | 0 | 5 | 0 | 12 | 0 | 1 | 0 | 0 | 0 | 11 | 0 | 13
+LCT | 1 | 2 | Internal_Name
+EQ | 5 | 
+   !Inst_dzielnik_400Hz_na_10Hz/licznik<0>.T := wy_clk_mp & 
+	!Inst_dzielnik_400Hz_na_10Hz/licznik<0> & !Inst_dzielnik_400Hz_na_10Hz/licznik<1> & 
+	!Inst_dzielnik_400Hz_na_10Hz/licznik<2> & Inst_dzielnik_400Hz_na_10Hz/licznik<3> & 
+	!Inst_dzielnik_400Hz_na_10Hz/licznik<4>;	// (1 pt, 6 inp)
+    Inst_dzielnik_400Hz_na_10Hz/licznik<0>.CLK = wy_clk;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 0 | 1 | Inst_dzielnik_400Hz_na_10Hz/licznik<1>_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 5 | 0 | 0 | 0 | 13 | 0 | 11 | 0 | 12 | 0 | 5
+INPUTS | 1 | Inst_dzielnik_400Hz_na_10Hz/licznik<0>
+INPUTMC | 1 | 0 | 12
+LCT | 1 | 2 | Internal_Name
+EQ | 2 | 
+   Inst_dzielnik_400Hz_na_10Hz/licznik<1>.T := Inst_dzielnik_400Hz_na_10Hz/licznik<0>;	// (1 pt, 1 inp)
+    Inst_dzielnik_400Hz_na_10Hz/licznik<1>.CLK = wy_clk;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 0 | 0 | Inst_dzielnik_400Hz_na_10Hz/licznik<2>_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 4 | 0 | 13 | 0 | 11 | 0 | 12 | 0 | 5
+INPUTS | 2 | Inst_dzielnik_400Hz_na_10Hz/licznik<0>  | Inst_dzielnik_400Hz_na_10Hz/licznik<1>
+INPUTMC | 2 | 0 | 12 | 0 | 1
+LCT | 1 | 2 | Internal_Name
+EQ | 3 | 
+   Inst_dzielnik_400Hz_na_10Hz/licznik<2>.T := Inst_dzielnik_400Hz_na_10Hz/licznik<0> & 
+	Inst_dzielnik_400Hz_na_10Hz/licznik<1>;	// (1 pt, 2 inp)
+    Inst_dzielnik_400Hz_na_10Hz/licznik<2>.CLK = wy_clk;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 0 | 11 | Inst_dzielnik_400Hz_na_10Hz/licznik<3>_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 4 | 0 | 13 | 0 | 11 | 0 | 12 | 0 | 5
+INPUTS | 6 | Inst_dzielnik_400Hz_na_10Hz/licznik<0>  | Inst_dzielnik_400Hz_na_10Hz/licznik<1>  | Inst_dzielnik_400Hz_na_10Hz/licznik<2>  | wy_clk_mp  | Inst_dzielnik_400Hz_na_10Hz/licznik<3>  | Inst_dzielnik_400Hz_na_10Hz/licznik<4>
+INPUTMC | 6 | 0 | 12 | 0 | 1 | 0 | 0 | 0 | 5 | 0 | 11 | 0 | 13
+LCT | 1 | 2 | Internal_Name
+EQ | 7 | 
+   Inst_dzielnik_400Hz_na_10Hz/licznik<3>.T := Inst_dzielnik_400Hz_na_10Hz/licznik<0> & 
+	Inst_dzielnik_400Hz_na_10Hz/licznik<1> & Inst_dzielnik_400Hz_na_10Hz/licznik<2>
+	# wy_clk_mp & 
+	!Inst_dzielnik_400Hz_na_10Hz/licznik<0> & !Inst_dzielnik_400Hz_na_10Hz/licznik<1> & 
+	!Inst_dzielnik_400Hz_na_10Hz/licznik<2> & Inst_dzielnik_400Hz_na_10Hz/licznik<3> & 
+	!Inst_dzielnik_400Hz_na_10Hz/licznik<4>;	// (2 pt, 6 inp)
+    Inst_dzielnik_400Hz_na_10Hz/licznik<3>.CLK = wy_clk;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 0 | 13 | Inst_dzielnik_400Hz_na_10Hz/licznik<4>_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 3 | 0 | 11 | 0 | 12 | 0 | 5
+INPUTS | 4 | Inst_dzielnik_400Hz_na_10Hz/licznik<0>  | Inst_dzielnik_400Hz_na_10Hz/licznik<1>  | Inst_dzielnik_400Hz_na_10Hz/licznik<2>  | Inst_dzielnik_400Hz_na_10Hz/licznik<3>
+INPUTMC | 4 | 0 | 12 | 0 | 1 | 0 | 0 | 0 | 11
+LCT | 1 | 2 | Internal_Name
+EQ | 4 | 
+   Inst_dzielnik_400Hz_na_10Hz/licznik<4>.T := Inst_dzielnik_400Hz_na_10Hz/licznik<0> & 
+	Inst_dzielnik_400Hz_na_10Hz/licznik<1> & Inst_dzielnik_400Hz_na_10Hz/licznik<2> & 
+	Inst_dzielnik_400Hz_na_10Hz/licznik<3>;	// (1 pt, 4 inp)
+    Inst_dzielnik_400Hz_na_10Hz/licznik<4>.CLK = wy_clk;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 4 | 12 | N_PZ_395_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 8 | 1 | 1 | 3 | 14 | 3 | 10 | 1 | 14 | 1 | 5 | 1 | 6 | 3 | 15 | 3 | 12
+INPUTS | 3 | wy_min_we4<1>  | wy_min_we4<2>  | wy_min_we4<3>
+INPUTMC | 3 | 1 | 1 | 3 | 9 | 1 | 13
+EQ | 1 | 
+   N_PZ_395 = !wy_min_we4<1> & !wy_min_we4<2> & wy_min_we4<3>;	// (1 pt, 3 inp)
+
+MACROCELL | 1 | 1 | wy_min_we4<1>_MC
+ATTRIBUTES | 2319450880 | 0
+OUTPUTMC | 4 | 3 | 9 | 1 | 13 | 4 | 12 | 3 | 4
+INPUTS | 10 | wy_s_dz_we3<0>  | wy_s_j_we2<1>  | wy_s_j_we2<2>  | N_PZ_414  | wy_min_we4<0>  | wy_s_dz_we3<1>  | wy_s_j_we2<3>  | wy_s_dz_we3<2>  | wy_s_dz_we3<3>  | N_PZ_395
+INPUTMC | 10 | 3 | 12 | 3 | 13 | 3 | 5 | 3 | 11 | 1 | 14 | 3 | 8 | 3 | 10 | 3 | 14 | 3 | 7 | 4 | 12
+LCT | 2 | 4 | Internal_Name | 2 | Internal_Name
+EQ | 5 | 
+   wy_min_we4<1>.T := wy_s_dz_we3<0> & !wy_s_j_we2<1> & !wy_s_j_we2<2> & 
+	N_PZ_414 & wy_min_we4<0> & !wy_s_dz_we3<1> & wy_s_j_we2<3> & 
+	wy_s_dz_we3<2> & !wy_s_dz_we3<3> & !N_PZ_395;	// (1 pt, 10 inp)
+    wy_min_we4<1>.CLK = wy_clk_mp;	// CTC	(1 pt, 1 inp)
+    wy_min_we4<1>.AR = !sw1 & !b0;	// CTR	(1 pt, 2 inp)
+
+MACROCELL | 3 | 9 | wy_min_we4<2>_MC
+ATTRIBUTES | 2319450880 | 0
+OUTPUTMC | 7 | 1 | 13 | 4 | 12 | 1 | 10 | 1 | 15 | 1 | 7 | 1 | 9 | 1 | 8
+INPUTS | 10 | wy_s_dz_we3<0>  | wy_s_j_we2<1>  | wy_s_j_we2<2>  | N_PZ_414  | wy_min_we4<0>  | wy_s_dz_we3<1>  | wy_s_j_we2<3>  | wy_s_dz_we3<2>  | wy_s_dz_we3<3>  | wy_min_we4<1>
+INPUTMC | 10 | 3 | 12 | 3 | 13 | 3 | 5 | 3 | 11 | 1 | 14 | 3 | 8 | 3 | 10 | 3 | 14 | 3 | 7 | 1 | 1
+LCT | 2 | 4 | Internal_Name | 2 | Internal_Name
+EQ | 5 | 
+   wy_min_we4<2>.T := wy_s_dz_we3<0> & !wy_s_j_we2<1> & !wy_s_j_we2<2> & 
+	N_PZ_414 & wy_min_we4<0> & !wy_s_dz_we3<1> & wy_s_j_we2<3> & 
+	wy_s_dz_we3<2> & !wy_s_dz_we3<3> & wy_min_we4<1>;	// (1 pt, 10 inp)
+    wy_min_we4<2>.CLK = wy_clk_mp;	// CTC	(1 pt, 1 inp)
+    wy_min_we4<2>.AR = !sw1 & !b0;	// CTR	(1 pt, 2 inp)
+
+MACROCELL | 1 | 13 | wy_min_we4<3>_MC
+ATTRIBUTES | 2319450880 | 0
+OUTPUTMC | 2 | 4 | 12 | 3 | 3
+INPUTS | 11 | wy_s_dz_we3<0>  | wy_s_j_we2<1>  | wy_s_j_we2<2>  | N_PZ_414  | wy_min_we4<0>  | wy_s_dz_we3<1>  | wy_s_j_we2<3>  | wy_s_dz_we3<2>  | wy_s_dz_we3<3>  | wy_min_we4<1>  | wy_min_we4<2>
+INPUTMC | 11 | 3 | 12 | 3 | 13 | 3 | 5 | 3 | 11 | 1 | 14 | 3 | 8 | 3 | 10 | 3 | 14 | 3 | 7 | 1 | 1 | 3 | 9
+LCT | 2 | 4 | Internal_Name | 2 | Internal_Name
+EQ | 5 | 
+   wy_min_we4<3>.T := wy_s_dz_we3<0> & !wy_s_j_we2<1> & !wy_s_j_we2<2> & 
+	N_PZ_414 & wy_min_we4<0> & !wy_s_dz_we3<1> & wy_s_j_we2<3> & 
+	wy_s_dz_we3<2> & !wy_s_dz_we3<3> & wy_min_we4<1> & wy_min_we4<2>;	// (1 pt, 11 inp)
+    wy_min_we4<3>.CLK = wy_clk_mp;	// CTC	(1 pt, 1 inp)
+    wy_min_we4<3>.AR = !sw1 & !b0;	// CTR	(1 pt, 2 inp)
+
+MACROCELL | 1 | 5 | wy_ds_we1<3>_MC
+ATTRIBUTES | 2323645184 | 0
+OUTPUTMC | 6 | 1 | 5 | 1 | 6 | 3 | 6 | 3 | 15 | 3 | 11 | 3 | 3
+INPUTS | 14 | N_PZ_310  | wy_ds_we1<3>  | wy_ds_we1<1>  | wy_ds_we1<2>  | wy_s_dz_we3<0>  | wy_s_j_we2<1>  | wy_s_j_we2<2>  | wy_s_j_we2<0>  | wy_min_we4<0>  | wy_s_dz_we3<1>  | wy_s_j_we2<3>  | wy_s_dz_we3<2>  | wy_s_dz_we3<3>  | N_PZ_395
+INPUTMC | 14 | 3 | 1 | 1 | 5 | 3 | 6 | 0 | 2 | 3 | 12 | 3 | 13 | 3 | 5 | 3 | 15 | 1 | 14 | 3 | 8 | 3 | 10 | 3 | 14 | 3 | 7 | 4 | 12
+LCT | 2 | 4 | Internal_Name | 2 | Internal_Name
+EQ | 11 | 
+   wy_ds_we1<3> := !N_PZ_310 & wy_ds_we1<3>
+	# wy_ds_we1<1> & !wy_ds_we1<2> & wy_ds_we1<3>
+	# !wy_ds_we1<1> & wy_ds_we1<2> & wy_ds_we1<3>
+	# wy_ds_we1<1> & wy_ds_we1<2> & N_PZ_310 & 
+	!wy_ds_we1<3>
+	# wy_s_dz_we3<0> & !wy_s_j_we2<1> & !wy_s_j_we2<2> & 
+	wy_s_j_we2<0> & !wy_ds_we1<2> & wy_min_we4<0> & !wy_s_dz_we3<1> & 
+	wy_s_j_we2<3> & wy_s_dz_we3<2> & !wy_s_dz_we3<3> & N_PZ_395 & 
+	wy_ds_we1<3>;	// (5 pt, 14 inp)
+    wy_ds_we1<3>.CLK = wy_clk_mp;	// CTC	(1 pt, 1 inp)
+    wy_ds_we1<3>.AR = !sw1 & !b0;	// CTR	(1 pt, 2 inp)
+
+MACROCELL | 3 | 4 | wy_we_transkoder7s<1>_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 8 | 1 | 15 | 4 | 10 | 15 | 15 | 15 | 4 | 15 | 10 | 15 | 11 | 15 | 14 | 13 | 15
+INPUTS | 11 | sw0  | wy_sterowanie_kropka  | wy_we<1>  | wy_s_dz_we3_2<1>  | wy_ds_we1_2<1>  | wy_min_we4_2<1>  | wy_s_j_we2_2<1>  | wy_s_dz_we3<1>  | wy_ds_we1<1>  | wy_min_we4<1>  | wy_s_j_we2<1>
+INPUTMC | 10 | 15 | 5 | 0 | 3 | 2 | 15 | 2 | 4 | 2 | 10 | 2 | 2 | 3 | 8 | 3 | 6 | 1 | 1 | 3 | 13
+INPUTP | 1 | 62
+EQ | 16 | 
+   wy_we_transkoder7s<1> = sw0 & wy_sterowanie_kropka & wy_we<1> & 
+	!wy_s_dz_we3_2<1>
+	# sw0 & wy_sterowanie_kropka & !wy_we<1> & 
+	!wy_ds_we1_2<1>
+	# sw0 & !wy_sterowanie_kropka & wy_we<1> & 
+	!wy_min_we4_2<1>
+	# sw0 & !wy_sterowanie_kropka & !wy_we<1> & 
+	!wy_s_j_we2_2<1>
+	# !sw0 & wy_sterowanie_kropka & wy_we<1> & 
+	!wy_s_dz_we3<1>
+	# !sw0 & wy_sterowanie_kropka & !wy_we<1> & 
+	!wy_ds_we1<1>
+	# !sw0 & !wy_sterowanie_kropka & wy_we<1> & 
+	!wy_min_we4<1>
+	# !sw0 & !wy_sterowanie_kropka & !wy_we<1> & 
+	!wy_s_j_we2<1>;	// (8 pt, 11 inp)
+
+MACROCELL | 2 | 15 | wy_s_dz_we3_2<1>_MC
+ATTRIBUTES | 2319450880 | 0
+OUTPUTMC | 13 | 2 | 13 | 2 | 10 | 2 | 5 | 2 | 3 | 2 | 6 | 2 | 8 | 2 | 9 | 2 | 12 | 2 | 14 | 2 | 11 | 2 | 7 | 2 | 15 | 3 | 4
+INPUTS | 8 | wy_s_dz_we3_2<1>  | wy_s_dz_we3_2<0>  | wy_s_j_we2_2<1>  | wy_s_j_we2_2<2>  | N_PZ_415  | wy_s_j_we2_2<3>  | wy_s_dz_we3_2<2>  | wy_s_dz_we3_2<3>
+INPUTMC | 8 | 2 | 15 | 2 | 7 | 2 | 2 | 3 | 2 | 2 | 1 | 2 | 6 | 2 | 8 | 2 | 13
+LCT | 2 | 4 | Internal_Name | 2 | Internal_Name
+EQ | 8 | 
+   wy_s_dz_we3_2<1>.T := wy_s_dz_we3_2<1> & wy_s_dz_we3_2<0> & 
+	!wy_s_j_we2_2<1> & !wy_s_j_we2_2<2> & N_PZ_415 & wy_s_j_we2_2<3>
+	# wy_s_dz_we3_2<0> & !wy_s_j_we2_2<1> & 
+	!wy_s_j_we2_2<2> & N_PZ_415 & !wy_s_dz_we3_2<2> & wy_s_j_we2_2<3>
+	# wy_s_dz_we3_2<0> & !wy_s_j_we2_2<1> & 
+	!wy_s_j_we2_2<2> & N_PZ_415 & wy_s_j_we2_2<3> & wy_s_dz_we3_2<3>;	// (3 pt, 8 inp)
+    wy_s_dz_we3_2<1>.CLK = wy_clk_mp;	// CTC	(1 pt, 1 inp)
+    wy_s_dz_we3_2<1>.AR = !sw1 & !b0;	// CTR	(1 pt, 2 inp)
+
+MACROCELL | 2 | 7 | wy_s_dz_we3_2<0>_MC
+ATTRIBUTES | 2319450880 | 0
+OUTPUTMC | 17 | 2 | 13 | 2 | 10 | 2 | 5 | 2 | 3 | 2 | 6 | 2 | 8 | 2 | 9 | 2 | 12 | 2 | 14 | 2 | 11 | 2 | 7 | 2 | 15 | 1 | 10 | 1 | 15 | 1 | 9 | 1 | 8 | 15 | 11
+INPUTS | 10 | wy_s_j_we2_2<1>  | wy_s_j_we2_2<2>  | N_PZ_415  | wy_s_j_we2_2<3>  | wy_s_dz_we3_2<1>  | wy_s_dz_we3_2<0>  | wy_min_we4_2<0>  | wy_s_dz_we3_2<2>  | wy_s_dz_we3_2<3>  | N_PZ_396
+INPUTMC | 10 | 2 | 2 | 3 | 2 | 2 | 1 | 2 | 6 | 2 | 15 | 2 | 7 | 2 | 9 | 2 | 8 | 2 | 13 | 4 | 11
+LCT | 2 | 4 | Internal_Name | 2 | Internal_Name
+EQ | 8 | 
+   !wy_s_dz_we3_2<0>.T := wy_s_j_we2_2<1>
+	# wy_s_j_we2_2<2>
+	# !N_PZ_415
+	# !wy_s_j_we2_2<3>
+	# !wy_s_dz_we3_2<1> & wy_s_dz_we3_2<0> & 
+	wy_min_we4_2<0> & wy_s_dz_we3_2<2> & !wy_s_dz_we3_2<3> & N_PZ_396;	// (5 pt, 10 inp)
+    wy_s_dz_we3_2<0>.CLK = wy_clk_mp;	// CTC	(1 pt, 1 inp)
+    wy_s_dz_we3_2<0>.AR = !sw1 & !b0;	// CTR	(1 pt, 2 inp)
+
+MACROCELL | 2 | 2 | wy_s_j_we2_2<1>_MC
+ATTRIBUTES | 2319450880 | 0
+OUTPUTMC | 15 | 2 | 13 | 2 | 10 | 2 | 5 | 2 | 3 | 2 | 6 | 2 | 8 | 2 | 9 | 2 | 12 | 2 | 14 | 2 | 11 | 3 | 2 | 2 | 2 | 2 | 7 | 2 | 15 | 3 | 4
+INPUTS | 4 | N_PZ_415  | wy_s_j_we2_2<1>  | wy_s_j_we2_2<2>  | wy_s_j_we2_2<3>
+INPUTMC | 4 | 2 | 1 | 2 | 2 | 3 | 2 | 2 | 6
+LCT | 2 | 4 | Internal_Name | 2 | Internal_Name
+EQ | 5 | 
+   !wy_s_j_we2_2<1>.T := !N_PZ_415
+	# !wy_s_j_we2_2<1> & !wy_s_j_we2_2<2> & 
+	wy_s_j_we2_2<3>;	// (2 pt, 4 inp)
+    wy_s_j_we2_2<1>.CLK = wy_clk_mp;	// CTC	(1 pt, 1 inp)
+    wy_s_j_we2_2<1>.AR = !sw1 & !b0;	// CTR	(1 pt, 2 inp)
+
+MACROCELL | 3 | 2 | wy_s_j_we2_2<2>_MC
+ATTRIBUTES | 2319450880 | 0
+OUTPUTMC | 18 | 2 | 13 | 2 | 10 | 2 | 5 | 2 | 3 | 2 | 6 | 2 | 8 | 2 | 9 | 2 | 12 | 2 | 14 | 2 | 11 | 2 | 2 | 2 | 7 | 2 | 15 | 1 | 10 | 1 | 15 | 1 | 7 | 1 | 9 | 1 | 8
+INPUTS | 2 | wy_s_j_we2_2<1>  | N_PZ_415
+INPUTMC | 2 | 2 | 2 | 2 | 1
+LCT | 2 | 4 | Internal_Name | 2 | Internal_Name
+EQ | 3 | 
+   wy_s_j_we2_2<2>.T := wy_s_j_we2_2<1> & N_PZ_415;	// (1 pt, 2 inp)
+    wy_s_j_we2_2<2>.CLK = wy_clk_mp;	// CTC	(1 pt, 1 inp)
+    wy_s_j_we2_2<2>.AR = !sw1 & !b0;	// CTR	(1 pt, 2 inp)
+
+MACROCELL | 2 | 1 | N_PZ_415_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 11 | 2 | 13 | 2 | 10 | 2 | 5 | 2 | 3 | 2 | 6 | 2 | 8 | 2 | 9 | 3 | 2 | 2 | 2 | 2 | 7 | 2 | 15
+INPUTS | 5 | wy_s_j_we2_2<0>  | wy_ds_we1_2<1>  | wy_ds_we1_2<2>  | N_PZ_311  | wy_ds_we1_2<3>
+INPUTMC | 5 | 2 | 11 | 2 | 4 | 2 | 0 | 4 | 14 | 2 | 12
+EQ | 2 | 
+   N_PZ_415 = wy_s_j_we2_2<0> & !wy_ds_we1_2<1> & 
+	!wy_ds_we1_2<2> & N_PZ_311 & wy_ds_we1_2<3>;	// (1 pt, 5 inp)
+
+MACROCELL | 2 | 11 | wy_s_j_we2_2<0>_MC
+ATTRIBUTES | 2319450880 | 0
+OUTPUTMC | 9 | 2 | 12 | 2 | 14 | 2 | 11 | 2 | 1 | 1 | 10 | 1 | 15 | 1 | 9 | 1 | 8 | 15 | 11
+INPUTS | 14 | wy_ds_we1_2<1>  | wy_ds_we1_2<2>  | N_PZ_311  | wy_ds_we1_2<3>  | wy_s_dz_we3_2<1>  | wy_s_dz_we3_2<0>  | wy_s_j_we2_2<1>  | wy_s_j_we2_2<2>  | wy_s_j_we2_2<0>  | wy_min_we4_2<0>  | wy_s_dz_we3_2<2>  | wy_s_j_we2_2<3>  | wy_s_dz_we3_2<3>  | N_PZ_396
+INPUTMC | 14 | 2 | 4 | 2 | 0 | 4 | 14 | 2 | 12 | 2 | 15 | 2 | 7 | 2 | 2 | 3 | 2 | 2 | 11 | 2 | 9 | 2 | 8 | 2 | 6 | 2 | 13 | 4 | 11
+LCT | 2 | 4 | Internal_Name | 2 | Internal_Name
+EQ | 10 | 
+   !wy_s_j_we2_2<0>.T := wy_ds_we1_2<1>
+	# wy_ds_we1_2<2>
+	# !N_PZ_311
+	# !wy_ds_we1_2<3>
+	# !wy_s_dz_we3_2<1> & wy_s_dz_we3_2<0> & 
+	!wy_s_j_we2_2<1> & !wy_s_j_we2_2<2> & wy_s_j_we2_2<0> & 
+	wy_min_we4_2<0> & wy_s_dz_we3_2<2> & wy_s_j_we2_2<3> & 
+	!wy_s_dz_we3_2<3> & N_PZ_396;	// (5 pt, 14 inp)
+    wy_s_j_we2_2<0>.CLK = wy_clk_mp;	// CTC	(1 pt, 1 inp)
+    wy_s_j_we2_2<0>.AR = !sw1 & !b0;	// CTR	(1 pt, 2 inp)
+
+MACROCELL | 2 | 4 | wy_ds_we1_2<1>_MC
+ATTRIBUTES | 2319450880 | 0
+OUTPUTMC | 7 | 2 | 12 | 2 | 14 | 2 | 0 | 2 | 4 | 2 | 11 | 2 | 1 | 3 | 4
+INPUTS | 4 | N_PZ_311  | wy_ds_we1_2<1>  | wy_ds_we1_2<2>  | wy_ds_we1_2<3>
+INPUTMC | 4 | 4 | 14 | 2 | 4 | 2 | 0 | 2 | 12
+LCT | 2 | 4 | Internal_Name | 2 | Internal_Name
+EQ | 4 | 
+   !wy_ds_we1_2<1>.T := !N_PZ_311
+	# !wy_ds_we1_2<1> & !wy_ds_we1_2<2> & wy_ds_we1_2<3>;	// (2 pt, 4 inp)
+    wy_ds_we1_2<1>.CLK = wy_clk_mp;	// CTC	(1 pt, 1 inp)
+    wy_ds_we1_2<1>.AR = !sw1 & !b0;	// CTR	(1 pt, 2 inp)
+
+MACROCELL | 2 | 0 | wy_ds_we1_2<2>_MC
+ATTRIBUTES | 2319450880 | 0
+OUTPUTMC | 10 | 2 | 12 | 2 | 14 | 2 | 4 | 2 | 11 | 2 | 1 | 1 | 10 | 1 | 15 | 1 | 7 | 1 | 9 | 1 | 8
+INPUTS | 2 | wy_ds_we1_2<1>  | N_PZ_311
+INPUTMC | 2 | 2 | 4 | 4 | 14
+LCT | 2 | 4 | Internal_Name | 2 | Internal_Name
+EQ | 3 | 
+   wy_ds_we1_2<2>.T := wy_ds_we1_2<1> & N_PZ_311;	// (1 pt, 2 inp)
+    wy_ds_we1_2<2>.CLK = wy_clk_mp;	// CTC	(1 pt, 1 inp)
+    wy_ds_we1_2<2>.AR = !sw1 & !b0;	// CTR	(1 pt, 2 inp)
+
+MACROCELL | 4 | 14 | N_PZ_311_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 5 | 2 | 12 | 2 | 0 | 2 | 4 | 2 | 11 | 2 | 1
+INPUTS | 5 | sw0  | sw1  | wy_ds_we1_2<0>  | Inst_moj_projekt_2/StartStop  | b0
+INPUTMC | 2 | 2 | 14 | 4 | 15
+INPUTP | 3 | 62 | 190 | 218
+EQ | 4 | 
+   N_PZ_311 = sw0 & sw1 & wy_ds_we1_2<0> & 
+	Inst_moj_projekt_2/StartStop
+	# sw0 & !b0 & wy_ds_we1_2<0> & 
+	Inst_moj_projekt_2/StartStop;	// (2 pt, 5 inp)
+
+MACROCELL | 2 | 14 | wy_ds_we1_2<0>_MC
+ATTRIBUTES | 2319450880 | 0
+OUTPUTMC | 7 | 2 | 14 | 4 | 14 | 1 | 10 | 1 | 15 | 1 | 9 | 1 | 8 | 15 | 11
+INPUTS | 18 | sw0  | Inst_moj_projekt_2/StartStop  | sw1  | b0  | wy_s_dz_we3_2<1>  | wy_s_dz_we3_2<0>  | wy_s_j_we2_2<1>  | wy_s_j_we2_2<2>  | wy_s_j_we2_2<0>  | wy_ds_we1_2<1>  | wy_ds_we1_2<2>  | wy_ds_we1_2<0>  | wy_min_we4_2<0>  | wy_s_dz_we3_2<2>  | wy_s_j_we2_2<3>  | wy_s_dz_we3_2<3>  | N_PZ_396  | wy_ds_we1_2<3>
+INPUTMC | 15 | 4 | 15 | 2 | 15 | 2 | 7 | 2 | 2 | 3 | 2 | 2 | 11 | 2 | 4 | 2 | 0 | 2 | 14 | 2 | 9 | 2 | 8 | 2 | 6 | 2 | 13 | 4 | 11 | 2 | 12
+INPUTP | 3 | 62 | 190 | 218
+LCT | 2 | 4 | Internal_Name | 2 | Internal_Name
+EQ | 10 | 
+   !wy_ds_we1_2<0>.T := !sw0
+	# !Inst_moj_projekt_2/StartStop
+	# !sw1 & b0
+	# !wy_s_dz_we3_2<1> & wy_s_dz_we3_2<0> & 
+	!wy_s_j_we2_2<1> & !wy_s_j_we2_2<2> & wy_s_j_we2_2<0> & 
+	!wy_ds_we1_2<1> & !wy_ds_we1_2<2> & wy_ds_we1_2<0> & 
+	wy_min_we4_2<0> & wy_s_dz_we3_2<2> & wy_s_j_we2_2<3> & 
+	!wy_s_dz_we3_2<3> & N_PZ_396 & wy_ds_we1_2<3>;	// (4 pt, 18 inp)
+    wy_ds_we1_2<0>.CLK = wy_clk_mp;	// CTC	(1 pt, 1 inp)
+    wy_ds_we1_2<0>.AR = !sw1 & !b0;	// CTR	(1 pt, 2 inp)
+
+MACROCELL | 4 | 15 | Inst_moj_projekt_2/StartStop_MC
+ATTRIBUTES | 2282226432 | 0
+OUTPUTMC | 3 | 4 | 15 | 2 | 14 | 4 | 14
+INPUTS | 4 | sw0  | Inst_moj_projekt_2/StartStop  | b0  | b1
+INPUTMC | 1 | 4 | 15
+INPUTP | 3 | 62 | 218 | 142
+LCT | 1 | 2 | Internal_Name
+EQ | 4 | 
+   !Inst_moj_projekt_2/StartStop.D = !sw0 & !Inst_moj_projekt_2/StartStop
+	# b0 & !Inst_moj_projekt_2/StartStop
+	# sw0 & b0 & !b1;	// (3 pt, 4 inp)
+    Inst_moj_projekt_2/StartStop.LH = sw1;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 2 | 9 | wy_min_we4_2<0>_MC
+ATTRIBUTES | 2319450880 | 0
+OUTPUTMC | 15 | 2 | 10 | 2 | 5 | 2 | 3 | 2 | 6 | 2 | 8 | 2 | 9 | 2 | 12 | 2 | 14 | 2 | 11 | 2 | 7 | 1 | 10 | 1 | 15 | 1 | 9 | 1 | 8 | 15 | 11
+INPUTS | 10 | wy_s_dz_we3_2<1>  | wy_s_dz_we3_2<0>  | wy_s_j_we2_2<1>  | wy_s_j_we2_2<2>  | N_PZ_415  | wy_min_we4_2<0>  | wy_s_dz_we3_2<2>  | wy_s_j_we2_2<3>  | wy_s_dz_we3_2<3>  | N_PZ_396
+INPUTMC | 10 | 2 | 15 | 2 | 7 | 2 | 2 | 3 | 2 | 2 | 1 | 2 | 9 | 2 | 8 | 2 | 6 | 2 | 13 | 4 | 11
+LCT | 2 | 4 | Internal_Name | 2 | Internal_Name
+EQ | 8 | 
+   wy_min_we4_2<0>.T := !wy_s_dz_we3_2<1> & wy_s_dz_we3_2<0> & 
+	!wy_s_j_we2_2<1> & !wy_s_j_we2_2<2> & N_PZ_415 & !wy_min_we4_2<0> & 
+	wy_s_dz_we3_2<2> & wy_s_j_we2_2<3> & !wy_s_dz_we3_2<3>
+	# !wy_s_dz_we3_2<1> & wy_s_dz_we3_2<0> & 
+	!wy_s_j_we2_2<1> & !wy_s_j_we2_2<2> & N_PZ_415 & wy_s_dz_we3_2<2> & 
+	wy_s_j_we2_2<3> & !wy_s_dz_we3_2<3> & !N_PZ_396;	// (2 pt, 10 inp)
+    wy_min_we4_2<0>.CLK = wy_clk_mp;	// CTC	(1 pt, 1 inp)
+    wy_min_we4_2<0>.AR = !sw1 & !b0;	// CTR	(1 pt, 2 inp)
+
+MACROCELL | 2 | 8 | wy_s_dz_we3_2<2>_MC
+ATTRIBUTES | 2319450880 | 0
+OUTPUTMC | 17 | 2 | 13 | 2 | 10 | 2 | 5 | 2 | 3 | 2 | 6 | 2 | 8 | 2 | 9 | 2 | 12 | 2 | 14 | 2 | 11 | 2 | 7 | 2 | 15 | 1 | 10 | 1 | 15 | 1 | 7 | 1 | 9 | 1 | 8
+INPUTS | 10 | wy_s_dz_we3_2<1>  | wy_s_dz_we3_2<0>  | wy_s_j_we2_2<1>  | wy_s_j_we2_2<2>  | N_PZ_415  | wy_s_j_we2_2<3>  | wy_min_we4_2<0>  | wy_s_dz_we3_2<2>  | wy_s_dz_we3_2<3>  | N_PZ_396
+INPUTMC | 10 | 2 | 15 | 2 | 7 | 2 | 2 | 3 | 2 | 2 | 1 | 2 | 6 | 2 | 9 | 2 | 8 | 2 | 13 | 4 | 11
+LCT | 2 | 4 | Internal_Name | 2 | Internal_Name
+EQ | 10 | 
+   wy_s_dz_we3_2<2>.T := wy_s_dz_we3_2<1> & wy_s_dz_we3_2<0> & 
+	!wy_s_j_we2_2<1> & !wy_s_j_we2_2<2> & N_PZ_415 & wy_s_j_we2_2<3>
+	# wy_s_dz_we3_2<0> & !wy_s_j_we2_2<1> & 
+	!wy_s_j_we2_2<2> & N_PZ_415 & !wy_min_we4_2<0> & wy_s_dz_we3_2<2> & 
+	wy_s_j_we2_2<3> & !wy_s_dz_we3_2<3>
+	# wy_s_dz_we3_2<0> & !wy_s_j_we2_2<1> & 
+	!wy_s_j_we2_2<2> & N_PZ_415 & wy_s_dz_we3_2<2> & wy_s_j_we2_2<3> & 
+	!wy_s_dz_we3_2<3> & !N_PZ_396;	// (3 pt, 10 inp)
+    wy_s_dz_we3_2<2>.CLK = wy_clk_mp;	// CTC	(1 pt, 1 inp)
+    wy_s_dz_we3_2<2>.AR = !sw1 & !b0;	// CTR	(1 pt, 2 inp)
+
+MACROCELL | 2 | 6 | wy_s_j_we2_2<3>_MC
+ATTRIBUTES | 2323645184 | 0
+OUTPUTMC | 14 | 2 | 13 | 2 | 10 | 2 | 5 | 2 | 3 | 2 | 6 | 2 | 8 | 2 | 9 | 2 | 12 | 2 | 14 | 2 | 11 | 2 | 2 | 2 | 7 | 2 | 15 | 3 | 3
+INPUTS | 10 | N_PZ_415  | wy_s_j_we2_2<3>  | wy_s_j_we2_2<1>  | wy_s_j_we2_2<2>  | wy_s_dz_we3_2<1>  | wy_s_dz_we3_2<0>  | wy_min_we4_2<0>  | wy_s_dz_we3_2<2>  | wy_s_dz_we3_2<3>  | N_PZ_396
+INPUTMC | 10 | 2 | 1 | 2 | 6 | 2 | 2 | 3 | 2 | 2 | 15 | 2 | 7 | 2 | 9 | 2 | 8 | 2 | 13 | 4 | 11
+LCT | 2 | 4 | Internal_Name | 2 | Internal_Name
+EQ | 12 | 
+   wy_s_j_we2_2<3> := !N_PZ_415 & wy_s_j_we2_2<3>
+	# wy_s_j_we2_2<1> & !wy_s_j_we2_2<2> & 
+	wy_s_j_we2_2<3>
+	# !wy_s_j_we2_2<1> & wy_s_j_we2_2<2> & 
+	wy_s_j_we2_2<3>
+	# wy_s_j_we2_2<1> & wy_s_j_we2_2<2> & N_PZ_415 & 
+	!wy_s_j_we2_2<3>
+	# !wy_s_dz_we3_2<1> & wy_s_dz_we3_2<0> & 
+	!wy_s_j_we2_2<2> & wy_min_we4_2<0> & wy_s_dz_we3_2<2> & 
+	wy_s_j_we2_2<3> & !wy_s_dz_we3_2<3> & N_PZ_396;	// (5 pt, 10 inp)
+    wy_s_j_we2_2<3>.CLK = wy_clk_mp;	// CTC	(1 pt, 1 inp)
+    wy_s_j_we2_2<3>.AR = !sw1 & !b0;	// CTR	(1 pt, 2 inp)
+
+MACROCELL | 2 | 13 | wy_s_dz_we3_2<3>_MC
+ATTRIBUTES | 2319450880 | 0
+OUTPUTMC | 12 | 2 | 10 | 2 | 5 | 2 | 3 | 2 | 6 | 2 | 8 | 2 | 9 | 2 | 12 | 2 | 14 | 2 | 11 | 2 | 7 | 2 | 15 | 3 | 3
+INPUTS | 7 | wy_s_dz_we3_2<1>  | wy_s_dz_we3_2<0>  | wy_s_j_we2_2<1>  | wy_s_j_we2_2<2>  | N_PZ_415  | wy_s_dz_we3_2<2>  | wy_s_j_we2_2<3>
+INPUTMC | 7 | 2 | 15 | 2 | 7 | 2 | 2 | 3 | 2 | 2 | 1 | 2 | 8 | 2 | 6
+LCT | 2 | 4 | Internal_Name | 2 | Internal_Name
+EQ | 5 | 
+   wy_s_dz_we3_2<3>.T := wy_s_dz_we3_2<1> & wy_s_dz_we3_2<0> & 
+	!wy_s_j_we2_2<1> & !wy_s_j_we2_2<2> & N_PZ_415 & wy_s_dz_we3_2<2> & 
+	wy_s_j_we2_2<3>;	// (1 pt, 7 inp)
+    wy_s_dz_we3_2<3>.CLK = wy_clk_mp;	// CTC	(1 pt, 1 inp)
+    wy_s_dz_we3_2<3>.AR = !sw1 & !b0;	// CTR	(1 pt, 2 inp)
+
+MACROCELL | 4 | 11 | N_PZ_396_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 8 | 2 | 10 | 2 | 6 | 2 | 8 | 2 | 9 | 2 | 12 | 2 | 14 | 2 | 11 | 2 | 7
+INPUTS | 3 | wy_min_we4_2<1>  | wy_min_we4_2<2>  | wy_min_we4_2<3>
+INPUTMC | 3 | 2 | 10 | 2 | 5 | 2 | 3
+EQ | 2 | 
+   N_PZ_396 = !wy_min_we4_2<1> & !wy_min_we4_2<2> & 
+	wy_min_we4_2<3>;	// (1 pt, 3 inp)
+
+MACROCELL | 2 | 10 | wy_min_we4_2<1>_MC
+ATTRIBUTES | 2319450880 | 0
+OUTPUTMC | 4 | 2 | 5 | 2 | 3 | 4 | 11 | 3 | 4
+INPUTS | 10 | wy_s_dz_we3_2<1>  | wy_s_dz_we3_2<0>  | wy_s_j_we2_2<1>  | wy_s_j_we2_2<2>  | N_PZ_415  | wy_min_we4_2<0>  | wy_s_dz_we3_2<2>  | wy_s_j_we2_2<3>  | wy_s_dz_we3_2<3>  | N_PZ_396
+INPUTMC | 10 | 2 | 15 | 2 | 7 | 2 | 2 | 3 | 2 | 2 | 1 | 2 | 9 | 2 | 8 | 2 | 6 | 2 | 13 | 4 | 11
+LCT | 2 | 4 | Internal_Name | 2 | Internal_Name
+EQ | 5 | 
+   wy_min_we4_2<1>.T := !wy_s_dz_we3_2<1> & wy_s_dz_we3_2<0> & 
+	!wy_s_j_we2_2<1> & !wy_s_j_we2_2<2> & N_PZ_415 & wy_min_we4_2<0> & 
+	wy_s_dz_we3_2<2> & wy_s_j_we2_2<3> & !wy_s_dz_we3_2<3> & !N_PZ_396;	// (1 pt, 10 inp)
+    wy_min_we4_2<1>.CLK = wy_clk_mp;	// CTC	(1 pt, 1 inp)
+    wy_min_we4_2<1>.AR = !sw1 & !b0;	// CTR	(1 pt, 2 inp)
+
+MACROCELL | 2 | 5 | wy_min_we4_2<2>_MC
+ATTRIBUTES | 2319450880 | 0
+OUTPUTMC | 7 | 2 | 3 | 4 | 11 | 1 | 10 | 1 | 15 | 1 | 7 | 1 | 9 | 1 | 8
+INPUTS | 10 | wy_s_dz_we3_2<1>  | wy_s_dz_we3_2<0>  | wy_s_j_we2_2<1>  | wy_s_j_we2_2<2>  | N_PZ_415  | wy_min_we4_2<0>  | wy_s_dz_we3_2<2>  | wy_s_j_we2_2<3>  | wy_s_dz_we3_2<3>  | wy_min_we4_2<1>
+INPUTMC | 10 | 2 | 15 | 2 | 7 | 2 | 2 | 3 | 2 | 2 | 1 | 2 | 9 | 2 | 8 | 2 | 6 | 2 | 13 | 2 | 10
+LCT | 2 | 4 | Internal_Name | 2 | Internal_Name
+EQ | 6 | 
+   wy_min_we4_2<2>.T := !wy_s_dz_we3_2<1> & wy_s_dz_we3_2<0> & 
+	!wy_s_j_we2_2<1> & !wy_s_j_we2_2<2> & N_PZ_415 & wy_min_we4_2<0> & 
+	wy_s_dz_we3_2<2> & wy_s_j_we2_2<3> & !wy_s_dz_we3_2<3> & 
+	wy_min_we4_2<1>;	// (1 pt, 10 inp)
+    wy_min_we4_2<2>.CLK = wy_clk_mp;	// CTC	(1 pt, 1 inp)
+    wy_min_we4_2<2>.AR = !sw1 & !b0;	// CTR	(1 pt, 2 inp)
+
+MACROCELL | 2 | 3 | wy_min_we4_2<3>_MC
+ATTRIBUTES | 2319450880 | 0
+OUTPUTMC | 2 | 4 | 11 | 3 | 3
+INPUTS | 11 | wy_s_dz_we3_2<1>  | wy_s_dz_we3_2<0>  | wy_s_j_we2_2<1>  | wy_s_j_we2_2<2>  | N_PZ_415  | wy_min_we4_2<0>  | wy_s_dz_we3_2<2>  | wy_s_j_we2_2<3>  | wy_s_dz_we3_2<3>  | wy_min_we4_2<1>  | wy_min_we4_2<2>
+INPUTMC | 11 | 2 | 15 | 2 | 7 | 2 | 2 | 3 | 2 | 2 | 1 | 2 | 9 | 2 | 8 | 2 | 6 | 2 | 13 | 2 | 10 | 2 | 5
+LCT | 2 | 4 | Internal_Name | 2 | Internal_Name
+EQ | 6 | 
+   wy_min_we4_2<3>.T := !wy_s_dz_we3_2<1> & wy_s_dz_we3_2<0> & 
+	!wy_s_j_we2_2<1> & !wy_s_j_we2_2<2> & N_PZ_415 & wy_min_we4_2<0> & 
+	wy_s_dz_we3_2<2> & wy_s_j_we2_2<3> & !wy_s_dz_we3_2<3> & 
+	wy_min_we4_2<1> & wy_min_we4_2<2>;	// (1 pt, 11 inp)
+    wy_min_we4_2<3>.CLK = wy_clk_mp;	// CTC	(1 pt, 1 inp)
+    wy_min_we4_2<3>.AR = !sw1 & !b0;	// CTR	(1 pt, 2 inp)
+
+MACROCELL | 2 | 12 | wy_ds_we1_2<3>_MC
+ATTRIBUTES | 2323645184 | 0
+OUTPUTMC | 6 | 2 | 12 | 2 | 14 | 2 | 4 | 2 | 11 | 2 | 1 | 3 | 3
+INPUTS | 14 | N_PZ_311  | wy_ds_we1_2<3>  | wy_ds_we1_2<1>  | wy_ds_we1_2<2>  | wy_s_dz_we3_2<1>  | wy_s_dz_we3_2<0>  | wy_s_j_we2_2<1>  | wy_s_j_we2_2<2>  | wy_s_j_we2_2<0>  | wy_min_we4_2<0>  | wy_s_dz_we3_2<2>  | wy_s_j_we2_2<3>  | wy_s_dz_we3_2<3>  | N_PZ_396
+INPUTMC | 14 | 4 | 14 | 2 | 12 | 2 | 4 | 2 | 0 | 2 | 15 | 2 | 7 | 2 | 2 | 3 | 2 | 2 | 11 | 2 | 9 | 2 | 8 | 2 | 6 | 2 | 13 | 4 | 11
+LCT | 2 | 4 | Internal_Name | 2 | Internal_Name
+EQ | 11 | 
+   wy_ds_we1_2<3> := !N_PZ_311 & wy_ds_we1_2<3>
+	# wy_ds_we1_2<1> & !wy_ds_we1_2<2> & wy_ds_we1_2<3>
+	# !wy_ds_we1_2<1> & wy_ds_we1_2<2> & wy_ds_we1_2<3>
+	# wy_ds_we1_2<1> & wy_ds_we1_2<2> & N_PZ_311 & 
+	!wy_ds_we1_2<3>
+	# !wy_s_dz_we3_2<1> & wy_s_dz_we3_2<0> & 
+	!wy_s_j_we2_2<1> & !wy_s_j_we2_2<2> & wy_s_j_we2_2<0> & 
+	!wy_ds_we1_2<2> & wy_min_we4_2<0> & wy_s_dz_we3_2<2> & 
+	wy_s_j_we2_2<3> & !wy_s_dz_we3_2<3> & N_PZ_396 & wy_ds_we1_2<3>;	// (5 pt, 14 inp)
+    wy_ds_we1_2<3>.CLK = wy_clk_mp;	// CTC	(1 pt, 1 inp)
+    wy_ds_we1_2<3>.AR = !sw1 & !b0;	// CTR	(1 pt, 2 inp)
+
+MACROCELL | 3 | 3 | wy_we_transkoder7s<3>_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 5 | 1 | 15 | 4 | 10 | 15 | 11 | 15 | 14 | 13 | 15
+INPUTS | 11 | sw0  | wy_sterowanie_kropka  | wy_we<1>  | wy_s_dz_we3_2<3>  | wy_ds_we1_2<3>  | wy_min_we4_2<3>  | wy_s_j_we2_2<3>  | wy_s_dz_we3<3>  | wy_ds_we1<3>  | wy_min_we4<3>  | wy_s_j_we2<3>
+INPUTMC | 10 | 15 | 5 | 0 | 3 | 2 | 13 | 2 | 12 | 2 | 3 | 2 | 6 | 3 | 7 | 1 | 5 | 1 | 13 | 3 | 10
+INPUTP | 1 | 62
+EQ | 16 | 
+   wy_we_transkoder7s<3> = sw0 & wy_sterowanie_kropka & wy_we<1> & 
+	!wy_s_dz_we3_2<3>
+	# sw0 & wy_sterowanie_kropka & !wy_we<1> & 
+	!wy_ds_we1_2<3>
+	# sw0 & !wy_sterowanie_kropka & wy_we<1> & 
+	!wy_min_we4_2<3>
+	# sw0 & !wy_sterowanie_kropka & !wy_we<1> & 
+	!wy_s_j_we2_2<3>
+	# !sw0 & wy_sterowanie_kropka & wy_we<1> & 
+	!wy_s_dz_we3<3>
+	# !sw0 & wy_sterowanie_kropka & !wy_we<1> & 
+	!wy_ds_we1<3>
+	# !sw0 & !wy_sterowanie_kropka & wy_we<1> & 
+	!wy_min_we4<3>
+	# !sw0 & !wy_sterowanie_kropka & !wy_we<1> & 
+	!wy_s_j_we2<3>;	// (8 pt, 11 inp)
+
+MACROCELL | 1 | 10 | N_PZ_362_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 3 | 1 | 15 | 15 | 15 | 15 | 14
+INPUTS | 19 | sw0  | wy_sterowanie_kropka  | wy_we<1>  | wy_s_dz_we3_2<0>  | wy_s_dz_we3_2<2>  | wy_ds_we1_2<2>  | wy_ds_we1_2<0>  | wy_min_we4_2<0>  | wy_min_we4_2<2>  | wy_s_j_we2_2<2>  | wy_s_j_we2_2<0>  | wy_s_dz_we3<0>  | wy_s_dz_we3<2>  | wy_ds_we1<2>  | wy_ds_we1<0>  | wy_min_we4<0>  | wy_min_we4<2>  | wy_s_j_we2<2>  | wy_s_j_we2<0>
+INPUTMC | 18 | 15 | 5 | 0 | 3 | 2 | 7 | 2 | 8 | 2 | 0 | 2 | 14 | 2 | 9 | 2 | 5 | 3 | 2 | 2 | 11 | 3 | 12 | 3 | 14 | 0 | 2 | 1 | 6 | 1 | 14 | 3 | 9 | 3 | 5 | 3 | 15
+INPUTP | 1 | 62
+EQ | 16 | 
+   N_PZ_362 = sw0 & wy_sterowanie_kropka & wy_we<1> & 
+	!wy_s_dz_we3_2<0> & wy_s_dz_we3_2<2>
+	# sw0 & wy_sterowanie_kropka & !wy_we<1> & 
+	wy_ds_we1_2<2> & !wy_ds_we1_2<0>
+	# sw0 & !wy_sterowanie_kropka & wy_we<1> & 
+	!wy_min_we4_2<0> & wy_min_we4_2<2>
+	# sw0 & !wy_sterowanie_kropka & !wy_we<1> & 
+	wy_s_j_we2_2<2> & !wy_s_j_we2_2<0>
+	# !sw0 & wy_sterowanie_kropka & wy_we<1> & 
+	!wy_s_dz_we3<0> & wy_s_dz_we3<2>
+	# !sw0 & wy_sterowanie_kropka & !wy_we<1> & 
+	wy_ds_we1<2> & !wy_ds_we1<0>
+	# !sw0 & !wy_sterowanie_kropka & wy_we<1> & 
+	!wy_min_we4<0> & wy_min_we4<2>
+	# !sw0 & !wy_sterowanie_kropka & !wy_we<1> & 
+	wy_s_j_we2<2> & !wy_s_j_we2<0>;	// (8 pt, 19 inp)
+
+MACROCELL | 4 | 10 | N_PZ_466_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 5 | 15 | 12 | 15 | 15 | 15 | 4 | 15 | 10 | 13 | 15
+INPUTS | 3 | wy_we_transkoder7s<1>  | wy_we_transkoder7s<3>  | N_PZ_300
+INPUTMC | 3 | 3 | 4 | 3 | 3 | 1 | 7
+EQ | 2 | 
+   N_PZ_466 = !wy_we_transkoder7s<1> & !wy_we_transkoder7s<3>
+	# !wy_we_transkoder7s<3> & !N_PZ_300;	// (2 pt, 3 inp)
+
+MACROCELL | 1 | 7 | N_PZ_300_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 3 | 4 | 10 | 15 | 14 | 13 | 15
+INPUTS | 11 | sw0  | wy_sterowanie_kropka  | wy_we<1>  | wy_s_dz_we3_2<2>  | wy_ds_we1_2<2>  | wy_min_we4_2<2>  | wy_s_j_we2_2<2>  | wy_s_dz_we3<2>  | wy_ds_we1<2>  | wy_min_we4<2>  | wy_s_j_we2<2>
+INPUTMC | 10 | 15 | 5 | 0 | 3 | 2 | 8 | 2 | 0 | 2 | 5 | 3 | 2 | 3 | 14 | 0 | 2 | 3 | 9 | 3 | 5
+INPUTP | 1 | 62
+EQ | 16 | 
+   N_PZ_300 = sw0 & wy_sterowanie_kropka & wy_we<1> & 
+	!wy_s_dz_we3_2<2>
+	# sw0 & wy_sterowanie_kropka & !wy_we<1> & 
+	!wy_ds_we1_2<2>
+	# sw0 & !wy_sterowanie_kropka & wy_we<1> & 
+	!wy_min_we4_2<2>
+	# sw0 & !wy_sterowanie_kropka & !wy_we<1> & 
+	!wy_s_j_we2_2<2>
+	# !sw0 & wy_sterowanie_kropka & wy_we<1> & 
+	!wy_s_dz_we3<2>
+	# !sw0 & wy_sterowanie_kropka & !wy_we<1> & 
+	!wy_ds_we1<2>
+	# !sw0 & !wy_sterowanie_kropka & wy_we<1> & 
+	!wy_min_we4<2>
+	# !sw0 & !wy_sterowanie_kropka & !wy_we<1> & 
+	!wy_s_j_we2<2>;	// (8 pt, 11 inp)
+
+MACROCELL | 15 | 15 | wy_transkoder_7s<1>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 4 | wy_we_transkoder7s<1>  | N_PZ_466  | N_PZ_363  | N_PZ_362
+INPUTMC | 4 | 3 | 4 | 4 | 10 | 1 | 9 | 1 | 10
+EQ | 2 | 
+   !wy_transkoder_7s<1> = wy_we_transkoder7s<1> & !N_PZ_466 & !N_PZ_363
+	# !wy_we_transkoder7s<1> & !N_PZ_362 & !N_PZ_466;	// (2 pt, 4 inp)
+
+MACROCELL | 1 | 9 | N_PZ_363_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 3 | 15 | 15 | 15 | 10 | 13 | 15
+INPUTS | 19 | sw0  | wy_sterowanie_kropka  | wy_we<1>  | wy_s_dz_we3_2<0>  | wy_s_dz_we3_2<2>  | wy_ds_we1_2<2>  | wy_ds_we1_2<0>  | wy_min_we4_2<0>  | wy_min_we4_2<2>  | wy_s_j_we2_2<2>  | wy_s_j_we2_2<0>  | wy_s_dz_we3<0>  | wy_s_dz_we3<2>  | wy_ds_we1<2>  | wy_ds_we1<0>  | wy_min_we4<0>  | wy_min_we4<2>  | wy_s_j_we2<2>  | wy_s_j_we2<0>
+INPUTMC | 18 | 15 | 5 | 0 | 3 | 2 | 7 | 2 | 8 | 2 | 0 | 2 | 14 | 2 | 9 | 2 | 5 | 3 | 2 | 2 | 11 | 3 | 12 | 3 | 14 | 0 | 2 | 1 | 6 | 1 | 14 | 3 | 9 | 3 | 5 | 3 | 15
+INPUTP | 1 | 62
+EQ | 16 | 
+   N_PZ_363 = sw0 & wy_sterowanie_kropka & wy_we<1> & 
+	wy_s_dz_we3_2<0> & wy_s_dz_we3_2<2>
+	# sw0 & wy_sterowanie_kropka & !wy_we<1> & 
+	wy_ds_we1_2<2> & wy_ds_we1_2<0>
+	# sw0 & !wy_sterowanie_kropka & wy_we<1> & 
+	wy_min_we4_2<0> & wy_min_we4_2<2>
+	# sw0 & !wy_sterowanie_kropka & !wy_we<1> & 
+	wy_s_j_we2_2<2> & wy_s_j_we2_2<0>
+	# !sw0 & wy_sterowanie_kropka & wy_we<1> & 
+	wy_s_dz_we3<0> & wy_s_dz_we3<2>
+	# !sw0 & wy_sterowanie_kropka & !wy_we<1> & 
+	wy_ds_we1<2> & wy_ds_we1<0>
+	# !sw0 & !wy_sterowanie_kropka & wy_we<1> & 
+	wy_min_we4<0> & wy_min_we4<2>
+	# !sw0 & !wy_sterowanie_kropka & !wy_we<1> & 
+	wy_s_j_we2<2> & wy_s_j_we2<0>;	// (8 pt, 19 inp)
+
+MACROCELL | 15 | 4 | wy_transkoder_7s<2>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 3 | N_PZ_466  | wy_we_transkoder7s<1>  | N_PZ_374
+INPUTMC | 3 | 4 | 10 | 3 | 4 | 1 | 8
+EQ | 2 | 
+   wy_transkoder_7s<2> = N_PZ_466
+	# !wy_we_transkoder7s<1> & N_PZ_374;	// (2 pt, 3 inp)
+
+MACROCELL | 1 | 8 | N_PZ_374_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 2 | 15 | 4 | 15 | 11
+INPUTS | 19 | sw0  | wy_sterowanie_kropka  | wy_we<1>  | wy_s_dz_we3_2<0>  | wy_s_dz_we3_2<2>  | wy_ds_we1_2<2>  | wy_ds_we1_2<0>  | wy_min_we4_2<0>  | wy_min_we4_2<2>  | wy_s_j_we2_2<2>  | wy_s_j_we2_2<0>  | wy_s_dz_we3<0>  | wy_s_dz_we3<2>  | wy_ds_we1<2>  | wy_ds_we1<0>  | wy_min_we4<0>  | wy_min_we4<2>  | wy_s_j_we2<2>  | wy_s_j_we2<0>
+INPUTMC | 18 | 15 | 5 | 0 | 3 | 2 | 7 | 2 | 8 | 2 | 0 | 2 | 14 | 2 | 9 | 2 | 5 | 3 | 2 | 2 | 11 | 3 | 12 | 3 | 14 | 0 | 2 | 1 | 6 | 1 | 14 | 3 | 9 | 3 | 5 | 3 | 15
+INPUTP | 1 | 62
+EQ | 16 | 
+   N_PZ_374 = sw0 & wy_sterowanie_kropka & wy_we<1> & 
+	!wy_s_dz_we3_2<0> & !wy_s_dz_we3_2<2>
+	# sw0 & wy_sterowanie_kropka & !wy_we<1> & 
+	!wy_ds_we1_2<2> & !wy_ds_we1_2<0>
+	# sw0 & !wy_sterowanie_kropka & wy_we<1> & 
+	!wy_min_we4_2<0> & !wy_min_we4_2<2>
+	# sw0 & !wy_sterowanie_kropka & !wy_we<1> & 
+	!wy_s_j_we2_2<2> & !wy_s_j_we2_2<0>
+	# !sw0 & wy_sterowanie_kropka & wy_we<1> & 
+	!wy_s_dz_we3<0> & !wy_s_dz_we3<2>
+	# !sw0 & wy_sterowanie_kropka & !wy_we<1> & 
+	!wy_ds_we1<2> & !wy_ds_we1<0>
+	# !sw0 & !wy_sterowanie_kropka & wy_we<1> & 
+	!wy_min_we4<0> & !wy_min_we4<2>
+	# !sw0 & !wy_sterowanie_kropka & !wy_we<1> & 
+	!wy_s_j_we2<2> & !wy_s_j_we2<0>;	// (8 pt, 19 inp)
+
+MACROCELL | 15 | 10 | wy_transkoder_7s<3>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 4 | Inst_transkoder_7s/wy<0>12  | wy_we_transkoder7s<1>  | N_PZ_466  | N_PZ_363
+INPUTMC | 4 | 1 | 15 | 3 | 4 | 4 | 10 | 1 | 9
+EQ | 3 | 
+   !wy_transkoder_7s<3> = !Inst_transkoder_7s/wy<0>12 & 
+	wy_we_transkoder7s<1> & !N_PZ_466
+	# !Inst_transkoder_7s/wy<0>12 & !N_PZ_466 & !N_PZ_363;	// (2 pt, 4 inp)
+
+MACROCELL | 15 | 11 | wy_transkoder_7s<4>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 15 | wy_we_transkoder7s<1>  | N_PZ_374  | sw0  | wy_sterowanie_kropka  | wy_we<1>  | Inst_transkoder_7s/wy<0>12  | wy_s_dz_we3_2<0>  | wy_we_transkoder7s<3>  | wy_ds_we1_2<0>  | wy_min_we4_2<0>  | wy_s_j_we2_2<0>  | wy_s_dz_we3<0>  | wy_ds_we1<0>  | wy_min_we4<0>  | wy_s_j_we2<0>
+INPUTMC | 14 | 3 | 4 | 1 | 8 | 15 | 5 | 0 | 3 | 1 | 15 | 2 | 7 | 3 | 3 | 2 | 14 | 2 | 9 | 2 | 11 | 3 | 12 | 1 | 6 | 1 | 14 | 3 | 15
+INPUTP | 1 | 62
+EQ | 17 | 
+   !wy_transkoder_7s<4> = wy_we_transkoder7s<1> & N_PZ_374
+	# sw0 & wy_sterowanie_kropka & wy_we<1> & 
+	!Inst_transkoder_7s/wy<0>12 & !wy_s_dz_we3_2<0> & wy_we_transkoder7s<3>
+	# sw0 & wy_sterowanie_kropka & !wy_we<1> & 
+	!Inst_transkoder_7s/wy<0>12 & !wy_ds_we1_2<0> & wy_we_transkoder7s<3>
+	# sw0 & !wy_sterowanie_kropka & wy_we<1> & 
+	!Inst_transkoder_7s/wy<0>12 & !wy_min_we4_2<0> & wy_we_transkoder7s<3>
+	# sw0 & !wy_sterowanie_kropka & !wy_we<1> & 
+	!Inst_transkoder_7s/wy<0>12 & !wy_s_j_we2_2<0> & wy_we_transkoder7s<3>
+	# !sw0 & wy_sterowanie_kropka & wy_we<1> & 
+	!Inst_transkoder_7s/wy<0>12 & !wy_s_dz_we3<0> & wy_we_transkoder7s<3>
+	# !sw0 & wy_sterowanie_kropka & !wy_we<1> & 
+	!Inst_transkoder_7s/wy<0>12 & !wy_ds_we1<0> & wy_we_transkoder7s<3>
+	# !sw0 & !wy_sterowanie_kropka & wy_we<1> & 
+	!Inst_transkoder_7s/wy<0>12 & !wy_min_we4<0> & wy_we_transkoder7s<3>
+	# !sw0 & !wy_sterowanie_kropka & !wy_we<1> & 
+	!Inst_transkoder_7s/wy<0>12 & !wy_s_j_we2<0> & wy_we_transkoder7s<3>;	// (9 pt, 15 inp)
+
+MACROCELL | 15 | 14 | wy_transkoder_7s<5>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 5 | wy_we_transkoder7s<3>  | N_PZ_362  | Inst_transkoder_7s/wy<0>12  | wy_we_transkoder7s<1>  | N_PZ_300
+INPUTMC | 5 | 3 | 3 | 1 | 10 | 1 | 15 | 3 | 4 | 1 | 7
+EQ | 5 | 
+   !wy_transkoder_7s<5> = wy_we_transkoder7s<3> & N_PZ_362
+	# !Inst_transkoder_7s/wy<0>12 & 
+	wy_we_transkoder7s<1> & N_PZ_300
+	# wy_we_transkoder7s<1> & wy_we_transkoder7s<3> & 
+	!N_PZ_300;	// (3 pt, 5 inp)
+
+MACROCELL | 13 | 15 | wy_transkoder_7s<6>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 5 | N_PZ_466  | wy_we_transkoder7s<1>  | N_PZ_363  | wy_we_transkoder7s<3>  | N_PZ_300
+INPUTMC | 5 | 4 | 10 | 3 | 4 | 1 | 9 | 3 | 3 | 1 | 7
+EQ | 4 | 
+   wy_transkoder_7s<6> = N_PZ_466
+	# !wy_we_transkoder7s<1> & N_PZ_363
+	# wy_we_transkoder7s<1> & wy_we_transkoder7s<3> & 
+	N_PZ_300;	// (3 pt, 5 inp)
+
+PIN | b0 | 64 | 16 | LVCMOS18 | 218 | 6 | 3 | 0 | 1 | 6 | 3 | 1 | 4 | 15 | 2 | 14 | 4 | 14
+PIN | b1 | 64 | 16 | LVCMOS18 | 142 | 2 | 3 | 0 | 4 | 15
+PIN | clk | 16384 | 16 | LVCMOS18 | 59 | 8 | 0 | 15 | 0 | 7 | 0 | 8 | 0 | 9 | 0 | 10 | 0 | 4 | 0 | 14 | 0 | 6
+PIN | sw0 | 64 | 16 | LVCMOS18 | 62 | 16 | 13 | 3 | 13 | 5 | 3 | 0 | 1 | 6 | 3 | 1 | 4 | 15 | 2 | 14 | 4 | 14 | 3 | 4 | 3 | 3 | 1 | 10 | 1 | 15 | 1 | 7 | 1 | 9 | 1 | 8 | 15 | 11
+PIN | sw1 | 64 | 16 | LVCMOS18 | 190 | 5 | 3 | 0 | 1 | 6 | 3 | 1 | 2 | 14 | 4 | 14
+PIN | d_Stopwatch1 | 536871040 | 0 | LVCMOS18 | 107
+PIN | d_Stopwatch2 | 536871040 | 0 | LVCMOS18 | 105
+PIN | wy_aktywna_anoda<0> | 536871040 | 0 | LVCMOS18 | 196
+PIN | wy_aktywna_anoda<1> | 536871040 | 0 | LVCMOS18 | 195
+PIN | wy_aktywna_anoda<2> | 536871040 | 0 | LVCMOS18 | 194
+PIN | wy_aktywna_anoda<3> | 536871040 | 0 | LVCMOS18 | 192
+PIN | wy_sterowanie_kropka | 536871040 | 0 | LVCMOS18 | 89
+PIN | wy_transkoder_7s<0> | 536871040 | 0 | LVCMOS18 | 86
+PIN | wy_transkoder_7s<1> | 536871040 | 0 | LVCMOS18 | 81
+PIN | wy_transkoder_7s<2> | 536871040 | 0 | LVCMOS18 | 90
+PIN | wy_transkoder_7s<3> | 536871040 | 0 | LVCMOS18 | 88
+PIN | wy_transkoder_7s<4> | 536871040 | 0 | LVCMOS18 | 87
+PIN | wy_transkoder_7s<5> | 536871040 | 0 | LVCMOS18 | 82
+PIN | wy_transkoder_7s<6> | 536871040 | 0 | LVCMOS18 | 95

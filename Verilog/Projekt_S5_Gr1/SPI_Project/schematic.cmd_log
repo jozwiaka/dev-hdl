@@ -1,0 +1,33 @@
+xst -intstyle ise -ifn "C:/dev/ULiC/Verilog/Projekt_S5_Gr1/SPI_Project/schematic.xst" -ofn "C:/dev/ULiC/Verilog/Projekt_S5_Gr1/SPI_Project/schematic.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc2c256-TQ144-6 schematic.ngc schematic.ngd  
+cpldfit -intstyle ise -p xc2c256-6-TQ144 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 schematic.ngd 
+tsim -intstyle ise schematic schematic.nga 
+taengine -intstyle ise -f schematic -w --format html1 -l schematic_html/tim/timing_report.htm 
+hprep6 -s IEEE1149 -i schematic 
+sch2verilog -intstyle ise -family xbr -tionly {} -tiext tfi -w C:/dev/ULiC/Verilog/Projekt_S5_Gr1/SPI_Project/schematic.sch schematic.tfi 
+ngdbuild -intstyle ise -dd _ngo -uc schematic.ucf -p xc2c256-TQ144-6 schematic.ngc schematic.ngd  
+xst -intstyle ise -ifn "C:/dev/ULiC/Verilog/Projekt_S5_Gr1/SPI_Project/schematic.xst" -ofn "C:/dev/ULiC/Verilog/Projekt_S5_Gr1/SPI_Project/schematic.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc schematic.ucf -p xc2c256-TQ144-6 schematic.ngc schematic.ngd  
+xst -intstyle ise -ifn "C:/dev/ULiC/Verilog/Projekt_S5_Gr1/SPI_Project/schematic.xst" -ofn "C:/dev/ULiC/Verilog/Projekt_S5_Gr1/SPI_Project/schematic.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc schematic.ucf -p xc2c256-TQ144-6 schematic.ngc schematic.ngd  
+cpldfit -intstyle ise -p xc2c256-6-TQ144 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 schematic.ngd 
+tsim -intstyle ise schematic schematic.nga 
+taengine -intstyle ise -f schematic -w --format html1 -l schematic_html/tim/timing_report.htm 
+hprep6 -s IEEE1149 -i schematic 
+xst -intstyle ise -ifn "C:/dev/ULiC/Verilog/Projekt_S5_Gr1/SPI_Project/schematic.xst" -ofn "C:/dev/ULiC/Verilog/Projekt_S5_Gr1/SPI_Project/schematic.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc schematic.ucf -p xc2c256-TQ144-6 schematic.ngc schematic.ngd  
+cpldfit -intstyle ise -p xc2c256-6-TQ144 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 schematic.ngd 
+tsim -intstyle ise schematic schematic.nga 
+hprep6 -s IEEE1149 -i schematic 
+xst -intstyle ise -ifn "C:/dev/ULiC/Verilog/Projekt_S5_Gr1/SPI_Project/schematic.xst" -ofn "C:/dev/ULiC/Verilog/Projekt_S5_Gr1/SPI_Project/schematic.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc schematic.ucf -p xc2c256-TQ144-6 schematic.ngc schematic.ngd  
+cpldfit -intstyle ise -p xc2c256-6-TQ144 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 schematic.ngd 
+tsim -intstyle ise schematic schematic.nga 
+taengine -intstyle ise -f schematic -w --format html1 -l schematic_html/tim/timing_report.htm 
+hprep6 -s IEEE1149 -i schematic 
+ngdbuild -intstyle ise -dd _ngo -uc schematic.ucf -p xc2c256-TQ144-6 schematic.ngc schematic.ngd  
+cpldfit -intstyle ise -p xc2c256-6-TQ144 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 schematic.ngd 
+XSLTProcess schematic_build.xml 
+tsim -intstyle ise schematic schematic.nga 
+taengine -intstyle ise -f schematic -w --format html1 -l schematic_html/tim/timing_report.htm 
+hprep6 -s IEEE1149 -i schematic 

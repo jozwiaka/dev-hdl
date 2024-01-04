@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/SchematGlowny</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Studia/ULiC/ProjektZaliczeniowy/SchematGlowny.vhf</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/dev/ULiC_Scripts/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/SchematGlowny.vhf</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/SchematGlowny/BEHAVIORAL</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Studia/ULiC/ProjektZaliczeniowy/SchematGlowny.vhf</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/dev/ULiC_Scripts/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/SchematGlowny.vhf</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/aktywna_anoda</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Studia/ULiC/ProjektZaliczeniowy/aktywna_anoda.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/dev/ULiC_Scripts/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/aktywna_anoda.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/aktywna_anoda/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Studia/ULiC/ProjektZaliczeniowy/aktywna_anoda.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/dev/ULiC_Scripts/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/aktywna_anoda.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/dzielnik_100kHz_na_400Hz</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Studia/ULiC/ProjektZaliczeniowy/dzielnik_100kHz_na_400Hz.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/dev/ULiC_Scripts/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/dzielnik_100kHz_na_400Hz.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/dzielnik_100kHz_na_400Hz/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Studia/ULiC/ProjektZaliczeniowy/dzielnik_100kHz_na_400Hz.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/dev/ULiC_Scripts/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/dzielnik_100kHz_na_400Hz.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/dzielnik_400Hz_na_10Hz</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Studia/ULiC/ProjektZaliczeniowy/dzielnik_400Hz_na_10Hz.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/dev/ULiC_Scripts/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/dzielnik_400Hz_na_10Hz.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/dzielnik_400Hz_na_10Hz/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Studia/ULiC/ProjektZaliczeniowy/dzielnik_400Hz_na_10Hz.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/dev/ULiC_Scripts/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/dzielnik_400Hz_na_10Hz.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/licznik_cyfra</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Studia/ULiC/ProjektZaliczeniowy/licznik_cyfra.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/dev/ULiC_Scripts/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/licznik_cyfra.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/licznik_cyfra/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Studia/ULiC/ProjektZaliczeniowy/licznik_cyfra.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/dev/ULiC_Scripts/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/licznik_cyfra.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/moj_projekt</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Studia/ULiC/ProjektZaliczeniowy/moj_projekt.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/dev/ULiC_Scripts/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/moj_projekt.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/moj_projekt/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Studia/ULiC/ProjektZaliczeniowy/moj_projekt.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/dev/ULiC_Scripts/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/moj_projekt.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/moj_projekt_Diody</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Studia/ULiC/ProjektZaliczeniowy/moj_projekt_Diody.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/dev/ULiC_Scripts/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/moj_projekt_Diody.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/moj_projekt_Diody/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Studia/ULiC/ProjektZaliczeniowy/moj_projekt_Diody.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/dev/ULiC_Scripts/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/moj_projekt_Diody.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/moj_projekt_MUX</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Studia/ULiC/ProjektZaliczeniowy/moj_projekt_MUX.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/dev/ULiC_Scripts/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/moj_projekt_MUX.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/moj_projekt_MUX/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Studia/ULiC/ProjektZaliczeniowy/moj_projekt_MUX.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/dev/ULiC_Scripts/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/moj_projekt_MUX.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/mult_vec1</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Studia/ULiC/ProjektZaliczeniowy/mult_vec1.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/dev/ULiC_Scripts/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/mult_vec1.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/mult_vec1/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Studia/ULiC/ProjektZaliczeniowy/mult_vec1.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/dev/ULiC_Scripts/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/mult_vec1.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/ster_kropka</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Studia/ULiC/ProjektZaliczeniowy/ster_kropka.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/dev/ULiC_Scripts/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/ster_kropka.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/ster_kropka/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Studia/ULiC/ProjektZaliczeniowy/ster_kropka.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/dev/ULiC_Scripts/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/ster_kropka.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/transkoder_7s</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Studia/ULiC/ProjektZaliczeniowy/transkoder_7s.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/dev/ULiC_Scripts/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/transkoder_7s.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/transkoder_7s/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Studia/ULiC/ProjektZaliczeniowy/transkoder_7s.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/dev/ULiC_Scripts/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/transkoder_7s.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">StartStop</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+</messages>
+

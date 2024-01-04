@@ -1,0 +1,62 @@
+MDF Database:  version 1.0
+MDF_INFO | ukladSekwencyjny | XC2C256-6-TQ144
+MACROCELL | 11 | 11 | out<0>_MC
+ATTRIBUTES | 2302935814 | 0
+OUTPUTMC | 3 | 11 | 1 | 9 | 5 | 9 | 13
+INPUTS | 1 | start_stop
+INPUTP | 1 | 190
+LCT | 1 | 2 | Internal_Name
+EQ | 3 | 
+   out<0>.T := !start_stop;	// (1 pt, 1 inp)
+    out<0>.CLK = clk;	// CTC	(1 pt, 1 inp)
+   out<0>.AP = !r;	// GSR	(0 pt, 0 inp)
+GLOBALS | 1 | 1 | r
+
+MACROCELL | 11 | 1 | out<1>_MC
+ATTRIBUTES | 2319713026 | 0
+OUTPUTMC | 3 | 9 | 5 | 9 | 13 | 11 | 1
+INPUTS | 5 | start_stop  | out<0>  | out<1>  | out<2>  | out<3>
+INPUTMC | 4 | 11 | 11 | 11 | 1 | 9 | 13 | 9 | 5
+INPUTP | 1 | 190
+LCT | 1 | 2 | Internal_Name
+EQ | 4 | 
+   out<1>.T := !start_stop & !out<0>
+	$ !start_stop & !out<0> & !out<1> & !out<2> & !out<3>;	// (2 pt, 5 inp)
+    out<1>.CLK = clk;	// CTC	(1 pt, 1 inp)
+   out<1>.AR = !r;	// GSR	(0 pt, 0 inp)
+GLOBALS | 1 | 4 | r
+
+MACROCELL | 9 | 13 | out<2>_MC
+ATTRIBUTES | 2319713026 | 0
+OUTPUTMC | 3 | 9 | 5 | 9 | 13 | 11 | 1
+INPUTS | 5 | start_stop  | out<0>  | out<1>  | out<2>  | out<3>
+INPUTMC | 4 | 11 | 11 | 11 | 1 | 9 | 13 | 9 | 5
+INPUTP | 1 | 190
+LCT | 1 | 2 | Internal_Name
+EQ | 4 | 
+   out<2>.T := !start_stop & !out<0> & !out<1> & out<2>
+	# !start_stop & !out<0> & !out<1> & out<3>;	// (2 pt, 5 inp)
+    out<2>.CLK = clk;	// CTC	(1 pt, 1 inp)
+   out<2>.AR = !r;	// GSR	(0 pt, 0 inp)
+GLOBALS | 1 | 4 | r
+
+MACROCELL | 9 | 5 | out<3>_MC
+ATTRIBUTES | 2302935814 | 0
+OUTPUTMC | 2 | 9 | 13 | 11 | 1
+INPUTS | 4 | start_stop  | out<0>  | out<1>  | out<2>
+INPUTMC | 3 | 11 | 11 | 11 | 1 | 9 | 13
+INPUTP | 1 | 190
+LCT | 1 | 2 | Internal_Name
+EQ | 3 | 
+   out<3>.T := !start_stop & !out<0> & !out<1> & !out<2>;	// (1 pt, 4 inp)
+    out<3>.CLK = clk;	// CTC	(1 pt, 1 inp)
+   out<3>.AP = !r;	// GSR	(0 pt, 0 inp)
+GLOBALS | 1 | 1 | r
+
+PIN | clk | 64 | 16 | LVCMOS18 | 62 | 0
+PIN | start_stop | 64 | 16 | LVCMOS18 | 190 | 4 | 11 | 11 | 11 | 1 | 9 | 5 | 9 | 13
+PIN | r | 65536 | 16 | LVCMOS18 | 218 | 4 | 11 | 11 | 9 | 5 | 9 | 13 | 11 | 1
+PIN | out<0> | 536871040 | 0 | LVCMOS18 | 145
+PIN | out<1> | 536871040 | 0 | LVCMOS18 | 152
+PIN | out<2> | 536871040 | 0 | LVCMOS18 | 156
+PIN | out<3> | 536871040 | 0 | LVCMOS18 | 160

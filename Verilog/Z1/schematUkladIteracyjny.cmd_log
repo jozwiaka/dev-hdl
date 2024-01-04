@@ -1,0 +1,34 @@
+xst -intstyle ise -ifn "C:/dev/ULiC/Verilog/Z1/schematUkladIteracyjny.xst" -ofn "C:/dev/ULiC/Verilog/Z1/schematUkladIteracyjny.syr" 
+ngdbuild -intstyle ise -dd _ngo -i -p xc2c256-TQ144-6 schematUkladIteracyjny.ngc schematUkladIteracyjny.ngd  
+cpldfit -intstyle ise -p xc2c256-6-TQ144 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 schematUkladIteracyjny.ngd 
+XSLTProcess schematUkladIteracyjny_build.xml 
+tsim -intstyle ise schematUkladIteracyjny schematUkladIteracyjny.nga 
+taengine -intstyle ise -f schematUkladIteracyjny -w --format html1 -l schematUkladIteracyjny_html/tim/timing_report.htm 
+hprep6 -s IEEE1149 -i schematUkladIteracyjny 
+xst -intstyle ise -ifn "C:/dev/ULiC/Verilog/Z1/schematUkladIteracyjny.xst" -ofn "C:/dev/ULiC/Verilog/Z1/schematUkladIteracyjny.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc schematUkladIteracyjny.ucf -p xc2c256-TQ144-6 schematUkladIteracyjny.ngc schematUkladIteracyjny.ngd  
+cpldfit -intstyle ise -p xc2c256-6-TQ144 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 schematUkladIteracyjny.ngd 
+XSLTProcess schematUkladIteracyjny_build.xml 
+tsim -intstyle ise schematUkladIteracyjny schematUkladIteracyjny.nga 
+taengine -intstyle ise -f schematUkladIteracyjny -w --format html1 -l schematUkladIteracyjny_html/tim/timing_report.htm 
+hprep6 -s IEEE1149 -i schematUkladIteracyjny 
+xst -intstyle ise -ifn "C:/dev/ULiC/Verilog/Z1/schematUkladIteracyjny.xst" -ofn "C:/dev/ULiC/Verilog/Z1/schematUkladIteracyjny.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc schematUkladIteracyjny.ucf -p xc2c256-TQ144-6 schematUkladIteracyjny.ngc schematUkladIteracyjny.ngd  
+cpldfit -intstyle ise -p xc2c256-6-TQ144 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 schematUkladIteracyjny.ngd 
+XSLTProcess schematUkladIteracyjny_build.xml 
+tsim -intstyle ise schematUkladIteracyjny schematUkladIteracyjny.nga 
+hprep6 -s IEEE1149 -i schematUkladIteracyjny 
+sch2vhdl -intstyle ise -family xbr -tionly -w C:/dev/ULiC/Verilog/Z1/schematUkladIteracyjny.sch schematUkladIteracyjny.vhi 
+sch2hdl -intstyle ise -family xbr -verilog schematUkladIteracyjny.vf -w C:/dev/ULiC/Verilog/Z1/schematUkladIteracyjny.sch 
+xst -intstyle ise -ifn "C:/students_ulic/Gricjuta_Jozwiak_5AiSR2_wtorek_14/VeriLog/Z1/schematUkladIteracyjny.xst" -ofn "C:/students_ulic/Gricjuta_Jozwiak_5AiSR2_wtorek_14/VeriLog/Z1/schematUkladIteracyjny.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc schematUkladIteracyjny.ucf -p xc2c256-TQ144-6 schematUkladIteracyjny.ngc schematUkladIteracyjny.ngd  
+cpldfit -intstyle ise -p xc2c256-6-TQ144 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 schematUkladIteracyjny.ngd 
+XSLTProcess schematUkladIteracyjny_build.xml 
+tsim -intstyle ise schematUkladIteracyjny schematUkladIteracyjny.nga 
+hprep6 -s IEEE1149 -i schematUkladIteracyjny 
+xst -intstyle ise -ifn "C:/students_ulic/Gricjuta_Jozwiak_5AiSR2_wtorek_14/VeriLog/Z1/schematUkladIteracyjny.xst" -ofn "C:/students_ulic/Gricjuta_Jozwiak_5AiSR2_wtorek_14/VeriLog/Z1/schematUkladIteracyjny.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc schematUkladIteracyjny.ucf -p xc2c256-TQ144-6 schematUkladIteracyjny.ngc schematUkladIteracyjny.ngd  
+cpldfit -intstyle ise -p xc2c256-6-TQ144 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 schematUkladIteracyjny.ngd 
+XSLTProcess schematUkladIteracyjny_build.xml 
+tsim -intstyle ise schematUkladIteracyjny schematUkladIteracyjny.nga 
+hprep6 -s IEEE1149 -i schematUkladIteracyjny 

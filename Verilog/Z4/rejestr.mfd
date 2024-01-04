@@ -1,0 +1,116 @@
+MDF Database:  version 1.0
+MDF_INFO | rejestr | XC2C256-6-TQ144
+MACROCELL | 11 | 11 | out<0>_MC
+ATTRIBUTES | 2290352898 | 0
+OUTPUTMC | 1 | 11 | 11
+INPUTS | 3 | sw1  | in<0>  | out<0>
+INPUTMC | 1 | 11 | 11
+INPUTP | 2 | 190 | 1
+LCT | 1 | 2 | Internal_Name
+EQ | 3 | 
+   out<0> := sw1 & in<0>
+	# !sw1 & !out<0>;	// (2 pt, 3 inp)
+    out<0>.CLK = clk;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 11 | 1 | out<1>_MC
+ATTRIBUTES | 2290352898 | 0
+OUTPUTMC | 1 | 11 | 1
+INPUTS | 3 | sw1  | in<1>  | out<1>
+INPUTMC | 1 | 11 | 1
+INPUTP | 2 | 190 | 4
+LCT | 1 | 2 | Internal_Name
+EQ | 3 | 
+   out<1> := sw1 & in<1>
+	# !sw1 & !out<1>;	// (2 pt, 3 inp)
+    out<1>.CLK = clk;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 9 | 13 | out<2>_MC
+ATTRIBUTES | 2290352898 | 0
+OUTPUTMC | 1 | 9 | 13
+INPUTS | 3 | sw1  | in<2>  | out<2>
+INPUTMC | 1 | 9 | 13
+INPUTP | 2 | 190 | 7
+LCT | 1 | 2 | Internal_Name
+EQ | 3 | 
+   out<2> := sw1 & in<2>
+	# !sw1 & !out<2>;	// (2 pt, 3 inp)
+    out<2>.CLK = clk;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 9 | 5 | out<3>_MC
+ATTRIBUTES | 2290352898 | 0
+OUTPUTMC | 1 | 9 | 5
+INPUTS | 3 | sw1  | in<3>  | out<3>
+INPUTMC | 1 | 9 | 5
+INPUTP | 2 | 190 | 10
+LCT | 1 | 2 | Internal_Name
+EQ | 3 | 
+   out<3> := sw1 & in<3>
+	# !sw1 & !out<3>;	// (2 pt, 3 inp)
+    out<3>.CLK = clk;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 8 | 1 | out<4>_MC
+ATTRIBUTES | 2290352898 | 0
+OUTPUTMC | 1 | 8 | 1
+INPUTS | 3 | sw1  | in<4>  | out<4>
+INPUTMC | 1 | 8 | 1
+INPUTP | 2 | 190 | 3
+LCT | 1 | 2 | Internal_Name
+EQ | 3 | 
+   out<4> := sw1 & in<4>
+	# !sw1 & !out<4>;	// (2 pt, 3 inp)
+    out<4>.CLK = clk;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 8 | 5 | out<5>_MC
+ATTRIBUTES | 2290352898 | 0
+OUTPUTMC | 1 | 8 | 5
+INPUTS | 3 | sw1  | in<5>  | out<5>
+INPUTMC | 1 | 8 | 5
+INPUTP | 2 | 190 | 5
+LCT | 1 | 2 | Internal_Name
+EQ | 3 | 
+   out<5> := sw1 & in<5>
+	# !sw1 & !out<5>;	// (2 pt, 3 inp)
+    out<5>.CLK = clk;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 8 | 12 | out<6>_MC
+ATTRIBUTES | 2290352898 | 0
+OUTPUTMC | 1 | 8 | 12
+INPUTS | 3 | sw1  | in<6>  | out<6>
+INPUTMC | 1 | 8 | 12
+INPUTP | 2 | 190 | 8
+LCT | 1 | 2 | Internal_Name
+EQ | 3 | 
+   out<6> := sw1 & in<6>
+	# !sw1 & !out<6>;	// (2 pt, 3 inp)
+    out<6>.CLK = clk;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 8 | 14 | out<7>_MC
+ATTRIBUTES | 2290352898 | 0
+OUTPUTMC | 1 | 8 | 14
+INPUTS | 3 | sw1  | in<7>  | out<7>
+INPUTMC | 1 | 8 | 14
+INPUTP | 2 | 190 | 12
+LCT | 1 | 2 | Internal_Name
+EQ | 3 | 
+   out<7> := sw1 & in<7>
+	# !sw1 & !out<7>;	// (2 pt, 3 inp)
+    out<7>.CLK = clk;	// CTC	(1 pt, 1 inp)
+
+PIN | clk | 64 | 16 | LVCMOS18 | 62 | 0
+PIN | in<0> | 64 | 16 | LVCMOS18 | 1 | 1 | 11 | 11
+PIN | in<1> | 64 | 16 | LVCMOS18 | 4 | 1 | 11 | 1
+PIN | in<2> | 64 | 16 | LVCMOS18 | 7 | 1 | 9 | 13
+PIN | in<3> | 64 | 16 | LVCMOS18 | 10 | 1 | 9 | 5
+PIN | in<4> | 64 | 16 | LVCMOS18 | 3 | 1 | 8 | 1
+PIN | in<5> | 64 | 16 | LVCMOS18 | 5 | 1 | 8 | 5
+PIN | in<6> | 64 | 16 | LVCMOS18 | 8 | 1 | 8 | 12
+PIN | in<7> | 64 | 16 | LVCMOS18 | 12 | 1 | 8 | 14
+PIN | sw1 | 64 | 16 | LVCMOS18 | 190 | 8 | 11 | 11 | 11 | 1 | 9 | 13 | 9 | 5 | 8 | 1 | 8 | 5 | 8 | 12 | 8 | 14
+PIN | out<0> | 536871040 | 0 | LVCMOS18 | 145
+PIN | out<1> | 536871040 | 0 | LVCMOS18 | 152
+PIN | out<2> | 536871040 | 0 | LVCMOS18 | 156
+PIN | out<3> | 536871040 | 0 | LVCMOS18 | 160
+PIN | out<4> | 536871040 | 0 | LVCMOS18 | 169
+PIN | out<5> | 536871040 | 0 | LVCMOS18 | 173
+PIN | out<6> | 536871040 | 0 | LVCMOS18 | 176
+PIN | out<7> | 536871040 | 0 | LVCMOS18 | 178

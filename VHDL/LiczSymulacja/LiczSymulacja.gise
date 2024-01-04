@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<generated_project xmlns="http://www.xilinx.com/XMLSchema" xmlns:xil_pn="http://www.xilinx.com/XMLSchema">
+
+  <!--                                                          -->
+
+  <!--             For tool use only. Do not edit.              -->
+
+  <!--                                                          -->
+
+  <!-- ProjectNavigator created generated project file.         -->
+
+  <!-- For use in tracking generated file and other information -->
+
+  <!-- allowing preservation of process status.                 -->
+
+  <!--                                                          -->
+
+  <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved. -->
+
+  <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
+
+  <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="LiczSymulacja.xise"/>
+
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_LSO" xil_pn:name=".lso"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="licz.bld"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_CHK" xil_pn:name="licz.chk"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="licz.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_CXT" xil_pn:name="licz.cxt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_GYD" xil_pn:name="licz.gyd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_JEDEC" xil_pn:name="licz.jed"/>
+    <file xil_pn:fileType="FILE_LFP" xil_pn:name="licz.lfp"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="licz.log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="licz.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MFD" xil_pn:name="licz.mfd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGA" xil_pn:name="licz.nga"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="licz.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="licz.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="licz.ngr"/>
+    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="licz.pad"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PNX" xil_pn:name="licz.pnx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="licz.prj"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="licz.rpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="licz.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="licz.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VM6" xil_pn:name="licz.vm6"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="licz.xml"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="licz.xst"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="licz_build.xml"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="licz_html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="licz_ngdbuild.xrpt"/>
+    <file xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="licz_pad.csv"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="licz_summary.html"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="licz_vhdl.prj"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="licz_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="test_licz_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="test_licz_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="test_licz_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="test_licz_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+  </files>
+
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1637155991" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1637155991">
+      <status xil_pn:value="SuccessfullyRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1637156972" xil_pn:in_ck="6635349365765590403" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1637156972">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="licz.vhd"/>
+      <outfile xil_pn:name="test_licz.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1637157055" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="7443825290796702338" xil_pn:start_ts="1637157055">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1637157055" xil_pn:in_ck="6635349365765590403" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1637157055">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="licz.vhd"/>
+      <outfile xil_pn:name="test_licz.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1637157059" xil_pn:in_ck="6635349365765590403" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-9106170688495076917" xil_pn:start_ts="1637157055">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="fuse.log"/>
+      <outfile xil_pn:name="isim"/>
+      <outfile xil_pn:name="test_licz_beh.prj"/>
+      <outfile xil_pn:name="test_licz_isim_beh.exe"/>
+      <outfile xil_pn:name="xilinxsim.ini"/>
+    </transform>
+    <transform xil_pn:end_ts="1637157059" xil_pn:in_ck="-5748182089497420480" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-4468132233888914568" xil_pn:start_ts="1637157059">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="test_licz_isim_beh.wdb"/>
+    </transform>
+    <transform xil_pn:end_ts="1637155726" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1637155725">
+      <status xil_pn:value="SuccessfullyRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1637155726" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="5546591453613229008" xil_pn:start_ts="1637155726">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1637155732" xil_pn:in_ck="4742416849666" xil_pn:name="TRANEXT_xstsynthesize_xbr" xil_pn:prop_ck="8871150925206180018" xil_pn:start_ts="1637155726">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="licz.lso"/>
+      <outfile xil_pn:name="licz.ngc"/>
+      <outfile xil_pn:name="licz.ngr"/>
+      <outfile xil_pn:name="licz.prj"/>
+      <outfile xil_pn:name="licz.stx"/>
+      <outfile xil_pn:name="licz.syr"/>
+      <outfile xil_pn:name="licz.xst"/>
+      <outfile xil_pn:name="licz_vhdl.prj"/>
+      <outfile xil_pn:name="licz_xst.xrpt"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
+    </transform>
+    <transform xil_pn:end_ts="1637155814" xil_pn:in_ck="4742416848414" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="3466099572406528554" xil_pn:start_ts="1637155814">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1637155820" xil_pn:in_ck="5108378799055824630" xil_pn:name="TRAN_ngdbuild" xil_pn:prop_ck="2820029809837737375" xil_pn:start_ts="1637155814">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_ngo"/>
+      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+      <outfile xil_pn:name="licz.bld"/>
+      <outfile xil_pn:name="licz.ngd"/>
+      <outfile xil_pn:name="licz_ngdbuild.xrpt"/>
+    </transform>
+    <transform xil_pn:end_ts="1637155830" xil_pn:in_ck="4742416840921" xil_pn:name="TRANEXT_vm6File_xbr" xil_pn:prop_ck="8185546684070601297" xil_pn:start_ts="1637155820">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="licz.chk"/>
+      <outfile xil_pn:name="licz.cxt"/>
+      <outfile xil_pn:name="licz.gyd"/>
+      <outfile xil_pn:name="licz.log"/>
+      <outfile xil_pn:name="licz.mfd"/>
+      <outfile xil_pn:name="licz.nga"/>
+      <outfile xil_pn:name="licz.pad"/>
+      <outfile xil_pn:name="licz.pnx"/>
+      <outfile xil_pn:name="licz.rpt"/>
+      <outfile xil_pn:name="licz.vm6"/>
+      <outfile xil_pn:name="licz.xml"/>
+      <outfile xil_pn:name="licz_build.xml"/>
+      <outfile xil_pn:name="licz_html"/>
+      <outfile xil_pn:name="licz_pad.csv"/>
+    </transform>
+    <transform xil_pn:end_ts="1637155832" xil_pn:in_ck="4742416849785" xil_pn:name="TRANEXT_crtProg_xbr" xil_pn:prop_ck="5245363024343" xil_pn:start_ts="1637155830">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="licz.jed"/>
+    </transform>
+    <transform xil_pn:end_ts="1637155830" xil_pn:in_ck="4742416849785" xil_pn:name="TRAN_timRpt" xil_pn:prop_ck="111903974446" xil_pn:start_ts="1637155828">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+  </transforms>
+
+</generated_project>

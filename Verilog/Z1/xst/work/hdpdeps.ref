@@ -1,0 +1,8 @@
+V3 6
+FL C:/dev/ULiC/Verilog/Z1/schematUkladIteracyjny.vhf 2022/01/02.12:24:35 P.20131013
+EN work/schematUkladIteracyjny 1641122678 \
+      FL C:/dev/ULiC/Verilog/Z1/schematUkladIteracyjny.vhf PB ieee/std_logic_1164 1381692176 \
+      PB ieee/NUMERIC_STD 1381692181 LB UNISIM PH unisim/VCOMPONENTS 1381692182
+AR work/schematUkladIteracyjny/BEHAVIORAL 1641122679 \
+      FL C:/dev/ULiC/Verilog/Z1/schematUkladIteracyjny.vhf \
+      EN work/schematUkladIteracyjny 1641122678 CP blokIteracyjny CP NAND2

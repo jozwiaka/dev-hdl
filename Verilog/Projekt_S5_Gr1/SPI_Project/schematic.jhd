@@ -1,0 +1,7 @@
+MODULE schematic
+	SUBMODULE divider_100kHz_to_1Hz
+		INSTANCE inst_divider_100kHz_to_1Hz
+	SUBMODULE sequenter
+		INSTANCE inst_sequenter
+	SUBMODULE register
+		INSTANCE inst_register

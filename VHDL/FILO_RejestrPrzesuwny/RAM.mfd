@@ -1,0 +1,1272 @@
+MDF Database:  version 1.0
+MDF_INFO | RAM | XC2C256-6-TQ144
+MACROCELL | 13 | 12 | empty_half_full<0>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 2 | empty_half_full<2>  | empty_half_full_wew_cmp_eq0001
+INPUTMC | 2 | 13 | 3 | 0 | 15
+EQ | 2 | 
+   !empty_half_full<0> = empty_half_full<2> & 
+	empty_half_full_wew_cmp_eq0001;	// (1 pt, 2 inp)
+
+MACROCELL | 13 | 3 | empty_half_full<2>_MC
+ATTRIBUTES | 1610875650 | 0
+OUTPUTMC | 65 | 0 | 9 | 0 | 10 | 0 | 14 | 0 | 8 | 13 | 12 | 1 | 7 | 1 | 10 | 1 | 9 | 1 | 8 | 0 | 2 | 0 | 3 | 0 | 5 | 0 | 11 | 0 | 12 | 0 | 13 | 0 | 0 | 0 | 1 | 0 | 4 | 0 | 6 | 0 | 7 | 4 | 10 | 4 | 11 | 4 | 12 | 4 | 14 | 4 | 15 | 4 | 9 | 1 | 3 | 1 | 4 | 1 | 11 | 1 | 12 | 1 | 13 | 1 | 14 | 1 | 1 | 1 | 5 | 1 | 6 | 4 | 7 | 4 | 8 | 2 | 4 | 2 | 13 | 2 | 15 | 2 | 3 | 2 | 5 | 2 | 6 | 2 | 7 | 2 | 8 | 2 | 9 | 2 | 10 | 2 | 11 | 2 | 12 | 2 | 14 | 4 | 2 | 4 | 6 | 3 | 3 | 3 | 4 | 3 | 5 | 3 | 11 | 3 | 13 | 3 | 6 | 3 | 7 | 3 | 8 | 3 | 9 | 3 | 10 | 3 | 12 | 3 | 14 | 3 | 15
+INPUTS | 4 | licznik<0>  | licznik<1>  | licznik<2>  | licznik<3>
+INPUTMC | 4 | 0 | 8 | 0 | 9 | 0 | 10 | 0 | 14
+EQ | 2 | 
+   !empty_half_full<2> = !licznik<0> & !licznik<1> & !licznik<2> & 
+	!licznik<3>;	// (1 pt, 4 inp)
+
+MACROCELL | 0 | 8 | licznik<0>_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 5 | 0 | 9 | 0 | 10 | 0 | 14 | 0 | 15 | 13 | 3
+INPUTS | 4 | rd_not_wr  | not_e  | empty_half_full<2>  | empty_half_full_wew_cmp_eq0001
+INPUTMC | 2 | 13 | 3 | 0 | 15
+INPUTP | 2 | 218 | 62
+LCT | 1 | 2 | Internal_Name
+EQ | 4 | 
+   licznik<0>.T := rd_not_wr & !not_e & empty_half_full<2>
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001;	// (2 pt, 4 inp)
+    licznik<0>.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 0 | 15 | empty_half_full_wew_cmp_eq0001_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 70 | 0 | 9 | 0 | 10 | 0 | 14 | 0 | 8 | 13 | 12 | 13 | 5 | 1 | 15 | 1 | 7 | 1 | 10 | 1 | 9 | 1 | 8 | 0 | 2 | 0 | 3 | 0 | 5 | 0 | 11 | 0 | 12 | 0 | 13 | 0 | 0 | 0 | 1 | 0 | 4 | 0 | 6 | 0 | 7 | 2 | 2 | 4 | 10 | 4 | 11 | 4 | 12 | 4 | 14 | 4 | 15 | 4 | 9 | 1 | 3 | 1 | 4 | 1 | 11 | 1 | 12 | 1 | 13 | 1 | 14 | 1 | 1 | 1 | 5 | 1 | 6 | 3 | 2 | 4 | 7 | 4 | 8 | 2 | 4 | 2 | 13 | 2 | 15 | 2 | 3 | 2 | 5 | 2 | 6 | 2 | 7 | 2 | 8 | 2 | 9 | 2 | 10 | 2 | 11 | 2 | 12 | 2 | 14 | 4 | 0 | 4 | 2 | 4 | 6 | 3 | 3 | 3 | 4 | 3 | 5 | 3 | 11 | 3 | 13 | 3 | 6 | 3 | 7 | 3 | 8 | 3 | 9 | 3 | 10 | 3 | 12 | 3 | 14 | 3 | 15
+INPUTS | 4 | licznik<0>  | licznik<1>  | licznik<2>  | licznik<3>
+INPUTMC | 4 | 0 | 8 | 0 | 9 | 0 | 10 | 0 | 14
+EQ | 2 | 
+   empty_half_full_wew_cmp_eq0001 = licznik<0> & licznik<1> & licznik<2> & 
+	licznik<3>;	// (1 pt, 4 inp)
+
+MACROCELL | 0 | 9 | licznik<1>_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 4 | 0 | 10 | 0 | 14 | 0 | 15 | 13 | 3
+INPUTS | 5 | licznik<0>  | rd_not_wr  | not_e  | empty_half_full_wew_cmp_eq0001  | empty_half_full<2>
+INPUTMC | 3 | 0 | 8 | 0 | 15 | 13 | 3
+INPUTP | 2 | 218 | 62
+LCT | 1 | 2 | Internal_Name
+EQ | 5 | 
+   licznik<1>.T := licznik<0> & !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001
+	# !licznik<0> & rd_not_wr & !not_e & 
+	empty_half_full<2>;	// (2 pt, 5 inp)
+    licznik<1>.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 0 | 10 | licznik<2>_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 3 | 0 | 14 | 0 | 15 | 13 | 3
+INPUTS | 6 | licznik<0>  | rd_not_wr  | not_e  | empty_half_full_wew_cmp_eq0001  | licznik<1>  | empty_half_full<2>
+INPUTMC | 4 | 0 | 8 | 0 | 15 | 0 | 9 | 13 | 3
+INPUTP | 2 | 218 | 62
+LCT | 1 | 2 | Internal_Name
+EQ | 5 | 
+   licznik<2>.T := licznik<0> & !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & licznik<1>
+	# !licznik<0> & rd_not_wr & !not_e & 
+	empty_half_full<2> & !licznik<1>;	// (2 pt, 6 inp)
+    licznik<2>.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 0 | 14 | licznik<3>_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 4 | 0 | 14 | 0 | 15 | 13 | 3 | 13 | 5
+INPUTS | 8 | licznik<0>  | rd_not_wr  | not_e  | empty_half_full<2>  | licznik<1>  | licznik<2>  | empty_half_full_wew_cmp_eq0001  | licznik<3>
+INPUTMC | 6 | 0 | 8 | 13 | 3 | 0 | 9 | 0 | 10 | 0 | 15 | 0 | 14
+INPUTP | 2 | 218 | 62
+LCT | 1 | 2 | Internal_Name
+EQ | 5 | 
+   licznik<3>.T := !licznik<0> & rd_not_wr & !not_e & 
+	empty_half_full<2> & !licznik<1> & !licznik<2>
+	# licznik<0> & !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & licznik<1> & licznik<2> & !licznik<3>;	// (2 pt, 8 inp)
+    licznik<3>.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 13 | 5 | empty_half_full<1>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 2 | empty_half_full_wew_cmp_eq0001  | licznik<3>
+INPUTMC | 2 | 0 | 15 | 0 | 14
+EQ | 1 | 
+   !empty_half_full<1> = !empty_half_full_wew_cmp_eq0001 & licznik<3>;	// (1 pt, 2 inp)
+
+MACROCELL | 11 | 11 | magistrala_wy<0>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 4 | rd_not_wr  | not_e  | ram_0_0  | magistrala_we<0>
+INPUTMC | 1 | 0 | 7
+INPUTP | 3 | 218 | 62 | 3
+EQ | 2 | 
+   magistrala_wy<0> = rd_not_wr & !not_e & ram_0_0
+	# !rd_not_wr & !not_e & magistrala_we<0>;	// (2 pt, 4 inp)
+
+MACROCELL | 0 | 7 | ram_0_0_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 3 | 0 | 6 | 0 | 7 | 11 | 11
+INPUTS | 7 | rd_not_wr  | not_e  | empty_half_full<2>  | ram_0_0  | ram_1_0  | empty_half_full_wew_cmp_eq0001  | magistrala_we<0>
+INPUTMC | 4 | 13 | 3 | 0 | 7 | 0 | 6 | 0 | 15
+INPUTP | 3 | 218 | 62 | 3
+LCT | 1 | 2 | Internal_Name
+EQ | 9 | 
+   ram_0_0.T := rd_not_wr & !not_e & empty_half_full<2> & 
+	ram_0_0 & !ram_1_0
+	# rd_not_wr & !not_e & empty_half_full<2> & 
+	!ram_0_0 & ram_1_0
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & magistrala_we<0> & !ram_0_0
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & !magistrala_we<0> & ram_0_0;	// (4 pt, 7 inp)
+    ram_0_0.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 0 | 6 | ram_1_0_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 3 | 0 | 4 | 0 | 6 | 0 | 7
+INPUTS | 7 | rd_not_wr  | not_e  | empty_half_full<2>  | ram_1_0  | ram_2_0  | empty_half_full_wew_cmp_eq0001  | ram_0_0
+INPUTMC | 5 | 13 | 3 | 0 | 6 | 0 | 4 | 0 | 15 | 0 | 7
+INPUTP | 2 | 218 | 62
+LCT | 1 | 2 | Internal_Name
+EQ | 9 | 
+   ram_1_0.T := rd_not_wr & !not_e & empty_half_full<2> & 
+	ram_1_0 & !ram_2_0
+	# rd_not_wr & !not_e & empty_half_full<2> & 
+	!ram_1_0 & ram_2_0
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & ram_0_0 & !ram_1_0
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & !ram_0_0 & ram_1_0;	// (4 pt, 7 inp)
+    ram_1_0.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 0 | 4 | ram_2_0_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 3 | 0 | 1 | 0 | 4 | 0 | 6
+INPUTS | 7 | rd_not_wr  | not_e  | empty_half_full<2>  | ram_2_0  | ram_3_0  | empty_half_full_wew_cmp_eq0001  | ram_1_0
+INPUTMC | 5 | 13 | 3 | 0 | 4 | 0 | 1 | 0 | 15 | 0 | 6
+INPUTP | 2 | 218 | 62
+LCT | 1 | 2 | Internal_Name
+EQ | 9 | 
+   ram_2_0.T := rd_not_wr & !not_e & empty_half_full<2> & 
+	ram_2_0 & !ram_3_0
+	# rd_not_wr & !not_e & empty_half_full<2> & 
+	!ram_2_0 & ram_3_0
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & ram_1_0 & !ram_2_0
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & !ram_1_0 & ram_2_0;	// (4 pt, 7 inp)
+    ram_2_0.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 0 | 1 | ram_3_0_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 3 | 0 | 0 | 0 | 1 | 0 | 4
+INPUTS | 7 | rd_not_wr  | not_e  | empty_half_full<2>  | ram_3_0  | ram_4_0  | empty_half_full_wew_cmp_eq0001  | ram_2_0
+INPUTMC | 5 | 13 | 3 | 0 | 1 | 0 | 0 | 0 | 15 | 0 | 4
+INPUTP | 2 | 218 | 62
+LCT | 1 | 2 | Internal_Name
+EQ | 9 | 
+   ram_3_0.T := rd_not_wr & !not_e & empty_half_full<2> & 
+	ram_3_0 & !ram_4_0
+	# rd_not_wr & !not_e & empty_half_full<2> & 
+	!ram_3_0 & ram_4_0
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & ram_2_0 & !ram_3_0
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & !ram_2_0 & ram_3_0;	// (4 pt, 7 inp)
+    ram_3_0.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 0 | 0 | ram_4_0_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 3 | 0 | 13 | 0 | 0 | 0 | 1
+INPUTS | 7 | rd_not_wr  | not_e  | empty_half_full<2>  | ram_4_0  | ram_5_0  | empty_half_full_wew_cmp_eq0001  | ram_3_0
+INPUTMC | 5 | 13 | 3 | 0 | 0 | 0 | 13 | 0 | 15 | 0 | 1
+INPUTP | 2 | 218 | 62
+LCT | 1 | 2 | Internal_Name
+EQ | 9 | 
+   ram_4_0.T := rd_not_wr & !not_e & empty_half_full<2> & 
+	ram_4_0 & !ram_5_0
+	# rd_not_wr & !not_e & empty_half_full<2> & 
+	!ram_4_0 & ram_5_0
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & ram_3_0 & !ram_4_0
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & !ram_3_0 & ram_4_0;	// (4 pt, 7 inp)
+    ram_4_0.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 0 | 13 | ram_5_0_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 3 | 0 | 12 | 0 | 13 | 0 | 0
+INPUTS | 7 | rd_not_wr  | not_e  | empty_half_full<2>  | ram_5_0  | ram_6_0  | empty_half_full_wew_cmp_eq0001  | ram_4_0
+INPUTMC | 5 | 13 | 3 | 0 | 13 | 0 | 12 | 0 | 15 | 0 | 0
+INPUTP | 2 | 218 | 62
+LCT | 1 | 2 | Internal_Name
+EQ | 9 | 
+   ram_5_0.T := rd_not_wr & !not_e & empty_half_full<2> & 
+	ram_5_0 & !ram_6_0
+	# rd_not_wr & !not_e & empty_half_full<2> & 
+	!ram_5_0 & ram_6_0
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & ram_4_0 & !ram_5_0
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & !ram_4_0 & ram_5_0;	// (4 pt, 7 inp)
+    ram_5_0.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 0 | 12 | ram_6_0_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 3 | 0 | 11 | 0 | 12 | 0 | 13
+INPUTS | 7 | rd_not_wr  | not_e  | empty_half_full<2>  | ram_6_0  | ram_7_0  | empty_half_full_wew_cmp_eq0001  | ram_5_0
+INPUTMC | 5 | 13 | 3 | 0 | 12 | 0 | 11 | 0 | 15 | 0 | 13
+INPUTP | 2 | 218 | 62
+LCT | 1 | 2 | Internal_Name
+EQ | 9 | 
+   ram_6_0.T := rd_not_wr & !not_e & empty_half_full<2> & 
+	ram_6_0 & !ram_7_0
+	# rd_not_wr & !not_e & empty_half_full<2> & 
+	!ram_6_0 & ram_7_0
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & ram_5_0 & !ram_6_0
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & !ram_5_0 & ram_6_0;	// (4 pt, 7 inp)
+    ram_6_0.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 0 | 11 | ram_7_0_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 3 | 0 | 5 | 0 | 11 | 0 | 12
+INPUTS | 7 | rd_not_wr  | not_e  | empty_half_full<2>  | ram_7_0  | ram_8_0  | empty_half_full_wew_cmp_eq0001  | ram_6_0
+INPUTMC | 5 | 13 | 3 | 0 | 11 | 0 | 5 | 0 | 15 | 0 | 12
+INPUTP | 2 | 218 | 62
+LCT | 1 | 2 | Internal_Name
+EQ | 9 | 
+   ram_7_0.T := rd_not_wr & !not_e & empty_half_full<2> & 
+	ram_7_0 & !ram_8_0
+	# rd_not_wr & !not_e & empty_half_full<2> & 
+	!ram_7_0 & ram_8_0
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & ram_6_0 & !ram_7_0
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & !ram_6_0 & ram_7_0;	// (4 pt, 7 inp)
+    ram_7_0.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 0 | 5 | ram_8_0_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 3 | 0 | 3 | 0 | 5 | 0 | 11
+INPUTS | 7 | rd_not_wr  | not_e  | empty_half_full<2>  | ram_8_0  | ram_9_0  | empty_half_full_wew_cmp_eq0001  | ram_7_0
+INPUTMC | 5 | 13 | 3 | 0 | 5 | 0 | 3 | 0 | 15 | 0 | 11
+INPUTP | 2 | 218 | 62
+LCT | 1 | 2 | Internal_Name
+EQ | 9 | 
+   ram_8_0.T := rd_not_wr & !not_e & empty_half_full<2> & 
+	ram_8_0 & !ram_9_0
+	# rd_not_wr & !not_e & empty_half_full<2> & 
+	!ram_8_0 & ram_9_0
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & ram_7_0 & !ram_8_0
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & !ram_7_0 & ram_8_0;	// (4 pt, 7 inp)
+    ram_8_0.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 0 | 3 | ram_9_0_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 3 | 0 | 2 | 0 | 3 | 0 | 5
+INPUTS | 7 | rd_not_wr  | not_e  | empty_half_full<2>  | ram_9_0  | ram_10_0  | empty_half_full_wew_cmp_eq0001  | ram_8_0
+INPUTMC | 5 | 13 | 3 | 0 | 3 | 0 | 2 | 0 | 15 | 0 | 5
+INPUTP | 2 | 218 | 62
+LCT | 1 | 2 | Internal_Name
+EQ | 9 | 
+   ram_9_0.T := rd_not_wr & !not_e & empty_half_full<2> & 
+	ram_9_0 & !ram_10_0
+	# rd_not_wr & !not_e & empty_half_full<2> & 
+	!ram_9_0 & ram_10_0
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & ram_8_0 & !ram_9_0
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & !ram_8_0 & ram_9_0;	// (4 pt, 7 inp)
+    ram_9_0.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 0 | 2 | ram_10_0_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 3 | 1 | 8 | 0 | 2 | 0 | 3
+INPUTS | 7 | rd_not_wr  | not_e  | empty_half_full<2>  | ram_10_0  | ram_11_0  | empty_half_full_wew_cmp_eq0001  | ram_9_0
+INPUTMC | 5 | 13 | 3 | 0 | 2 | 1 | 8 | 0 | 15 | 0 | 3
+INPUTP | 2 | 218 | 62
+LCT | 1 | 2 | Internal_Name
+EQ | 9 | 
+   ram_10_0.T := rd_not_wr & !not_e & empty_half_full<2> & 
+	ram_10_0 & !ram_11_0
+	# rd_not_wr & !not_e & empty_half_full<2> & 
+	!ram_10_0 & ram_11_0
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & ram_9_0 & !ram_10_0
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & !ram_9_0 & ram_10_0;	// (4 pt, 7 inp)
+    ram_10_0.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 1 | 8 | ram_11_0_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 3 | 1 | 9 | 1 | 8 | 0 | 2
+INPUTS | 7 | rd_not_wr  | not_e  | empty_half_full<2>  | ram_11_0  | ram_12_0  | empty_half_full_wew_cmp_eq0001  | ram_10_0
+INPUTMC | 5 | 13 | 3 | 1 | 8 | 1 | 9 | 0 | 15 | 0 | 2
+INPUTP | 2 | 218 | 62
+LCT | 1 | 2 | Internal_Name
+EQ | 9 | 
+   ram_11_0.T := rd_not_wr & !not_e & empty_half_full<2> & 
+	ram_11_0 & !ram_12_0
+	# rd_not_wr & !not_e & empty_half_full<2> & 
+	!ram_11_0 & ram_12_0
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & ram_10_0 & !ram_11_0
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & !ram_10_0 & ram_11_0;	// (4 pt, 7 inp)
+    ram_11_0.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 1 | 9 | ram_12_0_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 3 | 1 | 10 | 1 | 9 | 1 | 8
+INPUTS | 7 | rd_not_wr  | not_e  | empty_half_full<2>  | ram_12_0  | ram_13_0  | empty_half_full_wew_cmp_eq0001  | ram_11_0
+INPUTMC | 5 | 13 | 3 | 1 | 9 | 1 | 10 | 0 | 15 | 1 | 8
+INPUTP | 2 | 218 | 62
+LCT | 1 | 2 | Internal_Name
+EQ | 9 | 
+   ram_12_0.T := rd_not_wr & !not_e & empty_half_full<2> & 
+	ram_12_0 & !ram_13_0
+	# rd_not_wr & !not_e & empty_half_full<2> & 
+	!ram_12_0 & ram_13_0
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & ram_11_0 & !ram_12_0
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & !ram_11_0 & ram_12_0;	// (4 pt, 7 inp)
+    ram_12_0.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 1 | 10 | ram_13_0_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 3 | 1 | 7 | 1 | 10 | 1 | 9
+INPUTS | 7 | rd_not_wr  | not_e  | empty_half_full<2>  | ram_13_0  | ram_14_0  | empty_half_full_wew_cmp_eq0001  | ram_12_0
+INPUTMC | 5 | 13 | 3 | 1 | 10 | 1 | 7 | 0 | 15 | 1 | 9
+INPUTP | 2 | 218 | 62
+LCT | 1 | 2 | Internal_Name
+EQ | 9 | 
+   ram_13_0.T := rd_not_wr & !not_e & empty_half_full<2> & 
+	ram_13_0 & !ram_14_0
+	# rd_not_wr & !not_e & empty_half_full<2> & 
+	!ram_13_0 & ram_14_0
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & ram_12_0 & !ram_13_0
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & !ram_12_0 & ram_13_0;	// (4 pt, 7 inp)
+    ram_13_0.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 1 | 7 | ram_14_0_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 3 | 1 | 15 | 1 | 7 | 1 | 10
+INPUTS | 7 | rd_not_wr  | not_e  | empty_half_full<2>  | ram_14_0  | ram_15_0  | empty_half_full_wew_cmp_eq0001  | ram_13_0
+INPUTMC | 5 | 13 | 3 | 1 | 7 | 1 | 15 | 0 | 15 | 1 | 10
+INPUTP | 2 | 218 | 62
+LCT | 1 | 2 | Internal_Name
+EQ | 9 | 
+   ram_14_0.T := rd_not_wr & !not_e & empty_half_full<2> & 
+	ram_14_0 & !ram_15_0
+	# rd_not_wr & !not_e & empty_half_full<2> & 
+	!ram_14_0 & ram_15_0
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & ram_13_0 & !ram_14_0
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & !ram_13_0 & ram_14_0;	// (4 pt, 7 inp)
+    ram_14_0.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 1 | 15 | ram_15_0_MC
+ATTRIBUTES | 2290090816 | 0
+OUTPUTMC | 1 | 1 | 7
+INPUTS | 4 | ram_14_0  | rd_not_wr  | not_e  | empty_half_full_wew_cmp_eq0001
+INPUTMC | 2 | 1 | 7 | 0 | 15
+INPUTP | 2 | 218 | 62
+LCT | 1 | 2 | Internal_Name
+EQ | 4 | 
+   ram_15_0 := ram_14_0;	// (1 pt, 1 inp)
+    ram_15_0.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+    ram_15_0.CE = !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001;	// (1 pt, 3 inp)
+
+MACROCELL | 11 | 1 | magistrala_wy<1>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 4 | rd_not_wr  | not_e  | ram_0_1  | magistrala_we<1>
+INPUTMC | 1 | 1 | 6
+INPUTP | 3 | 218 | 62 | 5
+EQ | 2 | 
+   magistrala_wy<1> = rd_not_wr & !not_e & ram_0_1
+	# !rd_not_wr & !not_e & magistrala_we<1>;	// (2 pt, 4 inp)
+
+MACROCELL | 1 | 6 | ram_0_1_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 3 | 1 | 5 | 1 | 6 | 11 | 1
+INPUTS | 7 | rd_not_wr  | not_e  | empty_half_full<2>  | ram_0_1  | ram_1_1  | empty_half_full_wew_cmp_eq0001  | magistrala_we<1>
+INPUTMC | 4 | 13 | 3 | 1 | 6 | 1 | 5 | 0 | 15
+INPUTP | 3 | 218 | 62 | 5
+LCT | 1 | 2 | Internal_Name
+EQ | 9 | 
+   ram_0_1.T := rd_not_wr & !not_e & empty_half_full<2> & 
+	ram_0_1 & !ram_1_1
+	# rd_not_wr & !not_e & empty_half_full<2> & 
+	!ram_0_1 & ram_1_1
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & magistrala_we<1> & !ram_0_1
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & !magistrala_we<1> & ram_0_1;	// (4 pt, 7 inp)
+    ram_0_1.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 1 | 5 | ram_1_1_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 3 | 1 | 1 | 1 | 5 | 1 | 6
+INPUTS | 7 | rd_not_wr  | not_e  | empty_half_full<2>  | ram_1_1  | ram_2_1  | empty_half_full_wew_cmp_eq0001  | ram_0_1
+INPUTMC | 5 | 13 | 3 | 1 | 5 | 1 | 1 | 0 | 15 | 1 | 6
+INPUTP | 2 | 218 | 62
+LCT | 1 | 2 | Internal_Name
+EQ | 9 | 
+   ram_1_1.T := rd_not_wr & !not_e & empty_half_full<2> & 
+	ram_1_1 & !ram_2_1
+	# rd_not_wr & !not_e & empty_half_full<2> & 
+	!ram_1_1 & ram_2_1
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & ram_0_1 & !ram_1_1
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & !ram_0_1 & ram_1_1;	// (4 pt, 7 inp)
+    ram_1_1.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 1 | 1 | ram_2_1_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 3 | 1 | 14 | 1 | 1 | 1 | 5
+INPUTS | 7 | rd_not_wr  | not_e  | empty_half_full<2>  | ram_2_1  | ram_3_1  | empty_half_full_wew_cmp_eq0001  | ram_1_1
+INPUTMC | 5 | 13 | 3 | 1 | 1 | 1 | 14 | 0 | 15 | 1 | 5
+INPUTP | 2 | 218 | 62
+LCT | 1 | 2 | Internal_Name
+EQ | 9 | 
+   ram_2_1.T := rd_not_wr & !not_e & empty_half_full<2> & 
+	ram_2_1 & !ram_3_1
+	# rd_not_wr & !not_e & empty_half_full<2> & 
+	!ram_2_1 & ram_3_1
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & ram_1_1 & !ram_2_1
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & !ram_1_1 & ram_2_1;	// (4 pt, 7 inp)
+    ram_2_1.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 1 | 14 | ram_3_1_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 3 | 1 | 13 | 1 | 14 | 1 | 1
+INPUTS | 7 | rd_not_wr  | not_e  | empty_half_full<2>  | ram_3_1  | ram_4_1  | empty_half_full_wew_cmp_eq0001  | ram_2_1
+INPUTMC | 5 | 13 | 3 | 1 | 14 | 1 | 13 | 0 | 15 | 1 | 1
+INPUTP | 2 | 218 | 62
+LCT | 1 | 2 | Internal_Name
+EQ | 9 | 
+   ram_3_1.T := rd_not_wr & !not_e & empty_half_full<2> & 
+	ram_3_1 & !ram_4_1
+	# rd_not_wr & !not_e & empty_half_full<2> & 
+	!ram_3_1 & ram_4_1
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & ram_2_1 & !ram_3_1
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & !ram_2_1 & ram_3_1;	// (4 pt, 7 inp)
+    ram_3_1.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 1 | 13 | ram_4_1_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 3 | 1 | 12 | 1 | 13 | 1 | 14
+INPUTS | 7 | rd_not_wr  | not_e  | empty_half_full<2>  | ram_4_1  | ram_5_1  | empty_half_full_wew_cmp_eq0001  | ram_3_1
+INPUTMC | 5 | 13 | 3 | 1 | 13 | 1 | 12 | 0 | 15 | 1 | 14
+INPUTP | 2 | 218 | 62
+LCT | 1 | 2 | Internal_Name
+EQ | 9 | 
+   ram_4_1.T := rd_not_wr & !not_e & empty_half_full<2> & 
+	ram_4_1 & !ram_5_1
+	# rd_not_wr & !not_e & empty_half_full<2> & 
+	!ram_4_1 & ram_5_1
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & ram_3_1 & !ram_4_1
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & !ram_3_1 & ram_4_1;	// (4 pt, 7 inp)
+    ram_4_1.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 1 | 12 | ram_5_1_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 3 | 1 | 11 | 1 | 12 | 1 | 13
+INPUTS | 7 | rd_not_wr  | not_e  | empty_half_full<2>  | ram_5_1  | ram_6_1  | empty_half_full_wew_cmp_eq0001  | ram_4_1
+INPUTMC | 5 | 13 | 3 | 1 | 12 | 1 | 11 | 0 | 15 | 1 | 13
+INPUTP | 2 | 218 | 62
+LCT | 1 | 2 | Internal_Name
+EQ | 9 | 
+   ram_5_1.T := rd_not_wr & !not_e & empty_half_full<2> & 
+	ram_5_1 & !ram_6_1
+	# rd_not_wr & !not_e & empty_half_full<2> & 
+	!ram_5_1 & ram_6_1
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & ram_4_1 & !ram_5_1
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & !ram_4_1 & ram_5_1;	// (4 pt, 7 inp)
+    ram_5_1.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 1 | 11 | ram_6_1_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 3 | 1 | 4 | 1 | 11 | 1 | 12
+INPUTS | 7 | rd_not_wr  | not_e  | empty_half_full<2>  | ram_6_1  | ram_7_1  | empty_half_full_wew_cmp_eq0001  | ram_5_1
+INPUTMC | 5 | 13 | 3 | 1 | 11 | 1 | 4 | 0 | 15 | 1 | 12
+INPUTP | 2 | 218 | 62
+LCT | 1 | 2 | Internal_Name
+EQ | 9 | 
+   ram_6_1.T := rd_not_wr & !not_e & empty_half_full<2> & 
+	ram_6_1 & !ram_7_1
+	# rd_not_wr & !not_e & empty_half_full<2> & 
+	!ram_6_1 & ram_7_1
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & ram_5_1 & !ram_6_1
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & !ram_5_1 & ram_6_1;	// (4 pt, 7 inp)
+    ram_6_1.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 1 | 4 | ram_7_1_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 3 | 1 | 3 | 1 | 4 | 1 | 11
+INPUTS | 7 | rd_not_wr  | not_e  | empty_half_full<2>  | ram_7_1  | ram_8_1  | empty_half_full_wew_cmp_eq0001  | ram_6_1
+INPUTMC | 5 | 13 | 3 | 1 | 4 | 1 | 3 | 0 | 15 | 1 | 11
+INPUTP | 2 | 218 | 62
+LCT | 1 | 2 | Internal_Name
+EQ | 9 | 
+   ram_7_1.T := rd_not_wr & !not_e & empty_half_full<2> & 
+	ram_7_1 & !ram_8_1
+	# rd_not_wr & !not_e & empty_half_full<2> & 
+	!ram_7_1 & ram_8_1
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & ram_6_1 & !ram_7_1
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & !ram_6_1 & ram_7_1;	// (4 pt, 7 inp)
+    ram_7_1.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 1 | 3 | ram_8_1_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 3 | 4 | 9 | 1 | 3 | 1 | 4
+INPUTS | 7 | rd_not_wr  | not_e  | empty_half_full<2>  | ram_8_1  | ram_9_1  | empty_half_full_wew_cmp_eq0001  | ram_7_1
+INPUTMC | 5 | 13 | 3 | 1 | 3 | 4 | 9 | 0 | 15 | 1 | 4
+INPUTP | 2 | 218 | 62
+LCT | 1 | 2 | Internal_Name
+EQ | 9 | 
+   ram_8_1.T := rd_not_wr & !not_e & empty_half_full<2> & 
+	ram_8_1 & !ram_9_1
+	# rd_not_wr & !not_e & empty_half_full<2> & 
+	!ram_8_1 & ram_9_1
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & ram_7_1 & !ram_8_1
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & !ram_7_1 & ram_8_1;	// (4 pt, 7 inp)
+    ram_8_1.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 4 | 9 | ram_9_1_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 3 | 4 | 15 | 4 | 9 | 1 | 3
+INPUTS | 7 | rd_not_wr  | not_e  | empty_half_full<2>  | ram_9_1  | ram_10_1  | empty_half_full_wew_cmp_eq0001  | ram_8_1
+INPUTMC | 5 | 13 | 3 | 4 | 9 | 4 | 15 | 0 | 15 | 1 | 3
+INPUTP | 2 | 218 | 62
+LCT | 1 | 2 | Internal_Name
+EQ | 9 | 
+   ram_9_1.T := rd_not_wr & !not_e & empty_half_full<2> & 
+	ram_9_1 & !ram_10_1
+	# rd_not_wr & !not_e & empty_half_full<2> & 
+	!ram_9_1 & ram_10_1
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & ram_8_1 & !ram_9_1
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & !ram_8_1 & ram_9_1;	// (4 pt, 7 inp)
+    ram_9_1.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 4 | 15 | ram_10_1_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 3 | 4 | 14 | 4 | 15 | 4 | 9
+INPUTS | 7 | rd_not_wr  | not_e  | empty_half_full<2>  | ram_10_1  | ram_11_1  | empty_half_full_wew_cmp_eq0001  | ram_9_1
+INPUTMC | 5 | 13 | 3 | 4 | 15 | 4 | 14 | 0 | 15 | 4 | 9
+INPUTP | 2 | 218 | 62
+LCT | 1 | 2 | Internal_Name
+EQ | 9 | 
+   ram_10_1.T := rd_not_wr & !not_e & empty_half_full<2> & 
+	ram_10_1 & !ram_11_1
+	# rd_not_wr & !not_e & empty_half_full<2> & 
+	!ram_10_1 & ram_11_1
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & ram_9_1 & !ram_10_1
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & !ram_9_1 & ram_10_1;	// (4 pt, 7 inp)
+    ram_10_1.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 4 | 14 | ram_11_1_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 3 | 4 | 12 | 4 | 14 | 4 | 15
+INPUTS | 7 | rd_not_wr  | not_e  | empty_half_full<2>  | ram_11_1  | ram_12_1  | empty_half_full_wew_cmp_eq0001  | ram_10_1
+INPUTMC | 5 | 13 | 3 | 4 | 14 | 4 | 12 | 0 | 15 | 4 | 15
+INPUTP | 2 | 218 | 62
+LCT | 1 | 2 | Internal_Name
+EQ | 9 | 
+   ram_11_1.T := rd_not_wr & !not_e & empty_half_full<2> & 
+	ram_11_1 & !ram_12_1
+	# rd_not_wr & !not_e & empty_half_full<2> & 
+	!ram_11_1 & ram_12_1
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & ram_10_1 & !ram_11_1
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & !ram_10_1 & ram_11_1;	// (4 pt, 7 inp)
+    ram_11_1.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 4 | 12 | ram_12_1_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 3 | 4 | 11 | 4 | 12 | 4 | 14
+INPUTS | 7 | rd_not_wr  | not_e  | empty_half_full<2>  | ram_12_1  | ram_13_1  | empty_half_full_wew_cmp_eq0001  | ram_11_1
+INPUTMC | 5 | 13 | 3 | 4 | 12 | 4 | 11 | 0 | 15 | 4 | 14
+INPUTP | 2 | 218 | 62
+LCT | 1 | 2 | Internal_Name
+EQ | 9 | 
+   ram_12_1.T := rd_not_wr & !not_e & empty_half_full<2> & 
+	ram_12_1 & !ram_13_1
+	# rd_not_wr & !not_e & empty_half_full<2> & 
+	!ram_12_1 & ram_13_1
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & ram_11_1 & !ram_12_1
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & !ram_11_1 & ram_12_1;	// (4 pt, 7 inp)
+    ram_12_1.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 4 | 11 | ram_13_1_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 3 | 4 | 10 | 4 | 11 | 4 | 12
+INPUTS | 7 | rd_not_wr  | not_e  | empty_half_full<2>  | ram_13_1  | ram_14_1  | empty_half_full_wew_cmp_eq0001  | ram_12_1
+INPUTMC | 5 | 13 | 3 | 4 | 11 | 4 | 10 | 0 | 15 | 4 | 12
+INPUTP | 2 | 218 | 62
+LCT | 1 | 2 | Internal_Name
+EQ | 9 | 
+   ram_13_1.T := rd_not_wr & !not_e & empty_half_full<2> & 
+	ram_13_1 & !ram_14_1
+	# rd_not_wr & !not_e & empty_half_full<2> & 
+	!ram_13_1 & ram_14_1
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & ram_12_1 & !ram_13_1
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & !ram_12_1 & ram_13_1;	// (4 pt, 7 inp)
+    ram_13_1.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 4 | 10 | ram_14_1_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 3 | 2 | 2 | 4 | 10 | 4 | 11
+INPUTS | 7 | rd_not_wr  | not_e  | empty_half_full<2>  | ram_14_1  | ram_15_1  | empty_half_full_wew_cmp_eq0001  | ram_13_1
+INPUTMC | 5 | 13 | 3 | 4 | 10 | 2 | 2 | 0 | 15 | 4 | 11
+INPUTP | 2 | 218 | 62
+LCT | 1 | 2 | Internal_Name
+EQ | 9 | 
+   ram_14_1.T := rd_not_wr & !not_e & empty_half_full<2> & 
+	ram_14_1 & !ram_15_1
+	# rd_not_wr & !not_e & empty_half_full<2> & 
+	!ram_14_1 & ram_15_1
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & ram_13_1 & !ram_14_1
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & !ram_13_1 & ram_14_1;	// (4 pt, 7 inp)
+    ram_14_1.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 2 | 2 | ram_15_1_MC
+ATTRIBUTES | 2290090816 | 0
+OUTPUTMC | 1 | 4 | 10
+INPUTS | 4 | ram_14_1  | rd_not_wr  | not_e  | empty_half_full_wew_cmp_eq0001
+INPUTMC | 2 | 4 | 10 | 0 | 15
+INPUTP | 2 | 218 | 62
+LCT | 1 | 2 | Internal_Name
+EQ | 4 | 
+   ram_15_1 := ram_14_1;	// (1 pt, 1 inp)
+    ram_15_1.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+    ram_15_1.CE = !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001;	// (1 pt, 3 inp)
+
+MACROCELL | 9 | 13 | magistrala_wy<2>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 4 | rd_not_wr  | not_e  | ram_0_2  | magistrala_we<2>
+INPUTMC | 1 | 2 | 14
+INPUTP | 3 | 218 | 62 | 8
+EQ | 2 | 
+   magistrala_wy<2> = rd_not_wr & !not_e & ram_0_2
+	# !rd_not_wr & !not_e & magistrala_we<2>;	// (2 pt, 4 inp)
+
+MACROCELL | 2 | 14 | ram_0_2_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 3 | 2 | 12 | 2 | 14 | 9 | 13
+INPUTS | 7 | rd_not_wr  | not_e  | empty_half_full<2>  | ram_0_2  | ram_1_2  | empty_half_full_wew_cmp_eq0001  | magistrala_we<2>
+INPUTMC | 4 | 13 | 3 | 2 | 14 | 2 | 12 | 0 | 15
+INPUTP | 3 | 218 | 62 | 8
+LCT | 1 | 2 | Internal_Name
+EQ | 9 | 
+   ram_0_2.T := rd_not_wr & !not_e & empty_half_full<2> & 
+	ram_0_2 & !ram_1_2
+	# rd_not_wr & !not_e & empty_half_full<2> & 
+	!ram_0_2 & ram_1_2
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & magistrala_we<2> & !ram_0_2
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & !magistrala_we<2> & ram_0_2;	// (4 pt, 7 inp)
+    ram_0_2.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 2 | 12 | ram_1_2_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 3 | 2 | 11 | 2 | 12 | 2 | 14
+INPUTS | 7 | rd_not_wr  | not_e  | empty_half_full<2>  | ram_1_2  | ram_2_2  | empty_half_full_wew_cmp_eq0001  | ram_0_2
+INPUTMC | 5 | 13 | 3 | 2 | 12 | 2 | 11 | 0 | 15 | 2 | 14
+INPUTP | 2 | 218 | 62
+LCT | 1 | 2 | Internal_Name
+EQ | 9 | 
+   ram_1_2.T := rd_not_wr & !not_e & empty_half_full<2> & 
+	ram_1_2 & !ram_2_2
+	# rd_not_wr & !not_e & empty_half_full<2> & 
+	!ram_1_2 & ram_2_2
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & ram_0_2 & !ram_1_2
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & !ram_0_2 & ram_1_2;	// (4 pt, 7 inp)
+    ram_1_2.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 2 | 11 | ram_2_2_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 3 | 2 | 10 | 2 | 11 | 2 | 12
+INPUTS | 7 | rd_not_wr  | not_e  | empty_half_full<2>  | ram_2_2  | ram_3_2  | empty_half_full_wew_cmp_eq0001  | ram_1_2
+INPUTMC | 5 | 13 | 3 | 2 | 11 | 2 | 10 | 0 | 15 | 2 | 12
+INPUTP | 2 | 218 | 62
+LCT | 1 | 2 | Internal_Name
+EQ | 9 | 
+   ram_2_2.T := rd_not_wr & !not_e & empty_half_full<2> & 
+	ram_2_2 & !ram_3_2
+	# rd_not_wr & !not_e & empty_half_full<2> & 
+	!ram_2_2 & ram_3_2
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & ram_1_2 & !ram_2_2
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & !ram_1_2 & ram_2_2;	// (4 pt, 7 inp)
+    ram_2_2.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 2 | 10 | ram_3_2_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 3 | 2 | 9 | 2 | 10 | 2 | 11
+INPUTS | 7 | rd_not_wr  | not_e  | empty_half_full<2>  | ram_3_2  | ram_4_2  | empty_half_full_wew_cmp_eq0001  | ram_2_2
+INPUTMC | 5 | 13 | 3 | 2 | 10 | 2 | 9 | 0 | 15 | 2 | 11
+INPUTP | 2 | 218 | 62
+LCT | 1 | 2 | Internal_Name
+EQ | 9 | 
+   ram_3_2.T := rd_not_wr & !not_e & empty_half_full<2> & 
+	ram_3_2 & !ram_4_2
+	# rd_not_wr & !not_e & empty_half_full<2> & 
+	!ram_3_2 & ram_4_2
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & ram_2_2 & !ram_3_2
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & !ram_2_2 & ram_3_2;	// (4 pt, 7 inp)
+    ram_3_2.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 2 | 9 | ram_4_2_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 3 | 2 | 8 | 2 | 9 | 2 | 10
+INPUTS | 7 | rd_not_wr  | not_e  | empty_half_full<2>  | ram_4_2  | ram_5_2  | empty_half_full_wew_cmp_eq0001  | ram_3_2
+INPUTMC | 5 | 13 | 3 | 2 | 9 | 2 | 8 | 0 | 15 | 2 | 10
+INPUTP | 2 | 218 | 62
+LCT | 1 | 2 | Internal_Name
+EQ | 9 | 
+   ram_4_2.T := rd_not_wr & !not_e & empty_half_full<2> & 
+	ram_4_2 & !ram_5_2
+	# rd_not_wr & !not_e & empty_half_full<2> & 
+	!ram_4_2 & ram_5_2
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & ram_3_2 & !ram_4_2
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & !ram_3_2 & ram_4_2;	// (4 pt, 7 inp)
+    ram_4_2.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 2 | 8 | ram_5_2_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 3 | 2 | 7 | 2 | 8 | 2 | 9
+INPUTS | 7 | rd_not_wr  | not_e  | empty_half_full<2>  | ram_5_2  | ram_6_2  | empty_half_full_wew_cmp_eq0001  | ram_4_2
+INPUTMC | 5 | 13 | 3 | 2 | 8 | 2 | 7 | 0 | 15 | 2 | 9
+INPUTP | 2 | 218 | 62
+LCT | 1 | 2 | Internal_Name
+EQ | 9 | 
+   ram_5_2.T := rd_not_wr & !not_e & empty_half_full<2> & 
+	ram_5_2 & !ram_6_2
+	# rd_not_wr & !not_e & empty_half_full<2> & 
+	!ram_5_2 & ram_6_2
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & ram_4_2 & !ram_5_2
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & !ram_4_2 & ram_5_2;	// (4 pt, 7 inp)
+    ram_5_2.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 2 | 7 | ram_6_2_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 3 | 2 | 6 | 2 | 7 | 2 | 8
+INPUTS | 7 | rd_not_wr  | not_e  | empty_half_full<2>  | ram_6_2  | ram_7_2  | empty_half_full_wew_cmp_eq0001  | ram_5_2
+INPUTMC | 5 | 13 | 3 | 2 | 7 | 2 | 6 | 0 | 15 | 2 | 8
+INPUTP | 2 | 218 | 62
+LCT | 1 | 2 | Internal_Name
+EQ | 9 | 
+   ram_6_2.T := rd_not_wr & !not_e & empty_half_full<2> & 
+	ram_6_2 & !ram_7_2
+	# rd_not_wr & !not_e & empty_half_full<2> & 
+	!ram_6_2 & ram_7_2
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & ram_5_2 & !ram_6_2
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & !ram_5_2 & ram_6_2;	// (4 pt, 7 inp)
+    ram_6_2.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 2 | 6 | ram_7_2_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 3 | 2 | 5 | 2 | 6 | 2 | 7
+INPUTS | 7 | rd_not_wr  | not_e  | empty_half_full<2>  | ram_7_2  | ram_8_2  | empty_half_full_wew_cmp_eq0001  | ram_6_2
+INPUTMC | 5 | 13 | 3 | 2 | 6 | 2 | 5 | 0 | 15 | 2 | 7
+INPUTP | 2 | 218 | 62
+LCT | 1 | 2 | Internal_Name
+EQ | 9 | 
+   ram_7_2.T := rd_not_wr & !not_e & empty_half_full<2> & 
+	ram_7_2 & !ram_8_2
+	# rd_not_wr & !not_e & empty_half_full<2> & 
+	!ram_7_2 & ram_8_2
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & ram_6_2 & !ram_7_2
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & !ram_6_2 & ram_7_2;	// (4 pt, 7 inp)
+    ram_7_2.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 2 | 5 | ram_8_2_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 3 | 2 | 3 | 2 | 5 | 2 | 6
+INPUTS | 7 | rd_not_wr  | not_e  | empty_half_full<2>  | ram_8_2  | ram_9_2  | empty_half_full_wew_cmp_eq0001  | ram_7_2
+INPUTMC | 5 | 13 | 3 | 2 | 5 | 2 | 3 | 0 | 15 | 2 | 6
+INPUTP | 2 | 218 | 62
+LCT | 1 | 2 | Internal_Name
+EQ | 9 | 
+   ram_8_2.T := rd_not_wr & !not_e & empty_half_full<2> & 
+	ram_8_2 & !ram_9_2
+	# rd_not_wr & !not_e & empty_half_full<2> & 
+	!ram_8_2 & ram_9_2
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & ram_7_2 & !ram_8_2
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & !ram_7_2 & ram_8_2;	// (4 pt, 7 inp)
+    ram_8_2.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 2 | 3 | ram_9_2_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 3 | 2 | 15 | 2 | 3 | 2 | 5
+INPUTS | 7 | rd_not_wr  | not_e  | empty_half_full<2>  | ram_9_2  | ram_10_2  | empty_half_full_wew_cmp_eq0001  | ram_8_2
+INPUTMC | 5 | 13 | 3 | 2 | 3 | 2 | 15 | 0 | 15 | 2 | 5
+INPUTP | 2 | 218 | 62
+LCT | 1 | 2 | Internal_Name
+EQ | 9 | 
+   ram_9_2.T := rd_not_wr & !not_e & empty_half_full<2> & 
+	ram_9_2 & !ram_10_2
+	# rd_not_wr & !not_e & empty_half_full<2> & 
+	!ram_9_2 & ram_10_2
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & ram_8_2 & !ram_9_2
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & !ram_8_2 & ram_9_2;	// (4 pt, 7 inp)
+    ram_9_2.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 2 | 15 | ram_10_2_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 3 | 2 | 13 | 2 | 15 | 2 | 3
+INPUTS | 7 | rd_not_wr  | not_e  | empty_half_full<2>  | ram_10_2  | ram_11_2  | empty_half_full_wew_cmp_eq0001  | ram_9_2
+INPUTMC | 5 | 13 | 3 | 2 | 15 | 2 | 13 | 0 | 15 | 2 | 3
+INPUTP | 2 | 218 | 62
+LCT | 1 | 2 | Internal_Name
+EQ | 9 | 
+   ram_10_2.T := rd_not_wr & !not_e & empty_half_full<2> & 
+	ram_10_2 & !ram_11_2
+	# rd_not_wr & !not_e & empty_half_full<2> & 
+	!ram_10_2 & ram_11_2
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & ram_9_2 & !ram_10_2
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & !ram_9_2 & ram_10_2;	// (4 pt, 7 inp)
+    ram_10_2.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 2 | 13 | ram_11_2_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 3 | 2 | 4 | 2 | 13 | 2 | 15
+INPUTS | 7 | rd_not_wr  | not_e  | empty_half_full<2>  | ram_11_2  | ram_12_2  | empty_half_full_wew_cmp_eq0001  | ram_10_2
+INPUTMC | 5 | 13 | 3 | 2 | 13 | 2 | 4 | 0 | 15 | 2 | 15
+INPUTP | 2 | 218 | 62
+LCT | 1 | 2 | Internal_Name
+EQ | 9 | 
+   ram_11_2.T := rd_not_wr & !not_e & empty_half_full<2> & 
+	ram_11_2 & !ram_12_2
+	# rd_not_wr & !not_e & empty_half_full<2> & 
+	!ram_11_2 & ram_12_2
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & ram_10_2 & !ram_11_2
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & !ram_10_2 & ram_11_2;	// (4 pt, 7 inp)
+    ram_11_2.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 2 | 4 | ram_12_2_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 3 | 4 | 8 | 2 | 4 | 2 | 13
+INPUTS | 7 | rd_not_wr  | not_e  | empty_half_full<2>  | ram_12_2  | ram_13_2  | empty_half_full_wew_cmp_eq0001  | ram_11_2
+INPUTMC | 5 | 13 | 3 | 2 | 4 | 4 | 8 | 0 | 15 | 2 | 13
+INPUTP | 2 | 218 | 62
+LCT | 1 | 2 | Internal_Name
+EQ | 9 | 
+   ram_12_2.T := rd_not_wr & !not_e & empty_half_full<2> & 
+	ram_12_2 & !ram_13_2
+	# rd_not_wr & !not_e & empty_half_full<2> & 
+	!ram_12_2 & ram_13_2
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & ram_11_2 & !ram_12_2
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & !ram_11_2 & ram_12_2;	// (4 pt, 7 inp)
+    ram_12_2.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 4 | 8 | ram_13_2_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 3 | 4 | 7 | 4 | 8 | 2 | 4
+INPUTS | 7 | rd_not_wr  | not_e  | empty_half_full<2>  | ram_13_2  | ram_14_2  | empty_half_full_wew_cmp_eq0001  | ram_12_2
+INPUTMC | 5 | 13 | 3 | 4 | 8 | 4 | 7 | 0 | 15 | 2 | 4
+INPUTP | 2 | 218 | 62
+LCT | 1 | 2 | Internal_Name
+EQ | 9 | 
+   ram_13_2.T := rd_not_wr & !not_e & empty_half_full<2> & 
+	ram_13_2 & !ram_14_2
+	# rd_not_wr & !not_e & empty_half_full<2> & 
+	!ram_13_2 & ram_14_2
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & ram_12_2 & !ram_13_2
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & !ram_12_2 & ram_13_2;	// (4 pt, 7 inp)
+    ram_13_2.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 4 | 7 | ram_14_2_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 3 | 3 | 2 | 4 | 7 | 4 | 8
+INPUTS | 7 | rd_not_wr  | not_e  | empty_half_full<2>  | ram_14_2  | ram_15_2  | empty_half_full_wew_cmp_eq0001  | ram_13_2
+INPUTMC | 5 | 13 | 3 | 4 | 7 | 3 | 2 | 0 | 15 | 4 | 8
+INPUTP | 2 | 218 | 62
+LCT | 1 | 2 | Internal_Name
+EQ | 9 | 
+   ram_14_2.T := rd_not_wr & !not_e & empty_half_full<2> & 
+	ram_14_2 & !ram_15_2
+	# rd_not_wr & !not_e & empty_half_full<2> & 
+	!ram_14_2 & ram_15_2
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & ram_13_2 & !ram_14_2
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & !ram_13_2 & ram_14_2;	// (4 pt, 7 inp)
+    ram_14_2.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 3 | 2 | ram_15_2_MC
+ATTRIBUTES | 2290090816 | 0
+OUTPUTMC | 1 | 4 | 7
+INPUTS | 4 | ram_14_2  | rd_not_wr  | not_e  | empty_half_full_wew_cmp_eq0001
+INPUTMC | 2 | 4 | 7 | 0 | 15
+INPUTP | 2 | 218 | 62
+LCT | 1 | 2 | Internal_Name
+EQ | 4 | 
+   ram_15_2 := ram_14_2;	// (1 pt, 1 inp)
+    ram_15_2.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+    ram_15_2.CE = !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001;	// (1 pt, 3 inp)
+
+MACROCELL | 9 | 5 | magistrala_wy<3>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 4 | rd_not_wr  | not_e  | ram_0_3  | magistrala_we<3>
+INPUTMC | 1 | 3 | 15
+INPUTP | 3 | 218 | 62 | 12
+EQ | 2 | 
+   magistrala_wy<3> = rd_not_wr & !not_e & ram_0_3
+	# !rd_not_wr & !not_e & magistrala_we<3>;	// (2 pt, 4 inp)
+
+MACROCELL | 3 | 15 | ram_0_3_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 3 | 3 | 14 | 3 | 15 | 9 | 5
+INPUTS | 7 | rd_not_wr  | not_e  | empty_half_full<2>  | ram_0_3  | ram_1_3  | empty_half_full_wew_cmp_eq0001  | magistrala_we<3>
+INPUTMC | 4 | 13 | 3 | 3 | 15 | 3 | 14 | 0 | 15
+INPUTP | 3 | 218 | 62 | 12
+LCT | 1 | 2 | Internal_Name
+EQ | 9 | 
+   ram_0_3.T := rd_not_wr & !not_e & empty_half_full<2> & 
+	ram_0_3 & !ram_1_3
+	# rd_not_wr & !not_e & empty_half_full<2> & 
+	!ram_0_3 & ram_1_3
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & magistrala_we<3> & !ram_0_3
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & !magistrala_we<3> & ram_0_3;	// (4 pt, 7 inp)
+    ram_0_3.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 3 | 14 | ram_1_3_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 3 | 3 | 12 | 3 | 14 | 3 | 15
+INPUTS | 7 | rd_not_wr  | not_e  | empty_half_full<2>  | ram_1_3  | ram_2_3  | empty_half_full_wew_cmp_eq0001  | ram_0_3
+INPUTMC | 5 | 13 | 3 | 3 | 14 | 3 | 12 | 0 | 15 | 3 | 15
+INPUTP | 2 | 218 | 62
+LCT | 1 | 2 | Internal_Name
+EQ | 9 | 
+   ram_1_3.T := rd_not_wr & !not_e & empty_half_full<2> & 
+	ram_1_3 & !ram_2_3
+	# rd_not_wr & !not_e & empty_half_full<2> & 
+	!ram_1_3 & ram_2_3
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & ram_0_3 & !ram_1_3
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & !ram_0_3 & ram_1_3;	// (4 pt, 7 inp)
+    ram_1_3.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 3 | 12 | ram_2_3_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 3 | 3 | 10 | 3 | 12 | 3 | 14
+INPUTS | 7 | rd_not_wr  | not_e  | empty_half_full<2>  | ram_2_3  | ram_3_3  | empty_half_full_wew_cmp_eq0001  | ram_1_3
+INPUTMC | 5 | 13 | 3 | 3 | 12 | 3 | 10 | 0 | 15 | 3 | 14
+INPUTP | 2 | 218 | 62
+LCT | 1 | 2 | Internal_Name
+EQ | 9 | 
+   ram_2_3.T := rd_not_wr & !not_e & empty_half_full<2> & 
+	ram_2_3 & !ram_3_3
+	# rd_not_wr & !not_e & empty_half_full<2> & 
+	!ram_2_3 & ram_3_3
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & ram_1_3 & !ram_2_3
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & !ram_1_3 & ram_2_3;	// (4 pt, 7 inp)
+    ram_2_3.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 3 | 10 | ram_3_3_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 3 | 3 | 9 | 3 | 10 | 3 | 12
+INPUTS | 7 | rd_not_wr  | not_e  | empty_half_full<2>  | ram_3_3  | ram_4_3  | empty_half_full_wew_cmp_eq0001  | ram_2_3
+INPUTMC | 5 | 13 | 3 | 3 | 10 | 3 | 9 | 0 | 15 | 3 | 12
+INPUTP | 2 | 218 | 62
+LCT | 1 | 2 | Internal_Name
+EQ | 9 | 
+   ram_3_3.T := rd_not_wr & !not_e & empty_half_full<2> & 
+	ram_3_3 & !ram_4_3
+	# rd_not_wr & !not_e & empty_half_full<2> & 
+	!ram_3_3 & ram_4_3
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & ram_2_3 & !ram_3_3
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & !ram_2_3 & ram_3_3;	// (4 pt, 7 inp)
+    ram_3_3.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 3 | 9 | ram_4_3_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 3 | 3 | 8 | 3 | 9 | 3 | 10
+INPUTS | 7 | rd_not_wr  | not_e  | empty_half_full<2>  | ram_4_3  | ram_5_3  | empty_half_full_wew_cmp_eq0001  | ram_3_3
+INPUTMC | 5 | 13 | 3 | 3 | 9 | 3 | 8 | 0 | 15 | 3 | 10
+INPUTP | 2 | 218 | 62
+LCT | 1 | 2 | Internal_Name
+EQ | 9 | 
+   ram_4_3.T := rd_not_wr & !not_e & empty_half_full<2> & 
+	ram_4_3 & !ram_5_3
+	# rd_not_wr & !not_e & empty_half_full<2> & 
+	!ram_4_3 & ram_5_3
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & ram_3_3 & !ram_4_3
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & !ram_3_3 & ram_4_3;	// (4 pt, 7 inp)
+    ram_4_3.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 3 | 8 | ram_5_3_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 3 | 3 | 7 | 3 | 8 | 3 | 9
+INPUTS | 7 | rd_not_wr  | not_e  | empty_half_full<2>  | ram_5_3  | ram_6_3  | empty_half_full_wew_cmp_eq0001  | ram_4_3
+INPUTMC | 5 | 13 | 3 | 3 | 8 | 3 | 7 | 0 | 15 | 3 | 9
+INPUTP | 2 | 218 | 62
+LCT | 1 | 2 | Internal_Name
+EQ | 9 | 
+   ram_5_3.T := rd_not_wr & !not_e & empty_half_full<2> & 
+	ram_5_3 & !ram_6_3
+	# rd_not_wr & !not_e & empty_half_full<2> & 
+	!ram_5_3 & ram_6_3
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & ram_4_3 & !ram_5_3
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & !ram_4_3 & ram_5_3;	// (4 pt, 7 inp)
+    ram_5_3.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 3 | 7 | ram_6_3_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 3 | 3 | 6 | 3 | 7 | 3 | 8
+INPUTS | 7 | rd_not_wr  | not_e  | empty_half_full<2>  | ram_6_3  | ram_7_3  | empty_half_full_wew_cmp_eq0001  | ram_5_3
+INPUTMC | 5 | 13 | 3 | 3 | 7 | 3 | 6 | 0 | 15 | 3 | 8
+INPUTP | 2 | 218 | 62
+LCT | 1 | 2 | Internal_Name
+EQ | 9 | 
+   ram_6_3.T := rd_not_wr & !not_e & empty_half_full<2> & 
+	ram_6_3 & !ram_7_3
+	# rd_not_wr & !not_e & empty_half_full<2> & 
+	!ram_6_3 & ram_7_3
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & ram_5_3 & !ram_6_3
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & !ram_5_3 & ram_6_3;	// (4 pt, 7 inp)
+    ram_6_3.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 3 | 6 | ram_7_3_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 3 | 3 | 13 | 3 | 6 | 3 | 7
+INPUTS | 7 | rd_not_wr  | not_e  | empty_half_full<2>  | ram_7_3  | ram_8_3  | empty_half_full_wew_cmp_eq0001  | ram_6_3
+INPUTMC | 5 | 13 | 3 | 3 | 6 | 3 | 13 | 0 | 15 | 3 | 7
+INPUTP | 2 | 218 | 62
+LCT | 1 | 2 | Internal_Name
+EQ | 9 | 
+   ram_7_3.T := rd_not_wr & !not_e & empty_half_full<2> & 
+	ram_7_3 & !ram_8_3
+	# rd_not_wr & !not_e & empty_half_full<2> & 
+	!ram_7_3 & ram_8_3
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & ram_6_3 & !ram_7_3
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & !ram_6_3 & ram_7_3;	// (4 pt, 7 inp)
+    ram_7_3.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 3 | 13 | ram_8_3_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 3 | 3 | 11 | 3 | 13 | 3 | 6
+INPUTS | 7 | rd_not_wr  | not_e  | empty_half_full<2>  | ram_8_3  | ram_9_3  | empty_half_full_wew_cmp_eq0001  | ram_7_3
+INPUTMC | 5 | 13 | 3 | 3 | 13 | 3 | 11 | 0 | 15 | 3 | 6
+INPUTP | 2 | 218 | 62
+LCT | 1 | 2 | Internal_Name
+EQ | 9 | 
+   ram_8_3.T := rd_not_wr & !not_e & empty_half_full<2> & 
+	ram_8_3 & !ram_9_3
+	# rd_not_wr & !not_e & empty_half_full<2> & 
+	!ram_8_3 & ram_9_3
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & ram_7_3 & !ram_8_3
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & !ram_7_3 & ram_8_3;	// (4 pt, 7 inp)
+    ram_8_3.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 3 | 11 | ram_9_3_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 3 | 3 | 5 | 3 | 11 | 3 | 13
+INPUTS | 7 | rd_not_wr  | not_e  | empty_half_full<2>  | ram_9_3  | ram_10_3  | empty_half_full_wew_cmp_eq0001  | ram_8_3
+INPUTMC | 5 | 13 | 3 | 3 | 11 | 3 | 5 | 0 | 15 | 3 | 13
+INPUTP | 2 | 218 | 62
+LCT | 1 | 2 | Internal_Name
+EQ | 9 | 
+   ram_9_3.T := rd_not_wr & !not_e & empty_half_full<2> & 
+	ram_9_3 & !ram_10_3
+	# rd_not_wr & !not_e & empty_half_full<2> & 
+	!ram_9_3 & ram_10_3
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & ram_8_3 & !ram_9_3
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & !ram_8_3 & ram_9_3;	// (4 pt, 7 inp)
+    ram_9_3.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 3 | 5 | ram_10_3_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 3 | 3 | 4 | 3 | 5 | 3 | 11
+INPUTS | 7 | rd_not_wr  | not_e  | empty_half_full<2>  | ram_10_3  | ram_11_3  | empty_half_full_wew_cmp_eq0001  | ram_9_3
+INPUTMC | 5 | 13 | 3 | 3 | 5 | 3 | 4 | 0 | 15 | 3 | 11
+INPUTP | 2 | 218 | 62
+LCT | 1 | 2 | Internal_Name
+EQ | 9 | 
+   ram_10_3.T := rd_not_wr & !not_e & empty_half_full<2> & 
+	ram_10_3 & !ram_11_3
+	# rd_not_wr & !not_e & empty_half_full<2> & 
+	!ram_10_3 & ram_11_3
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & ram_9_3 & !ram_10_3
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & !ram_9_3 & ram_10_3;	// (4 pt, 7 inp)
+    ram_10_3.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 3 | 4 | ram_11_3_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 3 | 3 | 3 | 3 | 4 | 3 | 5
+INPUTS | 7 | rd_not_wr  | not_e  | empty_half_full<2>  | ram_11_3  | ram_12_3  | empty_half_full_wew_cmp_eq0001  | ram_10_3
+INPUTMC | 5 | 13 | 3 | 3 | 4 | 3 | 3 | 0 | 15 | 3 | 5
+INPUTP | 2 | 218 | 62
+LCT | 1 | 2 | Internal_Name
+EQ | 9 | 
+   ram_11_3.T := rd_not_wr & !not_e & empty_half_full<2> & 
+	ram_11_3 & !ram_12_3
+	# rd_not_wr & !not_e & empty_half_full<2> & 
+	!ram_11_3 & ram_12_3
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & ram_10_3 & !ram_11_3
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & !ram_10_3 & ram_11_3;	// (4 pt, 7 inp)
+    ram_11_3.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 3 | 3 | ram_12_3_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 3 | 4 | 6 | 3 | 3 | 3 | 4
+INPUTS | 7 | rd_not_wr  | not_e  | empty_half_full<2>  | ram_12_3  | ram_13_3  | empty_half_full_wew_cmp_eq0001  | ram_11_3
+INPUTMC | 5 | 13 | 3 | 3 | 3 | 4 | 6 | 0 | 15 | 3 | 4
+INPUTP | 2 | 218 | 62
+LCT | 1 | 2 | Internal_Name
+EQ | 9 | 
+   ram_12_3.T := rd_not_wr & !not_e & empty_half_full<2> & 
+	ram_12_3 & !ram_13_3
+	# rd_not_wr & !not_e & empty_half_full<2> & 
+	!ram_12_3 & ram_13_3
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & ram_11_3 & !ram_12_3
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & !ram_11_3 & ram_12_3;	// (4 pt, 7 inp)
+    ram_12_3.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 4 | 6 | ram_13_3_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 3 | 4 | 2 | 4 | 6 | 3 | 3
+INPUTS | 7 | rd_not_wr  | not_e  | empty_half_full<2>  | ram_13_3  | ram_14_3  | empty_half_full_wew_cmp_eq0001  | ram_12_3
+INPUTMC | 5 | 13 | 3 | 4 | 6 | 4 | 2 | 0 | 15 | 3 | 3
+INPUTP | 2 | 218 | 62
+LCT | 1 | 2 | Internal_Name
+EQ | 9 | 
+   ram_13_3.T := rd_not_wr & !not_e & empty_half_full<2> & 
+	ram_13_3 & !ram_14_3
+	# rd_not_wr & !not_e & empty_half_full<2> & 
+	!ram_13_3 & ram_14_3
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & ram_12_3 & !ram_13_3
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & !ram_12_3 & ram_13_3;	// (4 pt, 7 inp)
+    ram_13_3.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 4 | 2 | ram_14_3_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 3 | 4 | 0 | 4 | 2 | 4 | 6
+INPUTS | 7 | rd_not_wr  | not_e  | empty_half_full<2>  | ram_14_3  | ram_15_3  | empty_half_full_wew_cmp_eq0001  | ram_13_3
+INPUTMC | 5 | 13 | 3 | 4 | 2 | 4 | 0 | 0 | 15 | 4 | 6
+INPUTP | 2 | 218 | 62
+LCT | 1 | 2 | Internal_Name
+EQ | 9 | 
+   ram_14_3.T := rd_not_wr & !not_e & empty_half_full<2> & 
+	ram_14_3 & !ram_15_3
+	# rd_not_wr & !not_e & empty_half_full<2> & 
+	!ram_14_3 & ram_15_3
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & ram_13_3 & !ram_14_3
+	# !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001 & !ram_13_3 & ram_14_3;	// (4 pt, 7 inp)
+    ram_14_3.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 4 | 0 | ram_15_3_MC
+ATTRIBUTES | 2290090816 | 0
+OUTPUTMC | 1 | 4 | 2
+INPUTS | 4 | ram_14_3  | rd_not_wr  | not_e  | empty_half_full_wew_cmp_eq0001
+INPUTMC | 2 | 4 | 2 | 0 | 15
+INPUTP | 2 | 218 | 62
+LCT | 1 | 2 | Internal_Name
+EQ | 4 | 
+   ram_15_3 := ram_14_3;	// (1 pt, 1 inp)
+    ram_15_3.CLK = clk_wpis;	// CTC	(1 pt, 1 inp)
+    ram_15_3.CE = !rd_not_wr & !not_e & 
+	!empty_half_full_wew_cmp_eq0001;	// (1 pt, 3 inp)
+
+PIN | clk_wpis | 64 | 16 | LVCMOS18 | 190 | 0
+PIN | rd_not_wr | 64 | 16 | LVCMOS18 | 218 | 72 | 0 | 9 | 0 | 10 | 0 | 14 | 0 | 8 | 1 | 15 | 1 | 7 | 1 | 10 | 1 | 9 | 1 | 8 | 0 | 2 | 0 | 3 | 0 | 5 | 0 | 11 | 0 | 12 | 0 | 13 | 0 | 0 | 0 | 1 | 0 | 4 | 0 | 6 | 0 | 7 | 11 | 11 | 2 | 2 | 4 | 10 | 4 | 11 | 4 | 12 | 4 | 14 | 4 | 15 | 4 | 9 | 1 | 3 | 1 | 4 | 1 | 11 | 1 | 12 | 1 | 13 | 1 | 14 | 1 | 1 | 1 | 5 | 1 | 6 | 11 | 1 | 3 | 2 | 4 | 7 | 4 | 8 | 2 | 4 | 2 | 13 | 2 | 15 | 2 | 3 | 2 | 5 | 2 | 6 | 2 | 7 | 2 | 8 | 2 | 9 | 2 | 10 | 2 | 11 | 2 | 12 | 2 | 14 | 9 | 13 | 4 | 0 | 4 | 2 | 4 | 6 | 3 | 3 | 3 | 4 | 3 | 5 | 3 | 11 | 3 | 13 | 3 | 6 | 3 | 7 | 3 | 8 | 3 | 9 | 3 | 10 | 3 | 12 | 3 | 14 | 3 | 15 | 9 | 5
+PIN | not_e | 64 | 16 | LVCMOS18 | 62 | 72 | 0 | 9 | 0 | 10 | 0 | 14 | 0 | 8 | 1 | 15 | 1 | 7 | 1 | 10 | 1 | 9 | 1 | 8 | 0 | 2 | 0 | 3 | 0 | 5 | 0 | 11 | 0 | 12 | 0 | 13 | 0 | 0 | 0 | 1 | 0 | 4 | 0 | 6 | 0 | 7 | 11 | 11 | 2 | 2 | 4 | 10 | 4 | 11 | 4 | 12 | 4 | 14 | 4 | 15 | 4 | 9 | 1 | 3 | 1 | 4 | 1 | 11 | 1 | 12 | 1 | 13 | 1 | 14 | 1 | 1 | 1 | 5 | 1 | 6 | 11 | 1 | 3 | 2 | 4 | 7 | 4 | 8 | 2 | 4 | 2 | 13 | 2 | 15 | 2 | 3 | 2 | 5 | 2 | 6 | 2 | 7 | 2 | 8 | 2 | 9 | 2 | 10 | 2 | 11 | 2 | 12 | 2 | 14 | 9 | 13 | 4 | 0 | 4 | 2 | 4 | 6 | 3 | 3 | 3 | 4 | 3 | 5 | 3 | 11 | 3 | 13 | 3 | 6 | 3 | 7 | 3 | 8 | 3 | 9 | 3 | 10 | 3 | 12 | 3 | 14 | 3 | 15 | 9 | 5
+PIN | magistrala_we<0> | 64 | 16 | LVCMOS18 | 3 | 2 | 0 | 7 | 11 | 11
+PIN | magistrala_we<1> | 64 | 16 | LVCMOS18 | 5 | 2 | 1 | 6 | 11 | 1
+PIN | magistrala_we<2> | 64 | 16 | LVCMOS18 | 8 | 2 | 2 | 14 | 9 | 13
+PIN | magistrala_we<3> | 64 | 16 | LVCMOS18 | 12 | 2 | 3 | 15 | 9 | 5
+PIN | empty_half_full<0> | 536871040 | 0 | LVCMOS18 | 102
+PIN | empty_half_full<1> | 536871040 | 0 | LVCMOS18 | 105
+PIN | empty_half_full<2> | 536871040 | 0 | LVCMOS18 | 107
+PIN | magistrala_wy<0> | 536871040 | 0 | LVCMOS18 | 145
+PIN | magistrala_wy<1> | 536871040 | 0 | LVCMOS18 | 152
+PIN | magistrala_wy<2> | 536871040 | 0 | LVCMOS18 | 156
+PIN | magistrala_wy<3> | 536871040 | 0 | LVCMOS18 | 160

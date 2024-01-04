@@ -1,0 +1,29 @@
+Command line:
+   test_licz_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  58109
+
+Wed Nov 17 14:51:02 2021
+
+
+ Elaboration Time: 0.046875 sec
+
+ Current Memory Usage: 5150.78 Meg
+
+ Total Signals          : 9
+ Total Nets             : 11
+ Total Signal Drivers   : 5
+ Total Blocks           : 5
+ Total Primitive Blocks : 4
+ Total Processes        : 4
+ Total Traceable Variables  : 11
+ Total Scalar Nets and Variables : 390
+Total Line Count : 25
+
+ Total Simulation Time: 2.15625 sec
+
+ Current Memory Usage: 4678.92 Meg
+
+Wed Nov 17 14:56:38 2021
+

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<generated_project xmlns="http://www.xilinx.com/XMLSchema" xmlns:xil_pn="http://www.xilinx.com/XMLSchema">
+
+  <!--                                                          -->
+
+  <!--             For tool use only. Do not edit.              -->
+
+  <!--                                                          -->
+
+  <!-- ProjectNavigator created generated project file.         -->
+
+  <!-- For use in tracking generated file and other information -->
+
+  <!-- allowing preservation of process status.                 -->
+
+  <!--                                                          -->
+
+  <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved. -->
+
+  <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
+
+  <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="Z2.xise"/>
+
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name=".lso"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="ukladSekwencyjny.bld"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_CHK" xil_pn:name="ukladSekwencyjny.chk"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="ukladSekwencyjny.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_CXT" xil_pn:name="ukladSekwencyjny.cxt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_GYD" xil_pn:name="ukladSekwencyjny.gyd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_JEDEC" xil_pn:name="ukladSekwencyjny.jed"/>
+    <file xil_pn:fileType="FILE_LFP" xil_pn:name="ukladSekwencyjny.lfp"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="ukladSekwencyjny.log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="ukladSekwencyjny.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MFD" xil_pn:name="ukladSekwencyjny.mfd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGA" xil_pn:name="ukladSekwencyjny.nga"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="ukladSekwencyjny.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="ukladSekwencyjny.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="ukladSekwencyjny.ngr"/>
+    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="ukladSekwencyjny.pad"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PNX" xil_pn:name="ukladSekwencyjny.pnx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ukladSekwencyjny.prj"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="ukladSekwencyjny.rpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="ukladSekwencyjny.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="ukladSekwencyjny.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VM6" xil_pn:name="ukladSekwencyjny.vm6"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="ukladSekwencyjny.xml"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="ukladSekwencyjny.xst"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="ukladSekwencyjny_build.xml"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="ukladSekwencyjny_envsettings.html"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="ukladSekwencyjny_html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="ukladSekwencyjny_ngdbuild.xrpt"/>
+    <file xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="ukladSekwencyjny_pad.csv"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="ukladSekwencyjny_summary.html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="ukladSekwencyjny_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+  </files>
+
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1641906448" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1641906448">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1641906448" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="2538330435302072723" xil_pn:start_ts="1641906448">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1641906463" xil_pn:in_ck="6022406975263049999" xil_pn:name="TRANEXT_xstsynthesize_xbr" xil_pn:prop_ck="2048735148088752181" xil_pn:start_ts="1641906448">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name=".lso"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="ukladSekwencyjny.lso"/>
+      <outfile xil_pn:name="ukladSekwencyjny.ngc"/>
+      <outfile xil_pn:name="ukladSekwencyjny.ngr"/>
+      <outfile xil_pn:name="ukladSekwencyjny.prj"/>
+      <outfile xil_pn:name="ukladSekwencyjny.stx"/>
+      <outfile xil_pn:name="ukladSekwencyjny.syr"/>
+      <outfile xil_pn:name="ukladSekwencyjny.xst"/>
+      <outfile xil_pn:name="ukladSekwencyjny_xst.xrpt"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
+    </transform>
+    <transform xil_pn:end_ts="1641906463" xil_pn:in_ck="-8639694179138924105" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-1812472173068806291" xil_pn:start_ts="1641906463">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1641906473" xil_pn:in_ck="-902587997930612568" xil_pn:name="TRAN_ngdbuild" xil_pn:prop_ck="2820029809837737375" xil_pn:start_ts="1641906463">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_ngo"/>
+      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+      <outfile xil_pn:name="ukladSekwencyjny.bld"/>
+      <outfile xil_pn:name="ukladSekwencyjny.ngd"/>
+      <outfile xil_pn:name="ukladSekwencyjny_ngdbuild.xrpt"/>
+    </transform>
+    <transform xil_pn:end_ts="1641906487" xil_pn:in_ck="-8639694179138931598" xil_pn:name="TRANEXT_vm6File_xbr" xil_pn:prop_ck="993464723527307395" xil_pn:start_ts="1641906473">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="ukladSekwencyjny.chk"/>
+      <outfile xil_pn:name="ukladSekwencyjny.cxt"/>
+      <outfile xil_pn:name="ukladSekwencyjny.gyd"/>
+      <outfile xil_pn:name="ukladSekwencyjny.log"/>
+      <outfile xil_pn:name="ukladSekwencyjny.mfd"/>
+      <outfile xil_pn:name="ukladSekwencyjny.nga"/>
+      <outfile xil_pn:name="ukladSekwencyjny.pad"/>
+      <outfile xil_pn:name="ukladSekwencyjny.pnx"/>
+      <outfile xil_pn:name="ukladSekwencyjny.rpt"/>
+      <outfile xil_pn:name="ukladSekwencyjny.vm6"/>
+      <outfile xil_pn:name="ukladSekwencyjny.xml"/>
+      <outfile xil_pn:name="ukladSekwencyjny_build.xml"/>
+      <outfile xil_pn:name="ukladSekwencyjny_html"/>
+      <outfile xil_pn:name="ukladSekwencyjny_pad.csv"/>
+    </transform>
+    <transform xil_pn:end_ts="1641906490" xil_pn:in_ck="-8639694179138922734" xil_pn:name="TRANEXT_crtProg_xbr" xil_pn:prop_ck="5245363024343" xil_pn:start_ts="1641906487">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="ukladSekwencyjny.jed"/>
+    </transform>
+    <transform xil_pn:end_ts="1641906742" xil_pn:in_ck="-8639694179138936020" xil_pn:name="TRAN_configureTargetDevice_CPLD" xil_pn:prop_ck="-3223234765801749484" xil_pn:start_ts="1641906740">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:name="TRAN_timRpt">
+      <status xil_pn:value="AbortedRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputAdded"/>
+    </transform>
+  </transforms>
+
+</generated_project>

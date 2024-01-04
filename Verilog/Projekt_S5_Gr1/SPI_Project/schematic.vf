@@ -1,0 +1,60 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : schematic.vf
+// /___/   /\     Timestamp : 01/26/2022 14:57:00
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family xbr -verilog C:/dev/ULiC/Verilog/Projekt_S5_Gr1/SPI_Project/schematic.vf -w C:/dev/ULiC/Verilog/Projekt_S5_Gr1/SPI_Project/schematic.sch
+//Design Name: schematic
+//Device: xbr
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module schematic(b0, 
+                 clk, 
+                 in_data, 
+                 MISO, 
+                 clkSeq, 
+                 CS, 
+                 MOSI, 
+                 RM);
+
+    input b0;
+    input clk;
+    input [7:0] in_data;
+    input MISO;
+   output clkSeq;
+   output CS;
+   output MOSI;
+   output [7:0] RM;
+   
+   wire XLXN_7;
+   wire CS_DUMMY;
+   wire clkSeq_DUMMY;
+   
+   assign clkSeq = clkSeq_DUMMY;
+   assign CS = CS_DUMMY;
+   divider_100kHz_to_1Hz  inst_divider_100kHz_to_1Hz (.clk_in(clk), 
+                                                     .clk_out(XLXN_7));
+   register  inst_register (.b0(b0), 
+                           .clkSeq(clkSeq_DUMMY), 
+                           .CS(CS_DUMMY), 
+                           .in_data(in_data[7:0]), 
+                           .MISO(MISO), 
+                           .MOSI(MOSI), 
+                           .RM(RM[7:0]));
+   sequenter  inst_sequenter (.b0(b0), 
+                             .clk(XLXN_7), 
+                             .clkSeq(clkSeq_DUMMY), 
+                             .CS(CS_DUMMY));
+endmodule

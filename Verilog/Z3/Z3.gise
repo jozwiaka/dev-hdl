@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<generated_project xmlns="http://www.xilinx.com/XMLSchema" xmlns:xil_pn="http://www.xilinx.com/XMLSchema">
+
+  <!--                                                          -->
+
+  <!--             For tool use only. Do not edit.              -->
+
+  <!--                                                          -->
+
+  <!-- ProjectNavigator created generated project file.         -->
+
+  <!-- For use in tracking generated file and other information -->
+
+  <!-- allowing preservation of process status.                 -->
+
+  <!--                                                          -->
+
+  <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved. -->
+
+  <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
+
+  <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="Z3.xise"/>
+
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name=".lso"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="automatMoorea.bld"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_CHK" xil_pn:name="automatMoorea.chk"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="automatMoorea.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_CXT" xil_pn:name="automatMoorea.cxt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_GYD" xil_pn:name="automatMoorea.gyd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_JEDEC" xil_pn:name="automatMoorea.jed"/>
+    <file xil_pn:fileType="FILE_LFP" xil_pn:name="automatMoorea.lfp"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="automatMoorea.log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="automatMoorea.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MFD" xil_pn:name="automatMoorea.mfd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGA" xil_pn:name="automatMoorea.nga"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="automatMoorea.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="automatMoorea.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="automatMoorea.ngr"/>
+    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="automatMoorea.pad"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PNX" xil_pn:name="automatMoorea.pnx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="automatMoorea.prj"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="automatMoorea.rpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="automatMoorea.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="automatMoorea.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VM6" xil_pn:name="automatMoorea.vm6"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="automatMoorea.xml"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="automatMoorea.xst"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="automatMoorea_build.xml"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="automatMoorea_envsettings.html"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="automatMoorea_html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="automatMoorea_ngdbuild.xrpt"/>
+    <file xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="automatMoorea_pad.csv"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="automatMoorea_summary.html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="automatMoorea_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+  </files>
+
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1641909344" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1641909344">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1641909344" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-9214994307046742266" xil_pn:start_ts="1641909344">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1641909360" xil_pn:in_ck="-2528996119424269630" xil_pn:name="TRANEXT_xstsynthesize_xbr" xil_pn:prop_ck="1740700157560249320" xil_pn:start_ts="1641909344">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name=".lso"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="automatMoorea.lso"/>
+      <outfile xil_pn:name="automatMoorea.ngc"/>
+      <outfile xil_pn:name="automatMoorea.ngr"/>
+      <outfile xil_pn:name="automatMoorea.prj"/>
+      <outfile xil_pn:name="automatMoorea.stx"/>
+      <outfile xil_pn:name="automatMoorea.syr"/>
+      <outfile xil_pn:name="automatMoorea.xst"/>
+      <outfile xil_pn:name="automatMoorea_xst.xrpt"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
+    </transform>
+    <transform xil_pn:end_ts="1641909360" xil_pn:in_ck="-5511907070306434006" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-6502705023732652128" xil_pn:start_ts="1641909360">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1641909371" xil_pn:in_ck="4822352861445656462" xil_pn:name="TRAN_ngdbuild" xil_pn:prop_ck="2820029809837737375" xil_pn:start_ts="1641909360">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_ngo"/>
+      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+      <outfile xil_pn:name="automatMoorea.bld"/>
+      <outfile xil_pn:name="automatMoorea.ngd"/>
+      <outfile xil_pn:name="automatMoorea_ngdbuild.xrpt"/>
+    </transform>
+    <transform xil_pn:end_ts="1641909384" xil_pn:in_ck="-5511907070306441499" xil_pn:name="TRANEXT_vm6File_xbr" xil_pn:prop_ck="-6705354628760674167" xil_pn:start_ts="1641909371">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="automatMoorea.chk"/>
+      <outfile xil_pn:name="automatMoorea.cxt"/>
+      <outfile xil_pn:name="automatMoorea.gyd"/>
+      <outfile xil_pn:name="automatMoorea.log"/>
+      <outfile xil_pn:name="automatMoorea.mfd"/>
+      <outfile xil_pn:name="automatMoorea.nga"/>
+      <outfile xil_pn:name="automatMoorea.pad"/>
+      <outfile xil_pn:name="automatMoorea.pnx"/>
+      <outfile xil_pn:name="automatMoorea.rpt"/>
+      <outfile xil_pn:name="automatMoorea.vm6"/>
+      <outfile xil_pn:name="automatMoorea.xml"/>
+      <outfile xil_pn:name="automatMoorea_build.xml"/>
+      <outfile xil_pn:name="automatMoorea_html"/>
+      <outfile xil_pn:name="automatMoorea_pad.csv"/>
+    </transform>
+    <transform xil_pn:end_ts="1641909387" xil_pn:in_ck="-5511907070306432635" xil_pn:name="TRANEXT_crtProg_xbr" xil_pn:prop_ck="5245363024343" xil_pn:start_ts="1641909384">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="automatMoorea.jed"/>
+    </transform>
+    <transform xil_pn:end_ts="1641909390" xil_pn:in_ck="-5511907070306445921" xil_pn:name="TRAN_configureTargetDevice_CPLD" xil_pn:prop_ck="-3223234765801749484" xil_pn:start_ts="1641909388">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:name="TRAN_timRpt">
+      <status xil_pn:value="AbortedRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputAdded"/>
+    </transform>
+  </transforms>
+
+</generated_project>

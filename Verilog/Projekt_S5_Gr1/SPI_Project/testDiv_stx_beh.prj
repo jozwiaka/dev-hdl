@@ -1,0 +1,3 @@
+verilog isim_temp "divider_100kHz_to_1Hz.v"
+verilog isim_temp "testDiv.v"
+verilog isim_temp "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

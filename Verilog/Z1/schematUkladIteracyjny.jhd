@@ -1,0 +1,17 @@
+MODULE schematUkladIteracyjny
+	SUBMODULE blokIteracyjny
+		INSTANCE blok_1
+	SUBMODULE blokIteracyjny
+		INSTANCE blok_2
+	SUBMODULE blokIteracyjny
+		INSTANCE blok_3
+	SUBMODULE blokIteracyjny
+		INSTANCE blok_4
+	SUBMODULE blokIteracyjny
+		INSTANCE blok_5
+	SUBMODULE blokIteracyjny
+		INSTANCE blok_6
+	SUBMODULE blokIteracyjny
+		INSTANCE blok_7
+	SUBMODULE blokIteracyjny
+		INSTANCE blok_8

@@ -1,0 +1,2 @@
+vhdtdtfi -lib work C:/dev/ULiC/Verilog/Projekt_S5_Gr1/SPI_Project/seqenter.v -lang verilog -prj SPI_Project -o sequenter.spl -module sequenter -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family xbr sequenter.spl C:/dev/ULiC/Verilog/Projekt_S5_Gr1/SPI_Project/sequenter.sym 

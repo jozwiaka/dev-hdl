@@ -1,0 +1,36 @@
+Pin Freeze File:  version P.20131013
+
+2C256144 XC2C256-6-TQ144
+clk S:PIN38
+reset S:PIN124
+start S:PIN39
+wy<0> S:PIN3
+wy<1> S:PIN5
+wy<2> S:PIN7
+wy<3> S:PIN10
+
+
+;The remaining section of the .gyd file is for documentation purposes only.
+;It shows where your internal equations were placed in the last successful fit.
+
+
+PARTITION FB2_3 wy<0>
+PARTITION FB2_5 wy<1>
+PARTITION FB2_13 wy<2>
+PARTITION FB2_15 wy<3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

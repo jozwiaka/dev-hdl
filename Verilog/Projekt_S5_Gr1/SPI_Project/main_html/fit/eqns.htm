@@ -1,0 +1,225 @@
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="paths.js"></script><script src="eqns.js"></script><script>
+      var design = "main";
+      var device = "XC2C256";
+      signals = new Array("CS","RM0_SPECSIG","RM1_SPECSIG","RM2_SPECSIG","RM3_SPECSIG","RM4_SPECSIG","RM5_SPECSIG","RM6_SPECSIG","RM7_SPECSIG","buff_in","buff_inCOMB_SPECSIG","clk_seq","counter0_SPECSIG","counter1_SPECSIG","counter2_SPECSIG","counter3_SPECSIG","counter4_SPECSIG");
+      sigNegs = new Array("OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","ON","OFF","OFF","OFF","OFF","OFF");
+      sigTypes = new Array("DEFFS_SPECSIG","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","DFF","","DFF","TFF","TFF","TFF","TFF","TFF");
+
+      
+           iostyle["sw1"]=new Array("KPR");
+        
+           iostyle["b0"]=new Array("KPR");
+        
+           iostyle["clk"]=new Array("KPR");
+        
+        specSig["RM0_SPECSIG"]=new Array("RM<0>");
+      
+        specSig["RM1_SPECSIG"]=new Array("RM<1>");
+      
+        specSig["RM2_SPECSIG"]=new Array("RM<2>");
+      
+        specSig["RM3_SPECSIG"]=new Array("RM<3>");
+      
+        specSig["RM4_SPECSIG"]=new Array("RM<4>");
+      
+        specSig["RM5_SPECSIG"]=new Array("RM<5>");
+      
+        specSig["RM6_SPECSIG"]=new Array("RM<6>");
+      
+        specSig["RM7_SPECSIG"]=new Array("RM<7>");
+      
+        specSig["buff_inCOMB_SPECSIG"]=new Array("buff_in.COMB");
+      
+        specSig["counter0_SPECSIG"]=new Array("counter<0>");
+      
+        specSig["counter1_SPECSIG"]=new Array("counter<1>");
+      
+        specSig["counter2_SPECSIG"]=new Array("counter<2>");
+      
+        specSig["counter3_SPECSIG"]=new Array("counter<3>");
+      
+        specSig["counter4_SPECSIG"]=new Array("counter<4>");
+      
+        specSig["DEFFS_SPECSIG"]=new Array("DEFF/S");
+      
+            pterms["FB1_0"]=new Array("b0");
+          
+            pterms["FB1_1"]=new Array("/b0","/clk_seq");
+          
+            pterms["FB1_2"]=new Array("/clk_seq","CS");
+          
+            pterms["FB1_3"]=new Array("b0","/CS","/counter1_SPECSIG","/counter2_SPECSIG","/counter3_SPECSIG","counter4_SPECSIG");
+          
+            pterms["FB1_4"]=new Array("clk_seq");
+          
+            pterms["FB1_5"]=new Array("b0","/CS","counter0_SPECSIG","counter1_SPECSIG","counter2_SPECSIG","counter3_SPECSIG");
+          
+            pterms["FB1_6"]=new Array("b0","/CS","/counter0_SPECSIG","/counter1_SPECSIG","/counter2_SPECSIG","/counter3_SPECSIG","counter4_SPECSIG");
+          
+            pterms["FB1_7"]=new Array("/b0");
+          
+            pterms["FB1_8"]=new Array("/CS","/counter0_SPECSIG","/counter1_SPECSIG","/counter2_SPECSIG","/counter3_SPECSIG","counter4_SPECSIG");
+          
+            pterms["FB1_25"]=new Array("buff_inCOMB_SPECSIG");
+          
+            pterms["FB1_34"]=new Array("/CS","/buff_inCOMB_SPECSIG");
+          
+            pterms["FB1_37"]=new Array("b0","/CS","counter0_SPECSIG");
+          
+            pterms["FB1_40"]=new Array("b0","/CS","counter0_SPECSIG","counter1_SPECSIG");
+          
+            pterms["FB1_43"]=new Array("RM1_SPECSIG");
+          
+            pterms["FB1_46"]=new Array("RM2_SPECSIG");
+          
+            pterms["FB1_49"]=new Array("RM3_SPECSIG");
+          
+            pterms["FB1_52"]=new Array("b0","/CS","counter0_SPECSIG","counter1_SPECSIG","counter2_SPECSIG");
+          
+            pterms["FB2_4"]=new Array("clk_seq");
+          
+            pterms["FB2_10"]=new Array("RM4_SPECSIG");
+          
+            pterms["FB2_16"]=new Array("RM5_SPECSIG");
+          
+            pterms["FB2_19"]=new Array("RM6_SPECSIG");
+          
+            pterms["FB2_22"]=new Array("RM7_SPECSIG");
+          
+            pterms["FB2_43"]=new Array("buff_in");
+          
+              clk["buff_in"]=new Array("FB1_4");
+              prld["buff_in"]="GND";
+          inreg["buff_in"]=new Array("sw1");
+        
+          d2["clk_seq"]=new Array("FB1_1","FB1_2","FB1_37","FB1_3");
+          
+              gblclk["clk_seq"]=new Array("clk");
+            prld["clk_seq"]="GND";
+          d2["CS"]=new Array("FB1_0");
+          
+              gblclk["CS"]=new Array("clk");
+            
+          ce["CS"]=new Array("FB1_25");
+          prld["CS"]="VCC";
+          d1["counter0_SPECSIG"]=new Array("FB1_34");
+          
+              gblclk["counter0_SPECSIG"]=new Array("clk");
+            prld["counter0_SPECSIG"]="GND";
+          d1["counter1_SPECSIG"]=new Array("FB1_37");
+          
+              gblclk["counter1_SPECSIG"]=new Array("clk");
+            prld["counter1_SPECSIG"]="GND";
+          d1["counter2_SPECSIG"]=new Array("FB1_40");
+          
+              gblclk["counter2_SPECSIG"]=new Array("clk");
+            prld["counter2_SPECSIG"]="GND";
+          d1["RM0_SPECSIG"]=new Array("FB1_43");
+          clkNegs["RM0_SPECSIG"]=1;
+              clk["RM0_SPECSIG"]=new Array("FB1_4");
+              prld["RM0_SPECSIG"]="GND";
+          d1["RM1_SPECSIG"]=new Array("FB1_46");
+          clkNegs["RM1_SPECSIG"]=1;
+              clk["RM1_SPECSIG"]=new Array("FB1_4");
+              prld["RM1_SPECSIG"]="GND";
+          d1["RM2_SPECSIG"]=new Array("FB1_49");
+          clkNegs["RM2_SPECSIG"]=1;
+              clk["RM2_SPECSIG"]=new Array("FB1_4");
+              prld["RM2_SPECSIG"]="GND";
+          d1["counter3_SPECSIG"]=new Array("FB1_52");
+          
+              gblclk["counter3_SPECSIG"]=new Array("clk");
+            prld["counter3_SPECSIG"]="GND";
+          d2["counter4_SPECSIG"]=new Array("FB1_5","FB1_6");
+          
+              gblclk["counter4_SPECSIG"]=new Array("clk");
+            prld["counter4_SPECSIG"]="GND";
+          d2["buff_inCOMB_SPECSIG"]=new Array("FB1_7","FB1_8");
+          
+          d1["RM3_SPECSIG"]=new Array("FB2_10");
+          clkNegs["RM3_SPECSIG"]=1;
+              clk["RM3_SPECSIG"]=new Array("FB2_4");
+              prld["RM3_SPECSIG"]="GND";
+          d1["RM4_SPECSIG"]=new Array("FB2_16");
+          clkNegs["RM4_SPECSIG"]=1;
+              clk["RM4_SPECSIG"]=new Array("FB2_4");
+              prld["RM4_SPECSIG"]="GND";
+          d1["RM5_SPECSIG"]=new Array("FB2_19");
+          clkNegs["RM5_SPECSIG"]=1;
+              clk["RM5_SPECSIG"]=new Array("FB2_4");
+              prld["RM5_SPECSIG"]="GND";
+          d1["RM6_SPECSIG"]=new Array("FB2_22");
+          clkNegs["RM6_SPECSIG"]=1;
+              clk["RM6_SPECSIG"]=new Array("FB2_4");
+              prld["RM6_SPECSIG"]="GND";
+          d1["RM7_SPECSIG"]=new Array("FB2_43");
+          clkNegs["RM7_SPECSIG"]=1;
+              clk["RM7_SPECSIG"]=new Array("FB2_4");
+              prld["RM7_SPECSIG"]="GND";
+
+      uimSignals = new Array();
+
+      uimSigNegs = new Array();
+
+      uimPterms = new Array();
+      
+
+      
+        function getEqnList() {
+          var str = "<html><head><link type='text/css' href='style.css' rel='stylesheet'></head><body class='pgBgnd'>";
+          str += "<center><h3>Equations</h3></center>";
+          str += "<table width='90%' align='center' border='1' cellpadding='0' cellspacing='0'>";
+          for (s=0; s<uimSignals.length; s++) {
+            str += "<tr><td>";
+            str += retUimEqn(uimSignals[s]);
+            str += "</td></tr>";
+          }
+          for (s=0; s<signals.length; s++) {
+            str += "<tr><td>";
+            str += retEqn(signals[s]);
+            str += "</td></tr>";
+          }
+
+          var legend = retLegend();
+		      if (legend != "") {
+		        str += "<tr><td>" + legend + "</td></tr>";
+		      }
+
+          str += "</table>";
+          str += "<form><span class='pgRef'>";
+
+          if (!parent.leftnav.IsNS()) {
+            str += "<table width='90%' align='center'>";
+            str += "<tr><td align='left'><input type='button' value='back to top' ";
+            str += "onclick='javascript:parent.leftnav.showEqnAll()' ";
+            str += "onmouseover=\"window.status='goto top of page'; return true;\" ";
+            str += "onmouseout=\"window.status=''\">";
+            str += "</td>";
+            str += "<td align='right'>";
+            str += "<input type='button' value='print page' ";
+            str += "onclick='javascript:window.print()' ";
+            str += "onmouseover=\"window.status='print page'; return true;\" ";
+            str += "onmouseout=\"window.status=''\">";
+            str += "</td>";
+            str += "</tr></table>";
+          }
+          else {
+            str += "<table width='90%' align='center'>";
+            str += "<tr><td align='left'><a href='javascript:parent.leftnav.showEqnAll()'>back to top</a>";
+            str += "</td>";
+            str += "<td align='right'>";
+            str += "<a href='javascript:window.print()'>";
+            str += "print page</a>";
+            str += "</td>";
+            str += "</tr></table>";
+          }
+
+          str += "</span></form>";
+          str += "</body></html>";
+          return str;
+        }
+      
+    </script>
+</head></html>

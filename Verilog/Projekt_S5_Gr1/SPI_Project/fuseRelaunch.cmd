@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "uni9000_ver" -lib "aim_ver" -lib "cpld_ver" -lib "xilinxcorelib_ver" -o "C:/dev/ULiC/Verilog/Projekt_S5_Gr1/SPI_Project/schematic_schematic_sch_tb_isim_beh.exe" -prj "C:/dev/ULiC/Verilog/Projekt_S5_Gr1/SPI_Project/schematic_schematic_sch_tb_beh.prj" "work.schematic_schematic_sch_tb" "work.glbl" 

@@ -1,0 +1,97 @@
+V3 56
+FL C:/dev/ULiC_Scripts/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/aktywna_anoda.vhd 2021/05/25.08:32:34 P.20131013
+EN work/aktywna_anoda 1634117675 \
+      FL C:/dev/ULiC_Scripts/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/aktywna_anoda.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/aktywna_anoda/Behavioral 1634117676 \
+      FL C:/dev/ULiC_Scripts/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/aktywna_anoda.vhd \
+      EN work/aktywna_anoda 1634117675
+FL C:/dev/ULiC_Scripts/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/dzielnik_100kHz_na_400Hz.vhd 2021/05/09.12:25:03 P.20131013
+EN work/dzielnik_100kHz_na_400Hz 1634117671 \
+      FL C:/dev/ULiC_Scripts/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/dzielnik_100kHz_na_400Hz.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/dzielnik_100kHz_na_400Hz/Behavioral 1634117672 \
+      FL C:/dev/ULiC_Scripts/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/dzielnik_100kHz_na_400Hz.vhd \
+      EN work/dzielnik_100kHz_na_400Hz 1634117671
+FL C:/dev/ULiC_Scripts/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/dzielnik_400Hz_na_10Hz.vhd 2021/05/09.12:25:31 P.20131013
+EN work/dzielnik_400Hz_na_10Hz 1634117681 \
+      FL C:/dev/ULiC_Scripts/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/dzielnik_400Hz_na_10Hz.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/dzielnik_400Hz_na_10Hz/Behavioral 1634117682 \
+      FL C:/dev/ULiC_Scripts/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/dzielnik_400Hz_na_10Hz.vhd \
+      EN work/dzielnik_400Hz_na_10Hz 1634117681
+FL C:/dev/ULiC_Scripts/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/licznik_cyfra.vhd 2021/05/09.12:22:51 P.20131013
+EN work/licznik_cyfra 1634117673 \
+      FL C:/dev/ULiC_Scripts/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/licznik_cyfra.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/licznik_cyfra/Behavioral 1634117674 \
+      FL C:/dev/ULiC_Scripts/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/licznik_cyfra.vhd \
+      EN work/licznik_cyfra 1634117673
+FL C:/dev/ULiC_Scripts/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/moj_projekt.vhd 2021/06/04.10:46:55 P.20131013
+EN work/moj_projekt 1634117677 \
+      FL C:/dev/ULiC_Scripts/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/moj_projekt.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/moj_projekt/Behavioral 1634117678 \
+      FL C:/dev/ULiC_Scripts/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/moj_projekt.vhd \
+      EN work/moj_projekt 1634117677
+FL C:/dev/ULiC_Scripts/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/moj_projekt_Diody.vhd 2021/05/11.10:39:51 P.20131013
+EN work/moj_projekt_Diody 1634117683 \
+      FL C:/dev/ULiC_Scripts/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/moj_projekt_Diody.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/moj_projekt_Diody/Behavioral 1634117684 \
+      FL C:/dev/ULiC_Scripts/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/moj_projekt_Diody.vhd \
+      EN work/moj_projekt_Diody 1634117683
+FL C:/dev/ULiC_Scripts/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/moj_projekt_MUX.vhd 2021/05/12.13:27:16 P.20131013
+EN work/moj_projekt_MUX 1634117689 \
+      FL C:/dev/ULiC_Scripts/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/moj_projekt_MUX.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/moj_projekt_MUX/Behavioral 1634117690 \
+      FL C:/dev/ULiC_Scripts/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/moj_projekt_MUX.vhd \
+      EN work/moj_projekt_MUX 1634117689
+FL C:/dev/ULiC_Scripts/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/mult_vec1.vhd 2021/05/12.13:19:57 P.20131013
+EN work/mult_vec1 1634117679 \
+      FL C:/dev/ULiC_Scripts/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/mult_vec1.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/mult_vec1/Behavioral 1634117680 \
+      FL C:/dev/ULiC_Scripts/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/mult_vec1.vhd \
+      EN work/mult_vec1 1634117679
+FL C:/dev/ULiC_Scripts/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/SchematGlowny.vhf 2021/05/25.08:35:09 P.20131013
+EN work/SchematGlowny 1634117691 \
+      FL C:/dev/ULiC_Scripts/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/SchematGlowny.vhf \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
+      PH unisim/VCOMPONENTS 1381692182
+AR work/SchematGlowny/BEHAVIORAL 1634117692 \
+      FL C:/dev/ULiC_Scripts/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/SchematGlowny.vhf \
+      EN work/SchematGlowny 1634117691 CP dzielnik_100kHz_na_400Hz \
+      CP licznik_cyfra CP aktywna_anoda CP moj_projekt CP mult_vec1 \
+      CP dzielnik_400Hz_na_10Hz CP moj_projekt_Diody CP INV CP ster_kropka \
+      CP transkoder_7s CP moj_projekt_MUX
+FL C:/dev/ULiC_Scripts/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/ster_kropka.vhd 2021/05/11.09:04:50 P.20131013
+EN work/ster_kropka 1634117685 \
+      FL C:/dev/ULiC_Scripts/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/ster_kropka.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/ster_kropka/Behavioral 1634117686 \
+      FL C:/dev/ULiC_Scripts/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/ster_kropka.vhd \
+      EN work/ster_kropka 1634117685
+FL C:/dev/ULiC_Scripts/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/transkoder_7s.vhd 2021/05/09.12:31:14 P.20131013
+EN work/transkoder_7s 1634117687 \
+      FL C:/dev/ULiC_Scripts/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/transkoder_7s.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/transkoder_7s/Behavioral 1634117688 \
+      FL C:/dev/ULiC_Scripts/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/transkoder_7s.vhd \
+      EN work/transkoder_7s 1634117687
+FL C:/Studia/ULiC/ProjektZaliczeniowy/aktywna_anoda.vhd 2021/05/25.08:32:34 P.20131013
+FL C:/Studia/ULiC/ProjektZaliczeniowy/dzielnik_100kHz_na_400Hz.vhd 2021/05/09.12:25:03 P.20131013
+FL C:/Studia/ULiC/ProjektZaliczeniowy/dzielnik_400Hz_na_10Hz.vhd 2021/05/09.12:25:31 P.20131013
+FL C:/Studia/ULiC/ProjektZaliczeniowy/licznik_cyfra.vhd 2021/05/09.12:22:51 P.20131013
+FL C:/Studia/ULiC/ProjektZaliczeniowy/moj_projekt.vhd 2021/05/25.08:31:36 P.20131013
+FL C:/Studia/ULiC/ProjektZaliczeniowy/moj_projekt_Diody.vhd 2021/05/11.10:39:51 P.20131013
+FL C:/Studia/ULiC/ProjektZaliczeniowy/moj_projekt_MUX.vhd 2021/05/12.13:27:16 P.20131013
+FL C:/Studia/ULiC/ProjektZaliczeniowy/mult_vec1.vhd 2021/05/12.13:19:57 P.20131013
+FL C:/Studia/ULiC/ProjektZaliczeniowy/SchematGlowny.vhf 2021/05/25.08:35:09 P.20131013
+FL C:/Studia/ULiC/ProjektZaliczeniowy/ster_kropka.vhd 2021/05/11.09:04:50 P.20131013
+FL C:/Studia/ULiC/ProjektZaliczeniowy/transkoder_7s.vhd 2021/05/09.12:31:14 P.20131013

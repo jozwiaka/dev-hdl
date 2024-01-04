@@ -1,0 +1,2 @@
+vhdtdtfi -lib work C:/dev/ULiC/Verilog/Projekt_S5_Gr1/SPI_Project/register.v -lang verilog -prj SPI_Project -o register.spl -module register -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family xbr register.spl C:/dev/ULiC/Verilog/Projekt_S5_Gr1/SPI_Project/register.sym 

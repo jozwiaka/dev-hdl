@@ -1,0 +1,147 @@
+
+----------------------------------------
+|  P a r t i t i o n    S u c c e e d  |
+----------------------------------------
+0 Group(s)
+
+GCLK2: 11=clk.p
+GSET: 9=!b0.p
+GRST: 9=!b0.p
+----------------- B l o c k 0 ------------------
+PLApt(27/56), Fanin(24/38), Clk(1/3), Bct(3/4), Pin(3/6), Mcell(16/16)
+PLApts[27/56] 10 30 51 54 31 19 16 53 55 3 35 4 () 33 () () 42 () () () () () 32 () () 41 18 () 1 17 () 1 () () 29 () () 48 () () 49 () () () () () 40 () () 37 () () 50 () () 52
+Fanins[24] CS.n RM<4>.n clkSeq.n XLXN_7.n inst_divider_100kHz_to_1Hz/counter<0>.n inst_divider_100kHz_to_1Hz/counter<10>.n inst_divider_100kHz_to_1Hz/counter<1>.n inst_divider_100kHz_to_1Hz/counter<2>.n inst_divider_100kHz_to_1Hz/counter<3>.n inst_divider_100kHz_to_1Hz/counter<4>.n inst_divider_100kHz_to_1Hz/counter<5>.n inst_divider_100kHz_to_1Hz/counter<6>.n inst_divider_100kHz_to_1Hz/counter<7>.n inst_divider_100kHz_to_1Hz/counter<8>.n inst_divider_100kHz_to_1Hz/counter<9>.n inst_sequenter/counter<0>.n inst_sequenter/counter<1>.n inst_sequenter/counter<2>.n inst_sequenter/counter<3>.n inst_sequenter/counter<4>.n RM<3>_BUFR.n b0.p in_data<2>.p in_data<3>.p
+clk[1] clk 
+CTC: (pt=31) XLXN_7 ;
+CTR: (pt=19) b0' in_data<3>' ;
+CTS: (pt=16) b0' in_data<2> ;
+CTE: 
+vref: [0]
+Signal[17] [clkSeq(148),clkSeq(142)] [CS(156),CS(139)] [b0(143)] [inst_sequenter/counter<0>(160)]  
+           [inst_sequenter/counter<4>(159)] [inst_sequenter/counter<3>(155)]  
+           [inst_sequenter/counter<2>(154)] [inst_sequenter/counter<1>(153)] [RM<2>_BUFR(152)]  
+           [RM<3>_BUFR(151)] [inst_divider_100kHz_to_1Hz/counter<1>(149)]  
+           [inst_divider_100kHz_to_1Hz/counter<2>(146)] [inst_divider_100kHz_to_1Hz/counter<4>(145)]  
+           [inst_divider_100kHz_to_1Hz/counter<6>(158)] [inst_divider_100kHz_to_1Hz/counter<9>(157)]  
+           [inst_divider_100kHz_to_1Hz/counter<10>(150)] [inst_divider_100kHz_to_1Hz/counter<11>(147)] 
+Signal[17] [ 0: inst_divider_100kHz_to_1Hz/counter<4>(145)  ][ 1: inst_divider_100kHz_to_1Hz/counter<2>(146)  
+            ][ 2: inst_divider_100kHz_to_1Hz/counter<11>(147) b0(143)  ][ 3: clkSeq(148) clkSeq(142)  ][ 4:  
+           inst_divider_100kHz_to_1Hz/counter<1>(149)  ][ 5: inst_divider_100kHz_to_1Hz/counter<10>(150)  
+           (140)  ][ 6: RM<3>_BUFR(151)  ][ 7: RM<2>_BUFR(152)  ][ 8: inst_sequenter/counter<1>(153)  ][ 9:  
+           inst_sequenter/counter<2>(154)  ][ 10: inst_sequenter/counter<3>(155)  ][ 11: CS(156) CS(139)  ] 
+           [ 12: inst_divider_100kHz_to_1Hz/counter<9>(157) (138)  ][ 13:  
+           inst_divider_100kHz_to_1Hz/counter<6>(158) (137)  ][ 14: inst_sequenter/counter<4>(159)  ][ 15:  
+           inst_sequenter/counter<0>(160)  ]
+----------------- B l o c k 1 ------------------
+PLApt(10/56), Fanin(16/38), Clk(1/3), Bct(0/4), Pin(8/8), Mcell(10/16)
+PLApts[10/56] 44 45 34 36 38 39 () () () () () () () () () () () () () () () () () () () () () () () () () () () () 47 () () 47 () () 46 () () () () () () () () () () () () () () 43
+Fanins[16] inst_divider_100kHz_to_1Hz/counter<0>.n inst_divider_100kHz_to_1Hz/counter<10>.n inst_divider_100kHz_to_1Hz/counter<11>.n inst_divider_100kHz_to_1Hz/counter<12>.n inst_divider_100kHz_to_1Hz/counter<13>.n inst_divider_100kHz_to_1Hz/counter<14>.n inst_divider_100kHz_to_1Hz/counter<15>.n inst_divider_100kHz_to_1Hz/counter<1>.n inst_divider_100kHz_to_1Hz/counter<2>.n inst_divider_100kHz_to_1Hz/counter<3>.n inst_divider_100kHz_to_1Hz/counter<4>.n inst_divider_100kHz_to_1Hz/counter<5>.n inst_divider_100kHz_to_1Hz/counter<6>.n inst_divider_100kHz_to_1Hz/counter<7>.n inst_divider_100kHz_to_1Hz/counter<8>.n inst_divider_100kHz_to_1Hz/counter<9>.n
+clk[1] clk 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[18] [in_data<0>(2)] [in_data<1>(4)] [in_data<2>(6)] [in_data<3>(9)] [in_data<4>(3)] [in_data<5>(5)]  
+           [in_data<6>(7)] [in_data<7>(10)] [inst_divider_100kHz_to_1Hz/counter<12>(176)]  
+           [inst_divider_100kHz_to_1Hz/counter<15>(171)] [XLXN_7(170)]  
+           [inst_divider_100kHz_to_1Hz/counter<0>(169)] [inst_divider_100kHz_to_1Hz/counter<13>(168)]  
+           [inst_divider_100kHz_to_1Hz/counter<14>(167)] [inst_divider_100kHz_to_1Hz/counter<3>(166)]  
+           [inst_divider_100kHz_to_1Hz/counter<5>(162)] [inst_divider_100kHz_to_1Hz/counter<7>(175)]  
+           [inst_divider_100kHz_to_1Hz/counter<8>(174)] 
+Signal[18] [ 0: in_data<0>(2)  ][ 1: inst_divider_100kHz_to_1Hz/counter<5>(162)  ][ 2: in_data<4>(3)  ][ 3:  
+           in_data<1>(4)  ][ 4: in_data<5>(5)  ][ 5: inst_divider_100kHz_to_1Hz/counter<3>(166)  ][ 6:  
+           inst_divider_100kHz_to_1Hz/counter<14>(167)  ][ 7: inst_divider_100kHz_to_1Hz/counter<13>(168)  ] 
+           [ 8: inst_divider_100kHz_to_1Hz/counter<0>(169)  ][ 9: XLXN_7(170)  ][ 10:  
+           inst_divider_100kHz_to_1Hz/counter<15>(171)  ][ 11: in_data<2>(6)  ][ 12: in_data<6>(7)  ][ 13:  
+           inst_divider_100kHz_to_1Hz/counter<8>(174) in_data<3>(9)  ][ 14:  
+           inst_divider_100kHz_to_1Hz/counter<7>(175) in_data<7>(10)  ][ 15:  
+           inst_divider_100kHz_to_1Hz/counter<12>(176)  ]
+----------------- B l o c k 2 ------------------
+PLApt(2/56), Fanin(2/38), Clk(0/3), Bct(1/4), Pin(1/6), Mcell(1/16)
+PLApts[2/17] () () () () 1 () () () () () () () () () () () 28
+Fanins[ 2] RM<0>.n clkSeq.n
+clk[0] 
+CTC: (pt=1) clkSeq ;
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[ 1] [MOSI(179),MOSI(134)] 
+Signal[ 1] [ 0: (136)  ][ 1: (135)  ][ 2: MOSI(179) MOSI(134)  ][ 3:  ][ 4: (133)  ][ 5:  ][ 6:  ][ 7:  ] 
+           [ 8:  ][ 9:  ][ 10:  ][ 11:  ][ 12:  ][ 13: (132)  ][ 14:  ][ 15: (131)  ]
+----------------- B l o c k 3 ------------------
+----------------- B l o c k 4 ------------------
+----------------- B l o c k 5 ------------------
+PLApt(0/56), Fanin(0/38), Clk(0/3), Bct(0/4), Pin(1/8), Mcell(0/16)
+PLApts[0/0]
+Fanins[ 0]
+clk[0] 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[ 1] [clk(38)] 
+Signal[ 1] [ 0: (34)  ][ 1: (35)  ][ 2:  ][ 3: clk(38)  ][ 4:  ][ 5:  ][ 6:  ][ 7:  ][ 8:  ][ 9:  ][ 10:  ] 
+           [ 11: (39)  ][ 12: (40)  ][ 13: (41)  ][ 14: (42)  ][ 15: (43)  ]
+----------------- B l o c k 6 ------------------
+----------------- B l o c k 7 ------------------
+----------------- B l o c k 8 ------------------
+PLApt(9/56), Fanin(7/38), Clk(0/3), Bct(3/4), Pin(4/8), Mcell(4/16)
+PLApts[9/50] () () () () 1 15 12 () () () 57 () () () () () () () () 56 () () () () () () () () () () () () () () () () () () () () () 14 () 2 () () () 13 () 0
+Fanins[ 7] RM<1>.n clkSeq.n RM<2>_BUFR.n RM<3>_BUFR.n b0.p in_data<0>.p in_data<1>.p
+clk[0] 
+CTC: (pt=1) clkSeq ;
+CTR: (pt=15) b0' in_data<1>' ;
+CTS: (pt=12) b0' in_data<0> ;
+CTE: 
+vref: [0]
+Signal[ 4] [RM<0>(286),RM<0>(118)] [RM<1>(284),RM<1>(116)] [RM<2>(276),RM<2>(114)] [RM<3>(273),RM<3>(112)] 
+Signal[ 4] [ 0: RM<3>(273) RM<3>(112)  ][ 1: (113)  ][ 2:  ][ 3: RM<2>(276) RM<2>(114)  ][ 4:  ][ 5: (115)  ] 
+           [ 6:  ][ 7:  ][ 8:  ][ 9:  ][ 10:  ][ 11: RM<1>(284) RM<1>(116)  ][ 12: (117)  ][ 13: RM<0>(286)  
+           RM<0>(118)  ][ 14: (119)  ][ 15:  ]
+----------------- B l o c k 9 ------------------
+PLApt(7/56), Fanin(6/38), Clk(0/3), Bct(3/4), Pin(2/9), Mcell(2/16)
+PLApts[7/56] () () () () 1 23 20 () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () 21 () 5 () () () () () () () () () 22 () 6
+Fanins[ 6] RM<5>.n RM<6>.n clkSeq.n b0.p in_data<4>.p in_data<5>.p
+clk[0] 
+CTC: (pt=1) clkSeq ;
+CTR: (pt=23) b0' in_data<5>' ;
+CTS: (pt=20) b0' in_data<4> ;
+CTE: 
+vref: [0]
+Signal[ 2] [RM<4>(300),RM<4>(103)] [RM<5>(304),RM<5>(101)] 
+Signal[ 2] [ 0: (111)  ][ 1: (110)  ][ 2: (107)  ][ 3: (106)  ][ 4: (105)  ][ 5: (104)  ][ 6:  ][ 7:  ][ 8:  
+            ][ 9:  ][ 10:  ][ 11: RM<4>(300) RM<4>(103)  ][ 12:  ][ 13: (102)  ][ 14:  ][ 15: RM<5>(304)  
+           RM<5>(101)  ]
+----------------- B l o c k 10 ------------------
+PLApt(0/56), Fanin(0/38), Clk(0/3), Bct(0/4), Pin(1/8), Mcell(0/16)
+PLApts[0/0]
+Fanins[ 0]
+clk[0] 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[ 1] [MISO(124)] 
+Signal[ 1] [ 0:  ][ 1:  ][ 2:  ][ 3:  ][ 4: (120)  ][ 5: (121)  ][ 6:  ][ 7:  ][ 8:  ][ 9:  ][ 10: MISO(124)  
+            ][ 11: (125)  ][ 12: (126)  ][ 13: (128)  ][ 14: (129)  ][ 15: (130)  ]
+----------------- B l o c k 11 ------------------
+PLApt(7/56), Fanin(6/38), Clk(0/3), Bct(3/4), Pin(2/6), Mcell(2/16)
+PLApts[7/47] () () () () 1 27 24 () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () 25 () 7 () () () 26 () 8
+Fanins[ 6] RM<7>.n clkSeq.n MISO.p b0.p in_data<6>.p in_data<7>.p
+clk[0] 
+CTC: (pt=1) clkSeq ;
+CTR: (pt=27) b0' in_data<7>' ;
+CTS: (pt=24) b0' in_data<6> ;
+CTE: 
+vref: [0]
+Signal[ 2] [RM<6>(331),RM<6>(98)] [RM<7>(333),RM<7>(96)] 
+Signal[ 2] [ 0:  ][ 1: (100)  ][ 2:  ][ 3:  ][ 4:  ][ 5:  ][ 6:  ][ 7:  ][ 8:  ][ 9:  ][ 10: RM<6>(331)  
+           RM<6>(98)  ][ 11: (97)  ][ 12: RM<7>(333) RM<7>(96)  ][ 13: (95)  ][ 14: (94)  ][ 15:  ]
+----------------- B l o c k 12 ------------------
+----------------- B l o c k 13 ------------------
+----------------- B l o c k 14 ------------------
+----------------- B l o c k 15 ------------------

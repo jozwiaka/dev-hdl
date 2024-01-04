@@ -1,0 +1,543 @@
+MDF Database:  version 1.0
+MDF_INFO | schematic | XC2C256-6-TQ144
+MACROCELL | 0 | 11 | CS_MC
+ATTRIBUTES | 2290352902 | 0
+OUTPUTMC | 1 | 0 | 11
+INPUTS | 7 | b0  | CS  | inst_sequenter/counter<0>  | inst_sequenter/counter<1>  | inst_sequenter/counter<2>  | inst_sequenter/counter<3>  | inst_sequenter/counter<4>
+INPUTMC | 6 | 0 | 11 | 0 | 15 | 0 | 8 | 0 | 9 | 0 | 10 | 0 | 14
+INPUTP | 1 | 218
+LCT | 1 | 2 | Internal_Name
+EQ | 5 | 
+   CS := !b0 & CS
+	# b0 & !inst_sequenter/counter<0> & 
+	inst_sequenter/counter<1> & !inst_sequenter/counter<2> & 
+	!inst_sequenter/counter<3> & inst_sequenter/counter<4>;	// (2 pt, 7 inp)
+    CS.CLK = XLXN_7;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 0 | 15 | inst_sequenter/counter<0>_MC
+ATTRIBUTES | 2319450880 | 0
+OUTPUTMC | 7 | 0 | 8 | 0 | 9 | 0 | 10 | 0 | 14 | 0 | 15 | 0 | 11 | 0 | 3
+INPUTS | 5 | inst_sequenter/counter<0>  | inst_sequenter/counter<1>  | inst_sequenter/counter<2>  | inst_sequenter/counter<3>  | inst_sequenter/counter<4>
+INPUTMC | 5 | 0 | 15 | 0 | 8 | 0 | 9 | 0 | 10 | 0 | 14
+LCT | 1 | 2 | Internal_Name
+EQ | 5 | 
+   !inst_sequenter/counter<0>.T := !inst_sequenter/counter<0> & 
+	inst_sequenter/counter<1> & !inst_sequenter/counter<2> & 
+	!inst_sequenter/counter<3> & inst_sequenter/counter<4>;	// (1 pt, 5 inp)
+    inst_sequenter/counter<0>.CLK = XLXN_7;	// CTC	(1 pt, 1 inp)
+   inst_sequenter/counter<0>.AR = !b0;	// GSR	(0 pt, 0 inp)
+GLOBALS | 1 | 4 | b0
+
+MACROCELL | 0 | 8 | inst_sequenter/counter<1>_MC
+ATTRIBUTES | 2319450884 | 0
+OUTPUTMC | 6 | 0 | 9 | 0 | 10 | 0 | 14 | 0 | 15 | 0 | 11 | 0 | 3
+INPUTS | 1 | inst_sequenter/counter<0>
+INPUTMC | 1 | 0 | 15
+LCT | 1 | 2 | Internal_Name
+EQ | 3 | 
+   inst_sequenter/counter<1>.T := inst_sequenter/counter<0>;	// (1 pt, 1 inp)
+    inst_sequenter/counter<1>.CLK = XLXN_7;	// CTC	(1 pt, 1 inp)
+   inst_sequenter/counter<1>.AR = !b0;	// GSR	(0 pt, 0 inp)
+GLOBALS | 1 | 4 | b0
+
+MACROCELL | 1 | 9 | XLXN_7_MC
+ATTRIBUTES | 2151711488 | 0
+INPUTS | 16 | inst_divider_100kHz_to_1Hz/counter<0>  | inst_divider_100kHz_to_1Hz/counter<10>  | inst_divider_100kHz_to_1Hz/counter<1>  | inst_divider_100kHz_to_1Hz/counter<2>  | inst_divider_100kHz_to_1Hz/counter<3>  | inst_divider_100kHz_to_1Hz/counter<11>  | inst_divider_100kHz_to_1Hz/counter<4>  | inst_divider_100kHz_to_1Hz/counter<5>  | inst_divider_100kHz_to_1Hz/counter<12>  | inst_divider_100kHz_to_1Hz/counter<6>  | inst_divider_100kHz_to_1Hz/counter<7>  | inst_divider_100kHz_to_1Hz/counter<13>  | inst_divider_100kHz_to_1Hz/counter<8>  | inst_divider_100kHz_to_1Hz/counter<14>  | inst_divider_100kHz_to_1Hz/counter<9>  | inst_divider_100kHz_to_1Hz/counter<15>
+INPUTMC | 16 | 1 | 8 | 0 | 5 | 0 | 4 | 0 | 1 | 1 | 5 | 0 | 2 | 0 | 0 | 1 | 1 | 1 | 15 | 0 | 13 | 1 | 14 | 1 | 7 | 1 | 13 | 1 | 6 | 0 | 12 | 1 | 10
+EQ | 10 | 
+   XLXN_7.T := !inst_divider_100kHz_to_1Hz/counter<0> & 
+	!inst_divider_100kHz_to_1Hz/counter<10> & !inst_divider_100kHz_to_1Hz/counter<1> & 
+	!inst_divider_100kHz_to_1Hz/counter<2> & inst_divider_100kHz_to_1Hz/counter<3> & 
+	!inst_divider_100kHz_to_1Hz/counter<11> & !inst_divider_100kHz_to_1Hz/counter<4> & 
+	inst_divider_100kHz_to_1Hz/counter<5> & !inst_divider_100kHz_to_1Hz/counter<12> & 
+	!inst_divider_100kHz_to_1Hz/counter<6> & inst_divider_100kHz_to_1Hz/counter<7> & 
+	inst_divider_100kHz_to_1Hz/counter<13> & inst_divider_100kHz_to_1Hz/counter<8> & 
+	inst_divider_100kHz_to_1Hz/counter<14> & !inst_divider_100kHz_to_1Hz/counter<9> & 
+	!inst_divider_100kHz_to_1Hz/counter<15>;	// (1 pt, 16 inp)
+   XLXN_7.CLK  =  clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk
+
+MACROCELL | 1 | 8 | inst_divider_100kHz_to_1Hz/counter<0>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 17 | 0 | 4 | 0 | 1 | 0 | 0 | 0 | 13 | 0 | 12 | 1 | 10 | 1 | 6 | 1 | 13 | 1 | 7 | 1 | 14 | 1 | 15 | 1 | 1 | 0 | 2 | 1 | 5 | 0 | 5 | 1 | 8 | 1 | 9
+INPUTS | 16 | inst_divider_100kHz_to_1Hz/counter<0>  | inst_divider_100kHz_to_1Hz/counter<10>  | inst_divider_100kHz_to_1Hz/counter<1>  | inst_divider_100kHz_to_1Hz/counter<2>  | inst_divider_100kHz_to_1Hz/counter<3>  | inst_divider_100kHz_to_1Hz/counter<11>  | inst_divider_100kHz_to_1Hz/counter<4>  | inst_divider_100kHz_to_1Hz/counter<5>  | inst_divider_100kHz_to_1Hz/counter<12>  | inst_divider_100kHz_to_1Hz/counter<6>  | inst_divider_100kHz_to_1Hz/counter<7>  | inst_divider_100kHz_to_1Hz/counter<13>  | inst_divider_100kHz_to_1Hz/counter<8>  | inst_divider_100kHz_to_1Hz/counter<14>  | inst_divider_100kHz_to_1Hz/counter<9>  | inst_divider_100kHz_to_1Hz/counter<15>
+INPUTMC | 16 | 1 | 8 | 0 | 5 | 0 | 4 | 0 | 1 | 1 | 5 | 0 | 2 | 0 | 0 | 1 | 1 | 1 | 15 | 0 | 13 | 1 | 14 | 1 | 7 | 1 | 13 | 1 | 6 | 0 | 12 | 1 | 10
+EQ | 10 | 
+   !inst_divider_100kHz_to_1Hz/counter<0>.T := !inst_divider_100kHz_to_1Hz/counter<0> & 
+	!inst_divider_100kHz_to_1Hz/counter<10> & !inst_divider_100kHz_to_1Hz/counter<1> & 
+	!inst_divider_100kHz_to_1Hz/counter<2> & inst_divider_100kHz_to_1Hz/counter<3> & 
+	!inst_divider_100kHz_to_1Hz/counter<11> & !inst_divider_100kHz_to_1Hz/counter<4> & 
+	inst_divider_100kHz_to_1Hz/counter<5> & !inst_divider_100kHz_to_1Hz/counter<12> & 
+	!inst_divider_100kHz_to_1Hz/counter<6> & inst_divider_100kHz_to_1Hz/counter<7> & 
+	inst_divider_100kHz_to_1Hz/counter<13> & inst_divider_100kHz_to_1Hz/counter<8> & 
+	inst_divider_100kHz_to_1Hz/counter<14> & !inst_divider_100kHz_to_1Hz/counter<9> & 
+	!inst_divider_100kHz_to_1Hz/counter<15>;	// (1 pt, 16 inp)
+   inst_divider_100kHz_to_1Hz/counter<0>.CLK  =  clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk
+
+MACROCELL | 0 | 5 | inst_divider_100kHz_to_1Hz/counter<10>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 11 | 1 | 10 | 1 | 6 | 1 | 13 | 1 | 7 | 1 | 14 | 1 | 15 | 1 | 1 | 0 | 2 | 1 | 5 | 1 | 8 | 1 | 9
+INPUTS | 10 | inst_divider_100kHz_to_1Hz/counter<0>  | inst_divider_100kHz_to_1Hz/counter<1>  | inst_divider_100kHz_to_1Hz/counter<2>  | inst_divider_100kHz_to_1Hz/counter<3>  | inst_divider_100kHz_to_1Hz/counter<4>  | inst_divider_100kHz_to_1Hz/counter<5>  | inst_divider_100kHz_to_1Hz/counter<6>  | inst_divider_100kHz_to_1Hz/counter<7>  | inst_divider_100kHz_to_1Hz/counter<8>  | inst_divider_100kHz_to_1Hz/counter<9>
+INPUTMC | 10 | 1 | 8 | 0 | 4 | 0 | 1 | 1 | 5 | 0 | 0 | 1 | 1 | 0 | 13 | 1 | 14 | 1 | 13 | 0 | 12
+EQ | 7 | 
+   inst_divider_100kHz_to_1Hz/counter<10>.T := inst_divider_100kHz_to_1Hz/counter<0> & 
+	inst_divider_100kHz_to_1Hz/counter<1> & inst_divider_100kHz_to_1Hz/counter<2> & 
+	inst_divider_100kHz_to_1Hz/counter<3> & inst_divider_100kHz_to_1Hz/counter<4> & 
+	inst_divider_100kHz_to_1Hz/counter<5> & inst_divider_100kHz_to_1Hz/counter<6> & 
+	inst_divider_100kHz_to_1Hz/counter<7> & inst_divider_100kHz_to_1Hz/counter<8> & 
+	inst_divider_100kHz_to_1Hz/counter<9>;	// (1 pt, 10 inp)
+   inst_divider_100kHz_to_1Hz/counter<10>.CLK  =  clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk
+
+MACROCELL | 0 | 4 | inst_divider_100kHz_to_1Hz/counter<1>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 16 | 0 | 1 | 0 | 0 | 0 | 13 | 0 | 12 | 1 | 10 | 1 | 6 | 1 | 13 | 1 | 7 | 1 | 14 | 1 | 15 | 1 | 1 | 0 | 2 | 1 | 5 | 0 | 5 | 1 | 8 | 1 | 9
+INPUTS | 1 | inst_divider_100kHz_to_1Hz/counter<0>
+INPUTMC | 1 | 1 | 8
+EQ | 2 | 
+   inst_divider_100kHz_to_1Hz/counter<1>.T := inst_divider_100kHz_to_1Hz/counter<0>;	// (1 pt, 1 inp)
+   inst_divider_100kHz_to_1Hz/counter<1>.CLK  =  clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk
+
+MACROCELL | 0 | 1 | inst_divider_100kHz_to_1Hz/counter<2>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 15 | 0 | 0 | 0 | 13 | 0 | 12 | 1 | 10 | 1 | 6 | 1 | 13 | 1 | 7 | 1 | 14 | 1 | 15 | 1 | 1 | 0 | 2 | 1 | 5 | 0 | 5 | 1 | 8 | 1 | 9
+INPUTS | 2 | inst_divider_100kHz_to_1Hz/counter<0>  | inst_divider_100kHz_to_1Hz/counter<1>
+INPUTMC | 2 | 1 | 8 | 0 | 4
+EQ | 3 | 
+   inst_divider_100kHz_to_1Hz/counter<2>.T := inst_divider_100kHz_to_1Hz/counter<0> & 
+	inst_divider_100kHz_to_1Hz/counter<1>;	// (1 pt, 2 inp)
+   inst_divider_100kHz_to_1Hz/counter<2>.CLK  =  clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk
+
+MACROCELL | 1 | 5 | inst_divider_100kHz_to_1Hz/counter<3>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 15 | 0 | 0 | 0 | 13 | 0 | 12 | 1 | 10 | 1 | 6 | 1 | 13 | 1 | 7 | 1 | 14 | 1 | 15 | 1 | 1 | 0 | 2 | 1 | 5 | 0 | 5 | 1 | 8 | 1 | 9
+INPUTS | 16 | inst_divider_100kHz_to_1Hz/counter<0>  | inst_divider_100kHz_to_1Hz/counter<1>  | inst_divider_100kHz_to_1Hz/counter<2>  | inst_divider_100kHz_to_1Hz/counter<10>  | inst_divider_100kHz_to_1Hz/counter<3>  | inst_divider_100kHz_to_1Hz/counter<11>  | inst_divider_100kHz_to_1Hz/counter<4>  | inst_divider_100kHz_to_1Hz/counter<5>  | inst_divider_100kHz_to_1Hz/counter<12>  | inst_divider_100kHz_to_1Hz/counter<6>  | inst_divider_100kHz_to_1Hz/counter<7>  | inst_divider_100kHz_to_1Hz/counter<13>  | inst_divider_100kHz_to_1Hz/counter<8>  | inst_divider_100kHz_to_1Hz/counter<14>  | inst_divider_100kHz_to_1Hz/counter<9>  | inst_divider_100kHz_to_1Hz/counter<15>
+INPUTMC | 16 | 1 | 8 | 0 | 4 | 0 | 1 | 0 | 5 | 1 | 5 | 0 | 2 | 0 | 0 | 1 | 1 | 1 | 15 | 0 | 13 | 1 | 14 | 1 | 7 | 1 | 13 | 1 | 6 | 0 | 12 | 1 | 10
+EQ | 12 | 
+   inst_divider_100kHz_to_1Hz/counter<3>.T := inst_divider_100kHz_to_1Hz/counter<0> & 
+	inst_divider_100kHz_to_1Hz/counter<1> & inst_divider_100kHz_to_1Hz/counter<2>
+	# !inst_divider_100kHz_to_1Hz/counter<0> & 
+	!inst_divider_100kHz_to_1Hz/counter<10> & !inst_divider_100kHz_to_1Hz/counter<1> & 
+	!inst_divider_100kHz_to_1Hz/counter<2> & inst_divider_100kHz_to_1Hz/counter<3> & 
+	!inst_divider_100kHz_to_1Hz/counter<11> & !inst_divider_100kHz_to_1Hz/counter<4> & 
+	inst_divider_100kHz_to_1Hz/counter<5> & !inst_divider_100kHz_to_1Hz/counter<12> & 
+	!inst_divider_100kHz_to_1Hz/counter<6> & inst_divider_100kHz_to_1Hz/counter<7> & 
+	inst_divider_100kHz_to_1Hz/counter<13> & inst_divider_100kHz_to_1Hz/counter<8> & 
+	inst_divider_100kHz_to_1Hz/counter<14> & !inst_divider_100kHz_to_1Hz/counter<9> & 
+	!inst_divider_100kHz_to_1Hz/counter<15>;	// (2 pt, 16 inp)
+   inst_divider_100kHz_to_1Hz/counter<3>.CLK  =  clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk
+
+MACROCELL | 0 | 2 | inst_divider_100kHz_to_1Hz/counter<11>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 10 | 1 | 10 | 1 | 6 | 1 | 13 | 1 | 7 | 1 | 14 | 1 | 15 | 1 | 1 | 1 | 5 | 1 | 8 | 1 | 9
+INPUTS | 11 | inst_divider_100kHz_to_1Hz/counter<0>  | inst_divider_100kHz_to_1Hz/counter<10>  | inst_divider_100kHz_to_1Hz/counter<1>  | inst_divider_100kHz_to_1Hz/counter<2>  | inst_divider_100kHz_to_1Hz/counter<3>  | inst_divider_100kHz_to_1Hz/counter<4>  | inst_divider_100kHz_to_1Hz/counter<5>  | inst_divider_100kHz_to_1Hz/counter<6>  | inst_divider_100kHz_to_1Hz/counter<7>  | inst_divider_100kHz_to_1Hz/counter<8>  | inst_divider_100kHz_to_1Hz/counter<9>
+INPUTMC | 11 | 1 | 8 | 0 | 5 | 0 | 4 | 0 | 1 | 1 | 5 | 0 | 0 | 1 | 1 | 0 | 13 | 1 | 14 | 1 | 13 | 0 | 12
+EQ | 7 | 
+   inst_divider_100kHz_to_1Hz/counter<11>.T := inst_divider_100kHz_to_1Hz/counter<0> & 
+	inst_divider_100kHz_to_1Hz/counter<10> & inst_divider_100kHz_to_1Hz/counter<1> & 
+	inst_divider_100kHz_to_1Hz/counter<2> & inst_divider_100kHz_to_1Hz/counter<3> & 
+	inst_divider_100kHz_to_1Hz/counter<4> & inst_divider_100kHz_to_1Hz/counter<5> & 
+	inst_divider_100kHz_to_1Hz/counter<6> & inst_divider_100kHz_to_1Hz/counter<7> & 
+	inst_divider_100kHz_to_1Hz/counter<8> & inst_divider_100kHz_to_1Hz/counter<9>;	// (1 pt, 11 inp)
+   inst_divider_100kHz_to_1Hz/counter<11>.CLK  =  clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk
+
+MACROCELL | 0 | 0 | inst_divider_100kHz_to_1Hz/counter<4>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 14 | 0 | 13 | 0 | 12 | 1 | 10 | 1 | 6 | 1 | 13 | 1 | 7 | 1 | 14 | 1 | 15 | 1 | 1 | 0 | 2 | 1 | 5 | 0 | 5 | 1 | 8 | 1 | 9
+INPUTS | 4 | inst_divider_100kHz_to_1Hz/counter<0>  | inst_divider_100kHz_to_1Hz/counter<1>  | inst_divider_100kHz_to_1Hz/counter<2>  | inst_divider_100kHz_to_1Hz/counter<3>
+INPUTMC | 4 | 1 | 8 | 0 | 4 | 0 | 1 | 1 | 5
+EQ | 4 | 
+   inst_divider_100kHz_to_1Hz/counter<4>.T := inst_divider_100kHz_to_1Hz/counter<0> & 
+	inst_divider_100kHz_to_1Hz/counter<1> & inst_divider_100kHz_to_1Hz/counter<2> & 
+	inst_divider_100kHz_to_1Hz/counter<3>;	// (1 pt, 4 inp)
+   inst_divider_100kHz_to_1Hz/counter<4>.CLK  =  clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk
+
+MACROCELL | 1 | 1 | inst_divider_100kHz_to_1Hz/counter<5>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 14 | 0 | 13 | 0 | 12 | 1 | 10 | 1 | 6 | 1 | 13 | 1 | 7 | 1 | 14 | 1 | 15 | 1 | 1 | 0 | 2 | 1 | 5 | 0 | 5 | 1 | 8 | 1 | 9
+INPUTS | 16 | inst_divider_100kHz_to_1Hz/counter<0>  | inst_divider_100kHz_to_1Hz/counter<1>  | inst_divider_100kHz_to_1Hz/counter<2>  | inst_divider_100kHz_to_1Hz/counter<3>  | inst_divider_100kHz_to_1Hz/counter<4>  | inst_divider_100kHz_to_1Hz/counter<10>  | inst_divider_100kHz_to_1Hz/counter<11>  | inst_divider_100kHz_to_1Hz/counter<5>  | inst_divider_100kHz_to_1Hz/counter<12>  | inst_divider_100kHz_to_1Hz/counter<6>  | inst_divider_100kHz_to_1Hz/counter<7>  | inst_divider_100kHz_to_1Hz/counter<13>  | inst_divider_100kHz_to_1Hz/counter<8>  | inst_divider_100kHz_to_1Hz/counter<14>  | inst_divider_100kHz_to_1Hz/counter<9>  | inst_divider_100kHz_to_1Hz/counter<15>
+INPUTMC | 16 | 1 | 8 | 0 | 4 | 0 | 1 | 1 | 5 | 0 | 0 | 0 | 5 | 0 | 2 | 1 | 1 | 1 | 15 | 0 | 13 | 1 | 14 | 1 | 7 | 1 | 13 | 1 | 6 | 0 | 12 | 1 | 10
+EQ | 13 | 
+   inst_divider_100kHz_to_1Hz/counter<5>.T := inst_divider_100kHz_to_1Hz/counter<0> & 
+	inst_divider_100kHz_to_1Hz/counter<1> & inst_divider_100kHz_to_1Hz/counter<2> & 
+	inst_divider_100kHz_to_1Hz/counter<3> & inst_divider_100kHz_to_1Hz/counter<4>
+	# !inst_divider_100kHz_to_1Hz/counter<0> & 
+	!inst_divider_100kHz_to_1Hz/counter<10> & !inst_divider_100kHz_to_1Hz/counter<1> & 
+	!inst_divider_100kHz_to_1Hz/counter<2> & inst_divider_100kHz_to_1Hz/counter<3> & 
+	!inst_divider_100kHz_to_1Hz/counter<11> & !inst_divider_100kHz_to_1Hz/counter<4> & 
+	inst_divider_100kHz_to_1Hz/counter<5> & !inst_divider_100kHz_to_1Hz/counter<12> & 
+	!inst_divider_100kHz_to_1Hz/counter<6> & inst_divider_100kHz_to_1Hz/counter<7> & 
+	inst_divider_100kHz_to_1Hz/counter<13> & inst_divider_100kHz_to_1Hz/counter<8> & 
+	inst_divider_100kHz_to_1Hz/counter<14> & !inst_divider_100kHz_to_1Hz/counter<9> & 
+	!inst_divider_100kHz_to_1Hz/counter<15>;	// (2 pt, 16 inp)
+   inst_divider_100kHz_to_1Hz/counter<5>.CLK  =  clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk
+
+MACROCELL | 1 | 15 | inst_divider_100kHz_to_1Hz/counter<12>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 9 | 1 | 10 | 1 | 6 | 1 | 13 | 1 | 7 | 1 | 14 | 1 | 1 | 1 | 5 | 1 | 8 | 1 | 9
+INPUTS | 12 | inst_divider_100kHz_to_1Hz/counter<0>  | inst_divider_100kHz_to_1Hz/counter<10>  | inst_divider_100kHz_to_1Hz/counter<1>  | inst_divider_100kHz_to_1Hz/counter<2>  | inst_divider_100kHz_to_1Hz/counter<3>  | inst_divider_100kHz_to_1Hz/counter<11>  | inst_divider_100kHz_to_1Hz/counter<4>  | inst_divider_100kHz_to_1Hz/counter<5>  | inst_divider_100kHz_to_1Hz/counter<6>  | inst_divider_100kHz_to_1Hz/counter<7>  | inst_divider_100kHz_to_1Hz/counter<8>  | inst_divider_100kHz_to_1Hz/counter<9>
+INPUTMC | 12 | 1 | 8 | 0 | 5 | 0 | 4 | 0 | 1 | 1 | 5 | 0 | 2 | 0 | 0 | 1 | 1 | 0 | 13 | 1 | 14 | 1 | 13 | 0 | 12
+EQ | 8 | 
+   inst_divider_100kHz_to_1Hz/counter<12>.T := inst_divider_100kHz_to_1Hz/counter<0> & 
+	inst_divider_100kHz_to_1Hz/counter<10> & inst_divider_100kHz_to_1Hz/counter<1> & 
+	inst_divider_100kHz_to_1Hz/counter<2> & inst_divider_100kHz_to_1Hz/counter<3> & 
+	inst_divider_100kHz_to_1Hz/counter<11> & inst_divider_100kHz_to_1Hz/counter<4> & 
+	inst_divider_100kHz_to_1Hz/counter<5> & inst_divider_100kHz_to_1Hz/counter<6> & 
+	inst_divider_100kHz_to_1Hz/counter<7> & inst_divider_100kHz_to_1Hz/counter<8> & 
+	inst_divider_100kHz_to_1Hz/counter<9>;	// (1 pt, 12 inp)
+   inst_divider_100kHz_to_1Hz/counter<12>.CLK  =  clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk
+
+MACROCELL | 0 | 13 | inst_divider_100kHz_to_1Hz/counter<6>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 13 | 0 | 12 | 1 | 10 | 1 | 6 | 1 | 13 | 1 | 7 | 1 | 14 | 1 | 15 | 1 | 1 | 0 | 2 | 1 | 5 | 0 | 5 | 1 | 8 | 1 | 9
+INPUTS | 6 | inst_divider_100kHz_to_1Hz/counter<0>  | inst_divider_100kHz_to_1Hz/counter<1>  | inst_divider_100kHz_to_1Hz/counter<2>  | inst_divider_100kHz_to_1Hz/counter<3>  | inst_divider_100kHz_to_1Hz/counter<4>  | inst_divider_100kHz_to_1Hz/counter<5>
+INPUTMC | 6 | 1 | 8 | 0 | 4 | 0 | 1 | 1 | 5 | 0 | 0 | 1 | 1
+EQ | 5 | 
+   inst_divider_100kHz_to_1Hz/counter<6>.T := inst_divider_100kHz_to_1Hz/counter<0> & 
+	inst_divider_100kHz_to_1Hz/counter<1> & inst_divider_100kHz_to_1Hz/counter<2> & 
+	inst_divider_100kHz_to_1Hz/counter<3> & inst_divider_100kHz_to_1Hz/counter<4> & 
+	inst_divider_100kHz_to_1Hz/counter<5>;	// (1 pt, 6 inp)
+   inst_divider_100kHz_to_1Hz/counter<6>.CLK  =  clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk
+
+MACROCELL | 1 | 14 | inst_divider_100kHz_to_1Hz/counter<7>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 13 | 0 | 12 | 1 | 10 | 1 | 6 | 1 | 13 | 1 | 7 | 1 | 14 | 1 | 15 | 1 | 1 | 0 | 2 | 1 | 5 | 0 | 5 | 1 | 8 | 1 | 9
+INPUTS | 16 | inst_divider_100kHz_to_1Hz/counter<0>  | inst_divider_100kHz_to_1Hz/counter<1>  | inst_divider_100kHz_to_1Hz/counter<2>  | inst_divider_100kHz_to_1Hz/counter<3>  | inst_divider_100kHz_to_1Hz/counter<4>  | inst_divider_100kHz_to_1Hz/counter<5>  | inst_divider_100kHz_to_1Hz/counter<6>  | inst_divider_100kHz_to_1Hz/counter<10>  | inst_divider_100kHz_to_1Hz/counter<11>  | inst_divider_100kHz_to_1Hz/counter<12>  | inst_divider_100kHz_to_1Hz/counter<7>  | inst_divider_100kHz_to_1Hz/counter<13>  | inst_divider_100kHz_to_1Hz/counter<8>  | inst_divider_100kHz_to_1Hz/counter<14>  | inst_divider_100kHz_to_1Hz/counter<9>  | inst_divider_100kHz_to_1Hz/counter<15>
+INPUTMC | 16 | 1 | 8 | 0 | 4 | 0 | 1 | 1 | 5 | 0 | 0 | 1 | 1 | 0 | 13 | 0 | 5 | 0 | 2 | 1 | 15 | 1 | 14 | 1 | 7 | 1 | 13 | 1 | 6 | 0 | 12 | 1 | 10
+EQ | 14 | 
+   inst_divider_100kHz_to_1Hz/counter<7>.T := inst_divider_100kHz_to_1Hz/counter<0> & 
+	inst_divider_100kHz_to_1Hz/counter<1> & inst_divider_100kHz_to_1Hz/counter<2> & 
+	inst_divider_100kHz_to_1Hz/counter<3> & inst_divider_100kHz_to_1Hz/counter<4> & 
+	inst_divider_100kHz_to_1Hz/counter<5> & inst_divider_100kHz_to_1Hz/counter<6>
+	# !inst_divider_100kHz_to_1Hz/counter<0> & 
+	!inst_divider_100kHz_to_1Hz/counter<10> & !inst_divider_100kHz_to_1Hz/counter<1> & 
+	!inst_divider_100kHz_to_1Hz/counter<2> & inst_divider_100kHz_to_1Hz/counter<3> & 
+	!inst_divider_100kHz_to_1Hz/counter<11> & !inst_divider_100kHz_to_1Hz/counter<4> & 
+	inst_divider_100kHz_to_1Hz/counter<5> & !inst_divider_100kHz_to_1Hz/counter<12> & 
+	!inst_divider_100kHz_to_1Hz/counter<6> & inst_divider_100kHz_to_1Hz/counter<7> & 
+	inst_divider_100kHz_to_1Hz/counter<13> & inst_divider_100kHz_to_1Hz/counter<8> & 
+	inst_divider_100kHz_to_1Hz/counter<14> & !inst_divider_100kHz_to_1Hz/counter<9> & 
+	!inst_divider_100kHz_to_1Hz/counter<15>;	// (2 pt, 16 inp)
+   inst_divider_100kHz_to_1Hz/counter<7>.CLK  =  clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk
+
+MACROCELL | 1 | 7 | inst_divider_100kHz_to_1Hz/counter<13>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 9 | 1 | 10 | 1 | 6 | 1 | 13 | 1 | 7 | 1 | 14 | 1 | 1 | 1 | 5 | 1 | 8 | 1 | 9
+INPUTS | 16 | inst_divider_100kHz_to_1Hz/counter<0>  | inst_divider_100kHz_to_1Hz/counter<10>  | inst_divider_100kHz_to_1Hz/counter<1>  | inst_divider_100kHz_to_1Hz/counter<2>  | inst_divider_100kHz_to_1Hz/counter<3>  | inst_divider_100kHz_to_1Hz/counter<11>  | inst_divider_100kHz_to_1Hz/counter<4>  | inst_divider_100kHz_to_1Hz/counter<5>  | inst_divider_100kHz_to_1Hz/counter<12>  | inst_divider_100kHz_to_1Hz/counter<6>  | inst_divider_100kHz_to_1Hz/counter<7>  | inst_divider_100kHz_to_1Hz/counter<8>  | inst_divider_100kHz_to_1Hz/counter<9>  | inst_divider_100kHz_to_1Hz/counter<13>  | inst_divider_100kHz_to_1Hz/counter<14>  | inst_divider_100kHz_to_1Hz/counter<15>
+INPUTMC | 16 | 1 | 8 | 0 | 5 | 0 | 4 | 0 | 1 | 1 | 5 | 0 | 2 | 0 | 0 | 1 | 1 | 1 | 15 | 0 | 13 | 1 | 14 | 1 | 13 | 0 | 12 | 1 | 7 | 1 | 6 | 1 | 10
+EQ | 17 | 
+   inst_divider_100kHz_to_1Hz/counter<13>.T := inst_divider_100kHz_to_1Hz/counter<0> & 
+	inst_divider_100kHz_to_1Hz/counter<10> & inst_divider_100kHz_to_1Hz/counter<1> & 
+	inst_divider_100kHz_to_1Hz/counter<2> & inst_divider_100kHz_to_1Hz/counter<3> & 
+	inst_divider_100kHz_to_1Hz/counter<11> & inst_divider_100kHz_to_1Hz/counter<4> & 
+	inst_divider_100kHz_to_1Hz/counter<5> & inst_divider_100kHz_to_1Hz/counter<12> & 
+	inst_divider_100kHz_to_1Hz/counter<6> & inst_divider_100kHz_to_1Hz/counter<7> & 
+	inst_divider_100kHz_to_1Hz/counter<8> & inst_divider_100kHz_to_1Hz/counter<9>
+	# !inst_divider_100kHz_to_1Hz/counter<0> & 
+	!inst_divider_100kHz_to_1Hz/counter<10> & !inst_divider_100kHz_to_1Hz/counter<1> & 
+	!inst_divider_100kHz_to_1Hz/counter<2> & inst_divider_100kHz_to_1Hz/counter<3> & 
+	!inst_divider_100kHz_to_1Hz/counter<11> & !inst_divider_100kHz_to_1Hz/counter<4> & 
+	inst_divider_100kHz_to_1Hz/counter<5> & !inst_divider_100kHz_to_1Hz/counter<12> & 
+	!inst_divider_100kHz_to_1Hz/counter<6> & inst_divider_100kHz_to_1Hz/counter<7> & 
+	inst_divider_100kHz_to_1Hz/counter<13> & inst_divider_100kHz_to_1Hz/counter<8> & 
+	inst_divider_100kHz_to_1Hz/counter<14> & !inst_divider_100kHz_to_1Hz/counter<9> & 
+	!inst_divider_100kHz_to_1Hz/counter<15>;	// (2 pt, 16 inp)
+   inst_divider_100kHz_to_1Hz/counter<13>.CLK  =  clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk
+
+MACROCELL | 1 | 13 | inst_divider_100kHz_to_1Hz/counter<8>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 13 | 0 | 12 | 1 | 10 | 1 | 6 | 1 | 13 | 1 | 7 | 1 | 14 | 1 | 15 | 1 | 1 | 0 | 2 | 1 | 5 | 0 | 5 | 1 | 8 | 1 | 9
+INPUTS | 16 | inst_divider_100kHz_to_1Hz/counter<0>  | inst_divider_100kHz_to_1Hz/counter<1>  | inst_divider_100kHz_to_1Hz/counter<2>  | inst_divider_100kHz_to_1Hz/counter<3>  | inst_divider_100kHz_to_1Hz/counter<4>  | inst_divider_100kHz_to_1Hz/counter<5>  | inst_divider_100kHz_to_1Hz/counter<6>  | inst_divider_100kHz_to_1Hz/counter<7>  | inst_divider_100kHz_to_1Hz/counter<10>  | inst_divider_100kHz_to_1Hz/counter<11>  | inst_divider_100kHz_to_1Hz/counter<12>  | inst_divider_100kHz_to_1Hz/counter<13>  | inst_divider_100kHz_to_1Hz/counter<8>  | inst_divider_100kHz_to_1Hz/counter<14>  | inst_divider_100kHz_to_1Hz/counter<9>  | inst_divider_100kHz_to_1Hz/counter<15>
+INPUTMC | 16 | 1 | 8 | 0 | 4 | 0 | 1 | 1 | 5 | 0 | 0 | 1 | 1 | 0 | 13 | 1 | 14 | 0 | 5 | 0 | 2 | 1 | 15 | 1 | 7 | 1 | 13 | 1 | 6 | 0 | 12 | 1 | 10
+EQ | 15 | 
+   inst_divider_100kHz_to_1Hz/counter<8>.T := inst_divider_100kHz_to_1Hz/counter<0> & 
+	inst_divider_100kHz_to_1Hz/counter<1> & inst_divider_100kHz_to_1Hz/counter<2> & 
+	inst_divider_100kHz_to_1Hz/counter<3> & inst_divider_100kHz_to_1Hz/counter<4> & 
+	inst_divider_100kHz_to_1Hz/counter<5> & inst_divider_100kHz_to_1Hz/counter<6> & 
+	inst_divider_100kHz_to_1Hz/counter<7>
+	# !inst_divider_100kHz_to_1Hz/counter<0> & 
+	!inst_divider_100kHz_to_1Hz/counter<10> & !inst_divider_100kHz_to_1Hz/counter<1> & 
+	!inst_divider_100kHz_to_1Hz/counter<2> & inst_divider_100kHz_to_1Hz/counter<3> & 
+	!inst_divider_100kHz_to_1Hz/counter<11> & !inst_divider_100kHz_to_1Hz/counter<4> & 
+	inst_divider_100kHz_to_1Hz/counter<5> & !inst_divider_100kHz_to_1Hz/counter<12> & 
+	!inst_divider_100kHz_to_1Hz/counter<6> & inst_divider_100kHz_to_1Hz/counter<7> & 
+	inst_divider_100kHz_to_1Hz/counter<13> & inst_divider_100kHz_to_1Hz/counter<8> & 
+	inst_divider_100kHz_to_1Hz/counter<14> & !inst_divider_100kHz_to_1Hz/counter<9> & 
+	!inst_divider_100kHz_to_1Hz/counter<15>;	// (2 pt, 16 inp)
+   inst_divider_100kHz_to_1Hz/counter<8>.CLK  =  clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk
+
+MACROCELL | 1 | 6 | inst_divider_100kHz_to_1Hz/counter<14>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 9 | 1 | 10 | 1 | 6 | 1 | 13 | 1 | 7 | 1 | 14 | 1 | 1 | 1 | 5 | 1 | 8 | 1 | 9
+INPUTS | 16 | inst_divider_100kHz_to_1Hz/counter<0>  | inst_divider_100kHz_to_1Hz/counter<10>  | inst_divider_100kHz_to_1Hz/counter<1>  | inst_divider_100kHz_to_1Hz/counter<2>  | inst_divider_100kHz_to_1Hz/counter<3>  | inst_divider_100kHz_to_1Hz/counter<11>  | inst_divider_100kHz_to_1Hz/counter<4>  | inst_divider_100kHz_to_1Hz/counter<5>  | inst_divider_100kHz_to_1Hz/counter<12>  | inst_divider_100kHz_to_1Hz/counter<6>  | inst_divider_100kHz_to_1Hz/counter<7>  | inst_divider_100kHz_to_1Hz/counter<13>  | inst_divider_100kHz_to_1Hz/counter<8>  | inst_divider_100kHz_to_1Hz/counter<9>  | inst_divider_100kHz_to_1Hz/counter<14>  | inst_divider_100kHz_to_1Hz/counter<15>
+INPUTMC | 16 | 1 | 8 | 0 | 5 | 0 | 4 | 0 | 1 | 1 | 5 | 0 | 2 | 0 | 0 | 1 | 1 | 1 | 15 | 0 | 13 | 1 | 14 | 1 | 7 | 1 | 13 | 0 | 12 | 1 | 6 | 1 | 10
+EQ | 18 | 
+   inst_divider_100kHz_to_1Hz/counter<14>.T := inst_divider_100kHz_to_1Hz/counter<0> & 
+	inst_divider_100kHz_to_1Hz/counter<10> & inst_divider_100kHz_to_1Hz/counter<1> & 
+	inst_divider_100kHz_to_1Hz/counter<2> & inst_divider_100kHz_to_1Hz/counter<3> & 
+	inst_divider_100kHz_to_1Hz/counter<11> & inst_divider_100kHz_to_1Hz/counter<4> & 
+	inst_divider_100kHz_to_1Hz/counter<5> & inst_divider_100kHz_to_1Hz/counter<12> & 
+	inst_divider_100kHz_to_1Hz/counter<6> & inst_divider_100kHz_to_1Hz/counter<7> & 
+	inst_divider_100kHz_to_1Hz/counter<13> & inst_divider_100kHz_to_1Hz/counter<8> & 
+	inst_divider_100kHz_to_1Hz/counter<9>
+	# !inst_divider_100kHz_to_1Hz/counter<0> & 
+	!inst_divider_100kHz_to_1Hz/counter<10> & !inst_divider_100kHz_to_1Hz/counter<1> & 
+	!inst_divider_100kHz_to_1Hz/counter<2> & inst_divider_100kHz_to_1Hz/counter<3> & 
+	!inst_divider_100kHz_to_1Hz/counter<11> & !inst_divider_100kHz_to_1Hz/counter<4> & 
+	inst_divider_100kHz_to_1Hz/counter<5> & !inst_divider_100kHz_to_1Hz/counter<12> & 
+	!inst_divider_100kHz_to_1Hz/counter<6> & inst_divider_100kHz_to_1Hz/counter<7> & 
+	inst_divider_100kHz_to_1Hz/counter<13> & inst_divider_100kHz_to_1Hz/counter<8> & 
+	inst_divider_100kHz_to_1Hz/counter<14> & !inst_divider_100kHz_to_1Hz/counter<9> & 
+	!inst_divider_100kHz_to_1Hz/counter<15>;	// (2 pt, 16 inp)
+   inst_divider_100kHz_to_1Hz/counter<14>.CLK  =  clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk
+
+MACROCELL | 0 | 12 | inst_divider_100kHz_to_1Hz/counter<9>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 12 | 1 | 10 | 1 | 6 | 1 | 13 | 1 | 7 | 1 | 14 | 1 | 15 | 1 | 1 | 0 | 2 | 1 | 5 | 0 | 5 | 1 | 8 | 1 | 9
+INPUTS | 9 | inst_divider_100kHz_to_1Hz/counter<0>  | inst_divider_100kHz_to_1Hz/counter<1>  | inst_divider_100kHz_to_1Hz/counter<2>  | inst_divider_100kHz_to_1Hz/counter<3>  | inst_divider_100kHz_to_1Hz/counter<4>  | inst_divider_100kHz_to_1Hz/counter<5>  | inst_divider_100kHz_to_1Hz/counter<6>  | inst_divider_100kHz_to_1Hz/counter<7>  | inst_divider_100kHz_to_1Hz/counter<8>
+INPUTMC | 9 | 1 | 8 | 0 | 4 | 0 | 1 | 1 | 5 | 0 | 0 | 1 | 1 | 0 | 13 | 1 | 14 | 1 | 13
+EQ | 6 | 
+   inst_divider_100kHz_to_1Hz/counter<9>.T := inst_divider_100kHz_to_1Hz/counter<0> & 
+	inst_divider_100kHz_to_1Hz/counter<1> & inst_divider_100kHz_to_1Hz/counter<2> & 
+	inst_divider_100kHz_to_1Hz/counter<3> & inst_divider_100kHz_to_1Hz/counter<4> & 
+	inst_divider_100kHz_to_1Hz/counter<5> & inst_divider_100kHz_to_1Hz/counter<6> & 
+	inst_divider_100kHz_to_1Hz/counter<7> & inst_divider_100kHz_to_1Hz/counter<8>;	// (1 pt, 9 inp)
+   inst_divider_100kHz_to_1Hz/counter<9>.CLK  =  clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk
+
+MACROCELL | 1 | 10 | inst_divider_100kHz_to_1Hz/counter<15>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 8 | 1 | 6 | 1 | 13 | 1 | 7 | 1 | 14 | 1 | 1 | 1 | 5 | 1 | 8 | 1 | 9
+INPUTS | 15 | inst_divider_100kHz_to_1Hz/counter<0>  | inst_divider_100kHz_to_1Hz/counter<10>  | inst_divider_100kHz_to_1Hz/counter<1>  | inst_divider_100kHz_to_1Hz/counter<2>  | inst_divider_100kHz_to_1Hz/counter<3>  | inst_divider_100kHz_to_1Hz/counter<11>  | inst_divider_100kHz_to_1Hz/counter<4>  | inst_divider_100kHz_to_1Hz/counter<5>  | inst_divider_100kHz_to_1Hz/counter<12>  | inst_divider_100kHz_to_1Hz/counter<6>  | inst_divider_100kHz_to_1Hz/counter<7>  | inst_divider_100kHz_to_1Hz/counter<13>  | inst_divider_100kHz_to_1Hz/counter<8>  | inst_divider_100kHz_to_1Hz/counter<14>  | inst_divider_100kHz_to_1Hz/counter<9>
+INPUTMC | 15 | 1 | 8 | 0 | 5 | 0 | 4 | 0 | 1 | 1 | 5 | 0 | 2 | 0 | 0 | 1 | 1 | 1 | 15 | 0 | 13 | 1 | 14 | 1 | 7 | 1 | 13 | 1 | 6 | 0 | 12
+EQ | 9 | 
+   inst_divider_100kHz_to_1Hz/counter<15>.T := inst_divider_100kHz_to_1Hz/counter<0> & 
+	inst_divider_100kHz_to_1Hz/counter<10> & inst_divider_100kHz_to_1Hz/counter<1> & 
+	inst_divider_100kHz_to_1Hz/counter<2> & inst_divider_100kHz_to_1Hz/counter<3> & 
+	inst_divider_100kHz_to_1Hz/counter<11> & inst_divider_100kHz_to_1Hz/counter<4> & 
+	inst_divider_100kHz_to_1Hz/counter<5> & inst_divider_100kHz_to_1Hz/counter<12> & 
+	inst_divider_100kHz_to_1Hz/counter<6> & inst_divider_100kHz_to_1Hz/counter<7> & 
+	inst_divider_100kHz_to_1Hz/counter<13> & inst_divider_100kHz_to_1Hz/counter<8> & 
+	inst_divider_100kHz_to_1Hz/counter<14> & inst_divider_100kHz_to_1Hz/counter<9>;	// (1 pt, 15 inp)
+   inst_divider_100kHz_to_1Hz/counter<15>.CLK  =  clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk
+
+MACROCELL | 0 | 9 | inst_sequenter/counter<2>_MC
+ATTRIBUTES | 2319450880 | 0
+OUTPUTMC | 5 | 0 | 10 | 0 | 14 | 0 | 15 | 0 | 11 | 0 | 3
+INPUTS | 2 | inst_sequenter/counter<0>  | inst_sequenter/counter<1>
+INPUTMC | 2 | 0 | 15 | 0 | 8
+LCT | 1 | 2 | Internal_Name
+EQ | 4 | 
+   inst_sequenter/counter<2>.T := inst_sequenter/counter<0> & 
+	inst_sequenter/counter<1>;	// (1 pt, 2 inp)
+    inst_sequenter/counter<2>.CLK = XLXN_7;	// CTC	(1 pt, 1 inp)
+   inst_sequenter/counter<2>.AR = !b0;	// GSR	(0 pt, 0 inp)
+GLOBALS | 1 | 4 | b0
+
+MACROCELL | 0 | 10 | inst_sequenter/counter<3>_MC
+ATTRIBUTES | 2319450880 | 0
+OUTPUTMC | 4 | 0 | 14 | 0 | 15 | 0 | 11 | 0 | 3
+INPUTS | 3 | inst_sequenter/counter<0>  | inst_sequenter/counter<1>  | inst_sequenter/counter<2>
+INPUTMC | 3 | 0 | 15 | 0 | 8 | 0 | 9
+LCT | 1 | 2 | Internal_Name
+EQ | 4 | 
+   inst_sequenter/counter<3>.T := inst_sequenter/counter<0> & 
+	inst_sequenter/counter<1> & inst_sequenter/counter<2>;	// (1 pt, 3 inp)
+    inst_sequenter/counter<3>.CLK = XLXN_7;	// CTC	(1 pt, 1 inp)
+   inst_sequenter/counter<3>.AR = !b0;	// GSR	(0 pt, 0 inp)
+GLOBALS | 1 | 4 | b0
+
+MACROCELL | 0 | 14 | inst_sequenter/counter<4>_MC
+ATTRIBUTES | 2319450884 | 0
+OUTPUTMC | 3 | 0 | 15 | 0 | 11 | 0 | 3
+INPUTS | 4 | inst_sequenter/counter<0>  | inst_sequenter/counter<1>  | inst_sequenter/counter<2>  | inst_sequenter/counter<3>
+INPUTMC | 4 | 0 | 15 | 0 | 8 | 0 | 9 | 0 | 10
+LCT | 1 | 2 | Internal_Name
+EQ | 5 | 
+   inst_sequenter/counter<4>.T := inst_sequenter/counter<0> & 
+	inst_sequenter/counter<1> & inst_sequenter/counter<2> & 
+	inst_sequenter/counter<3>;	// (1 pt, 4 inp)
+    inst_sequenter/counter<4>.CLK = XLXN_7;	// CTC	(1 pt, 1 inp)
+   inst_sequenter/counter<4>.AR = !b0;	// GSR	(0 pt, 0 inp)
+GLOBALS | 1 | 4 | b0
+
+MACROCELL | 2 | 2 | MOSI_MC
+ATTRIBUTES | 142869250 | 0
+INPUTS | 1 | RM<0>
+INPUTMC | 1 | 8 | 13
+LCT | 1 | 2 | Internal_Name
+EQ | 2 | 
+   MOSI := RM<0>;	// (1 pt, 1 inp)
+    MOSI.CLK = clkSeq;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 8 | 13 | RM<0>_MC
+ATTRIBUTES | 2307130130 | 0
+OUTPUTMC | 1 | 2 | 2
+INPUTS | 3 | RM<1>  | b0  | in_data<0>
+INPUTMC | 1 | 8 | 11
+INPUTP | 2 | 218 | 1
+LCT | 2 | 1 | Internal_Name | 2 | Internal_Name
+EQ | 4 | 
+   RM<0> := RM<1>;	// (1 pt, 1 inp)
+    RM<0>.CLK = !(clkSeq);	// CTC	(1 pt, 1 inp)
+    RM<0>.AP = !b0 & in_data<0>;	// CTS	(1 pt, 2 inp)
+    RM<0>.AR = !b0 & !in_data<0>;	// PTA	(1 pt, 2 inp)
+
+MACROCELL | 8 | 11 | RM<1>_MC
+ATTRIBUTES | 2323907458 | 0
+OUTPUTMC | 1 | 8 | 13
+INPUTS | 3 | RM<2>_BUFR  | b0  | in_data<1>
+INPUTMC | 1 | 0 | 7
+INPUTP | 2 | 218 | 4
+LCT | 2 | 4 | Internal_Name | 2 | Internal_Name
+EQ | 4 | 
+   RM<1> := RM<2>_BUFR;	// (1 pt, 1 inp)
+    RM<1>.CLK = !(clkSeq);	// CTC	(1 pt, 1 inp)
+    RM<1>.AP = !b0 & in_data<1>;	// PTA	(1 pt, 2 inp)
+    RM<1>.AR = !b0 & !in_data<1>;	// CTR	(1 pt, 2 inp)
+
+MACROCELL | 0 | 7 | RM<2>_BUFR_MC
+ATTRIBUTES | 2172650288 | 0
+OUTPUTMC | 2 | 8 | 11 | 8 | 3
+INPUTS | 4 | RM<3>_BUFR  | clkSeq  | b0  | in_data<2>
+INPUTMC | 2 | 0 | 6 | 0 | 3
+INPUTP | 2 | 218 | 7
+LCT | 1 | 1 | Internal_Name
+EQ | 4 | 
+   RM<2>_BUFR := RM<3>_BUFR;	// (1 pt, 1 inp)
+    RM<2>_BUFR.CLK = !(clkSeq);	// PTC	(1 pt, 1 inp)
+    RM<2>_BUFR.AP = !b0 & in_data<2>;	// CTS	(1 pt, 2 inp)
+    RM<2>_BUFR.AR = !b0 & !in_data<2>;	// PTA	(1 pt, 2 inp)
+
+MACROCELL | 0 | 6 | RM<3>_BUFR_MC
+ATTRIBUTES | 2189427616 | 0
+OUTPUTMC | 2 | 0 | 7 | 8 | 0
+INPUTS | 4 | RM<4>  | clkSeq  | b0  | in_data<3>
+INPUTMC | 2 | 9 | 11 | 0 | 3
+INPUTP | 2 | 218 | 10
+LCT | 1 | 4 | Internal_Name
+EQ | 4 | 
+   RM<3>_BUFR := RM<4>;	// (1 pt, 1 inp)
+    RM<3>_BUFR.CLK = !(clkSeq);	// PTC	(1 pt, 1 inp)
+    RM<3>_BUFR.AP = !b0 & in_data<3>;	// PTA	(1 pt, 2 inp)
+    RM<3>_BUFR.AR = !b0 & !in_data<3>;	// CTR	(1 pt, 2 inp)
+
+MACROCELL | 9 | 11 | RM<4>_MC
+ATTRIBUTES | 2307130130 | 0
+OUTPUTMC | 1 | 0 | 6
+INPUTS | 3 | RM<5>  | b0  | in_data<4>
+INPUTMC | 1 | 9 | 15
+INPUTP | 2 | 218 | 3
+LCT | 2 | 1 | Internal_Name | 2 | Internal_Name
+EQ | 4 | 
+   RM<4> := RM<5>;	// (1 pt, 1 inp)
+    RM<4>.CLK = !(clkSeq);	// CTC	(1 pt, 1 inp)
+    RM<4>.AP = !b0 & in_data<4>;	// CTS	(1 pt, 2 inp)
+    RM<4>.AR = !b0 & !in_data<4>;	// PTA	(1 pt, 2 inp)
+
+MACROCELL | 9 | 15 | RM<5>_MC
+ATTRIBUTES | 2323907458 | 0
+OUTPUTMC | 1 | 9 | 11
+INPUTS | 3 | RM<6>  | b0  | in_data<5>
+INPUTMC | 1 | 11 | 10
+INPUTP | 2 | 218 | 5
+LCT | 2 | 4 | Internal_Name | 2 | Internal_Name
+EQ | 4 | 
+   RM<5> := RM<6>;	// (1 pt, 1 inp)
+    RM<5>.CLK = !(clkSeq);	// CTC	(1 pt, 1 inp)
+    RM<5>.AP = !b0 & in_data<5>;	// PTA	(1 pt, 2 inp)
+    RM<5>.AR = !b0 & !in_data<5>;	// CTR	(1 pt, 2 inp)
+
+MACROCELL | 11 | 10 | RM<6>_MC
+ATTRIBUTES | 2307130130 | 0
+OUTPUTMC | 1 | 9 | 15
+INPUTS | 3 | RM<7>  | b0  | in_data<6>
+INPUTMC | 1 | 11 | 12
+INPUTP | 2 | 218 | 8
+LCT | 2 | 1 | Internal_Name | 2 | Internal_Name
+EQ | 4 | 
+   RM<6> := RM<7>;	// (1 pt, 1 inp)
+    RM<6>.CLK = !(clkSeq);	// CTC	(1 pt, 1 inp)
+    RM<6>.AP = !b0 & in_data<6>;	// CTS	(1 pt, 2 inp)
+    RM<6>.AR = !b0 & !in_data<6>;	// PTA	(1 pt, 2 inp)
+
+MACROCELL | 11 | 12 | RM<7>_MC
+ATTRIBUTES | 2323907458 | 0
+OUTPUTMC | 1 | 11 | 10
+INPUTS | 3 | MISO  | b0  | in_data<7>
+INPUTP | 3 | 190 | 218 | 12
+LCT | 2 | 4 | Internal_Name | 2 | Internal_Name
+EQ | 4 | 
+   RM<7> := MISO;	// (1 pt, 1 inp)
+    RM<7>.CLK = !(clkSeq);	// CTC	(1 pt, 1 inp)
+    RM<7>.AP = !b0 & in_data<7>;	// PTA	(1 pt, 2 inp)
+    RM<7>.AR = !b0 & !in_data<7>;	// CTR	(1 pt, 2 inp)
+
+MACROCELL | 0 | 3 | clkSeq_MC
+ATTRIBUTES | 2290352898 | 0
+OUTPUTMC | 3 | 0 | 3 | 0 | 6 | 0 | 7
+INPUTS | 7 | b0  | inst_sequenter/counter<0>  | clkSeq  | inst_sequenter/counter<1>  | inst_sequenter/counter<2>  | inst_sequenter/counter<3>  | inst_sequenter/counter<4>
+INPUTMC | 6 | 0 | 15 | 0 | 3 | 0 | 8 | 0 | 9 | 0 | 10 | 0 | 14
+INPUTP | 1 | 218
+LCT | 1 | 2 | Internal_Name
+EQ | 9 | 
+   !clkSeq := b0 & inst_sequenter/counter<0>
+	# !b0 & !clkSeq
+	# b0 & inst_sequenter/counter<1> & 
+	!inst_sequenter/counter<2> & !inst_sequenter/counter<3> & 
+	inst_sequenter/counter<4>
+	# !inst_sequenter/counter<1> & 
+	!inst_sequenter/counter<2> & !inst_sequenter/counter<3> & 
+	!inst_sequenter/counter<4> & !clkSeq;	// (4 pt, 7 inp)
+    clkSeq.CLK = XLXN_7;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 8 | 3 | RM<2>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 1 | RM<2>_BUFR
+INPUTMC | 1 | 0 | 7
+EQ | 1 | 
+   RM<2> = RM<2>_BUFR;	// (1 pt, 1 inp)
+
+MACROCELL | 8 | 0 | RM<3>_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 1 | RM<3>_BUFR
+INPUTMC | 1 | 0 | 6
+EQ | 1 | 
+   RM<3> = RM<3>_BUFR;	// (1 pt, 1 inp)
+
+PIN | b0 | 65600 | 16 | LVCMOS18 | 218 | 15 | 0 | 11 | 0 | 3 | 11 | 12 | 11 | 10 | 9 | 15 | 9 | 11 | 0 | 6 | 0 | 7 | 8 | 11 | 8 | 13 | 0 | 8 | 0 | 9 | 0 | 10 | 0 | 14 | 0 | 15
+PIN | clk | 16384 | 16 | LVCMOS18 | 59 | 17 | 0 | 4 | 0 | 1 | 0 | 0 | 0 | 13 | 0 | 12 | 1 | 10 | 1 | 6 | 1 | 13 | 1 | 7 | 1 | 14 | 1 | 15 | 1 | 1 | 0 | 2 | 1 | 5 | 0 | 5 | 1 | 8 | 1 | 9
+PIN | MISO | 64 | 16 | LVCMOS18 | 190 | 1 | 11 | 12
+PIN | in_data<7> | 64 | 16 | LVCMOS18 | 12 | 1 | 11 | 12
+PIN | in_data<6> | 64 | 16 | LVCMOS18 | 8 | 1 | 11 | 10
+PIN | in_data<5> | 64 | 16 | LVCMOS18 | 5 | 1 | 9 | 15
+PIN | in_data<4> | 64 | 16 | LVCMOS18 | 3 | 1 | 9 | 11
+PIN | in_data<3> | 64 | 16 | LVCMOS18 | 10 | 1 | 0 | 6
+PIN | in_data<2> | 64 | 16 | LVCMOS18 | 7 | 1 | 0 | 7
+PIN | in_data<1> | 64 | 16 | LVCMOS18 | 4 | 1 | 8 | 11
+PIN | in_data<0> | 64 | 16 | LVCMOS18 | 1 | 1 | 8 | 13
+PIN | CS | 536871040 | 0 | LVCMOS18 | 213
+PIN | MOSI | 536871040 | 0 | LVCMOS18 | 206
+PIN | RM<0> | 536871040 | 0 | LVCMOS18 | 177
+PIN | RM<1> | 536871040 | 0 | LVCMOS18 | 175
+PIN | RM<2> | 536871040 | 0 | LVCMOS18 | 171
+PIN | RM<3> | 536871040 | 0 | LVCMOS18 | 168
+PIN | RM<4> | 536871040 | 0 | LVCMOS18 | 158
+PIN | RM<5> | 536871040 | 0 | LVCMOS18 | 154
+PIN | RM<6> | 536871040 | 0 | LVCMOS18 | 146
+PIN | RM<7> | 536871040 | 0 | LVCMOS18 | 144
+PIN | clkSeq | 536871040 | 0 | LVCMOS18 | 217

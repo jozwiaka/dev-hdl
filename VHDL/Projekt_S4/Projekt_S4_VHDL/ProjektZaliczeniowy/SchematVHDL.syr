@@ -1,0 +1,433 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Reading design: SchematVHDL.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "SchematVHDL.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "SchematVHDL"
+Output Format                      : NGC
+Target Device                      : CoolRunner2 CPLDs
+
+---- Source Options
+Top Module Name                    : SchematVHDL
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+
+---- Target Options
+Add IO Buffers                     : YES
+MACRO Preserve                     : YES
+XOR Preserve                       : YES
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : Yes
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Verilog 2001                       : YES
+
+---- Other Options
+Clock Enable                       : YES
+wysiwyg                            : NO
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+WARNING:HDLParsers:3607 - Unit work/SchematGlowny is now defined in a different file.  It was defined in "C:/students_ulic/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/SchematGlowny.vhf", and is now defined in "C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/SchematGlowny.vhf".
+WARNING:HDLParsers:3607 - Unit work/SchematGlowny/BEHAVIORAL is now defined in a different file.  It was defined in "C:/students_ulic/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/SchematGlowny.vhf", and is now defined in "C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/SchematGlowny.vhf".
+WARNING:HDLParsers:3607 - Unit work/aktywna_anoda is now defined in a different file.  It was defined in "C:/students_ulic/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/aktywna_anoda.vhd", and is now defined in "C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/aktywna_anoda.vhd".
+WARNING:HDLParsers:3607 - Unit work/aktywna_anoda/Behavioral is now defined in a different file.  It was defined in "C:/students_ulic/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/aktywna_anoda.vhd", and is now defined in "C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/aktywna_anoda.vhd".
+WARNING:HDLParsers:3607 - Unit work/dzielnik_100kHz_na_400Hz is now defined in a different file.  It was defined in "C:/students_ulic/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/dzielnik_100kHz_na_400Hz.vhd", and is now defined in "C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/dzielnik_100kHz_na_400Hz.vhd".
+WARNING:HDLParsers:3607 - Unit work/dzielnik_100kHz_na_400Hz/Behavioral is now defined in a different file.  It was defined in "C:/students_ulic/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/dzielnik_100kHz_na_400Hz.vhd", and is now defined in "C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/dzielnik_100kHz_na_400Hz.vhd".
+WARNING:HDLParsers:3607 - Unit work/dzielnik_400Hz_na_10Hz is now defined in a different file.  It was defined in "C:/students_ulic/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/dzielnik_400Hz_na_10Hz.vhd", and is now defined in "C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/dzielnik_400Hz_na_10Hz.vhd".
+WARNING:HDLParsers:3607 - Unit work/dzielnik_400Hz_na_10Hz/Behavioral is now defined in a different file.  It was defined in "C:/students_ulic/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/dzielnik_400Hz_na_10Hz.vhd", and is now defined in "C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/dzielnik_400Hz_na_10Hz.vhd".
+WARNING:HDLParsers:3607 - Unit work/licznik_cyfra is now defined in a different file.  It was defined in "C:/students_ulic/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/licznik_cyfra.vhd", and is now defined in "C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/licznik_cyfra.vhd".
+WARNING:HDLParsers:3607 - Unit work/licznik_cyfra/Behavioral is now defined in a different file.  It was defined in "C:/students_ulic/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/licznik_cyfra.vhd", and is now defined in "C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/licznik_cyfra.vhd".
+WARNING:HDLParsers:3607 - Unit work/moj_projekt is now defined in a different file.  It was defined in "C:/students_ulic/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/moj_projekt.vhd", and is now defined in "C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/moj_projekt.vhd".
+WARNING:HDLParsers:3607 - Unit work/moj_projekt/Behavioral is now defined in a different file.  It was defined in "C:/students_ulic/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/moj_projekt.vhd", and is now defined in "C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/moj_projekt.vhd".
+WARNING:HDLParsers:3607 - Unit work/moj_projekt_Diody is now defined in a different file.  It was defined in "C:/students_ulic/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/moj_projekt_Diody.vhd", and is now defined in "C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/moj_projekt_Diody.vhd".
+WARNING:HDLParsers:3607 - Unit work/moj_projekt_Diody/Behavioral is now defined in a different file.  It was defined in "C:/students_ulic/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/moj_projekt_Diody.vhd", and is now defined in "C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/moj_projekt_Diody.vhd".
+WARNING:HDLParsers:3607 - Unit work/moj_projekt_MUX is now defined in a different file.  It was defined in "C:/students_ulic/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/moj_projekt_MUX.vhd", and is now defined in "C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/moj_projekt_MUX.vhd".
+WARNING:HDLParsers:3607 - Unit work/moj_projekt_MUX/Behavioral is now defined in a different file.  It was defined in "C:/students_ulic/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/moj_projekt_MUX.vhd", and is now defined in "C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/moj_projekt_MUX.vhd".
+WARNING:HDLParsers:3607 - Unit work/mult_vec1 is now defined in a different file.  It was defined in "C:/students_ulic/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/mult_vec1.vhd", and is now defined in "C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/mult_vec1.vhd".
+WARNING:HDLParsers:3607 - Unit work/mult_vec1/Behavioral is now defined in a different file.  It was defined in "C:/students_ulic/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/mult_vec1.vhd", and is now defined in "C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/mult_vec1.vhd".
+WARNING:HDLParsers:3607 - Unit work/ster_kropka is now defined in a different file.  It was defined in "C:/students_ulic/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/ster_kropka.vhd", and is now defined in "C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/ster_kropka.vhd".
+WARNING:HDLParsers:3607 - Unit work/ster_kropka/Behavioral is now defined in a different file.  It was defined in "C:/students_ulic/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/ster_kropka.vhd", and is now defined in "C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/ster_kropka.vhd".
+WARNING:HDLParsers:3607 - Unit work/transkoder_7s is now defined in a different file.  It was defined in "C:/students_ulic/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/transkoder_7s.vhd", and is now defined in "C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/transkoder_7s.vhd".
+WARNING:HDLParsers:3607 - Unit work/transkoder_7s/Behavioral is now defined in a different file.  It was defined in "C:/students_ulic/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/transkoder_7s.vhd", and is now defined in "C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/transkoder_7s.vhd".
+Compiling vhdl file "C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/dzielnik_100kHz_na_400Hz.vhd" in Library work.
+Architecture behavioral of Entity dzielnik_100khz_na_400hz is up to date.
+Compiling vhdl file "C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/licznik_cyfra.vhd" in Library work.
+Architecture behavioral of Entity licznik_cyfra is up to date.
+Compiling vhdl file "C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/aktywna_anoda.vhd" in Library work.
+Architecture behavioral of Entity aktywna_anoda is up to date.
+Compiling vhdl file "C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/dzielnik_400Hz_na_10Hz.vhd" in Library work.
+Architecture behavioral of Entity dzielnik_400hz_na_10hz is up to date.
+Compiling vhdl file "C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/moj_projekt_Diody.vhd" in Library work.
+Architecture behavioral of Entity moj_projekt_diody is up to date.
+Compiling vhdl file "C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/moj_projekt.vhd" in Library work.
+Architecture behavioral of Entity moj_projekt is up to date.
+Compiling vhdl file "C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/mult_vec1.vhd" in Library work.
+Architecture behavioral of Entity mult_vec1 is up to date.
+Compiling vhdl file "C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/moj_projekt_MUX.vhd" in Library work.
+Architecture behavioral of Entity moj_projekt_mux is up to date.
+Compiling vhdl file "C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/transkoder_7s.vhd" in Library work.
+Architecture behavioral of Entity transkoder_7s is up to date.
+Compiling vhdl file "C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/ster_kropka.vhd" in Library work.
+Architecture behavioral of Entity ster_kropka is up to date.
+Compiling vhdl file "C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/SchematGlowny.vhf" in Library work.
+Architecture behavioral of Entity schematglowny is up to date.
+Compiling vhdl file "C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/Uklad_VHDL.vhd" in Library work.
+Entity <SchematVHDL> compiled.
+Entity <SchematVHDL> (Architecture <Behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <SchematVHDL> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <dzielnik_100kHz_na_400Hz> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <licznik_cyfra> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <aktywna_anoda> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <dzielnik_400Hz_na_10Hz> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <moj_projekt_Diody> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <moj_projekt> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <mult_vec1> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <moj_projekt_MUX> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <transkoder_7s> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <ster_kropka> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <SchematVHDL> in library <work> (Architecture <Behavioral>).
+Entity <SchematVHDL> analyzed. Unit <SchematVHDL> generated.
+
+Analyzing Entity <dzielnik_100kHz_na_400Hz> in library <work> (Architecture <behavioral>).
+Entity <dzielnik_100kHz_na_400Hz> analyzed. Unit <dzielnik_100kHz_na_400Hz> generated.
+
+Analyzing Entity <licznik_cyfra> in library <work> (Architecture <behavioral>).
+Entity <licznik_cyfra> analyzed. Unit <licznik_cyfra> generated.
+
+Analyzing Entity <aktywna_anoda> in library <work> (Architecture <behavioral>).
+Entity <aktywna_anoda> analyzed. Unit <aktywna_anoda> generated.
+
+Analyzing Entity <dzielnik_400Hz_na_10Hz> in library <work> (Architecture <behavioral>).
+Entity <dzielnik_400Hz_na_10Hz> analyzed. Unit <dzielnik_400Hz_na_10Hz> generated.
+
+Analyzing Entity <moj_projekt_Diody> in library <work> (Architecture <behavioral>).
+Entity <moj_projekt_Diody> analyzed. Unit <moj_projekt_Diody> generated.
+
+Analyzing Entity <moj_projekt> in library <work> (Architecture <behavioral>).
+Entity <moj_projekt> analyzed. Unit <moj_projekt> generated.
+
+Analyzing Entity <mult_vec1> in library <work> (Architecture <behavioral>).
+Entity <mult_vec1> analyzed. Unit <mult_vec1> generated.
+
+Analyzing Entity <moj_projekt_MUX> in library <work> (Architecture <behavioral>).
+Entity <moj_projekt_MUX> analyzed. Unit <moj_projekt_MUX> generated.
+
+Analyzing Entity <transkoder_7s> in library <work> (Architecture <behavioral>).
+Entity <transkoder_7s> analyzed. Unit <transkoder_7s> generated.
+
+Analyzing Entity <ster_kropka> in library <work> (Architecture <behavioral>).
+Entity <ster_kropka> analyzed. Unit <ster_kropka> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <dzielnik_100kHz_na_400Hz>.
+    Related source file is "C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/dzielnik_100kHz_na_400Hz.vhd".
+    Found 8-bit up counter for signal <licznik>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <dzielnik_100kHz_na_400Hz> synthesized.
+
+
+Synthesizing Unit <licznik_cyfra>.
+    Related source file is "C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/licznik_cyfra.vhd".
+    Found 2-bit up counter for signal <licznik>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <licznik_cyfra> synthesized.
+
+
+Synthesizing Unit <aktywna_anoda>.
+    Related source file is "C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/aktywna_anoda.vhd".
+    Found 4x4-bit ROM for signal <wy>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <aktywna_anoda> synthesized.
+
+
+Synthesizing Unit <dzielnik_400Hz_na_10Hz>.
+    Related source file is "C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/dzielnik_400Hz_na_10Hz.vhd".
+    Found 6-bit up counter for signal <licznik>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <dzielnik_400Hz_na_10Hz> synthesized.
+
+
+Synthesizing Unit <moj_projekt_Diody>.
+    Related source file is "C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/moj_projekt_Diody.vhd".
+Unit <moj_projekt_Diody> synthesized.
+
+
+Synthesizing Unit <moj_projekt>.
+    Related source file is "C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/moj_projekt.vhd".
+WARNING:Xst:737 - Found 1-bit latch for signal <StartStop>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 4-bit up counter for signal <ds>.
+    Found 4-bit up counter for signal <min>.
+    Found 4-bit up counter for signal <s_dz>.
+    Found 4-bit up counter for signal <s_j>.
+    Summary:
+	inferred   4 Counter(s).
+Unit <moj_projekt> synthesized.
+
+
+Synthesizing Unit <mult_vec1>.
+    Related source file is "C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/mult_vec1.vhd".
+    Found 4-bit 4-to-1 multiplexer for signal <wy>.
+Unit <mult_vec1> synthesized.
+
+
+Synthesizing Unit <moj_projekt_MUX>.
+    Related source file is "C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/moj_projekt_MUX.vhd".
+Unit <moj_projekt_MUX> synthesized.
+
+
+Synthesizing Unit <transkoder_7s>.
+    Related source file is "C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/transkoder_7s.vhd".
+    Found 16x7-bit ROM for signal <wy>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <transkoder_7s> synthesized.
+
+
+Synthesizing Unit <ster_kropka>.
+    Related source file is "C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/ster_kropka.vhd".
+Unit <ster_kropka> synthesized.
+
+
+Synthesizing Unit <SchematVHDL>.
+    Related source file is "C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/Uklad_VHDL.vhd".
+Unit <SchematVHDL> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 2
+ 16x7-bit ROM                                          : 1
+ 4x4-bit ROM                                           : 1
+# Counters                                             : 11
+ 2-bit up counter                                      : 1
+ 4-bit up counter                                      : 8
+ 6-bit up counter                                      : 1
+ 8-bit up counter                                      : 1
+# Latches                                              : 2
+ 1-bit latch                                           : 2
+# Multiplexers                                         : 2
+ 4-bit 4-to-1 multiplexer                              : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 2
+ 16x7-bit ROM                                          : 1
+ 4x4-bit ROM                                           : 1
+# Counters                                             : 11
+ 2-bit up counter                                      : 1
+ 4-bit up counter                                      : 8
+ 6-bit up counter                                      : 1
+ 8-bit up counter                                      : 1
+# Latches                                              : 2
+ 1-bit latch                                           : 2
+# Multiplexers                                         : 2
+ 4-bit 4-to-1 multiplexer                              : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <SchematVHDL> ...
+
+Optimizing unit <moj_projekt_Diody> ...
+
+Optimizing unit <moj_projekt_MUX> ...
+
+Optimizing unit <ster_kropka> ...
+
+Optimizing unit <aktywna_anoda> ...
+
+Optimizing unit <transkoder_7s> ...
+
+Optimizing unit <mult_vec1> ...
+
+Optimizing unit <dzielnik_100kHz_na_400Hz> ...
+  implementation constraint: INIT=r	 : licznik_7
+  implementation constraint: INIT=r	 : licznik_6
+  implementation constraint: INIT=r	 : licznik_0
+  implementation constraint: INIT=r	 : licznik_1
+  implementation constraint: INIT=r	 : licznik_2
+  implementation constraint: INIT=r	 : licznik_3
+  implementation constraint: INIT=r	 : licznik_4
+  implementation constraint: INIT=r	 : licznik_5
+
+Optimizing unit <licznik_cyfra> ...
+  implementation constraint: INIT=r	 : licznik_1
+  implementation constraint: INIT=r	 : licznik_0
+
+Optimizing unit <dzielnik_400Hz_na_10Hz> ...
+  implementation constraint: INIT=r	 : licznik_5
+  implementation constraint: INIT=r	 : licznik_4
+  implementation constraint: INIT=r	 : licznik_0
+  implementation constraint: INIT=r	 : licznik_1
+  implementation constraint: INIT=r	 : licznik_2
+  implementation constraint: INIT=r	 : licznik_3
+
+Optimizing unit <moj_projekt> ...
+  implementation constraint: INIT=r	 : s_dz_3
+  implementation constraint: INIT=r	 : ds_0
+  implementation constraint: INIT=r	 : ds_1
+  implementation constraint: INIT=r	 : ds_2
+  implementation constraint: INIT=r	 : ds_3
+  implementation constraint: INIT=r	 : s_dz_2
+  implementation constraint: INIT=r	 : min_0
+  implementation constraint: INIT=r	 : min_1
+  implementation constraint: INIT=r	 : min_2
+  implementation constraint: INIT=r	 : min_3
+  implementation constraint: INIT=r	 : s_j_0
+  implementation constraint: INIT=r	 : s_j_1
+  implementation constraint: INIT=r	 : s_j_2
+  implementation constraint: INIT=r	 : s_j_3
+  implementation constraint: INIT=r	 : s_dz_1
+  implementation constraint: INIT=r	 : s_dz_0
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : SchematVHDL.ngr
+Top Level Output File Name         : SchematVHDL
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : Yes
+Target Technology                  : CoolRunner2 CPLDs
+Macro Preserve                     : YES
+XOR Preserve                       : YES
+Clock Enable                       : YES
+wysiwyg                            : NO
+
+Design Statistics
+# IOs                              : 19
+
+Cell Usage :
+# BELS                             : 475
+#      AND2                        : 191
+#      AND3                        : 13
+#      AND4                        : 4
+#      INV                         : 168
+#      OR2                         : 58
+#      OR3                         : 2
+#      OR4                         : 2
+#      XOR2                        : 37
+# FlipFlops/Latches                : 50
+#      FD                          : 16
+#      FDCE                        : 32
+#      LD                          : 2
+# IO Buffers                       : 19
+#      IBUF                        : 5
+#      OBUF                        : 14
+=========================================================================
+
+
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 4.35 secs
+ 
+--> 
+
+Total memory usage is 4531624 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   23 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

@@ -1,0 +1,10 @@
+[Inputs]
+b0
+clk
+[Outputs]
+CS
+clkSeq
+[BiDir]
+[ATTRIBUTES]
+VeriModel sequenter
+

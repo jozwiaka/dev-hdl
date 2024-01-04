@@ -1,0 +1,7 @@
+xst -intstyle ise -ifn "C:/dev/ULiC/LiczSymulacja/licz.xst" -ofn "C:/dev/ULiC/LiczSymulacja/licz.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc licz.ucf -p xc2c256-TQ144-6 licz.ngc licz.ngd  
+cpldfit -intstyle ise -p xc2c256-6-TQ144 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 licz.ngd 
+XSLTProcess licz_build.xml 
+tsim -intstyle ise licz licz.nga 
+taengine -intstyle ise -f licz -w --format html1 -l licz_html/tim/timing_report.htm 
+hprep6 -s IEEE1149 -i licz 

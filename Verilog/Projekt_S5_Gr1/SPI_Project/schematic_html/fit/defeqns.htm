@@ -1,0 +1,274 @@
+<html><head><link type='text/css' href='style.css' rel='stylesheet'></head><body class='pgBgnd'>
+<h3 align='center'>Equations</h3>
+<table width='90%' align='center' border='1' cellpadding='0' cellspacing='0'>
+<tr><td>
+</td></tr><tr><td>
+********** Mapped Logic **********
+</td></tr><tr><td>
+FDCPE_CS: FDCPE port map (CS,CS_D,XLXN_7,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CS_D <= ((NOT b0 AND CS)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (b0 AND NOT inst_sequenter/counter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_sequenter/counter(1) AND NOT inst_sequenter/counter(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT inst_sequenter/counter(3) AND inst_sequenter/counter(4)));
+</td></tr><tr><td>
+FDCPE_MOSI: FDCPE port map (MOSI,RM(0),clkSeq,'0','0','1');
+</td></tr><tr><td>
+FDCPE_RM0: FDCPE port map (RM(0),RM(1),clkSeq,RM_CLR(0),RM_PRE(0),'1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RM_CLR(0) <= (NOT b0 AND NOT in_data(0));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RM_PRE(0) <= (NOT b0 AND in_data(0));
+</td></tr><tr><td>
+FDCPE_RM1: FDCPE port map (RM(1),RM(2)_BUFR,clkSeq,RM_CLR(1),RM_PRE(1),'1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RM_CLR(1) <= (NOT b0 AND NOT in_data(1));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RM_PRE(1) <= (NOT b0 AND in_data(1));
+</td></tr><tr><td>
+</td></tr><tr><td>
+RM(2) <= RM(2)_BUFR;
+</td></tr><tr><td>
+FDCPE_RM2_BUFR: FDCPE port map (RM(2)_BUFR,RM(3)_BUFR,clkSeq,RM_CLR(2)_BUFR,RM_PRE(2)_BUFR,'1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RM_CLR(2)_BUFR <= (NOT b0 AND NOT in_data(2));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RM_PRE(2)_BUFR <= (NOT b0 AND in_data(2));
+</td></tr><tr><td>
+</td></tr><tr><td>
+RM(3) <= RM(3)_BUFR;
+</td></tr><tr><td>
+FDCPE_RM3_BUFR: FDCPE port map (RM(3)_BUFR,RM(4),clkSeq,RM_CLR(3)_BUFR,RM_PRE(3)_BUFR,'1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RM_CLR(3)_BUFR <= (NOT b0 AND NOT in_data(3));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RM_PRE(3)_BUFR <= (NOT b0 AND in_data(3));
+</td></tr><tr><td>
+FDCPE_RM4: FDCPE port map (RM(4),RM(5),clkSeq,RM_CLR(4),RM_PRE(4),'1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RM_CLR(4) <= (NOT b0 AND NOT in_data(4));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RM_PRE(4) <= (NOT b0 AND in_data(4));
+</td></tr><tr><td>
+FDCPE_RM5: FDCPE port map (RM(5),RM(6),clkSeq,RM_CLR(5),RM_PRE(5),'1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RM_CLR(5) <= (NOT b0 AND NOT in_data(5));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RM_PRE(5) <= (NOT b0 AND in_data(5));
+</td></tr><tr><td>
+FDCPE_RM6: FDCPE port map (RM(6),RM(7),clkSeq,RM_CLR(6),RM_PRE(6),'1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RM_CLR(6) <= (NOT b0 AND NOT in_data(6));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RM_PRE(6) <= (NOT b0 AND in_data(6));
+</td></tr><tr><td>
+FDCPE_RM7: FDCPE port map (RM(7),MISO,clkSeq,RM_CLR(7),RM_PRE(7),'1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RM_CLR(7) <= (NOT b0 AND NOT in_data(7));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RM_PRE(7) <= (NOT b0 AND in_data(7));
+</td></tr><tr><td>
+FTCPE_XLXN_7: FTCPE port map (XLXN_7,XLXN_7_T,clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XLXN_7_T <= (NOT inst_divider_100kHz_to_1Hz/counter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT inst_divider_100kHz_to_1Hz/counter(10) AND NOT inst_divider_100kHz_to_1Hz/counter(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT inst_divider_100kHz_to_1Hz/counter(2) AND inst_divider_100kHz_to_1Hz/counter(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT inst_divider_100kHz_to_1Hz/counter(11) AND NOT inst_divider_100kHz_to_1Hz/counter(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(5) AND NOT inst_divider_100kHz_to_1Hz/counter(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT inst_divider_100kHz_to_1Hz/counter(6) AND inst_divider_100kHz_to_1Hz/counter(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(13) AND inst_divider_100kHz_to_1Hz/counter(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(14) AND NOT inst_divider_100kHz_to_1Hz/counter(9) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT inst_divider_100kHz_to_1Hz/counter(15));
+</td></tr><tr><td>
+FDCPE_clkSeq: FDCPE port map (clkSeq,clkSeq_D,XLXN_7,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clkSeq_D <= NOT (((b0 AND inst_sequenter/counter(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT b0 AND NOT clkSeq)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (b0 AND inst_sequenter/counter(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT inst_sequenter/counter(2) AND NOT inst_sequenter/counter(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_sequenter/counter(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT inst_sequenter/counter(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT inst_sequenter/counter(2) AND NOT inst_sequenter/counter(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT inst_sequenter/counter(4) AND NOT clkSeq)));
+</td></tr><tr><td>
+FTCPE_inst_divider_100kHz_to_1Hz/counter0: FTCPE port map (inst_divider_100kHz_to_1Hz/counter(0),inst_divider_100kHz_to_1Hz/counter_T(0),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inst_divider_100kHz_to_1Hz/counter_T(0) <= NOT ((NOT inst_divider_100kHz_to_1Hz/counter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT inst_divider_100kHz_to_1Hz/counter(10) AND NOT inst_divider_100kHz_to_1Hz/counter(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT inst_divider_100kHz_to_1Hz/counter(2) AND inst_divider_100kHz_to_1Hz/counter(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT inst_divider_100kHz_to_1Hz/counter(11) AND NOT inst_divider_100kHz_to_1Hz/counter(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(5) AND NOT inst_divider_100kHz_to_1Hz/counter(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT inst_divider_100kHz_to_1Hz/counter(6) AND inst_divider_100kHz_to_1Hz/counter(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(13) AND inst_divider_100kHz_to_1Hz/counter(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(14) AND NOT inst_divider_100kHz_to_1Hz/counter(9) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT inst_divider_100kHz_to_1Hz/counter(15)));
+</td></tr><tr><td>
+FTCPE_inst_divider_100kHz_to_1Hz/counter1: FTCPE port map (inst_divider_100kHz_to_1Hz/counter(1),inst_divider_100kHz_to_1Hz/counter(0),clk,'0','0','1');
+</td></tr><tr><td>
+FTCPE_inst_divider_100kHz_to_1Hz/counter2: FTCPE port map (inst_divider_100kHz_to_1Hz/counter(2),inst_divider_100kHz_to_1Hz/counter_T(2),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inst_divider_100kHz_to_1Hz/counter_T(2) <= (inst_divider_100kHz_to_1Hz/counter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(1));
+</td></tr><tr><td>
+FTCPE_inst_divider_100kHz_to_1Hz/counter3: FTCPE port map (inst_divider_100kHz_to_1Hz/counter(3),inst_divider_100kHz_to_1Hz/counter_T(3),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inst_divider_100kHz_to_1Hz/counter_T(3) <= ((inst_divider_100kHz_to_1Hz/counter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(1) AND inst_divider_100kHz_to_1Hz/counter(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT inst_divider_100kHz_to_1Hz/counter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT inst_divider_100kHz_to_1Hz/counter(10) AND NOT inst_divider_100kHz_to_1Hz/counter(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT inst_divider_100kHz_to_1Hz/counter(2) AND inst_divider_100kHz_to_1Hz/counter(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT inst_divider_100kHz_to_1Hz/counter(11) AND NOT inst_divider_100kHz_to_1Hz/counter(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(5) AND NOT inst_divider_100kHz_to_1Hz/counter(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT inst_divider_100kHz_to_1Hz/counter(6) AND inst_divider_100kHz_to_1Hz/counter(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(13) AND inst_divider_100kHz_to_1Hz/counter(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(14) AND NOT inst_divider_100kHz_to_1Hz/counter(9) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT inst_divider_100kHz_to_1Hz/counter(15)));
+</td></tr><tr><td>
+FTCPE_inst_divider_100kHz_to_1Hz/counter4: FTCPE port map (inst_divider_100kHz_to_1Hz/counter(4),inst_divider_100kHz_to_1Hz/counter_T(4),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inst_divider_100kHz_to_1Hz/counter_T(4) <= (inst_divider_100kHz_to_1Hz/counter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(1) AND inst_divider_100kHz_to_1Hz/counter(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(3));
+</td></tr><tr><td>
+FTCPE_inst_divider_100kHz_to_1Hz/counter5: FTCPE port map (inst_divider_100kHz_to_1Hz/counter(5),inst_divider_100kHz_to_1Hz/counter_T(5),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inst_divider_100kHz_to_1Hz/counter_T(5) <= ((inst_divider_100kHz_to_1Hz/counter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(1) AND inst_divider_100kHz_to_1Hz/counter(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(3) AND inst_divider_100kHz_to_1Hz/counter(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT inst_divider_100kHz_to_1Hz/counter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT inst_divider_100kHz_to_1Hz/counter(10) AND NOT inst_divider_100kHz_to_1Hz/counter(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT inst_divider_100kHz_to_1Hz/counter(2) AND inst_divider_100kHz_to_1Hz/counter(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT inst_divider_100kHz_to_1Hz/counter(11) AND NOT inst_divider_100kHz_to_1Hz/counter(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(5) AND NOT inst_divider_100kHz_to_1Hz/counter(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT inst_divider_100kHz_to_1Hz/counter(6) AND inst_divider_100kHz_to_1Hz/counter(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(13) AND inst_divider_100kHz_to_1Hz/counter(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(14) AND NOT inst_divider_100kHz_to_1Hz/counter(9) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT inst_divider_100kHz_to_1Hz/counter(15)));
+</td></tr><tr><td>
+FTCPE_inst_divider_100kHz_to_1Hz/counter6: FTCPE port map (inst_divider_100kHz_to_1Hz/counter(6),inst_divider_100kHz_to_1Hz/counter_T(6),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inst_divider_100kHz_to_1Hz/counter_T(6) <= (inst_divider_100kHz_to_1Hz/counter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(1) AND inst_divider_100kHz_to_1Hz/counter(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(3) AND inst_divider_100kHz_to_1Hz/counter(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(5));
+</td></tr><tr><td>
+FTCPE_inst_divider_100kHz_to_1Hz/counter7: FTCPE port map (inst_divider_100kHz_to_1Hz/counter(7),inst_divider_100kHz_to_1Hz/counter_T(7),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inst_divider_100kHz_to_1Hz/counter_T(7) <= ((inst_divider_100kHz_to_1Hz/counter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(1) AND inst_divider_100kHz_to_1Hz/counter(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(3) AND inst_divider_100kHz_to_1Hz/counter(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(5) AND inst_divider_100kHz_to_1Hz/counter(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT inst_divider_100kHz_to_1Hz/counter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT inst_divider_100kHz_to_1Hz/counter(10) AND NOT inst_divider_100kHz_to_1Hz/counter(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT inst_divider_100kHz_to_1Hz/counter(2) AND inst_divider_100kHz_to_1Hz/counter(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT inst_divider_100kHz_to_1Hz/counter(11) AND NOT inst_divider_100kHz_to_1Hz/counter(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(5) AND NOT inst_divider_100kHz_to_1Hz/counter(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT inst_divider_100kHz_to_1Hz/counter(6) AND inst_divider_100kHz_to_1Hz/counter(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(13) AND inst_divider_100kHz_to_1Hz/counter(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(14) AND NOT inst_divider_100kHz_to_1Hz/counter(9) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT inst_divider_100kHz_to_1Hz/counter(15)));
+</td></tr><tr><td>
+FTCPE_inst_divider_100kHz_to_1Hz/counter8: FTCPE port map (inst_divider_100kHz_to_1Hz/counter(8),inst_divider_100kHz_to_1Hz/counter_T(8),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inst_divider_100kHz_to_1Hz/counter_T(8) <= ((inst_divider_100kHz_to_1Hz/counter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(1) AND inst_divider_100kHz_to_1Hz/counter(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(3) AND inst_divider_100kHz_to_1Hz/counter(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(5) AND inst_divider_100kHz_to_1Hz/counter(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT inst_divider_100kHz_to_1Hz/counter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT inst_divider_100kHz_to_1Hz/counter(10) AND NOT inst_divider_100kHz_to_1Hz/counter(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT inst_divider_100kHz_to_1Hz/counter(2) AND inst_divider_100kHz_to_1Hz/counter(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT inst_divider_100kHz_to_1Hz/counter(11) AND NOT inst_divider_100kHz_to_1Hz/counter(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(5) AND NOT inst_divider_100kHz_to_1Hz/counter(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT inst_divider_100kHz_to_1Hz/counter(6) AND inst_divider_100kHz_to_1Hz/counter(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(13) AND inst_divider_100kHz_to_1Hz/counter(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(14) AND NOT inst_divider_100kHz_to_1Hz/counter(9) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT inst_divider_100kHz_to_1Hz/counter(15)));
+</td></tr><tr><td>
+FTCPE_inst_divider_100kHz_to_1Hz/counter9: FTCPE port map (inst_divider_100kHz_to_1Hz/counter(9),inst_divider_100kHz_to_1Hz/counter_T(9),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inst_divider_100kHz_to_1Hz/counter_T(9) <= (inst_divider_100kHz_to_1Hz/counter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(1) AND inst_divider_100kHz_to_1Hz/counter(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(3) AND inst_divider_100kHz_to_1Hz/counter(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(5) AND inst_divider_100kHz_to_1Hz/counter(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(7) AND inst_divider_100kHz_to_1Hz/counter(8));
+</td></tr><tr><td>
+FTCPE_inst_divider_100kHz_to_1Hz/counter10: FTCPE port map (inst_divider_100kHz_to_1Hz/counter(10),inst_divider_100kHz_to_1Hz/counter_T(10),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inst_divider_100kHz_to_1Hz/counter_T(10) <= (inst_divider_100kHz_to_1Hz/counter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(1) AND inst_divider_100kHz_to_1Hz/counter(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(3) AND inst_divider_100kHz_to_1Hz/counter(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(5) AND inst_divider_100kHz_to_1Hz/counter(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(7) AND inst_divider_100kHz_to_1Hz/counter(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(9));
+</td></tr><tr><td>
+FTCPE_inst_divider_100kHz_to_1Hz/counter11: FTCPE port map (inst_divider_100kHz_to_1Hz/counter(11),inst_divider_100kHz_to_1Hz/counter_T(11),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inst_divider_100kHz_to_1Hz/counter_T(11) <= (inst_divider_100kHz_to_1Hz/counter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(10) AND inst_divider_100kHz_to_1Hz/counter(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(2) AND inst_divider_100kHz_to_1Hz/counter(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(4) AND inst_divider_100kHz_to_1Hz/counter(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(6) AND inst_divider_100kHz_to_1Hz/counter(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(8) AND inst_divider_100kHz_to_1Hz/counter(9));
+</td></tr><tr><td>
+FTCPE_inst_divider_100kHz_to_1Hz/counter12: FTCPE port map (inst_divider_100kHz_to_1Hz/counter(12),inst_divider_100kHz_to_1Hz/counter_T(12),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inst_divider_100kHz_to_1Hz/counter_T(12) <= (inst_divider_100kHz_to_1Hz/counter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(10) AND inst_divider_100kHz_to_1Hz/counter(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(2) AND inst_divider_100kHz_to_1Hz/counter(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(11) AND inst_divider_100kHz_to_1Hz/counter(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(5) AND inst_divider_100kHz_to_1Hz/counter(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(7) AND inst_divider_100kHz_to_1Hz/counter(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(9));
+</td></tr><tr><td>
+FTCPE_inst_divider_100kHz_to_1Hz/counter13: FTCPE port map (inst_divider_100kHz_to_1Hz/counter(13),inst_divider_100kHz_to_1Hz/counter_T(13),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inst_divider_100kHz_to_1Hz/counter_T(13) <= ((inst_divider_100kHz_to_1Hz/counter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(10) AND inst_divider_100kHz_to_1Hz/counter(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(2) AND inst_divider_100kHz_to_1Hz/counter(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(11) AND inst_divider_100kHz_to_1Hz/counter(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(5) AND inst_divider_100kHz_to_1Hz/counter(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(6) AND inst_divider_100kHz_to_1Hz/counter(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(8) AND inst_divider_100kHz_to_1Hz/counter(9))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT inst_divider_100kHz_to_1Hz/counter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT inst_divider_100kHz_to_1Hz/counter(10) AND NOT inst_divider_100kHz_to_1Hz/counter(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT inst_divider_100kHz_to_1Hz/counter(2) AND inst_divider_100kHz_to_1Hz/counter(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT inst_divider_100kHz_to_1Hz/counter(11) AND NOT inst_divider_100kHz_to_1Hz/counter(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(5) AND NOT inst_divider_100kHz_to_1Hz/counter(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT inst_divider_100kHz_to_1Hz/counter(6) AND inst_divider_100kHz_to_1Hz/counter(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(13) AND inst_divider_100kHz_to_1Hz/counter(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(14) AND NOT inst_divider_100kHz_to_1Hz/counter(9) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT inst_divider_100kHz_to_1Hz/counter(15)));
+</td></tr><tr><td>
+FTCPE_inst_divider_100kHz_to_1Hz/counter14: FTCPE port map (inst_divider_100kHz_to_1Hz/counter(14),inst_divider_100kHz_to_1Hz/counter_T(14),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inst_divider_100kHz_to_1Hz/counter_T(14) <= ((inst_divider_100kHz_to_1Hz/counter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(10) AND inst_divider_100kHz_to_1Hz/counter(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(2) AND inst_divider_100kHz_to_1Hz/counter(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(11) AND inst_divider_100kHz_to_1Hz/counter(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(5) AND inst_divider_100kHz_to_1Hz/counter(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(6) AND inst_divider_100kHz_to_1Hz/counter(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(13) AND inst_divider_100kHz_to_1Hz/counter(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(9))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT inst_divider_100kHz_to_1Hz/counter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT inst_divider_100kHz_to_1Hz/counter(10) AND NOT inst_divider_100kHz_to_1Hz/counter(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT inst_divider_100kHz_to_1Hz/counter(2) AND inst_divider_100kHz_to_1Hz/counter(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT inst_divider_100kHz_to_1Hz/counter(11) AND NOT inst_divider_100kHz_to_1Hz/counter(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(5) AND NOT inst_divider_100kHz_to_1Hz/counter(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT inst_divider_100kHz_to_1Hz/counter(6) AND inst_divider_100kHz_to_1Hz/counter(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(13) AND inst_divider_100kHz_to_1Hz/counter(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(14) AND NOT inst_divider_100kHz_to_1Hz/counter(9) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT inst_divider_100kHz_to_1Hz/counter(15)));
+</td></tr><tr><td>
+FTCPE_inst_divider_100kHz_to_1Hz/counter15: FTCPE port map (inst_divider_100kHz_to_1Hz/counter(15),inst_divider_100kHz_to_1Hz/counter_T(15),clk,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inst_divider_100kHz_to_1Hz/counter_T(15) <= (inst_divider_100kHz_to_1Hz/counter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(10) AND inst_divider_100kHz_to_1Hz/counter(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(2) AND inst_divider_100kHz_to_1Hz/counter(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(11) AND inst_divider_100kHz_to_1Hz/counter(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(5) AND inst_divider_100kHz_to_1Hz/counter(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(6) AND inst_divider_100kHz_to_1Hz/counter(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(13) AND inst_divider_100kHz_to_1Hz/counter(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_divider_100kHz_to_1Hz/counter(14) AND inst_divider_100kHz_to_1Hz/counter(9));
+</td></tr><tr><td>
+FTCPE_inst_sequenter/counter0: FTCPE port map (inst_sequenter/counter(0),inst_sequenter/counter_T(0),XLXN_7,NOT b0,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inst_sequenter/counter_T(0) <= NOT ((NOT inst_sequenter/counter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_sequenter/counter(1) AND NOT inst_sequenter/counter(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT inst_sequenter/counter(3) AND inst_sequenter/counter(4)));
+</td></tr><tr><td>
+FTCPE_inst_sequenter/counter1: FTCPE port map (inst_sequenter/counter(1),inst_sequenter/counter(0),XLXN_7,NOT b0,'0','1');
+</td></tr><tr><td>
+FTCPE_inst_sequenter/counter2: FTCPE port map (inst_sequenter/counter(2),inst_sequenter/counter_T(2),XLXN_7,NOT b0,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inst_sequenter/counter_T(2) <= (inst_sequenter/counter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_sequenter/counter(1));
+</td></tr><tr><td>
+FTCPE_inst_sequenter/counter3: FTCPE port map (inst_sequenter/counter(3),inst_sequenter/counter_T(3),XLXN_7,NOT b0,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inst_sequenter/counter_T(3) <= (inst_sequenter/counter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_sequenter/counter(1) AND inst_sequenter/counter(2));
+</td></tr><tr><td>
+FTCPE_inst_sequenter/counter4: FTCPE port map (inst_sequenter/counter(4),inst_sequenter/counter_T(4),XLXN_7,NOT b0,'0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inst_sequenter/counter_T(4) <= (inst_sequenter/counter(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_sequenter/counter(1) AND inst_sequenter/counter(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	inst_sequenter/counter(3));
+</td></tr><tr><td>
+</td></tr><tr><td>
+Register Legend:
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FDDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FTCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FTDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LDCP  (Q,D,G,CLR,PRE); 
+</td></tr><tr><td>
+</td></tr>
+</table>
+<form><span class="pgRef"><table width="90%" align="center"><tr>
+<td align="left"><input type="button" onclick="javascript:parent.leftnav.showTop()" onmouseover="window.status='goto top of page'; return true;" onmouseout="window.status=''" value="back to top"></td>
+<td align="right"><input type="button" onclick="window.print()" onmouseover="window.status='print page'; return true;" onmouseout="window.status=''" value="print page"></td>
+</tr></table></span></form>
+</body></html>

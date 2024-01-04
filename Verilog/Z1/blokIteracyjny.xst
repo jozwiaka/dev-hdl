@@ -1,0 +1,5 @@
+set -tmpdir "C:/dev/ULiC/Verilog/Z1/xst/projnav.tmp"
+set -xsthdpdir "C:/dev/ULiC/Verilog/Z1/xst"
+elaborate
+-ifn blokIteracyjny.prj
+-ifmt mixed

@@ -1,0 +1,38 @@
+MDF Database:  version 1.0
+MDF_INFO | schematUkladIteracyjny | XC2C256-6-TQ144
+MACROCELL | 9 | 5 | P1wy_8_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 8 | ai_8  | ai_5  | ai_7  | ai_6  | ai_3  | ai_4  | ai_2  | ai_1
+INPUTP | 8 | 1 | 10 | 4 | 7 | 5 | 3 | 8 | 12
+EQ | 7 | 
+   P1wy_8 = ai_8
+	# ai_5 & !ai_7
+	# ai_6 & !ai_7
+	# ai_3 & !ai_4 & !ai_5
+	# !ai_3 & ai_2 & !ai_4
+	# !ai_3 & !ai_2 & ai_1
+	# ai_4 & !ai_5 & !ai_6;	// (7 pt, 8 inp)
+
+MACROCELL | 9 | 13 | P2wy_8_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 8 | ai_6  | ai_8  | ai_7  | ai_3  | ai_4  | ai_5  | ai_2  | ai_1
+INPUTP | 8 | 7 | 1 | 4 | 5 | 3 | 10 | 8 | 12
+EQ | 7 | 
+   P2wy_8 = ai_6 & !ai_8
+	# ai_7 & !ai_8
+	# ai_3 & !ai_4 & !ai_5
+	# !ai_3 & ai_2 & !ai_4
+	# !ai_3 & !ai_2 & ai_1
+	# ai_4 & !ai_5 & !ai_6
+	# ai_5 & !ai_6 & !ai_7;	// (7 pt, 8 inp)
+
+PIN | ai_3 | 64 | 16 | LVCMOS18 | 5 | 2 | 9 | 5 | 9 | 13
+PIN | ai_2 | 64 | 16 | LVCMOS18 | 8 | 2 | 9 | 5 | 9 | 13
+PIN | ai_4 | 64 | 16 | LVCMOS18 | 3 | 2 | 9 | 5 | 9 | 13
+PIN | ai_5 | 64 | 16 | LVCMOS18 | 10 | 2 | 9 | 5 | 9 | 13
+PIN | ai_6 | 64 | 16 | LVCMOS18 | 7 | 2 | 9 | 5 | 9 | 13
+PIN | ai_7 | 64 | 16 | LVCMOS18 | 4 | 2 | 9 | 5 | 9 | 13
+PIN | ai_8 | 64 | 16 | LVCMOS18 | 1 | 2 | 9 | 5 | 9 | 13
+PIN | ai_1 | 64 | 16 | LVCMOS18 | 12 | 2 | 9 | 5 | 9 | 13
+PIN | P1wy_8 | 536871040 | 0 | LVCMOS18 | 160
+PIN | P2wy_8 | 536871040 | 0 | LVCMOS18 | 156

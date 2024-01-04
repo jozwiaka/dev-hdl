@@ -1,0 +1,36 @@
+ Zad1. Układy iteracyjne:
+Instrukcja ogólna : zaprojektować układ przy użuciu języka Verilog, metodą układów iteracyjnych,
+który szuka w słowie 8 bitowym pewnej sekwencji 3 bitów opisanej poniżej, bit po prawej stronie jest bitem pierwszym:
+
+4. "100"
+
+Bity wejściowe proszę umieścić na złączu J1 piny P10..P3 P9...P2
+Informację o znalezieniu sekwencji proszę umieścić na J4 pin p104
+-----------------------------------------------------------------------------------------------------------
+Zad2. Układy sekwencyjne:
+Instrukcja ogólna : zaprojektować układ przy użuciu języka Verilog, w postaci licznika lub sekwentera o następujących właściwościach
+
+4. 4 bitowego licznika w kodzie bin liczącego od 9 do 0 z ustawianiem wartość "1001" i bitem start/stop
+
+Informację o stanie licznika/ sekwentera  proszę umieścić na J4 pin p104, p102, p100, p97.
+Sw0 -zegar 
+Sw1- start/ stop
+btn0 - reset lub ustawianie 
+btn1 - kierunek
+-----------------------------------------------------------------------------------------------------------
+Zad3.
+Realizacja automatu Moore'a szukającego sekwencji w ciągu n - bitów wprowadzanych szeregowo w tak zegara o sekwencji podanej poniżej.
+Na wyjściu pojawia się stan '1' gdy znaleziono sekwencję.
+Zaprojektować graf przejść dla automatu Moore'a . 
+Następnie opisać układ w Verilogu, o jednym wejściu i jednym wyjściu cyfrowym. 
+Wejście sygnał z SW1 , sygnał zegarowy z SW0 , btn0 jako aktywny zerem sygnał resetu.
+Wyjście zrealizować na górnym złączu J3 , ( na górnym złączu J4 można zrealizować wizualizację stanu automatu w kodzie binarnym naturalnym)
+
+4. "100000"
+-----------------------------------------------------------------------------------------------------------
+Zad4.
+Zrealizować układ ( opisany w Verilogu ) oparty o rejestr 8-bitowy wykorzystujący sygnał przełącznika SW1 do sterowania funkcjonalnością, a taktowany sygnałem z SW0 (rola clk).
+Wyjście rejestru na złączu J4 (górna część) i J3 (górna część)
+
+4.SW1 gdy 1 wprowadza dane równolegle do rejestru z złącza J1 ( góra i dół),
+gdy 0 zamienia wszystkie bity na ich wartość komplementarną

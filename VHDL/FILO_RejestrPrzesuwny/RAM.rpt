@@ -1,0 +1,1550 @@
+ 
+cpldfit:  version P.20131013                        Xilinx Inc.
+                                  Fitter Report
+Design Name: RAM                                 Date: 11-23-2021,  3:19PM
+Device Used: XC2C256-6-TQ144
+Fitting Status: Successful
+
+*************************  Mapped Resource Summary  **************************
+
+Macrocells     Product Terms    Function Block   Registers      Pins           
+Used/Tot       Used/Tot         Inps Used/Tot    Used/Tot       Used/Tot       
+76 /256 ( 30%) 273 /896  ( 30%) 125 /640  ( 20%) 68 /256 ( 27%) 14 /118 ( 12%)
+
+** Function Block Resources **
+
+Function Mcells   FB Inps  Pterms   IO       CTC      CTR      CTS      CTE     
+Block    Used/Tot Used/Tot Used/Tot Used/Tot Used/Tot Used/Tot Used/Tot Used/Tot
+FB1      16/16*    22/40    54/56     0/ 6    1/1*     0/1      0/1      0/1
+FB2      14/16     22/40    55/56     0/ 8    1/1*     0/1      0/1      0/1
+FB3      14/16     21/40    55/56     0/ 6    1/1*     0/1      0/1      0/1
+FB4      14/16     21/40    55/56     0/ 8    1/1*     0/1      0/1      0/1
+FB5      11/16     21/40    43/56     0/ 5    1/1*     0/1      0/1      0/1
+FB6       0/16      0/40     0/56     0/ 8    0/1      0/1      0/1      0/1
+FB7       0/16      0/40     0/56     0/ 8    0/1      0/1      0/1      0/1
+FB8       0/16      0/40     0/56     0/ 8    0/1      0/1      0/1      0/1
+FB9       0/16      0/40     0/56     0/ 8    0/1      0/1      0/1      0/1
+FB10      2/16      6/40     4/56     2/ 9    0/1      0/1      0/1      0/1
+FB11      0/16      0/40     0/56     0/ 8    0/1      0/1      0/1      0/1
+FB12      2/16      6/40     4/56     2/ 6    0/1      0/1      0/1      0/1
+FB13      0/16      0/40     0/56     0/ 8    0/1      0/1      0/1      0/1
+FB14      3/16      6/40     3/56     3/ 8    0/1      0/1      0/1      0/1
+FB15      0/16      0/40     0/56     0/ 7    0/1      0/1      0/1      0/1
+FB16      0/16      0/40     0/56     0/ 7    0/1      0/1      0/1      0/1
+         -----    -------  -------   -----    ---      ---      ---      ---
+Total    76/256   125/640  273/896    7/118   5/16     0/16     0/16     0/16
+
+CTC - Control Term Clock
+CTR - Control Term Reset
+CTS - Control Term Set
+CTE - Control Term Output Enable
+
+* - Resource is exhausted
+
+** Global Control Resources **
+
+GCK         GSR         GTS         DGE         
+Used/Tot    Used/Tot    Used/Tot    Used/Tot    
+0/3         0/1         0/4         0/1
+
+
+** Pin Resources **
+
+Signal Type    Required     Mapped  |  Pin Type            Used    Total 
+------------------------------------|------------------------------------
+Input         :    7           7    |  I/O              :    10    108
+Output        :    7           7    |  GCK/IO           :     0      3
+Bidirectional :    0           0    |  GTS/IO           :     2      4
+GCK           :    0           0    |  GSR/IO           :     1      1
+GTS           :    0           0    |  CDR/IO           :     0      1
+GSR           :    0           0    |  DGE/IO           :     1      1
+                 ----        ----
+        Total     14          14
+
+End of Mapped Resource Summary
+**************************  Errors and Warnings  ***************************
+
+WARNING:Cpld - Unable to retrieve the path to the iSE Project Repository. Will
+   use the default filename of 'RAM.ise'.
+*************************  Summary of Mapped Logic  ************************
+
+** 7 Outputs **
+
+Signal                          Total Total Bank Loc     Pin   Pin       Pin     I/O      I/O       Slew Reg     Reg Init
+Name                            Pts   Inps               No.   Type      Use     STD      Style     Rate Use     State
+magistrala_wy<3>                2     4     2    FB10_6  104   I/O       O       LVCMOS18           FAST         
+magistrala_wy<2>                2     4     2    FB10_14 102   I/O       O       LVCMOS18           FAST         
+magistrala_wy<1>                2     4     2    FB12_2  100   I/O       O       LVCMOS18           FAST         
+magistrala_wy<0>                2     4     2    FB12_12 97    I/O       O       LVCMOS18           FAST         
+empty_half_full<2>              1     4     1    FB14_4  69    I/O       O       LVCMOS18           FAST         
+empty_half_full<1>              1     2     1    FB14_6  68    I/O       O       LVCMOS18           FAST         
+empty_half_full<0>              1     2     1    FB14_13 66    I/O       O       LVCMOS18           FAST         
+
+** 69 Buried Nodes **
+
+Signal                          Total Total Loc     Reg     Reg Init
+Name                            Pts   Inps          Use     State
+ram_4_0                         5     8     FB1_1   TFF     RESET
+ram_3_0                         5     8     FB1_2   TFF     RESET
+ram_10_0                        5     8     FB1_3   TFF     RESET
+ram_9_0                         5     8     FB1_4   TFF     RESET
+ram_2_0                         5     8     FB1_5   TFF     RESET
+ram_8_0                         5     8     FB1_6   TFF     RESET
+ram_1_0                         5     8     FB1_7   TFF     RESET
+ram_0_0                         5     8     FB1_8   TFF     RESET
+licznik<0>                      3     5     FB1_9   TFF     RESET
+licznik<1>                      3     6     FB1_10  TFF     RESET
+licznik<2>                      3     7     FB1_11  TFF     RESET
+ram_7_0                         5     8     FB1_12  TFF     RESET
+ram_6_0                         5     8     FB1_13  TFF     RESET
+ram_5_0                         5     8     FB1_14  TFF     RESET
+licznik<3>                      3     9     FB1_15  TFF     RESET
+empty_half_full_wew_cmp_eq0001  1     4     FB1_16          
+ram_2_1                         5     8     FB2_2   TFF     RESET
+ram_8_1                         5     8     FB2_4   TFF     RESET
+ram_7_1                         5     8     FB2_5   TFF     RESET
+ram_1_1                         5     8     FB2_6   TFF     RESET
+ram_0_1                         5     8     FB2_7   TFF     RESET
+ram_14_0                        5     8     FB2_8   TFF     RESET
+ram_11_0                        5     8     FB2_9   TFF     RESET
+ram_12_0                        5     8     FB2_10  TFF     RESET
+ram_13_0                        5     8     FB2_11  TFF     RESET
+ram_6_1                         5     8     FB2_12  TFF     RESET
+ram_5_1                         5     8     FB2_13  TFF     RESET
+ram_4_1                         5     8     FB2_14  TFF     RESET
+ram_3_1                         5     8     FB2_15  TFF     RESET
+ram_15_0                        3     5     FB2_16  DEFF    RESET
+ram_15_1                        3     5     FB3_3   DEFF    RESET
+ram_9_2                         5     8     FB3_4   TFF     RESET
+ram_12_2                        5     8     FB3_5   TFF     RESET
+ram_8_2                         5     8     FB3_6   TFF     RESET
+ram_7_2                         5     8     FB3_7   TFF     RESET
+ram_6_2                         5     8     FB3_8   TFF     RESET
+ram_5_2                         5     8     FB3_9   TFF     RESET
+ram_4_2                         5     8     FB3_10  TFF     RESET
+ram_3_2                         5     8     FB3_11  TFF     RESET
+ram_2_2                         5     8     FB3_12  TFF     RESET
+
+Signal                          Total Total Loc     Reg     Reg Init
+Name                            Pts   Inps          Use     State
+ram_1_2                         5     8     FB3_13  TFF     RESET
+ram_11_2                        5     8     FB3_14  TFF     RESET
+ram_0_2                         5     8     FB3_15  TFF     RESET
+ram_10_2                        5     8     FB3_16  TFF     RESET
+ram_15_2                        3     5     FB4_3   DEFF    RESET
+ram_12_3                        5     8     FB4_4   TFF     RESET
+ram_11_3                        5     8     FB4_5   TFF     RESET
+ram_10_3                        5     8     FB4_6   TFF     RESET
+ram_7_3                         5     8     FB4_7   TFF     RESET
+ram_6_3                         5     8     FB4_8   TFF     RESET
+ram_5_3                         5     8     FB4_9   TFF     RESET
+ram_4_3                         5     8     FB4_10  TFF     RESET
+ram_3_3                         5     8     FB4_11  TFF     RESET
+ram_9_3                         5     8     FB4_12  TFF     RESET
+ram_2_3                         5     8     FB4_13  TFF     RESET
+ram_8_3                         5     8     FB4_14  TFF     RESET
+ram_1_3                         5     8     FB4_15  TFF     RESET
+ram_0_3                         5     8     FB4_16  TFF     RESET
+ram_15_3                        3     5     FB5_1   DEFF    RESET
+ram_14_3                        5     8     FB5_3   TFF     RESET
+ram_13_3                        5     8     FB5_7   TFF     RESET
+ram_14_2                        5     8     FB5_8   TFF     RESET
+ram_13_2                        5     8     FB5_9   TFF     RESET
+ram_9_1                         5     8     FB5_10  TFF     RESET
+ram_14_1                        5     8     FB5_11  TFF     RESET
+ram_13_1                        5     8     FB5_12  TFF     RESET
+ram_12_1                        5     8     FB5_13  TFF     RESET
+ram_11_1                        5     8     FB5_15  TFF     RESET
+ram_10_1                        5     8     FB5_16  TFF     RESET
+
+** 7 Inputs **
+
+Signal                          Bank Loc     Pin   Pin       Pin     I/O      I/O
+Name                                         No.   Type      Use     STD      Style
+rd_not_wr                       2    FB1_3   143   GSR/I/O   I       LVCMOS18 KPR
+magistrala_we<0>                2    FB2_3   3     GTS/I/O   I       LVCMOS18 KPR
+magistrala_we<1>                2    FB2_5   5     GTS/I/O   I       LVCMOS18 KPR
+magistrala_we<2>                2    FB2_13  7     I/O       I       LVCMOS18 KPR
+magistrala_we<3>                2    FB2_15  10    I/O       I       LVCMOS18 KPR
+not_e                           1    FB6_12  39    DGE/I/O   I       LVCMOS18 KPR
+clk_wpis                        2    FB11_11 124   I/O       I       LVCMOS18 KPR
+
+Legend:
+Pin No.   - ~     - User Assigned
+I/O Style - OD    - OpenDrain
+          - PU    - Pullup
+          - KPR   - Keeper
+          - S     - SchmittTrigger
+          - DG    - DataGate
+Reg Use   - LATCH - Transparent latch
+          - DFF   - D-flip-flop
+          - DEFF  - D-flip-flop with clock enable
+          - TFF   - T-flip-flop
+          - TDFF  - Dual-edge-triggered T-flip-flop
+          - DDFF  - Dual-edge-triggered flip-flop
+          - DDEFF - Dual-edge-triggered flip-flop with clock enable
+          /S (after any above flop/latch type) indicates initial state is Set
+**************************  Function Block Details  ************************
+Legend:
+Total Pt     - Total product terms used by the macrocell signal
+Loc          - Location where logic was mapped in device
+Pin Type/Use - I  - Input             GCK - Global clock
+               O  - Output            GTS - Global Output Enable
+              (b) - Buried macrocell  GSR - Global Set/Reset
+              VRF - Vref
+Pin No.      - ~  - User Assigned
+*********************************** FB1  ***********************************
+This function block is part of I/O Bank number:               2
+Number of function block inputs used/remaining:               22/18
+Number of function block control terms used/remaining:        1/3
+Number of PLA product terms used/remaining:                   54/2
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+ram_4_0                       5     FB1_1        (b)     (b)    +          
+ram_3_0                       5     FB1_2        (b)     (b)    +          
+ram_10_0                      5     FB1_3   143  GSR/I/O I      +          
+ram_9_0                       5     FB1_4   142  I/O     (b)    +          
+ram_2_0                       5     FB1_5        (b)     (b)    +          
+ram_8_0                       5     FB1_6   140  I/O     (b)    +          
+ram_1_0                       5     FB1_7        (b)     (b)    +          
+ram_0_0                       5     FB1_8        (b)     (b)    +          
+licznik<0>                    3     FB1_9        (b)     (b)    +          
+licznik<1>                    3     FB1_10       (b)     (b)    +          
+licznik<2>                    3     FB1_11       (b)     (b)    +          
+ram_7_0                       5     FB1_12  139  I/O     (b)    +          
+ram_6_0                       5     FB1_13  138  I/O     (b)    +          
+ram_5_0                       5     FB1_14  137  I/O     (b)    +          
+licznik<3>                    3     FB1_15       (b)     (b)    +          
+empty_half_full_wew_cmp_eq0001
+                              1     FB1_16       (b)     (b)               
+
+Signals Used by Logic in Function Block
+  1: clk_wpis                         9: not_e             16: ram_4_0 
+  2: empty_half_full<2>              10: ram_0_0           17: ram_5_0 
+  3: empty_half_full_wew_cmp_eq0001  11: ram_10_0          18: ram_6_0 
+  4: licznik<0>                      12: ram_11_0          19: ram_7_0 
+  5: licznik<1>                      13: ram_1_0           20: ram_8_0 
+  6: licznik<2>                      14: ram_2_0           21: ram_9_0 
+  7: licznik<3>                      15: ram_3_0           22: rd_not_wr 
+  8: magistrala_we<0>               
+
+Signal                     1         2         3         4 FB      
+Name             0----+----0----+----0----+----0----+----0 Inputs  
+ram_4_0           XXX.....X.....XXX....X.................. 8       
+ram_3_0           XXX.....X....XXX.....X.................. 8       
+ram_10_0          XXX.....X.XX........XX.................. 8       
+ram_9_0           XXX.....X.X........XXX.................. 8       
+ram_2_0           XXX.....X...XXX......X.................. 8       
+ram_8_0           XXX.....X.........XXXX.................. 8       
+ram_1_0           XXX.....XX..XX.......X.................. 8       
+ram_0_0           XXX....XXX..X........X.................. 8       
+licznik<0>        XXX.....X............X.................. 5       
+licznik<1>        XXXX....X............X.................. 6       
+licznik<2>        XXXXX...X............X.................. 7       
+ram_7_0           XXX.....X........XXX.X.................. 8       
+ram_6_0           XXX.....X.......XXX..X.................. 8       
+ram_5_0           XXX.....X......XXX...X.................. 8       
+licznik<3>        XXXXXXX.X............X.................. 9       
+empty_half_full_wew_cmp_eq0001 
+                  ...XXXX................................. 4       
+                 0----+----1----+----2----+----3----+----4
+                           0         0         0         0
+*********************************** FB2  ***********************************
+This function block is part of I/O Bank number:               2
+Number of function block inputs used/remaining:               22/18
+Number of function block control terms used/remaining:        1/3
+Number of PLA product terms used/remaining:                   55/1
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+(unused)                      0     FB2_1   2    GTS/I/O       
+ram_2_1                       5     FB2_2        (b)     (b)    +          
+(unused)                      0     FB2_3   3    GTS/I/O I     
+ram_8_1                       5     FB2_4   4    I/O     (b)    +          
+ram_7_1                       5     FB2_5   5    GTS/I/O I      +          
+ram_1_1                       5     FB2_6        (b)     (b)    +          
+ram_0_1                       5     FB2_7        (b)     (b)    +          
+ram_14_0                      5     FB2_8        (b)     (b)    +          
+ram_11_0                      5     FB2_9        (b)     (b)    +          
+ram_12_0                      5     FB2_10       (b)     (b)    +          
+ram_13_0                      5     FB2_11       (b)     (b)    +          
+ram_6_1                       5     FB2_12  6    GTS/I/O (b)    +          
+ram_5_1                       5     FB2_13  7    I/O     I      +          
+ram_4_1                       5     FB2_14  9    I/O     (b)    +          
+ram_3_1                       5     FB2_15  10   I/O     I      +          
+ram_15_0                      3     FB2_16       (b)     (b)    +          
+
+Signals Used by Logic in Function Block
+  1: clk_wpis                         9: ram_12_0          16: ram_4_1 
+  2: empty_half_full<2>              10: ram_13_0          17: ram_5_1 
+  3: empty_half_full_wew_cmp_eq0001  11: ram_14_0          18: ram_6_1 
+  4: magistrala_we<1>                12: ram_15_0          19: ram_7_1 
+  5: not_e                           13: ram_1_1           20: ram_8_1 
+  6: ram_0_1                         14: ram_2_1           21: ram_9_1 
+  7: ram_10_0                        15: ram_3_1           22: rd_not_wr 
+  8: ram_11_0                       
+
+Signal                     1         2         3         4 FB      
+Name             0----+----0----+----0----+----0----+----0 Inputs  
+ram_2_1           XXX.X.......XXX......X.................. 8       
+ram_8_1           XXX.X.............XXXX.................. 8       
+ram_7_1           XXX.X............XXX.X.................. 8       
+ram_1_1           XXX.XX......XX.......X.................. 8       
+ram_0_1           XXXXXX......X........X.................. 8       
+ram_14_0          XXX.X....XXX.........X.................. 8       
+ram_11_0          XXX.X.XXX............X.................. 8       
+ram_12_0          XXX.X..XXX...........X.................. 8       
+ram_13_0          XXX.X...XXX..........X.................. 8       
+ram_6_1           XXX.X...........XXX..X.................. 8       
+ram_5_1           XXX.X..........XXX...X.................. 8       
+ram_4_1           XXX.X.........XXX....X.................. 8       
+ram_3_1           XXX.X........XXX.....X.................. 8       
+ram_15_0          X.X.X.....X..........X.................. 5       
+                 0----+----1----+----2----+----3----+----4
+                           0         0         0         0
+*********************************** FB3  ***********************************
+This function block is part of I/O Bank number:               2
+Number of function block inputs used/remaining:               21/19
+Number of function block control terms used/remaining:        1/3
+Number of PLA product terms used/remaining:                   55/1
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+(unused)                      0     FB3_1   136  I/O           
+(unused)                      0     FB3_2   135  I/O           
+ram_15_1                      3     FB3_3   134  I/O     (b)    +          
+ram_9_2                       5     FB3_4        (b)     (b)    +          
+ram_12_2                      5     FB3_5   133  I/O     (b)    +          
+ram_8_2                       5     FB3_6        (b)     (b)    +          
+ram_7_2                       5     FB3_7        (b)     (b)    +          
+ram_6_2                       5     FB3_8        (b)     (b)    +          
+ram_5_2                       5     FB3_9        (b)     (b)    +          
+ram_4_2                       5     FB3_10       (b)     (b)    +          
+ram_3_2                       5     FB3_11       (b)     (b)    +          
+ram_2_2                       5     FB3_12       (b)     (b)    +          
+ram_1_2                       5     FB3_13       (b)     (b)    +          
+ram_11_2                      5     FB3_14  132  I/O     (b)    +          
+ram_0_2                       5     FB3_15       (b)     (b)    +          
+ram_10_2                      5     FB3_16  131  I/O     (b)    +          
+
+Signals Used by Logic in Function Block
+  1: clk_wpis                         8: ram_11_2          15: ram_4_2 
+  2: empty_half_full<2>               9: ram_12_2          16: ram_5_2 
+  3: empty_half_full_wew_cmp_eq0001  10: ram_13_2          17: ram_6_2 
+  4: magistrala_we<2>                11: ram_14_1          18: ram_7_2 
+  5: not_e                           12: ram_1_2           19: ram_8_2 
+  6: ram_0_2                         13: ram_2_2           20: ram_9_2 
+  7: ram_10_2                        14: ram_3_2           21: rd_not_wr 
+
+Signal                     1         2         3         4 FB      
+Name             0----+----0----+----0----+----0----+----0 Inputs  
+ram_15_1          X.X.X.....X.........X................... 5       
+ram_9_2           XXX.X.X...........XXX................... 8       
+ram_12_2          XXX.X..XXX..........X................... 8       
+ram_8_2           XXX.X............XXXX................... 8       
+ram_7_2           XXX.X...........XXX.X................... 8       
+ram_6_2           XXX.X..........XXX..X................... 8       
+ram_5_2           XXX.X.........XXX...X................... 8       
+ram_4_2           XXX.X........XXX....X................... 8       
+ram_3_2           XXX.X.......XXX.....X................... 8       
+ram_2_2           XXX.X......XXX......X................... 8       
+ram_1_2           XXX.XX.....XX.......X................... 8       
+ram_11_2          XXX.X.XXX...........X................... 8       
+ram_0_2           XXXXXX.....X........X................... 8       
+ram_10_2          XXX.X.XX...........XX................... 8       
+                 0----+----1----+----2----+----3----+----4
+                           0         0         0         0
+*********************************** FB4  ***********************************
+This function block is part of I/O Bank number:               2
+Number of function block inputs used/remaining:               21/19
+Number of function block control terms used/remaining:        1/3
+Number of PLA product terms used/remaining:                   55/1
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+(unused)                      0     FB4_1   11   I/O           
+(unused)                      0     FB4_2   12   I/O           
+ram_15_2                      3     FB4_3   13   I/O     (b)    +          
+ram_12_3                      5     FB4_4   14   I/O     (b)    +          
+ram_11_3                      5     FB4_5   15   I/O     (b)    +          
+ram_10_3                      5     FB4_6   16   I/O     (b)    +          
+ram_7_3                       5     FB4_7        (b)     (b)    +          
+ram_6_3                       5     FB4_8        (b)     (b)    +          
+ram_5_3                       5     FB4_9        (b)     (b)    +          
+ram_4_3                       5     FB4_10       (b)     (b)    +          
+ram_3_3                       5     FB4_11       (b)     (b)    +          
+ram_9_3                       5     FB4_12  17   I/O     (b)    +          
+ram_2_3                       5     FB4_13       (b)     (b)    +          
+ram_8_3                       5     FB4_14  18   I/O     (b)    +          
+ram_1_3                       5     FB4_15       (b)     (b)    +          
+ram_0_3                       5     FB4_16       (b)     (b)    +          
+
+Signals Used by Logic in Function Block
+  1: clk_wpis                         8: ram_11_3          15: ram_4_3 
+  2: empty_half_full<2>               9: ram_12_3          16: ram_5_3 
+  3: empty_half_full_wew_cmp_eq0001  10: ram_13_3          17: ram_6_3 
+  4: magistrala_we<3>                11: ram_14_2          18: ram_7_3 
+  5: not_e                           12: ram_1_3           19: ram_8_3 
+  6: ram_0_3                         13: ram_2_3           20: ram_9_3 
+  7: ram_10_3                        14: ram_3_3           21: rd_not_wr 
+
+Signal                     1         2         3         4 FB      
+Name             0----+----0----+----0----+----0----+----0 Inputs  
+ram_15_2          X.X.X.....X.........X................... 5       
+ram_12_3          XXX.X..XXX..........X................... 8       
+ram_11_3          XXX.X.XXX...........X................... 8       
+ram_10_3          XXX.X.XX...........XX................... 8       
+ram_7_3           XXX.X...........XXX.X................... 8       
+ram_6_3           XXX.X..........XXX..X................... 8       
+ram_5_3           XXX.X.........XXX...X................... 8       
+ram_4_3           XXX.X........XXX....X................... 8       
+ram_3_3           XXX.X.......XXX.....X................... 8       
+ram_9_3           XXX.X.X...........XXX................... 8       
+ram_2_3           XXX.X......XXX......X................... 8       
+ram_8_3           XXX.X............XXXX................... 8       
+ram_1_3           XXX.XX.....XX.......X................... 8       
+ram_0_3           XXXXXX.....X........X................... 8       
+                 0----+----1----+----2----+----3----+----4
+                           0         0         0         0
+*********************************** FB5  ***********************************
+This function block is part of I/O Bank number:               1
+Number of function block inputs used/remaining:               21/19
+Number of function block control terms used/remaining:        1/3
+Number of PLA product terms used/remaining:                   43/13
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+ram_15_3                      3     FB5_1        (b)     (b)    +          
+(unused)                      0     FB5_2   33   I/O           
+ram_14_3                      5     FB5_3        (b)     (b)    +          
+(unused)                      0     FB5_4   32   GCK/I/O       
+(unused)                      0     FB5_5   31   I/O           
+(unused)                      0     FB5_6   30   GCK/I/O       
+ram_13_3                      5     FB5_7        (b)     (b)    +          
+ram_14_2                      5     FB5_8        (b)     (b)    +          
+ram_13_2                      5     FB5_9        (b)     (b)    +          
+ram_9_1                       5     FB5_10       (b)     (b)    +          
+ram_14_1                      5     FB5_11       (b)     (b)    +          
+ram_13_1                      5     FB5_12       (b)     (b)    +          
+ram_12_1                      5     FB5_13       (b)     (b)    +          
+(unused)                      0     FB5_14  28   I/O           
+ram_11_1                      5     FB5_15       (b)     (b)    +          
+ram_10_1                      5     FB5_16       (b)     (b)    +          
+
+Signals Used by Logic in Function Block
+  1: clk_wpis                         8: ram_12_2          15: ram_14_3 
+  2: empty_half_full<2>               9: ram_12_3          16: ram_15_1 
+  3: empty_half_full_wew_cmp_eq0001  10: ram_13_1          17: ram_15_2 
+  4: not_e                           11: ram_13_2          18: ram_15_3 
+  5: ram_10_1                        12: ram_13_3          19: ram_8_1 
+  6: ram_11_1                        13: ram_14_1          20: ram_9_1 
+  7: ram_12_1                        14: ram_14_2          21: rd_not_wr 
+
+Signal                     1         2         3         4 FB      
+Name             0----+----0----+----0----+----0----+----0 Inputs  
+ram_15_3          X.XX..........X.....X................... 5       
+ram_14_3          XXXX.......X..X..X..X................... 8       
+ram_13_3          XXXX....X..X..X.....X................... 8       
+ram_14_2          XXXX......X..X..X...X................... 8       
+ram_13_2          XXXX...X..X..X......X................... 8       
+ram_9_1           XXXXX.............XXX................... 8       
+ram_14_1          XXXX.....X..X..X....X................... 8       
+ram_13_1          XXXX..X..X..X.......X................... 8       
+ram_12_1          XXXX.XX..X..........X................... 8       
+ram_11_1          XXXXXXX.............X................... 8       
+ram_10_1          XXXXXX.............XX................... 8       
+                 0----+----1----+----2----+----3----+----4
+                           0         0         0         0
+*********************************** FB6  ***********************************
+This function block is part of I/O Bank number:               1
+Number of function block inputs used/remaining:               0/40
+Number of function block control terms used/remaining:        0/4
+Number of PLA product terms used/remaining:                   0/56
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+(unused)                      0     FB6_1   34   I/O           
+(unused)                      0     FB6_2   35   CDR/I/O       
+(unused)                      0     FB6_3        (b)           
+(unused)                      0     FB6_4   38   GCK/I/O       
+(unused)                      0     FB6_5        (b)           
+(unused)                      0     FB6_6        (b)           
+(unused)                      0     FB6_7        (b)           
+(unused)                      0     FB6_8        (b)           
+(unused)                      0     FB6_9        (b)           
+(unused)                      0     FB6_10       (b)           
+(unused)                      0     FB6_11       (b)           
+(unused)                      0     FB6_12  39   DGE/I/O I     
+(unused)                      0     FB6_13  40   I/O           
+(unused)                      0     FB6_14  41   I/O           
+(unused)                      0     FB6_15  42   I/O           
+(unused)                      0     FB6_16  43   I/O           
+*********************************** FB7  ***********************************
+This function block is part of I/O Bank number:               1
+Number of function block inputs used/remaining:               0/40
+Number of function block control terms used/remaining:        0/4
+Number of PLA product terms used/remaining:                   0/56
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+(unused)                      0     FB7_1        (b)           
+(unused)                      0     FB7_2        (b)           
+(unused)                      0     FB7_3        (b)           
+(unused)                      0     FB7_4        (b)           
+(unused)                      0     FB7_5   26   I/O           
+(unused)                      0     FB7_6   25   I/O           
+(unused)                      0     FB7_7        (b)           
+(unused)                      0     FB7_8        (b)           
+(unused)                      0     FB7_9        (b)           
+(unused)                      0     FB7_10       (b)           
+(unused)                      0     FB7_11  24   I/O           
+(unused)                      0     FB7_12  23   I/O           
+(unused)                      0     FB7_13  22   I/O           
+(unused)                      0     FB7_14  21   I/O           
+(unused)                      0     FB7_15  20   I/O           
+(unused)                      0     FB7_16  19   I/O           
+*********************************** FB8  ***********************************
+This function block is part of I/O Bank number:               1
+Number of function block inputs used/remaining:               0/40
+Number of function block control terms used/remaining:        0/4
+Number of PLA product terms used/remaining:                   0/56
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+(unused)                      0     FB8_1   44   I/O           
+(unused)                      0     FB8_2   45   I/O           
+(unused)                      0     FB8_3   46   I/O           
+(unused)                      0     FB8_4        (b)           
+(unused)                      0     FB8_5   48   I/O           
+(unused)                      0     FB8_6   49   I/O           
+(unused)                      0     FB8_7        (b)           
+(unused)                      0     FB8_8        (b)           
+(unused)                      0     FB8_9        (b)           
+(unused)                      0     FB8_10       (b)           
+(unused)                      0     FB8_11  50   I/O           
+(unused)                      0     FB8_12  51   I/O           
+(unused)                      0     FB8_13  52   I/O           
+(unused)                      0     FB8_14       (b)           
+(unused)                      0     FB8_15       (b)           
+(unused)                      0     FB8_16       (b)           
+*********************************** FB9  ***********************************
+This function block is part of I/O Bank number:               2
+Number of function block inputs used/remaining:               0/40
+Number of function block control terms used/remaining:        0/4
+Number of PLA product terms used/remaining:                   0/56
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+(unused)                      0     FB9_1   112  I/O           
+(unused)                      0     FB9_2   113  I/O           
+(unused)                      0     FB9_3        (b)           
+(unused)                      0     FB9_4   114  I/O           
+(unused)                      0     FB9_5        (b)           
+(unused)                      0     FB9_6   115  I/O           
+(unused)                      0     FB9_7        (b)           
+(unused)                      0     FB9_8        (b)           
+(unused)                      0     FB9_9        (b)           
+(unused)                      0     FB9_10       (b)           
+(unused)                      0     FB9_11       (b)           
+(unused)                      0     FB9_12  116  I/O           
+(unused)                      0     FB9_13  117  I/O           
+(unused)                      0     FB9_14  118  I/O           
+(unused)                      0     FB9_15  119  I/O           
+(unused)                      0     FB9_16       (b)           
+*********************************** FB10 ***********************************
+This function block is part of I/O Bank number:               2
+Number of function block inputs used/remaining:               6/34
+Number of function block control terms used/remaining:        0/4
+Number of PLA product terms used/remaining:                   4/52
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+(unused)                      0     FB10_1  111  I/O           
+(unused)                      0     FB10_2  110  I/O           
+(unused)                      0     FB10_3  107  I/O           
+(unused)                      0     FB10_4  106  I/O           
+(unused)                      0     FB10_5  105  I/O           
+magistrala_wy<3>              2     FB10_6  104  I/O     O                 
+(unused)                      0     FB10_7       (b)           
+(unused)                      0     FB10_8       (b)           
+(unused)                      0     FB10_9       (b)           
+(unused)                      0     FB10_10      (b)           
+(unused)                      0     FB10_11      (b)           
+(unused)                      0     FB10_12 103  I/O           
+(unused)                      0     FB10_13      (b)           
+magistrala_wy<2>              2     FB10_14 102  I/O     O                 
+(unused)                      0     FB10_15      (b)           
+(unused)                      0     FB10_16 101  I/O           
+
+Signals Used by Logic in Function Block
+  1: magistrala_we<2>   3: not_e              5: ram_0_3 
+  2: magistrala_we<3>   4: ram_0_2            6: rd_not_wr 
+
+Signal                     1         2         3         4 FB      
+Name             0----+----0----+----0----+----0----+----0 Inputs  
+magistrala_wy<3>  .XX.XX.................................. 4       
+magistrala_wy<2>  X.XX.X.................................. 4       
+                 0----+----1----+----2----+----3----+----4
+                           0         0         0         0
+*********************************** FB11 ***********************************
+This function block is part of I/O Bank number:               2
+Number of function block inputs used/remaining:               0/40
+Number of function block control terms used/remaining:        0/4
+Number of PLA product terms used/remaining:                   0/56
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+(unused)                      0     FB11_1       (b)           
+(unused)                      0     FB11_2       (b)           
+(unused)                      0     FB11_3       (b)           
+(unused)                      0     FB11_4       (b)           
+(unused)                      0     FB11_5  120  I/O           
+(unused)                      0     FB11_6  121  I/O           
+(unused)                      0     FB11_7       (b)           
+(unused)                      0     FB11_8       (b)           
+(unused)                      0     FB11_9       (b)           
+(unused)                      0     FB11_10      (b)           
+(unused)                      0     FB11_11 124  I/O     I     
+(unused)                      0     FB11_12 125  I/O           
+(unused)                      0     FB11_13 126  I/O           
+(unused)                      0     FB11_14 128  I/O           
+(unused)                      0     FB11_15 129  I/O           
+(unused)                      0     FB11_16 130  I/O           
+*********************************** FB12 ***********************************
+This function block is part of I/O Bank number:               2
+Number of function block inputs used/remaining:               6/34
+Number of function block control terms used/remaining:        0/4
+Number of PLA product terms used/remaining:                   4/52
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+(unused)                      0     FB12_1       (b)           
+magistrala_wy<1>              2     FB12_2  100  I/O     O                 
+(unused)                      0     FB12_3       (b)           
+(unused)                      0     FB12_4       (b)           
+(unused)                      0     FB12_5       (b)           
+(unused)                      0     FB12_6       (b)           
+(unused)                      0     FB12_7       (b)           
+(unused)                      0     FB12_8       (b)           
+(unused)                      0     FB12_9       (b)           
+(unused)                      0     FB12_10      (b)           
+(unused)                      0     FB12_11 98   I/O           
+magistrala_wy<0>              2     FB12_12 97   I/O     O                 
+(unused)                      0     FB12_13 96   I/O           
+(unused)                      0     FB12_14 95   I/O           
+(unused)                      0     FB12_15 94   I/O           
+(unused)                      0     FB12_16      (b)           
+
+Signals Used by Logic in Function Block
+  1: magistrala_we<0>   3: not_e              5: ram_0_1 
+  2: magistrala_we<1>   4: ram_0_0            6: rd_not_wr 
+
+Signal                     1         2         3         4 FB      
+Name             0----+----0----+----0----+----0----+----0 Inputs  
+magistrala_wy<1>  .XX.XX.................................. 4       
+magistrala_wy<0>  X.XX.X.................................. 4       
+                 0----+----1----+----2----+----3----+----4
+                           0         0         0         0
+*********************************** FB13 ***********************************
+This function block is part of I/O Bank number:               1
+Number of function block inputs used/remaining:               0/40
+Number of function block control terms used/remaining:        0/4
+Number of PLA product terms used/remaining:                   0/56
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+(unused)                      0     FB13_1  75   I/O           
+(unused)                      0     FB13_2  76   I/O           
+(unused)                      0     FB13_3  77   I/O           
+(unused)                      0     FB13_4       (b)           
+(unused)                      0     FB13_5  78   I/O           
+(unused)                      0     FB13_6  79   I/O           
+(unused)                      0     FB13_7       (b)           
+(unused)                      0     FB13_8       (b)           
+(unused)                      0     FB13_9       (b)           
+(unused)                      0     FB13_10      (b)           
+(unused)                      0     FB13_11      (b)           
+(unused)                      0     FB13_12 80   I/O           
+(unused)                      0     FB13_13 81   I/O           
+(unused)                      0     FB13_14 82   I/O           
+(unused)                      0     FB13_15      (b)           
+(unused)                      0     FB13_16      (b)           
+*********************************** FB14 ***********************************
+This function block is part of I/O Bank number:               1
+Number of function block inputs used/remaining:               6/34
+Number of function block control terms used/remaining:        0/4
+Number of PLA product terms used/remaining:                   3/53
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+(unused)                      0     FB14_1  74   I/O           
+(unused)                      0     FB14_2  71   I/O           
+(unused)                      0     FB14_3  70   I/O           
+empty_half_full<2>            1     FB14_4  69   I/O     O                 
+(unused)                      0     FB14_5       (b)           
+empty_half_full<1>            1     FB14_6  68   I/O     O                 
+(unused)                      0     FB14_7       (b)           
+(unused)                      0     FB14_8       (b)           
+(unused)                      0     FB14_9       (b)           
+(unused)                      0     FB14_10      (b)           
+(unused)                      0     FB14_11      (b)           
+(unused)                      0     FB14_12      (b)           
+empty_half_full<0>            1     FB14_13 66   I/O     O                 
+(unused)                      0     FB14_14 64   I/O           
+(unused)                      0     FB14_15      (b)           
+(unused)                      0     FB14_16 61   I/O           
+
+Signals Used by Logic in Function Block
+  1: empty_half_full<2>               3: licznik<0>         5: licznik<2> 
+  2: empty_half_full_wew_cmp_eq0001   4: licznik<1>         6: licznik<3> 
+
+Signal                     1         2         3         4 FB      
+Name             0----+----0----+----0----+----0----+----0 Inputs  
+empty_half_full<2> 
+                  ..XXXX.................................. 4       
+empty_half_full<1> 
+                  .X...X.................................. 2       
+empty_half_full<0> 
+                  XX...................................... 2       
+                 0----+----1----+----2----+----3----+----4
+                           0         0         0         0
+*********************************** FB15 ***********************************
+This function block is part of I/O Bank number:               1
+Number of function block inputs used/remaining:               0/40
+Number of function block control terms used/remaining:        0/4
+Number of PLA product terms used/remaining:                   0/56
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+(unused)                      0     FB15_1       (b)           
+(unused)                      0     FB15_2  83   I/O           
+(unused)                      0     FB15_3       (b)           
+(unused)                      0     FB15_4       (b)           
+(unused)                      0     FB15_5       (b)           
+(unused)                      0     FB15_6       (b)           
+(unused)                      0     FB15_7       (b)           
+(unused)                      0     FB15_8       (b)           
+(unused)                      0     FB15_9       (b)           
+(unused)                      0     FB15_10      (b)           
+(unused)                      0     FB15_11 85   I/O           
+(unused)                      0     FB15_12 86   I/O           
+(unused)                      0     FB15_13 87   I/O           
+(unused)                      0     FB15_14 88   I/O           
+(unused)                      0     FB15_15 91   I/O           
+(unused)                      0     FB15_16 92   I/O           
+*********************************** FB16 ***********************************
+This function block is part of I/O Bank number:               1
+Number of function block inputs used/remaining:               0/40
+Number of function block control terms used/remaining:        0/4
+Number of PLA product terms used/remaining:                   0/56
+Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
+Name                          Pt            No.  Type    Use   
+(unused)                      0     FB16_1       (b)           
+(unused)                      0     FB16_2       (b)           
+(unused)                      0     FB16_3       (b)           
+(unused)                      0     FB16_4       (b)           
+(unused)                      0     FB16_5  60   I/O           
+(unused)                      0     FB16_6  59   I/O           
+(unused)                      0     FB16_7       (b)           
+(unused)                      0     FB16_8       (b)           
+(unused)                      0     FB16_9       (b)           
+(unused)                      0     FB16_10      (b)           
+(unused)                      0     FB16_11 58   I/O           
+(unused)                      0     FB16_12 57   I/O           
+(unused)                      0     FB16_13 56   I/O           
+(unused)                      0     FB16_14      (b)           
+(unused)                      0     FB16_15 54   I/O           
+(unused)                      0     FB16_16 53   I/O           
+*******************************  Equations  ********************************
+
+********** Mapped Logic **********
+
+
+empty_half_full(0) <= NOT ((empty_half_full(2) AND 
+	empty_half_full_wew_cmp_eq0001));
+
+
+empty_half_full(1) <= NOT ((NOT empty_half_full_wew_cmp_eq0001 AND licznik(3)));
+
+
+empty_half_full(2) <= NOT ((NOT licznik(0) AND NOT licznik(1) AND NOT licznik(2) AND 
+	NOT licznik(3)));
+
+
+empty_half_full_wew_cmp_eq0001 <= (licznik(0) AND licznik(1) AND licznik(2) AND 
+	licznik(3));
+
+FTCPE_licznik0: FTCPE port map (licznik(0),licznik_T(0),clk_wpis,'0','0','1');
+licznik_T(0) <= ((rd_not_wr AND NOT not_e AND empty_half_full(2))
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001));
+
+FTCPE_licznik1: FTCPE port map (licznik(1),licznik_T(1),clk_wpis,'0','0','1');
+licznik_T(1) <= ((licznik(0) AND NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001)
+	OR (NOT licznik(0) AND rd_not_wr AND NOT not_e AND 
+	empty_half_full(2)));
+
+FTCPE_licznik2: FTCPE port map (licznik(2),licznik_T(2),clk_wpis,'0','0','1');
+licznik_T(2) <= ((licznik(0) AND NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND licznik(1))
+	OR (NOT licznik(0) AND rd_not_wr AND NOT not_e AND 
+	empty_half_full(2) AND NOT licznik(1)));
+
+FTCPE_licznik3: FTCPE port map (licznik(3),licznik_T(3),clk_wpis,'0','0','1');
+licznik_T(3) <= ((NOT licznik(0) AND rd_not_wr AND NOT not_e AND 
+	empty_half_full(2) AND NOT licznik(1) AND NOT licznik(2))
+	OR (licznik(0) AND NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND licznik(1) AND licznik(2) AND NOT licznik(3)));
+
+
+magistrala_wy(0) <= ((rd_not_wr AND NOT not_e AND ram_0_0)
+	OR (NOT rd_not_wr AND NOT not_e AND magistrala_we(0)));
+
+
+magistrala_wy(1) <= ((rd_not_wr AND NOT not_e AND ram_0_1)
+	OR (NOT rd_not_wr AND NOT not_e AND magistrala_we(1)));
+
+
+magistrala_wy(2) <= ((rd_not_wr AND NOT not_e AND ram_0_2)
+	OR (NOT rd_not_wr AND NOT not_e AND magistrala_we(2)));
+
+
+magistrala_wy(3) <= ((rd_not_wr AND NOT not_e AND ram_0_3)
+	OR (NOT rd_not_wr AND NOT not_e AND magistrala_we(3)));
+
+FTCPE_ram_0_0: FTCPE port map (ram_0_0,ram_0_0_T,clk_wpis,'0','0','1');
+ram_0_0_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	ram_0_0 AND NOT ram_1_0)
+	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	NOT ram_0_0 AND ram_1_0)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND magistrala_we(0) AND NOT ram_0_0)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND NOT magistrala_we(0) AND ram_0_0));
+
+FTCPE_ram_0_1: FTCPE port map (ram_0_1,ram_0_1_T,clk_wpis,'0','0','1');
+ram_0_1_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	ram_0_1 AND NOT ram_1_1)
+	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	NOT ram_0_1 AND ram_1_1)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND magistrala_we(1) AND NOT ram_0_1)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND NOT magistrala_we(1) AND ram_0_1));
+
+FTCPE_ram_0_2: FTCPE port map (ram_0_2,ram_0_2_T,clk_wpis,'0','0','1');
+ram_0_2_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	ram_0_2 AND NOT ram_1_2)
+	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	NOT ram_0_2 AND ram_1_2)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND magistrala_we(2) AND NOT ram_0_2)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND NOT magistrala_we(2) AND ram_0_2));
+
+FTCPE_ram_0_3: FTCPE port map (ram_0_3,ram_0_3_T,clk_wpis,'0','0','1');
+ram_0_3_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	ram_0_3 AND NOT ram_1_3)
+	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	NOT ram_0_3 AND ram_1_3)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND magistrala_we(3) AND NOT ram_0_3)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND NOT magistrala_we(3) AND ram_0_3));
+
+FTCPE_ram_10_0: FTCPE port map (ram_10_0,ram_10_0_T,clk_wpis,'0','0','1');
+ram_10_0_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	ram_10_0 AND NOT ram_11_0)
+	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	NOT ram_10_0 AND ram_11_0)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND ram_9_0 AND NOT ram_10_0)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_9_0 AND ram_10_0));
+
+FTCPE_ram_10_1: FTCPE port map (ram_10_1,ram_10_1_T,clk_wpis,'0','0','1');
+ram_10_1_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	ram_10_1 AND NOT ram_11_1)
+	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	NOT ram_10_1 AND ram_11_1)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND ram_9_1 AND NOT ram_10_1)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_9_1 AND ram_10_1));
+
+FTCPE_ram_10_2: FTCPE port map (ram_10_2,ram_10_2_T,clk_wpis,'0','0','1');
+ram_10_2_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	ram_10_2 AND NOT ram_11_2)
+	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	NOT ram_10_2 AND ram_11_2)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND ram_9_2 AND NOT ram_10_2)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_9_2 AND ram_10_2));
+
+FTCPE_ram_10_3: FTCPE port map (ram_10_3,ram_10_3_T,clk_wpis,'0','0','1');
+ram_10_3_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	ram_10_3 AND NOT ram_11_3)
+	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	NOT ram_10_3 AND ram_11_3)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND ram_9_3 AND NOT ram_10_3)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_9_3 AND ram_10_3));
+
+FTCPE_ram_11_0: FTCPE port map (ram_11_0,ram_11_0_T,clk_wpis,'0','0','1');
+ram_11_0_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	ram_11_0 AND NOT ram_12_0)
+	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	NOT ram_11_0 AND ram_12_0)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND ram_10_0 AND NOT ram_11_0)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_10_0 AND ram_11_0));
+
+FTCPE_ram_11_1: FTCPE port map (ram_11_1,ram_11_1_T,clk_wpis,'0','0','1');
+ram_11_1_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	ram_11_1 AND NOT ram_12_1)
+	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	NOT ram_11_1 AND ram_12_1)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND ram_10_1 AND NOT ram_11_1)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_10_1 AND ram_11_1));
+
+FTCPE_ram_11_2: FTCPE port map (ram_11_2,ram_11_2_T,clk_wpis,'0','0','1');
+ram_11_2_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	ram_11_2 AND NOT ram_12_2)
+	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	NOT ram_11_2 AND ram_12_2)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND ram_10_2 AND NOT ram_11_2)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_10_2 AND ram_11_2));
+
+FTCPE_ram_11_3: FTCPE port map (ram_11_3,ram_11_3_T,clk_wpis,'0','0','1');
+ram_11_3_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	ram_11_3 AND NOT ram_12_3)
+	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	NOT ram_11_3 AND ram_12_3)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND ram_10_3 AND NOT ram_11_3)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_10_3 AND ram_11_3));
+
+FTCPE_ram_12_0: FTCPE port map (ram_12_0,ram_12_0_T,clk_wpis,'0','0','1');
+ram_12_0_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	ram_12_0 AND NOT ram_13_0)
+	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	NOT ram_12_0 AND ram_13_0)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND ram_11_0 AND NOT ram_12_0)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_11_0 AND ram_12_0));
+
+FTCPE_ram_12_1: FTCPE port map (ram_12_1,ram_12_1_T,clk_wpis,'0','0','1');
+ram_12_1_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	ram_12_1 AND NOT ram_13_1)
+	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	NOT ram_12_1 AND ram_13_1)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND ram_11_1 AND NOT ram_12_1)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_11_1 AND ram_12_1));
+
+FTCPE_ram_12_2: FTCPE port map (ram_12_2,ram_12_2_T,clk_wpis,'0','0','1');
+ram_12_2_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	ram_12_2 AND NOT ram_13_2)
+	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	NOT ram_12_2 AND ram_13_2)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND ram_11_2 AND NOT ram_12_2)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_11_2 AND ram_12_2));
+
+FTCPE_ram_12_3: FTCPE port map (ram_12_3,ram_12_3_T,clk_wpis,'0','0','1');
+ram_12_3_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	ram_12_3 AND NOT ram_13_3)
+	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	NOT ram_12_3 AND ram_13_3)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND ram_11_3 AND NOT ram_12_3)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_11_3 AND ram_12_3));
+
+FTCPE_ram_13_0: FTCPE port map (ram_13_0,ram_13_0_T,clk_wpis,'0','0','1');
+ram_13_0_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	ram_13_0 AND NOT ram_14_0)
+	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	NOT ram_13_0 AND ram_14_0)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND ram_12_0 AND NOT ram_13_0)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_12_0 AND ram_13_0));
+
+FTCPE_ram_13_1: FTCPE port map (ram_13_1,ram_13_1_T,clk_wpis,'0','0','1');
+ram_13_1_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	ram_13_1 AND NOT ram_14_1)
+	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	NOT ram_13_1 AND ram_14_1)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND ram_12_1 AND NOT ram_13_1)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_12_1 AND ram_13_1));
+
+FTCPE_ram_13_2: FTCPE port map (ram_13_2,ram_13_2_T,clk_wpis,'0','0','1');
+ram_13_2_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	ram_13_2 AND NOT ram_14_2)
+	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	NOT ram_13_2 AND ram_14_2)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND ram_12_2 AND NOT ram_13_2)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_12_2 AND ram_13_2));
+
+FTCPE_ram_13_3: FTCPE port map (ram_13_3,ram_13_3_T,clk_wpis,'0','0','1');
+ram_13_3_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	ram_13_3 AND NOT ram_14_3)
+	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	NOT ram_13_3 AND ram_14_3)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND ram_12_3 AND NOT ram_13_3)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_12_3 AND ram_13_3));
+
+FTCPE_ram_14_0: FTCPE port map (ram_14_0,ram_14_0_T,clk_wpis,'0','0','1');
+ram_14_0_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	ram_14_0 AND NOT ram_15_0)
+	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	NOT ram_14_0 AND ram_15_0)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND ram_13_0 AND NOT ram_14_0)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_13_0 AND ram_14_0));
+
+FTCPE_ram_14_1: FTCPE port map (ram_14_1,ram_14_1_T,clk_wpis,'0','0','1');
+ram_14_1_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	ram_14_1 AND NOT ram_15_1)
+	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	NOT ram_14_1 AND ram_15_1)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND ram_13_1 AND NOT ram_14_1)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_13_1 AND ram_14_1));
+
+FTCPE_ram_14_2: FTCPE port map (ram_14_2,ram_14_2_T,clk_wpis,'0','0','1');
+ram_14_2_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	ram_14_2 AND NOT ram_15_2)
+	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	NOT ram_14_2 AND ram_15_2)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND ram_13_2 AND NOT ram_14_2)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_13_2 AND ram_14_2));
+
+FTCPE_ram_14_3: FTCPE port map (ram_14_3,ram_14_3_T,clk_wpis,'0','0','1');
+ram_14_3_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	ram_14_3 AND NOT ram_15_3)
+	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	NOT ram_14_3 AND ram_15_3)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND ram_13_3 AND NOT ram_14_3)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_13_3 AND ram_14_3));
+
+FDCPE_ram_15_0: FDCPE port map (ram_15_0,ram_14_0,clk_wpis,'0','0',ram_15_0_CE);
+ram_15_0_CE <= (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001);
+
+FDCPE_ram_15_1: FDCPE port map (ram_15_1,ram_14_1,clk_wpis,'0','0',ram_15_1_CE);
+ram_15_1_CE <= (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001);
+
+FDCPE_ram_15_2: FDCPE port map (ram_15_2,ram_14_2,clk_wpis,'0','0',ram_15_2_CE);
+ram_15_2_CE <= (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001);
+
+FDCPE_ram_15_3: FDCPE port map (ram_15_3,ram_14_3,clk_wpis,'0','0',ram_15_3_CE);
+ram_15_3_CE <= (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001);
+
+FTCPE_ram_1_0: FTCPE port map (ram_1_0,ram_1_0_T,clk_wpis,'0','0','1');
+ram_1_0_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	ram_1_0 AND NOT ram_2_0)
+	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	NOT ram_1_0 AND ram_2_0)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND ram_0_0 AND NOT ram_1_0)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_0_0 AND ram_1_0));
+
+FTCPE_ram_1_1: FTCPE port map (ram_1_1,ram_1_1_T,clk_wpis,'0','0','1');
+ram_1_1_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	ram_1_1 AND NOT ram_2_1)
+	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	NOT ram_1_1 AND ram_2_1)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND ram_0_1 AND NOT ram_1_1)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_0_1 AND ram_1_1));
+
+FTCPE_ram_1_2: FTCPE port map (ram_1_2,ram_1_2_T,clk_wpis,'0','0','1');
+ram_1_2_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	ram_1_2 AND NOT ram_2_2)
+	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	NOT ram_1_2 AND ram_2_2)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND ram_0_2 AND NOT ram_1_2)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_0_2 AND ram_1_2));
+
+FTCPE_ram_1_3: FTCPE port map (ram_1_3,ram_1_3_T,clk_wpis,'0','0','1');
+ram_1_3_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	ram_1_3 AND NOT ram_2_3)
+	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	NOT ram_1_3 AND ram_2_3)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND ram_0_3 AND NOT ram_1_3)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_0_3 AND ram_1_3));
+
+FTCPE_ram_2_0: FTCPE port map (ram_2_0,ram_2_0_T,clk_wpis,'0','0','1');
+ram_2_0_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	ram_2_0 AND NOT ram_3_0)
+	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	NOT ram_2_0 AND ram_3_0)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND ram_1_0 AND NOT ram_2_0)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_1_0 AND ram_2_0));
+
+FTCPE_ram_2_1: FTCPE port map (ram_2_1,ram_2_1_T,clk_wpis,'0','0','1');
+ram_2_1_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	ram_2_1 AND NOT ram_3_1)
+	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	NOT ram_2_1 AND ram_3_1)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND ram_1_1 AND NOT ram_2_1)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_1_1 AND ram_2_1));
+
+FTCPE_ram_2_2: FTCPE port map (ram_2_2,ram_2_2_T,clk_wpis,'0','0','1');
+ram_2_2_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	ram_2_2 AND NOT ram_3_2)
+	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	NOT ram_2_2 AND ram_3_2)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND ram_1_2 AND NOT ram_2_2)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_1_2 AND ram_2_2));
+
+FTCPE_ram_2_3: FTCPE port map (ram_2_3,ram_2_3_T,clk_wpis,'0','0','1');
+ram_2_3_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	ram_2_3 AND NOT ram_3_3)
+	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	NOT ram_2_3 AND ram_3_3)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND ram_1_3 AND NOT ram_2_3)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_1_3 AND ram_2_3));
+
+FTCPE_ram_3_0: FTCPE port map (ram_3_0,ram_3_0_T,clk_wpis,'0','0','1');
+ram_3_0_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	ram_3_0 AND NOT ram_4_0)
+	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	NOT ram_3_0 AND ram_4_0)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND ram_2_0 AND NOT ram_3_0)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_2_0 AND ram_3_0));
+
+FTCPE_ram_3_1: FTCPE port map (ram_3_1,ram_3_1_T,clk_wpis,'0','0','1');
+ram_3_1_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	ram_3_1 AND NOT ram_4_1)
+	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	NOT ram_3_1 AND ram_4_1)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND ram_2_1 AND NOT ram_3_1)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_2_1 AND ram_3_1));
+
+FTCPE_ram_3_2: FTCPE port map (ram_3_2,ram_3_2_T,clk_wpis,'0','0','1');
+ram_3_2_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	ram_3_2 AND NOT ram_4_2)
+	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	NOT ram_3_2 AND ram_4_2)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND ram_2_2 AND NOT ram_3_2)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_2_2 AND ram_3_2));
+
+FTCPE_ram_3_3: FTCPE port map (ram_3_3,ram_3_3_T,clk_wpis,'0','0','1');
+ram_3_3_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	ram_3_3 AND NOT ram_4_3)
+	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	NOT ram_3_3 AND ram_4_3)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND ram_2_3 AND NOT ram_3_3)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_2_3 AND ram_3_3));
+
+FTCPE_ram_4_0: FTCPE port map (ram_4_0,ram_4_0_T,clk_wpis,'0','0','1');
+ram_4_0_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	ram_4_0 AND NOT ram_5_0)
+	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	NOT ram_4_0 AND ram_5_0)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND ram_3_0 AND NOT ram_4_0)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_3_0 AND ram_4_0));
+
+FTCPE_ram_4_1: FTCPE port map (ram_4_1,ram_4_1_T,clk_wpis,'0','0','1');
+ram_4_1_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	ram_4_1 AND NOT ram_5_1)
+	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	NOT ram_4_1 AND ram_5_1)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND ram_3_1 AND NOT ram_4_1)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_3_1 AND ram_4_1));
+
+FTCPE_ram_4_2: FTCPE port map (ram_4_2,ram_4_2_T,clk_wpis,'0','0','1');
+ram_4_2_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	ram_4_2 AND NOT ram_5_2)
+	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	NOT ram_4_2 AND ram_5_2)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND ram_3_2 AND NOT ram_4_2)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_3_2 AND ram_4_2));
+
+FTCPE_ram_4_3: FTCPE port map (ram_4_3,ram_4_3_T,clk_wpis,'0','0','1');
+ram_4_3_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	ram_4_3 AND NOT ram_5_3)
+	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	NOT ram_4_3 AND ram_5_3)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND ram_3_3 AND NOT ram_4_3)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_3_3 AND ram_4_3));
+
+FTCPE_ram_5_0: FTCPE port map (ram_5_0,ram_5_0_T,clk_wpis,'0','0','1');
+ram_5_0_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	ram_5_0 AND NOT ram_6_0)
+	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	NOT ram_5_0 AND ram_6_0)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND ram_4_0 AND NOT ram_5_0)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_4_0 AND ram_5_0));
+
+FTCPE_ram_5_1: FTCPE port map (ram_5_1,ram_5_1_T,clk_wpis,'0','0','1');
+ram_5_1_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	ram_5_1 AND NOT ram_6_1)
+	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	NOT ram_5_1 AND ram_6_1)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND ram_4_1 AND NOT ram_5_1)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_4_1 AND ram_5_1));
+
+FTCPE_ram_5_2: FTCPE port map (ram_5_2,ram_5_2_T,clk_wpis,'0','0','1');
+ram_5_2_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	ram_5_2 AND NOT ram_6_2)
+	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	NOT ram_5_2 AND ram_6_2)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND ram_4_2 AND NOT ram_5_2)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_4_2 AND ram_5_2));
+
+FTCPE_ram_5_3: FTCPE port map (ram_5_3,ram_5_3_T,clk_wpis,'0','0','1');
+ram_5_3_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	ram_5_3 AND NOT ram_6_3)
+	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	NOT ram_5_3 AND ram_6_3)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND ram_4_3 AND NOT ram_5_3)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_4_3 AND ram_5_3));
+
+FTCPE_ram_6_0: FTCPE port map (ram_6_0,ram_6_0_T,clk_wpis,'0','0','1');
+ram_6_0_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	ram_6_0 AND NOT ram_7_0)
+	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	NOT ram_6_0 AND ram_7_0)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND ram_5_0 AND NOT ram_6_0)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_5_0 AND ram_6_0));
+
+FTCPE_ram_6_1: FTCPE port map (ram_6_1,ram_6_1_T,clk_wpis,'0','0','1');
+ram_6_1_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	ram_6_1 AND NOT ram_7_1)
+	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	NOT ram_6_1 AND ram_7_1)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND ram_5_1 AND NOT ram_6_1)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_5_1 AND ram_6_1));
+
+FTCPE_ram_6_2: FTCPE port map (ram_6_2,ram_6_2_T,clk_wpis,'0','0','1');
+ram_6_2_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	ram_6_2 AND NOT ram_7_2)
+	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	NOT ram_6_2 AND ram_7_2)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND ram_5_2 AND NOT ram_6_2)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_5_2 AND ram_6_2));
+
+FTCPE_ram_6_3: FTCPE port map (ram_6_3,ram_6_3_T,clk_wpis,'0','0','1');
+ram_6_3_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	ram_6_3 AND NOT ram_7_3)
+	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	NOT ram_6_3 AND ram_7_3)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND ram_5_3 AND NOT ram_6_3)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_5_3 AND ram_6_3));
+
+FTCPE_ram_7_0: FTCPE port map (ram_7_0,ram_7_0_T,clk_wpis,'0','0','1');
+ram_7_0_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	ram_7_0 AND NOT ram_8_0)
+	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	NOT ram_7_0 AND ram_8_0)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND ram_6_0 AND NOT ram_7_0)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_6_0 AND ram_7_0));
+
+FTCPE_ram_7_1: FTCPE port map (ram_7_1,ram_7_1_T,clk_wpis,'0','0','1');
+ram_7_1_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	ram_7_1 AND NOT ram_8_1)
+	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	NOT ram_7_1 AND ram_8_1)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND ram_6_1 AND NOT ram_7_1)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_6_1 AND ram_7_1));
+
+FTCPE_ram_7_2: FTCPE port map (ram_7_2,ram_7_2_T,clk_wpis,'0','0','1');
+ram_7_2_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	ram_7_2 AND NOT ram_8_2)
+	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	NOT ram_7_2 AND ram_8_2)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND ram_6_2 AND NOT ram_7_2)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_6_2 AND ram_7_2));
+
+FTCPE_ram_7_3: FTCPE port map (ram_7_3,ram_7_3_T,clk_wpis,'0','0','1');
+ram_7_3_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	ram_7_3 AND NOT ram_8_3)
+	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	NOT ram_7_3 AND ram_8_3)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND ram_6_3 AND NOT ram_7_3)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_6_3 AND ram_7_3));
+
+FTCPE_ram_8_0: FTCPE port map (ram_8_0,ram_8_0_T,clk_wpis,'0','0','1');
+ram_8_0_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	ram_8_0 AND NOT ram_9_0)
+	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	NOT ram_8_0 AND ram_9_0)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND ram_7_0 AND NOT ram_8_0)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_7_0 AND ram_8_0));
+
+FTCPE_ram_8_1: FTCPE port map (ram_8_1,ram_8_1_T,clk_wpis,'0','0','1');
+ram_8_1_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	ram_8_1 AND NOT ram_9_1)
+	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	NOT ram_8_1 AND ram_9_1)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND ram_7_1 AND NOT ram_8_1)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_7_1 AND ram_8_1));
+
+FTCPE_ram_8_2: FTCPE port map (ram_8_2,ram_8_2_T,clk_wpis,'0','0','1');
+ram_8_2_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	ram_8_2 AND NOT ram_9_2)
+	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	NOT ram_8_2 AND ram_9_2)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND ram_7_2 AND NOT ram_8_2)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_7_2 AND ram_8_2));
+
+FTCPE_ram_8_3: FTCPE port map (ram_8_3,ram_8_3_T,clk_wpis,'0','0','1');
+ram_8_3_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	ram_8_3 AND NOT ram_9_3)
+	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	NOT ram_8_3 AND ram_9_3)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND ram_7_3 AND NOT ram_8_3)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_7_3 AND ram_8_3));
+
+FTCPE_ram_9_0: FTCPE port map (ram_9_0,ram_9_0_T,clk_wpis,'0','0','1');
+ram_9_0_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	ram_9_0 AND NOT ram_10_0)
+	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	NOT ram_9_0 AND ram_10_0)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND ram_8_0 AND NOT ram_9_0)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_8_0 AND ram_9_0));
+
+FTCPE_ram_9_1: FTCPE port map (ram_9_1,ram_9_1_T,clk_wpis,'0','0','1');
+ram_9_1_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	ram_9_1 AND NOT ram_10_1)
+	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	NOT ram_9_1 AND ram_10_1)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND ram_8_1 AND NOT ram_9_1)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_8_1 AND ram_9_1));
+
+FTCPE_ram_9_2: FTCPE port map (ram_9_2,ram_9_2_T,clk_wpis,'0','0','1');
+ram_9_2_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	ram_9_2 AND NOT ram_10_2)
+	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	NOT ram_9_2 AND ram_10_2)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND ram_8_2 AND NOT ram_9_2)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_8_2 AND ram_9_2));
+
+FTCPE_ram_9_3: FTCPE port map (ram_9_3,ram_9_3_T,clk_wpis,'0','0','1');
+ram_9_3_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	ram_9_3 AND NOT ram_10_3)
+	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+	NOT ram_9_3 AND ram_10_3)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND ram_8_3 AND NOT ram_9_3)
+	OR (NOT rd_not_wr AND NOT not_e AND 
+	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_8_3 AND ram_9_3));
+
+
+Register Legend:
+ FDCPE (Q,D,C,CLR,PRE,CE); 
+ FDDCPE (Q,D,C,CLR,PRE,CE); 
+ FTCPE (Q,D,C,CLR,PRE,CE); 
+ FTDCPE (Q,D,C,CLR,PRE,CE); 
+ LDCP  (Q,D,G,CLR,PRE); 
+
+******************************  Device Pin Out *****************************
+
+Device : XC2C256-6-TQ144
+
+
+Pin Signal                         Pin Signal                        
+No. Name                           No. Name                          
+  1 VCC                              73 VCCIO-1.8                     
+  2 KPR                              74 KPR                           
+  3 magistrala_we<0>                 75 KPR                           
+  4 KPR                              76 KPR                           
+  5 magistrala_we<1>                 77 KPR                           
+  6 KPR                              78 KPR                           
+  7 magistrala_we<2>                 79 KPR                           
+  8 VCCAUX                           80 KPR                           
+  9 KPR                              81 KPR                           
+ 10 magistrala_we<3>                 82 KPR                           
+ 11 KPR                              83 KPR                           
+ 12 KPR                              84 VCC                           
+ 13 KPR                              85 KPR                           
+ 14 KPR                              86 KPR                           
+ 15 KPR                              87 KPR                           
+ 16 KPR                              88 KPR                           
+ 17 KPR                              89 GND                           
+ 18 KPR                              90 GND                           
+ 19 KPR                              91 KPR                           
+ 20 KPR                              92 KPR                           
+ 21 KPR                              93 VCCIO-1.8                     
+ 22 KPR                              94 KPR                           
+ 23 KPR                              95 KPR                           
+ 24 KPR                              96 KPR                           
+ 25 KPR                              97 magistrala_wy<0>              
+ 26 KPR                              98 KPR                           
+ 27 VCCIO-1.8                        99 GND                           
+ 28 KPR                             100 magistrala_wy<1>              
+ 29 GND                             101 KPR                           
+ 30 KPR                             102 magistrala_wy<2>              
+ 31 KPR                             103 KPR                           
+ 32 KPR                             104 magistrala_wy<3>              
+ 33 KPR                             105 KPR                           
+ 34 KPR                             106 KPR                           
+ 35 KPR                             107 KPR                           
+ 36 GND                             108 GND                           
+ 37 VCC                             109 VCCIO-1.8                     
+ 38 KPR                             110 KPR                           
+ 39 not_e                           111 KPR                           
+ 40 KPR                             112 KPR                           
+ 41 KPR                             113 KPR                           
+ 42 KPR                             114 KPR                           
+ 43 KPR                             115 KPR                           
+ 44 KPR                             116 KPR                           
+ 45 KPR                             117 KPR                           
+ 46 KPR                             118 KPR                           
+ 47 GND                             119 KPR                           
+ 48 KPR                             120 KPR                           
+ 49 KPR                             121 KPR                           
+ 50 KPR                             122 TDO                           
+ 51 KPR                             123 GND                           
+ 52 KPR                             124 clk_wpis                      
+ 53 KPR                             125 KPR                           
+ 54 KPR                             126 KPR                           
+ 55 VCCIO-1.8                       127 VCCIO-1.8                     
+ 56 KPR                             128 KPR                           
+ 57 KPR                             129 KPR                           
+ 58 KPR                             130 KPR                           
+ 59 KPR                             131 KPR                           
+ 60 KPR                             132 KPR                           
+ 61 KPR                             133 KPR                           
+ 62 GND                             134 KPR                           
+ 63 TDI                             135 KPR                           
+ 64 KPR                             136 KPR                           
+ 65 TMS                             137 KPR                           
+ 66 empty_half_full<0>              138 KPR                           
+ 67 TCK                             139 KPR                           
+ 68 empty_half_full<1>              140 KPR                           
+ 69 empty_half_full<2>              141 VCCIO-1.8                     
+ 70 KPR                             142 KPR                           
+ 71 KPR                             143 rd_not_wr                     
+ 72 GND                             144 GND                           
+
+
+Legend :  NC  = Not Connected, unbonded pin
+        PGND  = Unused I/O configured as additional Ground pin
+         KPR  = Unused I/O with weak keeper (leave unconnected)
+         WPU  = Unused I/O with weak pull up (leave unconnected)
+         TIE  = Unused I/O floating -- must tie to VCC, GND or other signal
+         VCC  = Dedicated Power Pin
+      VCCAUX  = Power supply for JTAG pins
+   VCCIO-3.3  = I/O supply voltage for LVTTL, LVCMOS33, SSTL3_I
+   VCCIO-2.5  = I/O supply voltage for LVCMOS25, SSTL2_I
+   VCCIO-1.8  = I/O supply voltage for LVCMOS18
+   VCCIO-1.5  = I/O supply voltage for LVCMOS15, HSTL_I
+        VREF  = Reference voltage for indicated input standard
+       *VREF  = Reference voltage pin selected by software
+         GND  = Dedicated Ground Pin
+         TDI  = Test Data In, JTAG pin
+         TDO  = Test Data Out, JTAG pin
+         TCK  = Test Clock, JTAG pin
+         TMS  = Test Mode Select, JTAG pin
+  PROHIBITED  = User reserved pin
+****************************  Compiler Options  ****************************
+
+Following is a list of all global compiler options used by the fitter run.
+
+Device(s) Specified                         : xc2c256-6-TQ144
+Optimization Method                         : DENSITY
+Multi-Level Logic Optimization              : ON
+Ignore Timing Specifications                : OFF
+Default Register Power Up Value             : LOW
+Keep User Location Constraints              : ON
+What-You-See-Is-What-You-Get                : OFF
+Exhaustive Fitting                          : OFF
+Keep Unused Inputs                          : OFF
+Slew Rate                                   : FAST
+Set Unused I/O Pin Termination              : KEEPER
+Global Clock Optimization                   : ON
+Global Set/Reset Optimization               : ON
+Global Ouput Enable Optimization            : ON
+Enable Input Registers                      : ON
+Function Block Fan-in Limit                 : 38
+Use DATA_GATE Attribute                     : ON
+Set Tristate Outputs to Termination Mode    : KEEPER
+Default Voltage Standard for All Outputs    : LVCMOS18
+Input Limit                                 : 32
+Pterm Limit                                 : 28

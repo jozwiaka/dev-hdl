@@ -1,0 +1,4 @@
+verilog work "seqenter.v"
+verilog work "register.v"
+verilog work "divider_100kHz_to_1Hz.v"
+verilog work "schematic.vf"

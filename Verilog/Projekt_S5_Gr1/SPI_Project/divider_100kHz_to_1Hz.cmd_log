@@ -1,0 +1,6 @@
+vhdtdtfi -lib work C:/dev/ULiC/Verilog/Projekt_S5_Gr1/SPI_Project/divider_100kHz_to_1Hz.v -lang verilog -prj SPI_Project -o divider_100kHz_to_1Hz.spl -module divider_100kHz_to_1Hz -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family xbr divider_100kHz_to_1Hz.spl C:/dev/ULiC/Verilog/Projekt_S5_Gr1/SPI_Project/divider_100kHz_to_1Hz.sym 
+vhdtdtfi -lib work C:/dev/ULiC/Verilog/Projekt_S5_Gr1/SPI_Project/divider_100kHz_to_1Hz.v -lang verilog -prj SPI_Project -o divider_100kHz_to_1Hz.spl -module divider_100kHz_to_1Hz -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family xbr divider_100kHz_to_1Hz.spl C:/dev/ULiC/Verilog/Projekt_S5_Gr1/SPI_Project/divider_100kHz_to_1Hz.sym 
+vhdtdtfi -lib work C:/dev/ULiC/Verilog/Projekt_S5_Gr1/SPI_Project/divider_100kHz_to_1Hz.v -lang verilog -prj SPI_Project -o divider_100kHz_to_1Hz.spl -module divider_100kHz_to_1Hz -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family xbr divider_100kHz_to_1Hz.spl C:/dev/ULiC/Verilog/Projekt_S5_Gr1/SPI_Project/divider_100kHz_to_1Hz.sym 

@@ -1,0 +1,7 @@
+V3 3
+FL C:/dev/ULiC/LiczSymulacja/licz.vhd 2021/11/17.14:28:42 P.20131013
+EN work/licz 1637155737 FL C:/dev/ULiC/LiczSymulacja/licz.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/licz/Behavioral 1637155738 \
+      FL C:/dev/ULiC/LiczSymulacja/licz.vhd EN work/licz 1637155737

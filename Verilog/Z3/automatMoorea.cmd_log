@@ -1,0 +1,9 @@
+xst -intstyle ise -ifn "C:/dev/ULiC/Verilog/Z3/automatMoorea.xst" -ofn "C:/dev/ULiC/Verilog/Z3/automatMoorea.syr" 
+xst -intstyle ise -ifn "C:/dev/ULiC/Verilog/Z3/automatMoorea.xst" -ofn "C:/dev/ULiC/Verilog/Z3/automatMoorea.syr" 
+xst -intstyle ise -ifn "C:/dev/ULiC/Verilog/Z3/automatMoorea.xst" -ofn "C:/dev/ULiC/Verilog/Z3/automatMoorea.syr" 
+xst -intstyle ise -ifn "C:/students_ulic/Gricjuta_Jozwiak_5AiSR2_wtorek_14/VeriLog/Z3/automatMoorea.xst" -ofn "C:/students_ulic/Gricjuta_Jozwiak_5AiSR2_wtorek_14/VeriLog/Z3/automatMoorea.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc automatMoorea.ucf -p xc2c256-TQ144-6 automatMoorea.ngc automatMoorea.ngd  
+cpldfit -intstyle ise -p xc2c256-6-TQ144 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused keeper -terminate keeper -iostd LVCMOS18 automatMoorea.ngd 
+XSLTProcess automatMoorea_build.xml 
+tsim -intstyle ise automatMoorea automatMoorea.nga 
+hprep6 -s IEEE1149 -i automatMoorea 

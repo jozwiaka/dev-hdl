@@ -1,0 +1,692 @@
+<html><head><link type='text/css' href='style.css' rel='stylesheet'></head><body class='pgBgnd'>
+<h3 align='center'>Equations</h3>
+<table width='90%' align='center' border='1' cellpadding='0' cellspacing='0'>
+<tr><td>
+</td></tr><tr><td>
+********** Mapped Logic **********
+</td></tr><tr><td>
+</td></tr><tr><td>
+empty_half_full(0) <= NOT ((empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	empty_half_full_wew_cmp_eq0001));
+</td></tr><tr><td>
+</td></tr><tr><td>
+empty_half_full(1) <= NOT ((NOT empty_half_full_wew_cmp_eq0001 AND licznik(3)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+empty_half_full(2) <= NOT ((NOT licznik(0) AND NOT licznik(1) AND NOT licznik(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT licznik(3)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+empty_half_full_wew_cmp_eq0001 <= (licznik(0) AND licznik(1) AND licznik(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	licznik(3));
+</td></tr><tr><td>
+FTCPE_licznik0: FTCPE port map (licznik(0),licznik_T(0),clk_wpis,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;licznik_T(0) <= ((rd_not_wr AND NOT not_e AND empty_half_full(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001));
+</td></tr><tr><td>
+FTCPE_licznik1: FTCPE port map (licznik(1),licznik_T(1),clk_wpis,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;licznik_T(1) <= ((licznik(0) AND NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT licznik(0) AND rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	empty_half_full(2)));
+</td></tr><tr><td>
+FTCPE_licznik2: FTCPE port map (licznik(2),licznik_T(2),clk_wpis,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;licznik_T(2) <= ((licznik(0) AND NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND licznik(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT licznik(0) AND rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	empty_half_full(2) AND NOT licznik(1)));
+</td></tr><tr><td>
+FTCPE_licznik3: FTCPE port map (licznik(3),licznik_T(3),clk_wpis,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;licznik_T(3) <= ((NOT licznik(0) AND rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	empty_half_full(2) AND NOT licznik(1) AND NOT licznik(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (licznik(0) AND NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND licznik(1) AND licznik(2) AND NOT licznik(3)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+magistrala_wy(0) <= ((rd_not_wr AND NOT not_e AND ram_0_0)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND magistrala_we(0)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+magistrala_wy(1) <= ((rd_not_wr AND NOT not_e AND ram_0_1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND magistrala_we(1)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+magistrala_wy(2) <= ((rd_not_wr AND NOT not_e AND ram_0_2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND magistrala_we(2)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+magistrala_wy(3) <= ((rd_not_wr AND NOT not_e AND ram_0_3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND magistrala_we(3)));
+</td></tr><tr><td>
+FTCPE_ram_0_0: FTCPE port map (ram_0_0,ram_0_0_T,clk_wpis,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram_0_0_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ram_0_0 AND NOT ram_1_0)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ram_0_0 AND ram_1_0)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND magistrala_we(0) AND NOT ram_0_0)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND NOT magistrala_we(0) AND ram_0_0));
+</td></tr><tr><td>
+FTCPE_ram_0_1: FTCPE port map (ram_0_1,ram_0_1_T,clk_wpis,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram_0_1_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ram_0_1 AND NOT ram_1_1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ram_0_1 AND ram_1_1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND magistrala_we(1) AND NOT ram_0_1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND NOT magistrala_we(1) AND ram_0_1));
+</td></tr><tr><td>
+FTCPE_ram_0_2: FTCPE port map (ram_0_2,ram_0_2_T,clk_wpis,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram_0_2_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ram_0_2 AND NOT ram_1_2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ram_0_2 AND ram_1_2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND magistrala_we(2) AND NOT ram_0_2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND NOT magistrala_we(2) AND ram_0_2));
+</td></tr><tr><td>
+FTCPE_ram_0_3: FTCPE port map (ram_0_3,ram_0_3_T,clk_wpis,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram_0_3_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ram_0_3 AND NOT ram_1_3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ram_0_3 AND ram_1_3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND magistrala_we(3) AND NOT ram_0_3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND NOT magistrala_we(3) AND ram_0_3));
+</td></tr><tr><td>
+FTCPE_ram_10_0: FTCPE port map (ram_10_0,ram_10_0_T,clk_wpis,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram_10_0_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ram_10_0 AND NOT ram_11_0)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ram_10_0 AND ram_11_0)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND ram_9_0 AND NOT ram_10_0)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_9_0 AND ram_10_0));
+</td></tr><tr><td>
+FTCPE_ram_10_1: FTCPE port map (ram_10_1,ram_10_1_T,clk_wpis,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram_10_1_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ram_10_1 AND NOT ram_11_1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ram_10_1 AND ram_11_1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND ram_9_1 AND NOT ram_10_1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_9_1 AND ram_10_1));
+</td></tr><tr><td>
+FTCPE_ram_10_2: FTCPE port map (ram_10_2,ram_10_2_T,clk_wpis,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram_10_2_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ram_10_2 AND NOT ram_11_2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ram_10_2 AND ram_11_2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND ram_9_2 AND NOT ram_10_2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_9_2 AND ram_10_2));
+</td></tr><tr><td>
+FTCPE_ram_10_3: FTCPE port map (ram_10_3,ram_10_3_T,clk_wpis,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram_10_3_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ram_10_3 AND NOT ram_11_3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ram_10_3 AND ram_11_3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND ram_9_3 AND NOT ram_10_3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_9_3 AND ram_10_3));
+</td></tr><tr><td>
+FTCPE_ram_11_0: FTCPE port map (ram_11_0,ram_11_0_T,clk_wpis,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram_11_0_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ram_11_0 AND NOT ram_12_0)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ram_11_0 AND ram_12_0)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND ram_10_0 AND NOT ram_11_0)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_10_0 AND ram_11_0));
+</td></tr><tr><td>
+FTCPE_ram_11_1: FTCPE port map (ram_11_1,ram_11_1_T,clk_wpis,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram_11_1_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ram_11_1 AND NOT ram_12_1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ram_11_1 AND ram_12_1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND ram_10_1 AND NOT ram_11_1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_10_1 AND ram_11_1));
+</td></tr><tr><td>
+FTCPE_ram_11_2: FTCPE port map (ram_11_2,ram_11_2_T,clk_wpis,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram_11_2_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ram_11_2 AND NOT ram_12_2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ram_11_2 AND ram_12_2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND ram_10_2 AND NOT ram_11_2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_10_2 AND ram_11_2));
+</td></tr><tr><td>
+FTCPE_ram_11_3: FTCPE port map (ram_11_3,ram_11_3_T,clk_wpis,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram_11_3_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ram_11_3 AND NOT ram_12_3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ram_11_3 AND ram_12_3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND ram_10_3 AND NOT ram_11_3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_10_3 AND ram_11_3));
+</td></tr><tr><td>
+FTCPE_ram_12_0: FTCPE port map (ram_12_0,ram_12_0_T,clk_wpis,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram_12_0_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ram_12_0 AND NOT ram_13_0)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ram_12_0 AND ram_13_0)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND ram_11_0 AND NOT ram_12_0)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_11_0 AND ram_12_0));
+</td></tr><tr><td>
+FTCPE_ram_12_1: FTCPE port map (ram_12_1,ram_12_1_T,clk_wpis,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram_12_1_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ram_12_1 AND NOT ram_13_1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ram_12_1 AND ram_13_1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND ram_11_1 AND NOT ram_12_1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_11_1 AND ram_12_1));
+</td></tr><tr><td>
+FTCPE_ram_12_2: FTCPE port map (ram_12_2,ram_12_2_T,clk_wpis,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram_12_2_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ram_12_2 AND NOT ram_13_2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ram_12_2 AND ram_13_2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND ram_11_2 AND NOT ram_12_2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_11_2 AND ram_12_2));
+</td></tr><tr><td>
+FTCPE_ram_12_3: FTCPE port map (ram_12_3,ram_12_3_T,clk_wpis,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram_12_3_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ram_12_3 AND NOT ram_13_3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ram_12_3 AND ram_13_3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND ram_11_3 AND NOT ram_12_3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_11_3 AND ram_12_3));
+</td></tr><tr><td>
+FTCPE_ram_13_0: FTCPE port map (ram_13_0,ram_13_0_T,clk_wpis,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram_13_0_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ram_13_0 AND NOT ram_14_0)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ram_13_0 AND ram_14_0)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND ram_12_0 AND NOT ram_13_0)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_12_0 AND ram_13_0));
+</td></tr><tr><td>
+FTCPE_ram_13_1: FTCPE port map (ram_13_1,ram_13_1_T,clk_wpis,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram_13_1_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ram_13_1 AND NOT ram_14_1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ram_13_1 AND ram_14_1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND ram_12_1 AND NOT ram_13_1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_12_1 AND ram_13_1));
+</td></tr><tr><td>
+FTCPE_ram_13_2: FTCPE port map (ram_13_2,ram_13_2_T,clk_wpis,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram_13_2_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ram_13_2 AND NOT ram_14_2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ram_13_2 AND ram_14_2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND ram_12_2 AND NOT ram_13_2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_12_2 AND ram_13_2));
+</td></tr><tr><td>
+FTCPE_ram_13_3: FTCPE port map (ram_13_3,ram_13_3_T,clk_wpis,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram_13_3_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ram_13_3 AND NOT ram_14_3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ram_13_3 AND ram_14_3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND ram_12_3 AND NOT ram_13_3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_12_3 AND ram_13_3));
+</td></tr><tr><td>
+FTCPE_ram_14_0: FTCPE port map (ram_14_0,ram_14_0_T,clk_wpis,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram_14_0_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ram_14_0 AND NOT ram_15_0)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ram_14_0 AND ram_15_0)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND ram_13_0 AND NOT ram_14_0)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_13_0 AND ram_14_0));
+</td></tr><tr><td>
+FTCPE_ram_14_1: FTCPE port map (ram_14_1,ram_14_1_T,clk_wpis,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram_14_1_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ram_14_1 AND NOT ram_15_1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ram_14_1 AND ram_15_1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND ram_13_1 AND NOT ram_14_1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_13_1 AND ram_14_1));
+</td></tr><tr><td>
+FTCPE_ram_14_2: FTCPE port map (ram_14_2,ram_14_2_T,clk_wpis,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram_14_2_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ram_14_2 AND NOT ram_15_2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ram_14_2 AND ram_15_2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND ram_13_2 AND NOT ram_14_2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_13_2 AND ram_14_2));
+</td></tr><tr><td>
+FTCPE_ram_14_3: FTCPE port map (ram_14_3,ram_14_3_T,clk_wpis,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram_14_3_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ram_14_3 AND NOT ram_15_3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ram_14_3 AND ram_15_3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND ram_13_3 AND NOT ram_14_3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_13_3 AND ram_14_3));
+</td></tr><tr><td>
+FDCPE_ram_15_0: FDCPE port map (ram_15_0,ram_14_0,clk_wpis,'0','0',ram_15_0_CE);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram_15_0_CE <= (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001);
+</td></tr><tr><td>
+FDCPE_ram_15_1: FDCPE port map (ram_15_1,ram_14_1,clk_wpis,'0','0',ram_15_1_CE);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram_15_1_CE <= (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001);
+</td></tr><tr><td>
+FDCPE_ram_15_2: FDCPE port map (ram_15_2,ram_14_2,clk_wpis,'0','0',ram_15_2_CE);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram_15_2_CE <= (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001);
+</td></tr><tr><td>
+FDCPE_ram_15_3: FDCPE port map (ram_15_3,ram_14_3,clk_wpis,'0','0',ram_15_3_CE);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram_15_3_CE <= (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001);
+</td></tr><tr><td>
+FTCPE_ram_1_0: FTCPE port map (ram_1_0,ram_1_0_T,clk_wpis,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram_1_0_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ram_1_0 AND NOT ram_2_0)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ram_1_0 AND ram_2_0)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND ram_0_0 AND NOT ram_1_0)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_0_0 AND ram_1_0));
+</td></tr><tr><td>
+FTCPE_ram_1_1: FTCPE port map (ram_1_1,ram_1_1_T,clk_wpis,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram_1_1_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ram_1_1 AND NOT ram_2_1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ram_1_1 AND ram_2_1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND ram_0_1 AND NOT ram_1_1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_0_1 AND ram_1_1));
+</td></tr><tr><td>
+FTCPE_ram_1_2: FTCPE port map (ram_1_2,ram_1_2_T,clk_wpis,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram_1_2_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ram_1_2 AND NOT ram_2_2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ram_1_2 AND ram_2_2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND ram_0_2 AND NOT ram_1_2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_0_2 AND ram_1_2));
+</td></tr><tr><td>
+FTCPE_ram_1_3: FTCPE port map (ram_1_3,ram_1_3_T,clk_wpis,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram_1_3_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ram_1_3 AND NOT ram_2_3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ram_1_3 AND ram_2_3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND ram_0_3 AND NOT ram_1_3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_0_3 AND ram_1_3));
+</td></tr><tr><td>
+FTCPE_ram_2_0: FTCPE port map (ram_2_0,ram_2_0_T,clk_wpis,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram_2_0_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ram_2_0 AND NOT ram_3_0)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ram_2_0 AND ram_3_0)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND ram_1_0 AND NOT ram_2_0)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_1_0 AND ram_2_0));
+</td></tr><tr><td>
+FTCPE_ram_2_1: FTCPE port map (ram_2_1,ram_2_1_T,clk_wpis,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram_2_1_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ram_2_1 AND NOT ram_3_1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ram_2_1 AND ram_3_1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND ram_1_1 AND NOT ram_2_1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_1_1 AND ram_2_1));
+</td></tr><tr><td>
+FTCPE_ram_2_2: FTCPE port map (ram_2_2,ram_2_2_T,clk_wpis,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram_2_2_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ram_2_2 AND NOT ram_3_2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ram_2_2 AND ram_3_2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND ram_1_2 AND NOT ram_2_2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_1_2 AND ram_2_2));
+</td></tr><tr><td>
+FTCPE_ram_2_3: FTCPE port map (ram_2_3,ram_2_3_T,clk_wpis,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram_2_3_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ram_2_3 AND NOT ram_3_3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ram_2_3 AND ram_3_3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND ram_1_3 AND NOT ram_2_3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_1_3 AND ram_2_3));
+</td></tr><tr><td>
+FTCPE_ram_3_0: FTCPE port map (ram_3_0,ram_3_0_T,clk_wpis,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram_3_0_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ram_3_0 AND NOT ram_4_0)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ram_3_0 AND ram_4_0)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND ram_2_0 AND NOT ram_3_0)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_2_0 AND ram_3_0));
+</td></tr><tr><td>
+FTCPE_ram_3_1: FTCPE port map (ram_3_1,ram_3_1_T,clk_wpis,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram_3_1_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ram_3_1 AND NOT ram_4_1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ram_3_1 AND ram_4_1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND ram_2_1 AND NOT ram_3_1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_2_1 AND ram_3_1));
+</td></tr><tr><td>
+FTCPE_ram_3_2: FTCPE port map (ram_3_2,ram_3_2_T,clk_wpis,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram_3_2_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ram_3_2 AND NOT ram_4_2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ram_3_2 AND ram_4_2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND ram_2_2 AND NOT ram_3_2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_2_2 AND ram_3_2));
+</td></tr><tr><td>
+FTCPE_ram_3_3: FTCPE port map (ram_3_3,ram_3_3_T,clk_wpis,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram_3_3_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ram_3_3 AND NOT ram_4_3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ram_3_3 AND ram_4_3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND ram_2_3 AND NOT ram_3_3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_2_3 AND ram_3_3));
+</td></tr><tr><td>
+FTCPE_ram_4_0: FTCPE port map (ram_4_0,ram_4_0_T,clk_wpis,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram_4_0_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ram_4_0 AND NOT ram_5_0)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ram_4_0 AND ram_5_0)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND ram_3_0 AND NOT ram_4_0)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_3_0 AND ram_4_0));
+</td></tr><tr><td>
+FTCPE_ram_4_1: FTCPE port map (ram_4_1,ram_4_1_T,clk_wpis,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram_4_1_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ram_4_1 AND NOT ram_5_1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ram_4_1 AND ram_5_1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND ram_3_1 AND NOT ram_4_1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_3_1 AND ram_4_1));
+</td></tr><tr><td>
+FTCPE_ram_4_2: FTCPE port map (ram_4_2,ram_4_2_T,clk_wpis,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram_4_2_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ram_4_2 AND NOT ram_5_2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ram_4_2 AND ram_5_2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND ram_3_2 AND NOT ram_4_2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_3_2 AND ram_4_2));
+</td></tr><tr><td>
+FTCPE_ram_4_3: FTCPE port map (ram_4_3,ram_4_3_T,clk_wpis,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram_4_3_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ram_4_3 AND NOT ram_5_3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ram_4_3 AND ram_5_3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND ram_3_3 AND NOT ram_4_3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_3_3 AND ram_4_3));
+</td></tr><tr><td>
+FTCPE_ram_5_0: FTCPE port map (ram_5_0,ram_5_0_T,clk_wpis,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram_5_0_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ram_5_0 AND NOT ram_6_0)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ram_5_0 AND ram_6_0)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND ram_4_0 AND NOT ram_5_0)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_4_0 AND ram_5_0));
+</td></tr><tr><td>
+FTCPE_ram_5_1: FTCPE port map (ram_5_1,ram_5_1_T,clk_wpis,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram_5_1_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ram_5_1 AND NOT ram_6_1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ram_5_1 AND ram_6_1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND ram_4_1 AND NOT ram_5_1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_4_1 AND ram_5_1));
+</td></tr><tr><td>
+FTCPE_ram_5_2: FTCPE port map (ram_5_2,ram_5_2_T,clk_wpis,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram_5_2_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ram_5_2 AND NOT ram_6_2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ram_5_2 AND ram_6_2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND ram_4_2 AND NOT ram_5_2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_4_2 AND ram_5_2));
+</td></tr><tr><td>
+FTCPE_ram_5_3: FTCPE port map (ram_5_3,ram_5_3_T,clk_wpis,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram_5_3_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ram_5_3 AND NOT ram_6_3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ram_5_3 AND ram_6_3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND ram_4_3 AND NOT ram_5_3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_4_3 AND ram_5_3));
+</td></tr><tr><td>
+FTCPE_ram_6_0: FTCPE port map (ram_6_0,ram_6_0_T,clk_wpis,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram_6_0_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ram_6_0 AND NOT ram_7_0)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ram_6_0 AND ram_7_0)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND ram_5_0 AND NOT ram_6_0)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_5_0 AND ram_6_0));
+</td></tr><tr><td>
+FTCPE_ram_6_1: FTCPE port map (ram_6_1,ram_6_1_T,clk_wpis,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram_6_1_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ram_6_1 AND NOT ram_7_1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ram_6_1 AND ram_7_1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND ram_5_1 AND NOT ram_6_1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_5_1 AND ram_6_1));
+</td></tr><tr><td>
+FTCPE_ram_6_2: FTCPE port map (ram_6_2,ram_6_2_T,clk_wpis,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram_6_2_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ram_6_2 AND NOT ram_7_2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ram_6_2 AND ram_7_2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND ram_5_2 AND NOT ram_6_2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_5_2 AND ram_6_2));
+</td></tr><tr><td>
+FTCPE_ram_6_3: FTCPE port map (ram_6_3,ram_6_3_T,clk_wpis,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram_6_3_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ram_6_3 AND NOT ram_7_3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ram_6_3 AND ram_7_3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND ram_5_3 AND NOT ram_6_3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_5_3 AND ram_6_3));
+</td></tr><tr><td>
+FTCPE_ram_7_0: FTCPE port map (ram_7_0,ram_7_0_T,clk_wpis,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram_7_0_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ram_7_0 AND NOT ram_8_0)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ram_7_0 AND ram_8_0)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND ram_6_0 AND NOT ram_7_0)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_6_0 AND ram_7_0));
+</td></tr><tr><td>
+FTCPE_ram_7_1: FTCPE port map (ram_7_1,ram_7_1_T,clk_wpis,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram_7_1_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ram_7_1 AND NOT ram_8_1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ram_7_1 AND ram_8_1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND ram_6_1 AND NOT ram_7_1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_6_1 AND ram_7_1));
+</td></tr><tr><td>
+FTCPE_ram_7_2: FTCPE port map (ram_7_2,ram_7_2_T,clk_wpis,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram_7_2_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ram_7_2 AND NOT ram_8_2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ram_7_2 AND ram_8_2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND ram_6_2 AND NOT ram_7_2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_6_2 AND ram_7_2));
+</td></tr><tr><td>
+FTCPE_ram_7_3: FTCPE port map (ram_7_3,ram_7_3_T,clk_wpis,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram_7_3_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ram_7_3 AND NOT ram_8_3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ram_7_3 AND ram_8_3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND ram_6_3 AND NOT ram_7_3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_6_3 AND ram_7_3));
+</td></tr><tr><td>
+FTCPE_ram_8_0: FTCPE port map (ram_8_0,ram_8_0_T,clk_wpis,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram_8_0_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ram_8_0 AND NOT ram_9_0)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ram_8_0 AND ram_9_0)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND ram_7_0 AND NOT ram_8_0)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_7_0 AND ram_8_0));
+</td></tr><tr><td>
+FTCPE_ram_8_1: FTCPE port map (ram_8_1,ram_8_1_T,clk_wpis,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram_8_1_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ram_8_1 AND NOT ram_9_1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ram_8_1 AND ram_9_1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND ram_7_1 AND NOT ram_8_1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_7_1 AND ram_8_1));
+</td></tr><tr><td>
+FTCPE_ram_8_2: FTCPE port map (ram_8_2,ram_8_2_T,clk_wpis,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram_8_2_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ram_8_2 AND NOT ram_9_2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ram_8_2 AND ram_9_2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND ram_7_2 AND NOT ram_8_2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_7_2 AND ram_8_2));
+</td></tr><tr><td>
+FTCPE_ram_8_3: FTCPE port map (ram_8_3,ram_8_3_T,clk_wpis,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram_8_3_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ram_8_3 AND NOT ram_9_3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ram_8_3 AND ram_9_3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND ram_7_3 AND NOT ram_8_3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_7_3 AND ram_8_3));
+</td></tr><tr><td>
+FTCPE_ram_9_0: FTCPE port map (ram_9_0,ram_9_0_T,clk_wpis,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram_9_0_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ram_9_0 AND NOT ram_10_0)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ram_9_0 AND ram_10_0)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND ram_8_0 AND NOT ram_9_0)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_8_0 AND ram_9_0));
+</td></tr><tr><td>
+FTCPE_ram_9_1: FTCPE port map (ram_9_1,ram_9_1_T,clk_wpis,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram_9_1_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ram_9_1 AND NOT ram_10_1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ram_9_1 AND ram_10_1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND ram_8_1 AND NOT ram_9_1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_8_1 AND ram_9_1));
+</td></tr><tr><td>
+FTCPE_ram_9_2: FTCPE port map (ram_9_2,ram_9_2_T,clk_wpis,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram_9_2_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ram_9_2 AND NOT ram_10_2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ram_9_2 AND ram_10_2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND ram_8_2 AND NOT ram_9_2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_8_2 AND ram_9_2));
+</td></tr><tr><td>
+FTCPE_ram_9_3: FTCPE port map (ram_9_3,ram_9_3_T,clk_wpis,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram_9_3_T <= ((rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ram_9_3 AND NOT ram_10_3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (rd_not_wr AND NOT not_e AND empty_half_full(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT ram_9_3 AND ram_10_3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND ram_8_3 AND NOT ram_9_3)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_not_wr AND NOT not_e AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT empty_half_full_wew_cmp_eq0001 AND NOT ram_8_3 AND ram_9_3));
+</td></tr><tr><td>
+</td></tr><tr><td>
+Register Legend:
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FDDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FTCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FTDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LDCP  (Q,D,G,CLR,PRE); 
+</td></tr><tr><td>
+</td></tr>
+</table>
+<form><span class="pgRef"><table width="90%" align="center"><tr>
+<td align="left"><input type="button" onclick="javascript:parent.leftnav.showTop()" onmouseover="window.status='goto top of page'; return true;" onmouseout="window.status=''" value="back to top"></td>
+<td align="right"><input type="button" onclick="window.print()" onmouseover="window.status='print page'; return true;" onmouseout="window.status=''" value="print page"></td>
+</tr></table></span></form>
+</body></html>

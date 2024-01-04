@@ -1,0 +1,25 @@
+MODULE SchematGlowny
+	SUBMODULE dzielnik_100kHz_na_400Hz
+		INSTANCE dzielnik_100kHz_na400Hz_inst
+	SUBMODULE licznik_cyfra
+		INSTANCE licznik_cyfra_inst
+	SUBMODULE aktywna_anoda
+		INSTANCE aktywna_anoda_inst
+	SUBMODULE moj_projekt
+		INSTANCE moj_projekt1_inst
+	SUBMODULE moj_projekt
+		INSTANCE moj_projekt2_inst
+	SUBMODULE mult_vec1
+		INSTANCE mult_vec11_inst
+	SUBMODULE mult_vec1
+		INSTANCE mult_vec12_inst
+	SUBMODULE transkoder_7s
+		INSTANCE transkoder_7s_inst
+	SUBMODULE dzielnik_400Hz_na_10Hz
+		INSTANCE dzielnik_400Hz_na_10Hz_inst
+	SUBMODULE moj_projekt_Diody
+		INSTANCE moj_projekt_Diody_inst
+	SUBMODULE ster_kropka
+		INSTANCE ster_kropka_inst
+	SUBMODULE moj_projekt_MUX
+		INSTANCE moj_projekt_MUX_inst

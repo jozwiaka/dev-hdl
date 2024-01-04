@@ -1,0 +1,115 @@
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="paths.js"></script><script src="eqns.js"></script><script>
+      var design = "schematUkladIteracyjny";
+      var device = "XC2C256";
+      signals = new Array("P1wy_8","P2wy_8");
+      sigNegs = new Array("OFF","OFF");
+      sigTypes = new Array("","");
+
+      
+           iostyle["ai_8"]=new Array("KPR");
+        
+           iostyle["ai_4"]=new Array("KPR");
+        
+           iostyle["ai_7"]=new Array("KPR");
+        
+           iostyle["ai_3"]=new Array("KPR");
+        
+           iostyle["ai_6"]=new Array("KPR");
+        
+           iostyle["ai_2"]=new Array("KPR");
+        
+           iostyle["ai_5"]=new Array("KPR");
+        
+           iostyle["ai_1"]=new Array("KPR");
+        
+            pterms["FB10_0"]=new Array("/ai_3","ai_2","/ai_4");
+          
+            pterms["FB10_1"]=new Array("ai_3","/ai_4","/ai_5");
+          
+            pterms["FB10_2"]=new Array("ai_4","/ai_5","/ai_6");
+          
+            pterms["FB10_3"]=new Array("ai_5","/ai_7");
+          
+            pterms["FB10_4"]=new Array("ai_6","/ai_7");
+          
+            pterms["FB10_5"]=new Array("ai_8");
+          
+            pterms["FB10_6"]=new Array("/ai_3","/ai_2","ai_1");
+          
+            pterms["FB10_7"]=new Array("ai_5","/ai_6","/ai_7");
+          
+            pterms["FB10_8"]=new Array("ai_6","/ai_8");
+          
+            pterms["FB10_9"]=new Array("ai_7","/ai_8");
+          
+          d2["P1wy_8"]=new Array("FB10_5","FB10_3","FB10_4","FB10_1","FB10_0","FB10_6","FB10_2");
+          
+          d2["P2wy_8"]=new Array("FB10_8","FB10_9","FB10_1","FB10_0","FB10_6","FB10_2","FB10_7");
+          
+
+      uimSignals = new Array();
+
+      uimSigNegs = new Array();
+
+      uimPterms = new Array();
+      
+
+      
+        function getEqnList() {
+          var str = "<html><head><link type='text/css' href='style.css' rel='stylesheet'></head><body class='pgBgnd'>";
+          str += "<center><h3>Equations</h3></center>";
+          str += "<table width='90%' align='center' border='1' cellpadding='0' cellspacing='0'>";
+          for (s=0; s<uimSignals.length; s++) {
+            str += "<tr><td>";
+            str += retUimEqn(uimSignals[s]);
+            str += "</td></tr>";
+          }
+          for (s=0; s<signals.length; s++) {
+            str += "<tr><td>";
+            str += retEqn(signals[s]);
+            str += "</td></tr>";
+          }
+
+          var legend = retLegend();
+		      if (legend != "") {
+		        str += "<tr><td>" + legend + "</td></tr>";
+		      }
+
+          str += "</table>";
+          str += "<form><span class='pgRef'>";
+
+          if (!parent.leftnav.IsNS()) {
+            str += "<table width='90%' align='center'>";
+            str += "<tr><td align='left'><input type='button' value='back to top' ";
+            str += "onclick='javascript:parent.leftnav.showEqnAll()' ";
+            str += "onmouseover=\"window.status='goto top of page'; return true;\" ";
+            str += "onmouseout=\"window.status=''\">";
+            str += "</td>";
+            str += "<td align='right'>";
+            str += "<input type='button' value='print page' ";
+            str += "onclick='javascript:window.print()' ";
+            str += "onmouseover=\"window.status='print page'; return true;\" ";
+            str += "onmouseout=\"window.status=''\">";
+            str += "</td>";
+            str += "</tr></table>";
+          }
+          else {
+            str += "<table width='90%' align='center'>";
+            str += "<tr><td align='left'><a href='javascript:parent.leftnav.showEqnAll()'>back to top</a>";
+            str += "</td>";
+            str += "<td align='right'>";
+            str += "<a href='javascript:window.print()'>";
+            str += "print page</a>";
+            str += "</td>";
+            str += "</tr></table>";
+          }
+
+          str += "</span></form>";
+          str += "</body></html>";
+          return str;
+        }
+      
+    </script>
+</head></html>

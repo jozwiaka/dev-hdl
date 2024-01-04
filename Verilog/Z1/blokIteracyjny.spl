@@ -1,0 +1,11 @@
+[Inputs]
+ai
+P2we
+P1we
+[Outputs]
+P2wy
+P1wy
+[BiDir]
+[ATTRIBUTES]
+VeriModel blokIteracyjny
+

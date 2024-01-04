@@ -1,0 +1,963 @@
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="paths.js"></script><script src="eqns.js"></script><script>
+      var design = "RAM";
+      var device = "XC2C256";
+      signals = new Array("empty_half_full0_SPECSIG","empty_half_full1_SPECSIG","empty_half_full2_SPECSIG","empty_half_full_wew_cmp_eq0001","licznik0_SPECSIG","licznik1_SPECSIG","licznik2_SPECSIG","licznik3_SPECSIG","magistrala_wy0_SPECSIG","magistrala_wy1_SPECSIG","magistrala_wy2_SPECSIG","magistrala_wy3_SPECSIG","ram_0_0","ram_0_1","ram_0_2","ram_0_3","ram_10_0","ram_10_1","ram_10_2","ram_10_3","ram_11_0","ram_11_1","ram_11_2","ram_11_3","ram_12_0","ram_12_1","ram_12_2","ram_12_3","ram_13_0","ram_13_1","ram_13_2","ram_13_3","ram_14_0","ram_14_1","ram_14_2","ram_14_3","ram_15_0","ram_15_1","ram_15_2","ram_15_3","ram_1_0","ram_1_1","ram_1_2","ram_1_3","ram_2_0","ram_2_1","ram_2_2","ram_2_3","ram_3_0","ram_3_1","ram_3_2","ram_3_3","ram_4_0","ram_4_1","ram_4_2","ram_4_3","ram_5_0","ram_5_1","ram_5_2","ram_5_3","ram_6_0","ram_6_1","ram_6_2","ram_6_3","ram_7_0","ram_7_1","ram_7_2","ram_7_3","ram_8_0","ram_8_1","ram_8_2","ram_8_3","ram_9_0","ram_9_1","ram_9_2","ram_9_3");
+      sigNegs = new Array("ON","ON","ON","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF");
+      sigTypes = new Array("","","","","TFF","TFF","TFF","TFF","","","","","TFF","TFF","TFF","TFF","TFF","TFF","TFF","TFF","TFF","TFF","TFF","TFF","TFF","TFF","TFF","TFF","TFF","TFF","TFF","TFF","TFF","TFF","TFF","TFF","DEFF","DEFF","DEFF","DEFF","TFF","TFF","TFF","TFF","TFF","TFF","TFF","TFF","TFF","TFF","TFF","TFF","TFF","TFF","TFF","TFF","TFF","TFF","TFF","TFF","TFF","TFF","TFF","TFF","TFF","TFF","TFF","TFF","TFF","TFF","TFF","TFF","TFF","TFF","TFF","TFF");
+
+      
+           iostyle["rd_not_wr"]=new Array("KPR");
+        
+           iostyle["magistrala_we0_SPECSIG"]=new Array("KPR");
+        
+           iostyle["magistrala_we1_SPECSIG"]=new Array("KPR");
+        
+           iostyle["magistrala_we2_SPECSIG"]=new Array("KPR");
+        
+           iostyle["magistrala_we3_SPECSIG"]=new Array("KPR");
+        
+           iostyle["not_e"]=new Array("KPR");
+        
+           iostyle["clk_wpis"]=new Array("KPR");
+        
+        specSig["magistrala_we0_SPECSIG"]=new Array("magistrala_we<0>");
+      
+        specSig["magistrala_we1_SPECSIG"]=new Array("magistrala_we<1>");
+      
+        specSig["magistrala_we2_SPECSIG"]=new Array("magistrala_we<2>");
+      
+        specSig["magistrala_we3_SPECSIG"]=new Array("magistrala_we<3>");
+      
+        specSig["b_SPECSIG"]=new Array("(b)");
+      
+        specSig["magistrala_wy3_SPECSIG"]=new Array("magistrala_wy<3>");
+      
+        specSig["magistrala_wy2_SPECSIG"]=new Array("magistrala_wy<2>");
+      
+        specSig["magistrala_wy1_SPECSIG"]=new Array("magistrala_wy<1>");
+      
+        specSig["magistrala_wy0_SPECSIG"]=new Array("magistrala_wy<0>");
+      
+        specSig["empty_half_full2_SPECSIG"]=new Array("empty_half_full<2>");
+      
+        specSig["empty_half_full1_SPECSIG"]=new Array("empty_half_full<1>");
+      
+        specSig["empty_half_full0_SPECSIG"]=new Array("empty_half_full<0>");
+      
+        specSig["licznik0_SPECSIG"]=new Array("licznik<0>");
+      
+        specSig["licznik1_SPECSIG"]=new Array("licznik<1>");
+      
+        specSig["licznik2_SPECSIG"]=new Array("licznik<2>");
+      
+        specSig["licznik3_SPECSIG"]=new Array("licznik<3>");
+      
+            pterms["FB1_0"]=new Array("/licznik0_SPECSIG","rd_not_wr","/not_e","empty_half_full2_SPECSIG","/licznik1_SPECSIG","/licznik2_SPECSIG");
+          
+            pterms["FB1_1"]=new Array("licznik0_SPECSIG","/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","licznik1_SPECSIG","licznik2_SPECSIG","/licznik3_SPECSIG");
+          
+            pterms["FB1_2"]=new Array("/licznik0_SPECSIG","rd_not_wr","/not_e","empty_half_full2_SPECSIG","/licznik1_SPECSIG");
+          
+            pterms["FB1_3"]=new Array("licznik0_SPECSIG","/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","licznik1_SPECSIG");
+          
+            pterms["FB1_4"]=new Array("clk_wpis");
+          
+            pterms["FB1_5"]=new Array("/licznik0_SPECSIG","rd_not_wr","/not_e","empty_half_full2_SPECSIG");
+          
+            pterms["FB1_6"]=new Array("licznik0_SPECSIG","/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001");
+          
+            pterms["FB1_7"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG");
+          
+            pterms["FB1_8"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001");
+          
+            pterms["FB1_9"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","/ram_0_0","ram_1_0");
+          
+            pterms["FB1_10"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","ram_0_0","/ram_1_0");
+          
+            pterms["FB1_11"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","/magistrala_we0_SPECSIG","ram_0_0");
+          
+            pterms["FB1_12"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","magistrala_we0_SPECSIG","/ram_0_0");
+          
+            pterms["FB1_13"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","/ram_1_0","ram_2_0");
+          
+            pterms["FB1_14"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","ram_1_0","/ram_2_0");
+          
+            pterms["FB1_15"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","/ram_0_0","ram_1_0");
+          
+            pterms["FB1_16"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","ram_0_0","/ram_1_0");
+          
+            pterms["FB1_17"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","/ram_2_0","ram_3_0");
+          
+            pterms["FB1_18"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","ram_2_0","/ram_3_0");
+          
+            pterms["FB1_19"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","/ram_1_0","ram_2_0");
+          
+            pterms["FB1_20"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","ram_1_0","/ram_2_0");
+          
+            pterms["FB1_21"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","/ram_3_0","ram_4_0");
+          
+            pterms["FB1_22"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","ram_3_0","/ram_4_0");
+          
+            pterms["FB1_23"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","/ram_2_0","ram_3_0");
+          
+            pterms["FB1_24"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","ram_2_0","/ram_3_0");
+          
+            pterms["FB1_25"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","/ram_4_0","ram_5_0");
+          
+            pterms["FB1_26"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","ram_4_0","/ram_5_0");
+          
+            pterms["FB1_27"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","/ram_3_0","ram_4_0");
+          
+            pterms["FB1_28"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","ram_3_0","/ram_4_0");
+          
+            pterms["FB1_29"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","/ram_5_0","ram_6_0");
+          
+            pterms["FB1_30"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","ram_5_0","/ram_6_0");
+          
+            pterms["FB1_31"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","/ram_4_0","ram_5_0");
+          
+            pterms["FB1_32"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","ram_4_0","/ram_5_0");
+          
+            pterms["FB1_33"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","/ram_6_0","ram_7_0");
+          
+            pterms["FB1_34"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","ram_6_0","/ram_7_0");
+          
+            pterms["FB1_35"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","/ram_5_0","ram_6_0");
+          
+            pterms["FB1_36"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","ram_5_0","/ram_6_0");
+          
+            pterms["FB1_37"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","/ram_7_0","ram_8_0");
+          
+            pterms["FB1_38"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","ram_7_0","/ram_8_0");
+          
+            pterms["FB1_39"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","/ram_6_0","ram_7_0");
+          
+            pterms["FB1_40"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","ram_6_0","/ram_7_0");
+          
+            pterms["FB1_41"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","/ram_8_0","ram_9_0");
+          
+            pterms["FB1_42"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","ram_8_0","/ram_9_0");
+          
+            pterms["FB1_43"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","/ram_7_0","ram_8_0");
+          
+            pterms["FB1_44"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","ram_7_0","/ram_8_0");
+          
+            pterms["FB1_45"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","ram_9_0","/ram_10_0");
+          
+            pterms["FB1_46"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","/ram_9_0","ram_10_0");
+          
+            pterms["FB1_47"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","/ram_8_0","ram_9_0");
+          
+            pterms["FB1_48"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","ram_8_0","/ram_9_0");
+          
+            pterms["FB1_49"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","/ram_10_0","ram_11_0");
+          
+            pterms["FB1_50"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","ram_10_0","/ram_11_0");
+          
+            pterms["FB1_51"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","ram_9_0","/ram_10_0");
+          
+            pterms["FB1_52"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","/ram_9_0","ram_10_0");
+          
+            pterms["FB1_55"]=new Array("licznik0_SPECSIG","licznik1_SPECSIG","licznik2_SPECSIG","licznik3_SPECSIG");
+          
+            pterms["FB2_0"]=new Array("ram_14_0");
+          
+            pterms["FB2_1"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","/ram_13_0","ram_14_0");
+          
+            pterms["FB2_2"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","ram_13_0","/ram_14_0");
+          
+            pterms["FB2_3"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","/ram_12_0","ram_13_0");
+          
+            pterms["FB2_4"]=new Array("clk_wpis");
+          
+            pterms["FB2_5"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","ram_12_0","/ram_13_0");
+          
+            pterms["FB2_6"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","/ram_12_0","ram_13_0");
+          
+            pterms["FB2_7"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","ram_12_0","/ram_13_0");
+          
+            pterms["FB2_8"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","/ram_11_0","ram_12_0");
+          
+            pterms["FB2_9"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","ram_11_0","/ram_12_0");
+          
+            pterms["FB2_10"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","/ram_11_0","ram_12_0");
+          
+            pterms["FB2_11"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","ram_11_0","/ram_12_0");
+          
+            pterms["FB2_12"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","/ram_10_0","ram_11_0");
+          
+            pterms["FB2_13"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","ram_10_0","/ram_11_0");
+          
+            pterms["FB2_14"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","/ram_14_0","ram_15_0");
+          
+            pterms["FB2_15"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","ram_14_0","/ram_15_0");
+          
+            pterms["FB2_16"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","/ram_13_0","ram_14_0");
+          
+            pterms["FB2_17"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","ram_13_0","/ram_14_0");
+          
+            pterms["FB2_18"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","/ram_0_1","ram_1_1");
+          
+            pterms["FB2_19"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","ram_0_1","/ram_1_1");
+          
+            pterms["FB2_20"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","/magistrala_we1_SPECSIG","ram_0_1");
+          
+            pterms["FB2_21"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","magistrala_we1_SPECSIG","/ram_0_1");
+          
+            pterms["FB2_22"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","/ram_1_1","ram_2_1");
+          
+            pterms["FB2_23"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","ram_1_1","/ram_2_1");
+          
+            pterms["FB2_24"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","/ram_0_1","ram_1_1");
+          
+            pterms["FB2_25"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","ram_0_1","/ram_1_1");
+          
+            pterms["FB2_26"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","/ram_2_1","ram_3_1");
+          
+            pterms["FB2_27"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","ram_2_1","/ram_3_1");
+          
+            pterms["FB2_28"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","/ram_1_1","ram_2_1");
+          
+            pterms["FB2_29"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","ram_1_1","/ram_2_1");
+          
+            pterms["FB2_30"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","/ram_3_1","ram_4_1");
+          
+            pterms["FB2_31"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","ram_3_1","/ram_4_1");
+          
+            pterms["FB2_32"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","/ram_2_1","ram_3_1");
+          
+            pterms["FB2_33"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","ram_2_1","/ram_3_1");
+          
+            pterms["FB2_34"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","/ram_4_1","ram_5_1");
+          
+            pterms["FB2_35"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","ram_4_1","/ram_5_1");
+          
+            pterms["FB2_36"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","/ram_3_1","ram_4_1");
+          
+            pterms["FB2_37"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","ram_3_1","/ram_4_1");
+          
+            pterms["FB2_38"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","/ram_5_1","ram_6_1");
+          
+            pterms["FB2_39"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","ram_5_1","/ram_6_1");
+          
+            pterms["FB2_40"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","/ram_4_1","ram_5_1");
+          
+            pterms["FB2_41"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","ram_4_1","/ram_5_1");
+          
+            pterms["FB2_42"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","/ram_6_1","ram_7_1");
+          
+            pterms["FB2_43"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","ram_6_1","/ram_7_1");
+          
+            pterms["FB2_44"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","/ram_5_1","ram_6_1");
+          
+            pterms["FB2_45"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","ram_5_1","/ram_6_1");
+          
+            pterms["FB2_46"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","/ram_7_1","ram_8_1");
+          
+            pterms["FB2_47"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","ram_7_1","/ram_8_1");
+          
+            pterms["FB2_48"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","/ram_6_1","ram_7_1");
+          
+            pterms["FB2_49"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","ram_6_1","/ram_7_1");
+          
+            pterms["FB2_50"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","/ram_8_1","ram_9_1");
+          
+            pterms["FB2_51"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","ram_8_1","/ram_9_1");
+          
+            pterms["FB2_52"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","/ram_7_1","ram_8_1");
+          
+            pterms["FB2_53"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","ram_7_1","/ram_8_1");
+          
+            pterms["FB2_55"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001");
+          
+            pterms["FB3_0"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","/ram_0_2","ram_1_2");
+          
+            pterms["FB3_1"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","ram_0_2","/ram_1_2");
+          
+            pterms["FB3_2"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","/magistrala_we2_SPECSIG","ram_0_2");
+          
+            pterms["FB3_3"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","magistrala_we2_SPECSIG","/ram_0_2");
+          
+            pterms["FB3_4"]=new Array("clk_wpis");
+          
+            pterms["FB3_5"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","/ram_1_2","ram_2_2");
+          
+            pterms["FB3_6"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","ram_1_2","/ram_2_2");
+          
+            pterms["FB3_7"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","/ram_0_2","ram_1_2");
+          
+            pterms["FB3_8"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","ram_0_2","/ram_1_2");
+          
+            pterms["FB3_9"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","/ram_2_2","ram_3_2");
+          
+            pterms["FB3_10"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","ram_2_2","/ram_3_2");
+          
+            pterms["FB3_11"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","/ram_1_2","ram_2_2");
+          
+            pterms["FB3_12"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","ram_1_2","/ram_2_2");
+          
+            pterms["FB3_13"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","/ram_3_2","ram_4_2");
+          
+            pterms["FB3_14"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","ram_3_2","/ram_4_2");
+          
+            pterms["FB3_15"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","/ram_2_2","ram_3_2");
+          
+            pterms["FB3_16"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001");
+          
+            pterms["FB3_17"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","ram_2_2","/ram_3_2");
+          
+            pterms["FB3_18"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","/ram_4_2","ram_5_2");
+          
+            pterms["FB3_19"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","ram_4_2","/ram_5_2");
+          
+            pterms["FB3_20"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","/ram_3_2","ram_4_2");
+          
+            pterms["FB3_21"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","ram_3_2","/ram_4_2");
+          
+            pterms["FB3_22"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","/ram_5_2","ram_6_2");
+          
+            pterms["FB3_23"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","ram_5_2","/ram_6_2");
+          
+            pterms["FB3_24"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","/ram_4_2","ram_5_2");
+          
+            pterms["FB3_25"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","ram_4_2","/ram_5_2");
+          
+            pterms["FB3_26"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","/ram_6_2","ram_7_2");
+          
+            pterms["FB3_27"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","ram_6_2","/ram_7_2");
+          
+            pterms["FB3_28"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","/ram_5_2","ram_6_2");
+          
+            pterms["FB3_29"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","ram_5_2","/ram_6_2");
+          
+            pterms["FB3_30"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","/ram_7_2","ram_8_2");
+          
+            pterms["FB3_31"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","ram_7_2","/ram_8_2");
+          
+            pterms["FB3_32"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","/ram_6_2","ram_7_2");
+          
+            pterms["FB3_33"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","ram_6_2","/ram_7_2");
+          
+            pterms["FB3_34"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","/ram_8_2","ram_9_2");
+          
+            pterms["FB3_35"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","ram_8_2","/ram_9_2");
+          
+            pterms["FB3_36"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","/ram_7_2","ram_8_2");
+          
+            pterms["FB3_37"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","ram_7_2","/ram_8_2");
+          
+            pterms["FB3_38"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","ram_9_2","/ram_10_2");
+          
+            pterms["FB3_39"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","/ram_9_2","ram_10_2");
+          
+            pterms["FB3_40"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","/ram_8_2","ram_9_2");
+          
+            pterms["FB3_41"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","ram_8_2","/ram_9_2");
+          
+            pterms["FB3_42"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","/ram_10_2","ram_11_2");
+          
+            pterms["FB3_43"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","ram_10_2","/ram_11_2");
+          
+            pterms["FB3_44"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","ram_9_2","/ram_10_2");
+          
+            pterms["FB3_45"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","/ram_9_2","ram_10_2");
+          
+            pterms["FB3_46"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","/ram_11_2","ram_12_2");
+          
+            pterms["FB3_47"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","ram_11_2","/ram_12_2");
+          
+            pterms["FB3_48"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","/ram_10_2","ram_11_2");
+          
+            pterms["FB3_49"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","ram_10_2","/ram_11_2");
+          
+            pterms["FB3_50"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","/ram_12_2","ram_13_2");
+          
+            pterms["FB3_51"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","ram_12_2","/ram_13_2");
+          
+            pterms["FB3_52"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","/ram_11_2","ram_12_2");
+          
+            pterms["FB3_53"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","ram_11_2","/ram_12_2");
+          
+            pterms["FB3_54"]=new Array("ram_14_1");
+          
+            pterms["FB4_0"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","/ram_0_3","ram_1_3");
+          
+            pterms["FB4_1"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","ram_0_3","/ram_1_3");
+          
+            pterms["FB4_2"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","/magistrala_we3_SPECSIG","ram_0_3");
+          
+            pterms["FB4_3"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","magistrala_we3_SPECSIG","/ram_0_3");
+          
+            pterms["FB4_4"]=new Array("clk_wpis");
+          
+            pterms["FB4_5"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","/ram_1_3","ram_2_3");
+          
+            pterms["FB4_6"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","ram_1_3","/ram_2_3");
+          
+            pterms["FB4_7"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","/ram_0_3","ram_1_3");
+          
+            pterms["FB4_8"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","ram_0_3","/ram_1_3");
+          
+            pterms["FB4_9"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","/ram_2_3","ram_3_3");
+          
+            pterms["FB4_10"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","ram_2_3","/ram_3_3");
+          
+            pterms["FB4_11"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","/ram_1_3","ram_2_3");
+          
+            pterms["FB4_12"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","ram_1_3","/ram_2_3");
+          
+            pterms["FB4_13"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","/ram_3_3","ram_4_3");
+          
+            pterms["FB4_14"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","ram_3_3","/ram_4_3");
+          
+            pterms["FB4_15"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","/ram_2_3","ram_3_3");
+          
+            pterms["FB4_16"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001");
+          
+            pterms["FB4_17"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","ram_2_3","/ram_3_3");
+          
+            pterms["FB4_18"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","/ram_4_3","ram_5_3");
+          
+            pterms["FB4_19"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","ram_4_3","/ram_5_3");
+          
+            pterms["FB4_20"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","/ram_3_3","ram_4_3");
+          
+            pterms["FB4_21"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","ram_3_3","/ram_4_3");
+          
+            pterms["FB4_22"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","/ram_5_3","ram_6_3");
+          
+            pterms["FB4_23"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","ram_5_3","/ram_6_3");
+          
+            pterms["FB4_24"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","/ram_4_3","ram_5_3");
+          
+            pterms["FB4_25"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","ram_4_3","/ram_5_3");
+          
+            pterms["FB4_26"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","/ram_6_3","ram_7_3");
+          
+            pterms["FB4_27"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","ram_6_3","/ram_7_3");
+          
+            pterms["FB4_28"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","/ram_5_3","ram_6_3");
+          
+            pterms["FB4_29"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","ram_5_3","/ram_6_3");
+          
+            pterms["FB4_30"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","/ram_7_3","ram_8_3");
+          
+            pterms["FB4_31"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","ram_7_3","/ram_8_3");
+          
+            pterms["FB4_32"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","/ram_6_3","ram_7_3");
+          
+            pterms["FB4_33"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","ram_6_3","/ram_7_3");
+          
+            pterms["FB4_34"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","/ram_8_3","ram_9_3");
+          
+            pterms["FB4_35"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","ram_8_3","/ram_9_3");
+          
+            pterms["FB4_36"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","/ram_7_3","ram_8_3");
+          
+            pterms["FB4_37"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","ram_7_3","/ram_8_3");
+          
+            pterms["FB4_38"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","ram_9_3","/ram_10_3");
+          
+            pterms["FB4_39"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","/ram_9_3","ram_10_3");
+          
+            pterms["FB4_40"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","/ram_8_3","ram_9_3");
+          
+            pterms["FB4_41"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","ram_8_3","/ram_9_3");
+          
+            pterms["FB4_42"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","/ram_10_3","ram_11_3");
+          
+            pterms["FB4_43"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","ram_10_3","/ram_11_3");
+          
+            pterms["FB4_44"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","ram_9_3","/ram_10_3");
+          
+            pterms["FB4_45"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","/ram_9_3","ram_10_3");
+          
+            pterms["FB4_46"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","/ram_11_3","ram_12_3");
+          
+            pterms["FB4_47"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","ram_11_3","/ram_12_3");
+          
+            pterms["FB4_48"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","/ram_10_3","ram_11_3");
+          
+            pterms["FB4_49"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","ram_10_3","/ram_11_3");
+          
+            pterms["FB4_50"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","/ram_12_3","ram_13_3");
+          
+            pterms["FB4_51"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","ram_12_3","/ram_13_3");
+          
+            pterms["FB4_52"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","/ram_11_3","ram_12_3");
+          
+            pterms["FB4_53"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","ram_11_3","/ram_12_3");
+          
+            pterms["FB4_54"]=new Array("ram_14_2");
+          
+            pterms["FB5_0"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","/ram_10_1","ram_11_1");
+          
+            pterms["FB5_1"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","ram_10_1","/ram_11_1");
+          
+            pterms["FB5_2"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","ram_9_1","/ram_10_1");
+          
+            pterms["FB5_3"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","/ram_9_1","ram_10_1");
+          
+            pterms["FB5_4"]=new Array("clk_wpis");
+          
+            pterms["FB5_5"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","/ram_11_1","ram_12_1");
+          
+            pterms["FB5_6"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","ram_11_1","/ram_12_1");
+          
+            pterms["FB5_7"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","/ram_10_1","ram_11_1");
+          
+            pterms["FB5_8"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","ram_10_1","/ram_11_1");
+          
+            pterms["FB5_9"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","/ram_12_1","ram_13_1");
+          
+            pterms["FB5_10"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001");
+          
+            pterms["FB5_11"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","ram_12_1","/ram_13_1");
+          
+            pterms["FB5_12"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","/ram_11_1","ram_12_1");
+          
+            pterms["FB5_13"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","ram_11_1","/ram_12_1");
+          
+            pterms["FB5_14"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","/ram_13_1","ram_14_1");
+          
+            pterms["FB5_15"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","ram_13_1","/ram_14_1");
+          
+            pterms["FB5_16"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","/ram_12_1","ram_13_1");
+          
+            pterms["FB5_17"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","ram_12_1","/ram_13_1");
+          
+            pterms["FB5_18"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","/ram_14_1","ram_15_1");
+          
+            pterms["FB5_19"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","ram_14_1","/ram_15_1");
+          
+            pterms["FB5_20"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","/ram_13_1","ram_14_1");
+          
+            pterms["FB5_21"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","ram_13_1","/ram_14_1");
+          
+            pterms["FB5_22"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","ram_9_1","/ram_10_1");
+          
+            pterms["FB5_23"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","/ram_9_1","ram_10_1");
+          
+            pterms["FB5_24"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","/ram_8_1","ram_9_1");
+          
+            pterms["FB5_25"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","ram_8_1","/ram_9_1");
+          
+            pterms["FB5_26"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","/ram_13_2","ram_14_2");
+          
+            pterms["FB5_27"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","ram_13_2","/ram_14_2");
+          
+            pterms["FB5_28"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","/ram_12_2","ram_13_2");
+          
+            pterms["FB5_29"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","ram_12_2","/ram_13_2");
+          
+            pterms["FB5_30"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","/ram_14_2","ram_15_2");
+          
+            pterms["FB5_31"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","ram_14_2","/ram_15_2");
+          
+            pterms["FB5_32"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","/ram_13_2","ram_14_2");
+          
+            pterms["FB5_33"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","ram_13_2","/ram_14_2");
+          
+            pterms["FB5_34"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","/ram_13_3","ram_14_3");
+          
+            pterms["FB5_35"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","ram_13_3","/ram_14_3");
+          
+            pterms["FB5_36"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","/ram_12_3","ram_13_3");
+          
+            pterms["FB5_37"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","ram_12_3","/ram_13_3");
+          
+            pterms["FB5_38"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","/ram_14_3","ram_15_3");
+          
+            pterms["FB5_39"]=new Array("rd_not_wr","/not_e","empty_half_full2_SPECSIG","ram_14_3","/ram_15_3");
+          
+            pterms["FB5_40"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","/ram_13_3","ram_14_3");
+          
+            pterms["FB5_41"]=new Array("/rd_not_wr","/not_e","/empty_half_full_wew_cmp_eq0001","ram_13_3","/ram_14_3");
+          
+            pterms["FB5_42"]=new Array("ram_14_3");
+          
+            pterms["FB10_0"]=new Array("/rd_not_wr","/not_e","magistrala_we2_SPECSIG");
+          
+            pterms["FB10_1"]=new Array("rd_not_wr","/not_e","ram_0_2");
+          
+            pterms["FB10_2"]=new Array("/rd_not_wr","/not_e","magistrala_we3_SPECSIG");
+          
+            pterms["FB10_3"]=new Array("rd_not_wr","/not_e","ram_0_3");
+          
+            pterms["FB12_0"]=new Array("/rd_not_wr","/not_e","magistrala_we0_SPECSIG");
+          
+            pterms["FB12_1"]=new Array("rd_not_wr","/not_e","ram_0_0");
+          
+            pterms["FB12_2"]=new Array("/rd_not_wr","/not_e","magistrala_we1_SPECSIG");
+          
+            pterms["FB12_3"]=new Array("rd_not_wr","/not_e","ram_0_1");
+          
+            pterms["FB14_19"]=new Array("/licznik0_SPECSIG","/licznik1_SPECSIG","/licznik2_SPECSIG","/licznik3_SPECSIG");
+          
+            pterms["FB14_25"]=new Array("/empty_half_full_wew_cmp_eq0001","licznik3_SPECSIG");
+          
+            pterms["FB14_46"]=new Array("empty_half_full2_SPECSIG","empty_half_full_wew_cmp_eq0001");
+          
+          d2["ram_4_0"]=new Array("FB1_26","FB1_25","FB1_28","FB1_27");
+          
+              clk["ram_4_0"]=new Array("FB1_4");
+              prld["ram_4_0"]="GND";
+          d2["ram_3_0"]=new Array("FB1_22","FB1_21","FB1_24","FB1_23");
+          
+              clk["ram_3_0"]=new Array("FB1_4");
+              prld["ram_3_0"]="GND";
+          d2["ram_10_0"]=new Array("FB1_50","FB1_49","FB1_51","FB1_52");
+          
+              clk["ram_10_0"]=new Array("FB1_4");
+              prld["ram_10_0"]="GND";
+          d2["ram_9_0"]=new Array("FB1_45","FB1_46","FB1_48","FB1_47");
+          
+              clk["ram_9_0"]=new Array("FB1_4");
+              prld["ram_9_0"]="GND";
+          d2["ram_2_0"]=new Array("FB1_18","FB1_17","FB1_20","FB1_19");
+          
+              clk["ram_2_0"]=new Array("FB1_4");
+              prld["ram_2_0"]="GND";
+          d2["ram_8_0"]=new Array("FB1_42","FB1_41","FB1_44","FB1_43");
+          
+              clk["ram_8_0"]=new Array("FB1_4");
+              prld["ram_8_0"]="GND";
+          d2["ram_1_0"]=new Array("FB1_14","FB1_13","FB1_16","FB1_15");
+          
+              clk["ram_1_0"]=new Array("FB1_4");
+              prld["ram_1_0"]="GND";
+          d2["ram_0_0"]=new Array("FB1_10","FB1_9","FB1_12","FB1_11");
+          
+              clk["ram_0_0"]=new Array("FB1_4");
+              prld["ram_0_0"]="GND";
+          d2["licznik0_SPECSIG"]=new Array("FB1_7","FB1_8");
+          
+              clk["licznik0_SPECSIG"]=new Array("FB1_4");
+              prld["licznik0_SPECSIG"]="GND";
+          d2["licznik1_SPECSIG"]=new Array("FB1_6","FB1_5");
+          
+              clk["licznik1_SPECSIG"]=new Array("FB1_4");
+              prld["licznik1_SPECSIG"]="GND";
+          d2["licznik2_SPECSIG"]=new Array("FB1_3","FB1_2");
+          
+              clk["licznik2_SPECSIG"]=new Array("FB1_4");
+              prld["licznik2_SPECSIG"]="GND";
+          d2["ram_7_0"]=new Array("FB1_38","FB1_37","FB1_40","FB1_39");
+          
+              clk["ram_7_0"]=new Array("FB1_4");
+              prld["ram_7_0"]="GND";
+          d2["ram_6_0"]=new Array("FB1_34","FB1_33","FB1_36","FB1_35");
+          
+              clk["ram_6_0"]=new Array("FB1_4");
+              prld["ram_6_0"]="GND";
+          d2["ram_5_0"]=new Array("FB1_30","FB1_29","FB1_32","FB1_31");
+          
+              clk["ram_5_0"]=new Array("FB1_4");
+              prld["ram_5_0"]="GND";
+          d2["licznik3_SPECSIG"]=new Array("FB1_0","FB1_1");
+          
+              clk["licznik3_SPECSIG"]=new Array("FB1_4");
+              prld["licznik3_SPECSIG"]="GND";
+          d1["empty_half_full_wew_cmp_eq0001"]=new Array("FB1_55");
+          
+          d2["ram_2_1"]=new Array("FB2_27","FB2_26","FB2_29","FB2_28");
+          
+              clk["ram_2_1"]=new Array("FB2_4");
+              prld["ram_2_1"]="GND";
+          d2["ram_8_1"]=new Array("FB2_51","FB2_50","FB2_53","FB2_52");
+          
+              clk["ram_8_1"]=new Array("FB2_4");
+              prld["ram_8_1"]="GND";
+          d2["ram_7_1"]=new Array("FB2_47","FB2_46","FB2_49","FB2_48");
+          
+              clk["ram_7_1"]=new Array("FB2_4");
+              prld["ram_7_1"]="GND";
+          d2["ram_1_1"]=new Array("FB2_23","FB2_22","FB2_25","FB2_24");
+          
+              clk["ram_1_1"]=new Array("FB2_4");
+              prld["ram_1_1"]="GND";
+          d2["ram_0_1"]=new Array("FB2_19","FB2_18","FB2_21","FB2_20");
+          
+              clk["ram_0_1"]=new Array("FB2_4");
+              prld["ram_0_1"]="GND";
+          d2["ram_14_0"]=new Array("FB2_15","FB2_14","FB2_17","FB2_16");
+          
+              clk["ram_14_0"]=new Array("FB2_4");
+              prld["ram_14_0"]="GND";
+          d2["ram_11_0"]=new Array("FB2_11","FB2_10","FB2_13","FB2_12");
+          
+              clk["ram_11_0"]=new Array("FB2_4");
+              prld["ram_11_0"]="GND";
+          d2["ram_12_0"]=new Array("FB2_7","FB2_6","FB2_9","FB2_8");
+          
+              clk["ram_12_0"]=new Array("FB2_4");
+              prld["ram_12_0"]="GND";
+          d2["ram_13_0"]=new Array("FB2_2","FB2_1","FB2_5","FB2_3");
+          
+              clk["ram_13_0"]=new Array("FB2_4");
+              prld["ram_13_0"]="GND";
+          d2["ram_6_1"]=new Array("FB2_43","FB2_42","FB2_45","FB2_44");
+          
+              clk["ram_6_1"]=new Array("FB2_4");
+              prld["ram_6_1"]="GND";
+          d2["ram_5_1"]=new Array("FB2_39","FB2_38","FB2_41","FB2_40");
+          
+              clk["ram_5_1"]=new Array("FB2_4");
+              prld["ram_5_1"]="GND";
+          d2["ram_4_1"]=new Array("FB2_35","FB2_34","FB2_37","FB2_36");
+          
+              clk["ram_4_1"]=new Array("FB2_4");
+              prld["ram_4_1"]="GND";
+          d2["ram_3_1"]=new Array("FB2_31","FB2_30","FB2_33","FB2_32");
+          
+              clk["ram_3_1"]=new Array("FB2_4");
+              prld["ram_3_1"]="GND";
+          d2["ram_15_0"]=new Array("FB2_0");
+          
+              clk["ram_15_0"]=new Array("FB2_4");
+              
+          ce["ram_15_0"]=new Array("FB2_55");
+          prld["ram_15_0"]="GND";
+          d2["ram_15_1"]=new Array("FB3_54");
+          
+              clk["ram_15_1"]=new Array("FB3_4");
+              
+          ce["ram_15_1"]=new Array("FB3_16");
+          prld["ram_15_1"]="GND";
+          d2["ram_9_2"]=new Array("FB3_38","FB3_39","FB3_41","FB3_40");
+          
+              clk["ram_9_2"]=new Array("FB3_4");
+              prld["ram_9_2"]="GND";
+          d2["ram_12_2"]=new Array("FB3_51","FB3_50","FB3_53","FB3_52");
+          
+              clk["ram_12_2"]=new Array("FB3_4");
+              prld["ram_12_2"]="GND";
+          d2["ram_8_2"]=new Array("FB3_35","FB3_34","FB3_37","FB3_36");
+          
+              clk["ram_8_2"]=new Array("FB3_4");
+              prld["ram_8_2"]="GND";
+          d2["ram_7_2"]=new Array("FB3_31","FB3_30","FB3_33","FB3_32");
+          
+              clk["ram_7_2"]=new Array("FB3_4");
+              prld["ram_7_2"]="GND";
+          d2["ram_6_2"]=new Array("FB3_27","FB3_26","FB3_29","FB3_28");
+          
+              clk["ram_6_2"]=new Array("FB3_4");
+              prld["ram_6_2"]="GND";
+          d2["ram_5_2"]=new Array("FB3_23","FB3_22","FB3_25","FB3_24");
+          
+              clk["ram_5_2"]=new Array("FB3_4");
+              prld["ram_5_2"]="GND";
+          d2["ram_4_2"]=new Array("FB3_19","FB3_18","FB3_21","FB3_20");
+          
+              clk["ram_4_2"]=new Array("FB3_4");
+              prld["ram_4_2"]="GND";
+          d2["ram_3_2"]=new Array("FB3_14","FB3_13","FB3_17","FB3_15");
+          
+              clk["ram_3_2"]=new Array("FB3_4");
+              prld["ram_3_2"]="GND";
+          d2["ram_2_2"]=new Array("FB3_10","FB3_9","FB3_12","FB3_11");
+          
+              clk["ram_2_2"]=new Array("FB3_4");
+              prld["ram_2_2"]="GND";
+          d2["ram_1_2"]=new Array("FB3_6","FB3_5","FB3_8","FB3_7");
+          
+              clk["ram_1_2"]=new Array("FB3_4");
+              prld["ram_1_2"]="GND";
+          d2["ram_11_2"]=new Array("FB3_47","FB3_46","FB3_49","FB3_48");
+          
+              clk["ram_11_2"]=new Array("FB3_4");
+              prld["ram_11_2"]="GND";
+          d2["ram_0_2"]=new Array("FB3_1","FB3_0","FB3_3","FB3_2");
+          
+              clk["ram_0_2"]=new Array("FB3_4");
+              prld["ram_0_2"]="GND";
+          d2["ram_10_2"]=new Array("FB3_43","FB3_42","FB3_44","FB3_45");
+          
+              clk["ram_10_2"]=new Array("FB3_4");
+              prld["ram_10_2"]="GND";
+          d2["ram_15_2"]=new Array("FB4_54");
+          
+              clk["ram_15_2"]=new Array("FB4_4");
+              
+          ce["ram_15_2"]=new Array("FB4_16");
+          prld["ram_15_2"]="GND";
+          d2["ram_12_3"]=new Array("FB4_51","FB4_50","FB4_53","FB4_52");
+          
+              clk["ram_12_3"]=new Array("FB4_4");
+              prld["ram_12_3"]="GND";
+          d2["ram_11_3"]=new Array("FB4_47","FB4_46","FB4_49","FB4_48");
+          
+              clk["ram_11_3"]=new Array("FB4_4");
+              prld["ram_11_3"]="GND";
+          d2["ram_10_3"]=new Array("FB4_43","FB4_42","FB4_44","FB4_45");
+          
+              clk["ram_10_3"]=new Array("FB4_4");
+              prld["ram_10_3"]="GND";
+          d2["ram_7_3"]=new Array("FB4_31","FB4_30","FB4_33","FB4_32");
+          
+              clk["ram_7_3"]=new Array("FB4_4");
+              prld["ram_7_3"]="GND";
+          d2["ram_6_3"]=new Array("FB4_27","FB4_26","FB4_29","FB4_28");
+          
+              clk["ram_6_3"]=new Array("FB4_4");
+              prld["ram_6_3"]="GND";
+          d2["ram_5_3"]=new Array("FB4_23","FB4_22","FB4_25","FB4_24");
+          
+              clk["ram_5_3"]=new Array("FB4_4");
+              prld["ram_5_3"]="GND";
+          d2["ram_4_3"]=new Array("FB4_19","FB4_18","FB4_21","FB4_20");
+          
+              clk["ram_4_3"]=new Array("FB4_4");
+              prld["ram_4_3"]="GND";
+          d2["ram_3_3"]=new Array("FB4_14","FB4_13","FB4_17","FB4_15");
+          
+              clk["ram_3_3"]=new Array("FB4_4");
+              prld["ram_3_3"]="GND";
+          d2["ram_9_3"]=new Array("FB4_38","FB4_39","FB4_41","FB4_40");
+          
+              clk["ram_9_3"]=new Array("FB4_4");
+              prld["ram_9_3"]="GND";
+          d2["ram_2_3"]=new Array("FB4_10","FB4_9","FB4_12","FB4_11");
+          
+              clk["ram_2_3"]=new Array("FB4_4");
+              prld["ram_2_3"]="GND";
+          d2["ram_8_3"]=new Array("FB4_35","FB4_34","FB4_37","FB4_36");
+          
+              clk["ram_8_3"]=new Array("FB4_4");
+              prld["ram_8_3"]="GND";
+          d2["ram_1_3"]=new Array("FB4_6","FB4_5","FB4_8","FB4_7");
+          
+              clk["ram_1_3"]=new Array("FB4_4");
+              prld["ram_1_3"]="GND";
+          d2["ram_0_3"]=new Array("FB4_1","FB4_0","FB4_3","FB4_2");
+          
+              clk["ram_0_3"]=new Array("FB4_4");
+              prld["ram_0_3"]="GND";
+          d2["ram_15_3"]=new Array("FB5_42");
+          
+              clk["ram_15_3"]=new Array("FB5_4");
+              
+          ce["ram_15_3"]=new Array("FB5_10");
+          prld["ram_15_3"]="GND";
+          d2["ram_14_3"]=new Array("FB5_39","FB5_38","FB5_41","FB5_40");
+          
+              clk["ram_14_3"]=new Array("FB5_4");
+              prld["ram_14_3"]="GND";
+          d2["ram_13_3"]=new Array("FB5_35","FB5_34","FB5_37","FB5_36");
+          
+              clk["ram_13_3"]=new Array("FB5_4");
+              prld["ram_13_3"]="GND";
+          d2["ram_14_2"]=new Array("FB5_31","FB5_30","FB5_33","FB5_32");
+          
+              clk["ram_14_2"]=new Array("FB5_4");
+              prld["ram_14_2"]="GND";
+          d2["ram_13_2"]=new Array("FB5_27","FB5_26","FB5_29","FB5_28");
+          
+              clk["ram_13_2"]=new Array("FB5_4");
+              prld["ram_13_2"]="GND";
+          d2["ram_9_1"]=new Array("FB5_22","FB5_23","FB5_25","FB5_24");
+          
+              clk["ram_9_1"]=new Array("FB5_4");
+              prld["ram_9_1"]="GND";
+          d2["ram_14_1"]=new Array("FB5_19","FB5_18","FB5_21","FB5_20");
+          
+              clk["ram_14_1"]=new Array("FB5_4");
+              prld["ram_14_1"]="GND";
+          d2["ram_13_1"]=new Array("FB5_15","FB5_14","FB5_17","FB5_16");
+          
+              clk["ram_13_1"]=new Array("FB5_4");
+              prld["ram_13_1"]="GND";
+          d2["ram_12_1"]=new Array("FB5_11","FB5_9","FB5_13","FB5_12");
+          
+              clk["ram_12_1"]=new Array("FB5_4");
+              prld["ram_12_1"]="GND";
+          d2["ram_11_1"]=new Array("FB5_6","FB5_5","FB5_8","FB5_7");
+          
+              clk["ram_11_1"]=new Array("FB5_4");
+              prld["ram_11_1"]="GND";
+          d2["ram_10_1"]=new Array("FB5_1","FB5_0","FB5_2","FB5_3");
+          
+              clk["ram_10_1"]=new Array("FB5_4");
+              prld["ram_10_1"]="GND";
+          d2["magistrala_wy3_SPECSIG"]=new Array("FB10_3","FB10_2");
+          
+          d2["magistrala_wy2_SPECSIG"]=new Array("FB10_1","FB10_0");
+          
+          d2["magistrala_wy1_SPECSIG"]=new Array("FB12_3","FB12_2");
+          
+          d2["magistrala_wy0_SPECSIG"]=new Array("FB12_1","FB12_0");
+          
+          d1["empty_half_full2_SPECSIG"]=new Array("FB14_19");
+          
+          d1["empty_half_full1_SPECSIG"]=new Array("FB14_25");
+          
+          d1["empty_half_full0_SPECSIG"]=new Array("FB14_46");
+          
+
+      uimSignals = new Array();
+
+      uimSigNegs = new Array();
+
+      uimPterms = new Array();
+      
+
+      
+        function getEqnList() {
+          var str = "<html><head><link type='text/css' href='style.css' rel='stylesheet'></head><body class='pgBgnd'>";
+          str += "<center><h3>Equations</h3></center>";
+          str += "<table width='90%' align='center' border='1' cellpadding='0' cellspacing='0'>";
+          for (s=0; s<uimSignals.length; s++) {
+            str += "<tr><td>";
+            str += retUimEqn(uimSignals[s]);
+            str += "</td></tr>";
+          }
+          for (s=0; s<signals.length; s++) {
+            str += "<tr><td>";
+            str += retEqn(signals[s]);
+            str += "</td></tr>";
+          }
+
+          var legend = retLegend();
+		      if (legend != "") {
+		        str += "<tr><td>" + legend + "</td></tr>";
+		      }
+
+          str += "</table>";
+          str += "<form><span class='pgRef'>";
+
+          if (!parent.leftnav.IsNS()) {
+            str += "<table width='90%' align='center'>";
+            str += "<tr><td align='left'><input type='button' value='back to top' ";
+            str += "onclick='javascript:parent.leftnav.showEqnAll()' ";
+            str += "onmouseover=\"window.status='goto top of page'; return true;\" ";
+            str += "onmouseout=\"window.status=''\">";
+            str += "</td>";
+            str += "<td align='right'>";
+            str += "<input type='button' value='print page' ";
+            str += "onclick='javascript:window.print()' ";
+            str += "onmouseover=\"window.status='print page'; return true;\" ";
+            str += "onmouseout=\"window.status=''\">";
+            str += "</td>";
+            str += "</tr></table>";
+          }
+          else {
+            str += "<table width='90%' align='center'>";
+            str += "<tr><td align='left'><a href='javascript:parent.leftnav.showEqnAll()'>back to top</a>";
+            str += "</td>";
+            str += "<td align='right'>";
+            str += "<a href='javascript:window.print()'>";
+            str += "print page</a>";
+            str += "</td>";
+            str += "</tr></table>";
+          }
+
+          str += "</span></form>";
+          str += "</body></html>";
+          return str;
+        }
+      
+    </script>
+</head></html>

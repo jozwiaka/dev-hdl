@@ -1,0 +1,60 @@
+MDF Database:  version 1.0
+MDF_INFO | automatMoorea | XC2C256-6-TQ144
+MACROCELL | 11 | 1 | current<0>_MC
+ATTRIBUTES | 2323907330 | 0
+OUTPUTMC | 4 | 9 | 5 | 9 | 13 | 11 | 1 | 8 | 14
+INPUTS | 4 | in  | current<0>  | current<1>  | current<2>
+INPUTMC | 3 | 11 | 1 | 9 | 13 | 9 | 5
+INPUTP | 1 | 190
+LCT | 1 | 2 | Internal_Name
+EQ | 6 | 
+   !current<0> := !in & current<0>
+	# !in & current<1> & current<2>
+	# !in & !current<1> & !current<2>
+	# current<0> & current<1> & current<2>;	// (4 pt, 4 inp)
+    current<0>.CLK = clk;	// CTC	(1 pt, 1 inp)
+   current<0>.AR = !r;	// GSR	(0 pt, 0 inp)
+GLOBALS | 1 | 4 | r
+
+MACROCELL | 9 | 13 | current<1>_MC
+ATTRIBUTES | 2323907330 | 0
+OUTPUTMC | 4 | 9 | 5 | 9 | 13 | 11 | 1 | 8 | 14
+INPUTS | 4 | in  | current<0>  | current<1>  | current<2>
+INPUTMC | 3 | 11 | 1 | 9 | 13 | 9 | 5
+INPUTP | 1 | 190
+LCT | 1 | 2 | Internal_Name
+EQ | 4 | 
+   current<1> := !in & current<0> & !current<1>
+	# !in & !current<0> & current<1> & !current<2>;	// (2 pt, 4 inp)
+    current<1>.CLK = clk;	// CTC	(1 pt, 1 inp)
+   current<1>.AR = !r;	// GSR	(0 pt, 0 inp)
+GLOBALS | 1 | 4 | r
+
+MACROCELL | 9 | 5 | current<2>_MC
+ATTRIBUTES | 2323907330 | 0
+OUTPUTMC | 4 | 9 | 5 | 9 | 13 | 11 | 1 | 8 | 14
+INPUTS | 4 | in  | current<1>  | current<2>  | current<0>
+INPUTMC | 3 | 9 | 13 | 9 | 5 | 11 | 1
+INPUTP | 1 | 190
+LCT | 1 | 2 | Internal_Name
+EQ | 4 | 
+   current<2> := !in & !current<1> & current<2>
+	# !in & current<0> & current<1> & !current<2>;	// (2 pt, 4 inp)
+    current<2>.CLK = clk;	// CTC	(1 pt, 1 inp)
+   current<2>.AR = !r;	// GSR	(0 pt, 0 inp)
+GLOBALS | 1 | 4 | r
+
+MACROCELL | 8 | 14 | out_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 3 | current<0>  | current<1>  | current<2>
+INPUTMC | 3 | 11 | 1 | 9 | 13 | 9 | 5
+EQ | 1 | 
+   out = !current<0> & current<1> & current<2>;	// (1 pt, 3 inp)
+
+PIN | clk | 64 | 16 | LVCMOS18 | 62 | 0
+PIN | in | 64 | 16 | LVCMOS18 | 190 | 3 | 9 | 5 | 9 | 13 | 11 | 1
+PIN | r | 65536 | 16 | LVCMOS18 | 218 | 3 | 9 | 5 | 9 | 13 | 11 | 1
+PIN | current<0> | 536871040 | 0 | LVCMOS18 | 152
+PIN | current<1> | 536871040 | 0 | LVCMOS18 | 156
+PIN | current<2> | 536871040 | 0 | LVCMOS18 | 160
+PIN | out | 536871040 | 0 | LVCMOS18 | 178

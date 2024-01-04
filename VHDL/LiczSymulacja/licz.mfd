@@ -1,0 +1,57 @@
+MDF Database:  version 1.0
+MDF_INFO | licz | XC2C256-6-TQ144
+MACROCELL | 1 | 2 | wy<0>_MC
+ATTRIBUTES | 2156167938 | 0
+OUTPUTMC | 4 | 1 | 2 | 1 | 4 | 1 | 12 | 1 | 14
+INPUTS | 3 | reset  | wy<0>  | start
+INPUTMC | 1 | 1 | 2
+INPUTP | 2 | 190 | 62
+EQ | 3 | 
+   wy<0> := reset & wy<0> & !start
+	# reset & !wy<0> & start;	// (2 pt, 3 inp)
+   wy<0>.CLK  =  clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk
+
+MACROCELL | 1 | 4 | wy<1>_MC
+ATTRIBUTES | 2151973634 | 0
+OUTPUTMC | 3 | 1 | 4 | 1 | 12 | 1 | 14
+INPUTS | 4 | reset  | wy<1>  | wy<0>  | start
+INPUTMC | 2 | 1 | 4 | 1 | 2
+INPUTP | 2 | 190 | 62
+EQ | 3 | 
+   wy<1>.T := !reset & wy<1>
+	# reset & wy<0> & start;	// (2 pt, 4 inp)
+   wy<1>.CLK  =  clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk
+
+MACROCELL | 1 | 12 | wy<2>_MC
+ATTRIBUTES | 2151973634 | 0
+OUTPUTMC | 2 | 1 | 12 | 1 | 14
+INPUTS | 5 | reset  | wy<2>  | wy<0>  | start  | wy<1>
+INPUTMC | 3 | 1 | 12 | 1 | 2 | 1 | 4
+INPUTP | 2 | 190 | 62
+EQ | 3 | 
+   wy<2>.T := !reset & wy<2>
+	# reset & wy<0> & start & wy<1>;	// (2 pt, 5 inp)
+   wy<2>.CLK  =  clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk
+
+MACROCELL | 1 | 14 | wy<3>_MC
+ATTRIBUTES | 2151973634 | 0
+OUTPUTMC | 1 | 1 | 14
+INPUTS | 6 | reset  | wy<3>  | wy<0>  | start  | wy<1>  | wy<2>
+INPUTMC | 4 | 1 | 14 | 1 | 2 | 1 | 4 | 1 | 12
+INPUTP | 2 | 190 | 62
+EQ | 3 | 
+   wy<3>.T := !reset & wy<3>
+	# reset & wy<0> & start & wy<1> & wy<2>;	// (2 pt, 6 inp)
+   wy<3>.CLK  =  clk;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk
+
+PIN | clk | 16384 | 16 | LVCMOS18 | 59 | 4 | 1 | 2 | 1 | 4 | 1 | 12 | 1 | 14
+PIN | reset | 64 | 16 | LVCMOS18 | 190 | 4 | 1 | 2 | 1 | 4 | 1 | 12 | 1 | 14
+PIN | start | 64 | 16 | LVCMOS18 | 62 | 4 | 1 | 2 | 1 | 4 | 1 | 12 | 1 | 14
+PIN | wy<0> | 536871040 | 0 | LVCMOS18 | 3
+PIN | wy<1> | 536871040 | 0 | LVCMOS18 | 5
+PIN | wy<2> | 536871040 | 0 | LVCMOS18 | 8
+PIN | wy<3> | 536871040 | 0 | LVCMOS18 | 12

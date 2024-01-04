@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/dev/ULiC/LiczSymulacja/test_licz_isim_beh.exe" -prj "C:/dev/ULiC/LiczSymulacja/test_licz_beh.prj" "work.test_licz" 

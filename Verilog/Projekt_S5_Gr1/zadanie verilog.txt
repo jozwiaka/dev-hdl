@@ -1,0 +1,22 @@
+Należy zaprojektować układ w układzie CPLD, który realizuje transmisję szeregową w standardzie SPI, inicjowaną na rozkaz generowany przez sygnał z przycisku btn0.
+Pojawienie się niskiego sygnału na btn0 powinno ( zbocze opadające ):
+1. Przepisać z magistarli 8-bitowej realizowanej przez JP1 daną , która ma zostać wpisana do rejestru , z którego dane będą wysyłane .
+2. Rozpocząć sekwencję wysyłającą a generowaną przez układ Automatu sekwencyjnego.
+Automat ma być taktowany sygnałem zegarowym o częstotliwości 1 HZ , uzyskanenym przez podzielenie sygnały zegarowego z nóżki p38 (100 kHz)
+Automat ma za zadanie :
+- wygenerowanie sygnału CS o aktywnności sygnałowej = 0 na pinie związanym ze złączem JP2, na czas trwania transmisji
+- wygenerowanie 8 cykli zegarowych CLK w trakcie stanu niskiego na CS ,zegar ma być zrealizowany na złączu JP2
+- wygenerowanie sekwencyjnie w takt sygnału CLK 8 bitów danej wprowadzonej z JP1 - sygnał MOSI ,który ma być zrealizowany na złączu JP2
+- wprowadzenie sekwencyjnie w takt sygnału CLK 8 bitów danej wprowadzonej z SW1 - sygnał MISO 
+Rejestr przesuwny 8 bitowej danej powinien być wizualizowny przez diody na złączach JP3,JP4.
+
+Należy przymysleć jak zrealizować układ sekwentera/automatu .
+
+Należy przymysleć jak zrealizować układ rejestru wykonawczego ( patrz rysunek ), w jakim wariancie użyć buf_wyj a w jakim buf_wej oraz ,
+które ze zboczy służy do taktowanie 8-bit rejestru , a które do buforów.
+
+Układ ma być zrealizowany w 4 wariantach ( patrz rysunek).
+- wariant 1 POL=0, Phase =0 (nasz)
+- wariant 2 POL=1, Phase =0
+- wariant 3 POL=0, Phase =1
+- wariant 4 POL=1, Phase =1

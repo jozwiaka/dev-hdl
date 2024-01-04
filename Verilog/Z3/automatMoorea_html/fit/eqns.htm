@@ -1,0 +1,129 @@
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="paths.js"></script><script src="eqns.js"></script><script>
+      var design = "automatMoorea";
+      var device = "XC2C256";
+      signals = new Array("current0_SPECSIG","current1_SPECSIG","current2_SPECSIG","out");
+      sigNegs = new Array("ON","OFF","OFF","OFF");
+      sigTypes = new Array("DFF","DFF","DFF","");
+
+      
+           iostyle["r"]=new Array("KPR");
+        
+           iostyle["clk"]=new Array("KPR");
+        
+           iostyle["in"]=new Array("KPR");
+        
+        specSig["current2_SPECSIG"]=new Array("current<2>");
+      
+        specSig["current1_SPECSIG"]=new Array("current<1>");
+      
+        specSig["current0_SPECSIG"]=new Array("current<0>");
+      
+            pterms["FB9_52"]=new Array("/current0_SPECSIG","current1_SPECSIG","current2_SPECSIG");
+          
+            pterms["FB10_0"]=new Array("/in","current0_SPECSIG","/current1_SPECSIG");
+          
+            pterms["FB10_1"]=new Array("/in","/current0_SPECSIG","current1_SPECSIG","/current2_SPECSIG");
+          
+            pterms["FB10_2"]=new Array("/in","/current1_SPECSIG","current2_SPECSIG");
+          
+            pterms["FB10_3"]=new Array("/in","current0_SPECSIG","current1_SPECSIG","/current2_SPECSIG");
+          
+            pterms["FB10_4"]=new Array("clk");
+          
+            pterms["FB12_0"]=new Array("/in","current0_SPECSIG");
+          
+            pterms["FB12_1"]=new Array("/in","current1_SPECSIG","current2_SPECSIG");
+          
+            pterms["FB12_2"]=new Array("current0_SPECSIG","current1_SPECSIG","current2_SPECSIG");
+          
+            pterms["FB12_3"]=new Array("/in","/current1_SPECSIG","/current2_SPECSIG");
+          
+            pterms["FB12_4"]=new Array("clk");
+          
+          d1["out"]=new Array("FB9_52");
+          
+          d2["current2_SPECSIG"]=new Array("FB10_2","FB10_3");
+          
+              clk["current2_SPECSIG"]=new Array("FB10_4");
+              rstNegs["current2_SPECSIG"]=1;
+              gblrst["current2_SPECSIG"]=new Array("r");
+            prld["current2_SPECSIG"]="GND";
+          d2["current1_SPECSIG"]=new Array("FB10_0","FB10_1");
+          
+              clk["current1_SPECSIG"]=new Array("FB10_4");
+              rstNegs["current1_SPECSIG"]=1;
+              gblrst["current1_SPECSIG"]=new Array("r");
+            prld["current1_SPECSIG"]="GND";
+          d2["current0_SPECSIG"]=new Array("FB12_0","FB12_1","FB12_3","FB12_2");
+          
+              clk["current0_SPECSIG"]=new Array("FB12_4");
+              rstNegs["current0_SPECSIG"]=1;
+              gblrst["current0_SPECSIG"]=new Array("r");
+            prld["current0_SPECSIG"]="GND";
+
+      uimSignals = new Array();
+
+      uimSigNegs = new Array();
+
+      uimPterms = new Array();
+      
+
+      
+        function getEqnList() {
+          var str = "<html><head><link type='text/css' href='style.css' rel='stylesheet'></head><body class='pgBgnd'>";
+          str += "<center><h3>Equations</h3></center>";
+          str += "<table width='90%' align='center' border='1' cellpadding='0' cellspacing='0'>";
+          for (s=0; s<uimSignals.length; s++) {
+            str += "<tr><td>";
+            str += retUimEqn(uimSignals[s]);
+            str += "</td></tr>";
+          }
+          for (s=0; s<signals.length; s++) {
+            str += "<tr><td>";
+            str += retEqn(signals[s]);
+            str += "</td></tr>";
+          }
+
+          var legend = retLegend();
+		      if (legend != "") {
+		        str += "<tr><td>" + legend + "</td></tr>";
+		      }
+
+          str += "</table>";
+          str += "<form><span class='pgRef'>";
+
+          if (!parent.leftnav.IsNS()) {
+            str += "<table width='90%' align='center'>";
+            str += "<tr><td align='left'><input type='button' value='back to top' ";
+            str += "onclick='javascript:parent.leftnav.showEqnAll()' ";
+            str += "onmouseover=\"window.status='goto top of page'; return true;\" ";
+            str += "onmouseout=\"window.status=''\">";
+            str += "</td>";
+            str += "<td align='right'>";
+            str += "<input type='button' value='print page' ";
+            str += "onclick='javascript:window.print()' ";
+            str += "onmouseover=\"window.status='print page'; return true;\" ";
+            str += "onmouseout=\"window.status=''\">";
+            str += "</td>";
+            str += "</tr></table>";
+          }
+          else {
+            str += "<table width='90%' align='center'>";
+            str += "<tr><td align='left'><a href='javascript:parent.leftnav.showEqnAll()'>back to top</a>";
+            str += "</td>";
+            str += "<td align='right'>";
+            str += "<a href='javascript:window.print()'>";
+            str += "print page</a>";
+            str += "</td>";
+            str += "</tr></table>";
+          }
+
+          str += "</span></form>";
+          str += "</body></html>";
+          return str;
+        }
+      
+    </script>
+</head></html>

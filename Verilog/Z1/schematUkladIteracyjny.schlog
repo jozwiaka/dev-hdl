@@ -1,0 +1,2 @@
+select figure at 3068 1562 8 -branches -sn=1
+select figure at 3063 1559 8 -branches -all -sn=1

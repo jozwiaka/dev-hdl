@@ -1,0 +1,126 @@
+V3 73
+FL C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/aktywna_anoda.vhd 2021/05/25.08:32:36 P.20131013
+EN work/aktywna_anoda 1634661148 \
+      FL C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/aktywna_anoda.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/aktywna_anoda/Behavioral 1634661149 \
+      FL C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/aktywna_anoda.vhd \
+      EN work/aktywna_anoda 1634661148
+FL C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/dzielnik_100kHz_na_400Hz.vhd 2021/05/09.12:25:04 P.20131013
+EN work/dzielnik_100kHz_na_400Hz 1634661144 \
+      FL C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/dzielnik_100kHz_na_400Hz.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/dzielnik_100kHz_na_400Hz/Behavioral 1634661145 \
+      FL C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/dzielnik_100kHz_na_400Hz.vhd \
+      EN work/dzielnik_100kHz_na_400Hz 1634661144
+FL C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/dzielnik_400Hz_na_10Hz.vhd 2021/05/09.12:25:32 P.20131013
+EN work/dzielnik_400Hz_na_10Hz 1634661150 \
+      FL C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/dzielnik_400Hz_na_10Hz.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/dzielnik_400Hz_na_10Hz/Behavioral 1634661151 \
+      FL C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/dzielnik_400Hz_na_10Hz.vhd \
+      EN work/dzielnik_400Hz_na_10Hz 1634661150
+FL C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/licznik_cyfra.vhd 2021/05/09.12:22:52 P.20131013
+EN work/licznik_cyfra 1634661146 \
+      FL C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/licznik_cyfra.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/licznik_cyfra/Behavioral 1634661147 \
+      FL C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/licznik_cyfra.vhd \
+      EN work/licznik_cyfra 1634661146
+FL C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/moj_projekt.vhd 2021/06/04.10:46:56 P.20131013
+EN work/moj_projekt 1634661154 \
+      FL C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/moj_projekt.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/moj_projekt/Behavioral 1634661155 \
+      FL C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/moj_projekt.vhd \
+      EN work/moj_projekt 1634661154
+FL C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/moj_projekt_Diody.vhd 2021/05/11.10:39:52 P.20131013
+EN work/moj_projekt_Diody 1634661152 \
+      FL C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/moj_projekt_Diody.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/moj_projekt_Diody/Behavioral 1634661153 \
+      FL C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/moj_projekt_Diody.vhd \
+      EN work/moj_projekt_Diody 1634661152
+FL C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/moj_projekt_MUX.vhd 2021/05/12.13:27:18 P.20131013
+EN work/moj_projekt_MUX 1634661158 \
+      FL C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/moj_projekt_MUX.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/moj_projekt_MUX/Behavioral 1634661159 \
+      FL C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/moj_projekt_MUX.vhd \
+      EN work/moj_projekt_MUX 1634661158
+FL C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/mult_vec1.vhd 2021/05/12.13:19:58 P.20131013
+EN work/mult_vec1 1634661156 \
+      FL C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/mult_vec1.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/mult_vec1/Behavioral 1634661157 \
+      FL C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/mult_vec1.vhd \
+      EN work/mult_vec1 1634661156
+FL C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/SchematGlowny.vhf 2021/05/25.08:35:10 P.20131013
+EN work/SchematGlowny 1634661164 \
+      FL C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/SchematGlowny.vhf \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
+      PH unisim/VCOMPONENTS 1381692182
+AR work/SchematGlowny/BEHAVIORAL 1634661165 \
+      FL C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/SchematGlowny.vhf \
+      EN work/SchematGlowny 1634661164 CP dzielnik_100kHz_na_400Hz \
+      CP licznik_cyfra CP aktywna_anoda CP moj_projekt CP mult_vec1 \
+      CP dzielnik_400Hz_na_10Hz CP moj_projekt_Diody CP INV CP ster_kropka \
+      CP transkoder_7s CP moj_projekt_MUX
+FL C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/Schemat_VHDL.vhd 2021/10/19.18:31:21 P.20131013
+EN work/Schemat_VHDL 1634661166 \
+      FL C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/Schemat_VHDL.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/Schemat_VHDL/Behavioral 1634661167 \
+      FL C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/Schemat_VHDL.vhd \
+      EN work/Schemat_VHDL 1634661166 CP dzielnik_100kHz_na_400Hz CP licznik_cyfra \
+      CP aktywna_anoda CP dzielnik_400Hz_na_10Hz CP moj_projekt_Diody \
+      CP moj_projekt CP mult_vec1 CP moj_projekt_MUX CP transkoder_7s CP ster_kropka
+FL C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/ster_kropka.vhd 2021/05/11.09:04:52 P.20131013
+EN work/ster_kropka 1634661162 \
+      FL C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/ster_kropka.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/ster_kropka/Behavioral 1634661163 \
+      FL C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/ster_kropka.vhd \
+      EN work/ster_kropka 1634661162
+FL C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/transkoder_7s.vhd 2021/05/09.12:31:16 P.20131013
+EN work/transkoder_7s 1634661160 \
+      FL C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/transkoder_7s.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/transkoder_7s/Behavioral 1634661161 \
+      FL C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/transkoder_7s.vhd \
+      EN work/transkoder_7s 1634661160
+FL C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/Uklad_VHDL.vhd 2021/10/19.18:22:54 P.20131013
+EN work/SchematVHDL 1634660715 \
+      FL C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/Uklad_VHDL.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/SchematVHDL/Behavioral 1634660716 \
+      FL C:/dev/ULiC_Scripts/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/Uklad_VHDL.vhd \
+      EN work/SchematVHDL 1634660715 CP dzielnik_100kHz_na_400Hz CP licznik_cyfra \
+      CP aktywna_anoda CP dzielnik_400Hz_na_10Hz CP moj_projekt_Diody \
+      CP moj_projekt CP mult_vec1 CP moj_projekt_MUX CP transkoder_7s CP ster_kropka
+FL C:/students_ulic/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/aktywna_anoda.vhd 2021/05/25.08:32:36 P.20131013
+FL C:/students_ulic/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/dzielnik_100kHz_na_400Hz.vhd 2021/05/09.12:25:04 P.20131013
+FL C:/students_ulic/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/dzielnik_400Hz_na_10Hz.vhd 2021/05/09.12:25:32 P.20131013
+FL C:/students_ulic/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/licznik_cyfra.vhd 2021/05/09.12:22:52 P.20131013
+FL C:/students_ulic/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/moj_projekt.vhd 2021/06/04.10:46:56 P.20131013
+FL C:/students_ulic/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/moj_projekt_Diody.vhd 2021/05/11.10:39:52 P.20131013
+FL C:/students_ulic/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/moj_projekt_MUX.vhd 2021/05/12.13:27:18 P.20131013
+FL C:/students_ulic/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/mult_vec1.vhd 2021/05/12.13:19:58 P.20131013
+FL C:/students_ulic/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/SchematGlowny.vhf 2021/05/25.08:35:10 P.20131013
+FL C:/students_ulic/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/ster_kropka.vhd 2021/05/11.09:04:52 P.20131013
+FL C:/students_ulic/Gricjuta_Jozwiak_5AiSR2_wtorek_14/ProjektZaliczeniowy_TrescZadan/ProjektZaliczeniowy/transkoder_7s.vhd 2021/05/09.12:31:16 P.20131013
+FL C:/Studia/ULiC/ProjektZaliczeniowy/aktywna_anoda.vhd 2021/05/25.08:32:34 P.20131013
+FL C:/Studia/ULiC/ProjektZaliczeniowy/dzielnik_100kHz_na_400Hz.vhd 2021/05/09.12:25:03 P.20131013
+FL C:/Studia/ULiC/ProjektZaliczeniowy/dzielnik_400Hz_na_10Hz.vhd 2021/05/09.12:25:31 P.20131013
+FL C:/Studia/ULiC/ProjektZaliczeniowy/licznik_cyfra.vhd 2021/05/09.12:22:51 P.20131013
+FL C:/Studia/ULiC/ProjektZaliczeniowy/moj_projekt.vhd 2021/05/25.08:31:36 P.20131013
+FL C:/Studia/ULiC/ProjektZaliczeniowy/moj_projekt_Diody.vhd 2021/05/11.10:39:51 P.20131013
+FL C:/Studia/ULiC/ProjektZaliczeniowy/moj_projekt_MUX.vhd 2021/05/12.13:27:16 P.20131013
+FL C:/Studia/ULiC/ProjektZaliczeniowy/mult_vec1.vhd 2021/05/12.13:19:57 P.20131013
+FL C:/Studia/ULiC/ProjektZaliczeniowy/SchematGlowny.vhf 2021/05/25.08:35:09 P.20131013
+FL C:/Studia/ULiC/ProjektZaliczeniowy/ster_kropka.vhd 2021/05/11.09:04:50 P.20131013
+FL C:/Studia/ULiC/ProjektZaliczeniowy/transkoder_7s.vhd 2021/05/09.12:31:14 P.20131013

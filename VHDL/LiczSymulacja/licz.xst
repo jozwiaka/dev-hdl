@@ -1,0 +1,5 @@
+set -tmpdir "C:/dev/ULiC/LiczSymulacja/xst/projnav.tmp"
+set -xsthdpdir "C:/dev/ULiC/LiczSymulacja/xst"
+elaborate
+-ifn licz.prj
+-ifmt mixed

@@ -1,0 +1,8 @@
+FILO rejestr przesuwny
+
+1. Licznik:
+    liczba to integer
+    enable
+    rd/wr - kierunek liczenia
+2. Pamiec - array
+3. Dekoder adresowy
